@@ -74,5 +74,11 @@ namespace Solucion_informatica_Consultorio_Juridico
                 }
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_recuperar_contra_por_email rec = new frm_recuperar_contra_por_email();
+            rec.ShowDialog();
+        }
     } }
 
