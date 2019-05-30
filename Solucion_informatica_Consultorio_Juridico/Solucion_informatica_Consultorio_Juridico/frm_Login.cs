@@ -80,5 +80,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_recuperar_contra_por_email rec = new frm_recuperar_contra_por_email();
             rec.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_registrar_usuario fr = new frm_registrar_usuario();
+            fr.ShowDialog();
+        }
     } }
 
