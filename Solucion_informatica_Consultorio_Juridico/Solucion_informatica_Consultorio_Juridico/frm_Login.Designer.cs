@@ -168,11 +168,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 215);
+            this.button1.Location = new System.Drawing.Point(199, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 29);
+            this.button1.Size = new System.Drawing.Size(132, 29);
             this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
+            this.button1.Text = "Registrar Nuevo Usuario ";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_Login
