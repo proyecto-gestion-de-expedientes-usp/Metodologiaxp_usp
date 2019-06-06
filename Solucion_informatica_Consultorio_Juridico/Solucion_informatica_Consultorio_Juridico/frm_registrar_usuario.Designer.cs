@@ -65,16 +65,23 @@
             this.txt_contra = new System.Windows.Forms.TextBox();
             this.txt_confi_contra = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cb_tip_usu = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_limpiar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.txt_cod_estausua = new System.Windows.Forms.TextBox();
             this.txt_cod_tipusua = new System.Windows.Forms.TextBox();
+            this.txt_cod_estausua = new System.Windows.Forms.TextBox();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_limpiar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cb_tip_usu = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbt_dni = new System.Windows.Forms.RadioButton();
+            this.rbt_nom_apepatymat = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -225,7 +232,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(11, 75);
+            this.label17.Location = new System.Drawing.Point(58, 75);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 13);
             this.label17.TabIndex = 0;
@@ -242,7 +249,11 @@
             // 
             // cb_Sexo
             // 
+            this.cb_Sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Sexo.FormattingEnabled = true;
+            this.cb_Sexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
             this.cb_Sexo.Location = new System.Drawing.Point(101, 235);
             this.cb_Sexo.Name = "cb_Sexo";
             this.cb_Sexo.Size = new System.Drawing.Size(121, 21);
@@ -250,7 +261,13 @@
             // 
             // cb_estadoci
             // 
+            this.cb_estadoci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_estadoci.FormattingEnabled = true;
+            this.cb_estadoci.Items.AddRange(new object[] {
+            "Soltero/a",
+            "Casado/a",
+            "Divorciado/a",
+            "Viudo/a"});
             this.cb_estadoci.Location = new System.Drawing.Point(101, 260);
             this.cb_estadoci.Name = "cb_estadoci";
             this.cb_estadoci.Size = new System.Drawing.Size(121, 21);
@@ -258,6 +275,7 @@
             // 
             // cb_esta_usua
             // 
+            this.cb_esta_usua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_esta_usua.FormattingEnabled = true;
             this.cb_esta_usua.Location = new System.Drawing.Point(153, 390);
             this.cb_esta_usua.Name = "cb_esta_usua";
@@ -268,6 +286,7 @@
             // dp_fenaci
             // 
             this.dp_fenaci.Location = new System.Drawing.Point(138, 287);
+            this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
             this.dp_fenaci.Name = "dp_fenaci";
             this.dp_fenaci.Size = new System.Drawing.Size(214, 20);
             this.dp_fenaci.TabIndex = 2;
@@ -353,9 +372,9 @@
             // 
             // txt_contra
             // 
-            this.txt_contra.Location = new System.Drawing.Point(78, 72);
+            this.txt_contra.Location = new System.Drawing.Point(128, 72);
             this.txt_contra.Name = "txt_contra";
-            this.txt_contra.Size = new System.Drawing.Size(179, 20);
+            this.txt_contra.Size = new System.Drawing.Size(129, 20);
             this.txt_contra.TabIndex = 3;
             // 
             // txt_confi_contra
@@ -411,14 +430,56 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
-            // cb_tip_usu
+            // txt_cod_tipusua
             // 
-            this.cb_tip_usu.FormattingEnabled = true;
-            this.cb_tip_usu.Location = new System.Drawing.Point(153, 416);
-            this.cb_tip_usu.Name = "cb_tip_usu";
-            this.cb_tip_usu.Size = new System.Drawing.Size(121, 21);
-            this.cb_tip_usu.TabIndex = 1;
-            this.cb_tip_usu.SelectedIndexChanged += new System.EventHandler(this.cb_tip_usu_SelectedIndexChanged);
+            this.txt_cod_tipusua.Location = new System.Drawing.Point(101, 417);
+            this.txt_cod_tipusua.Name = "txt_cod_tipusua";
+            this.txt_cod_tipusua.Size = new System.Drawing.Size(46, 20);
+            this.txt_cod_tipusua.TabIndex = 6;
+            // 
+            // txt_cod_estausua
+            // 
+            this.txt_cod_estausua.Location = new System.Drawing.Point(101, 391);
+            this.txt_cod_estausua.Name = "txt_cod_estausua";
+            this.txt_cod_estausua.Size = new System.Drawing.Size(46, 20);
+            this.txt_cod_estausua.TabIndex = 6;
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.Location = new System.Drawing.Point(571, 379);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(119, 33);
+            this.btn_salir.TabIndex = 5;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            // 
+            // btn_limpiar
+            // 
+            this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(119, 33);
+            this.btn_limpiar.TabIndex = 5;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Location = new System.Drawing.Point(571, 260);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(119, 33);
+            this.btn_modificar.TabIndex = 5;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(571, 198);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(119, 33);
+            this.btn_guardar.TabIndex = 5;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // groupBox2
             // 
@@ -435,63 +496,73 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuario de Sesion";
             // 
-            // btn_guardar
+            // cb_tip_usu
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(571, 198);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(119, 33);
-            this.btn_guardar.TabIndex = 5;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            this.cb_tip_usu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tip_usu.FormattingEnabled = true;
+            this.cb_tip_usu.Location = new System.Drawing.Point(153, 416);
+            this.cb_tip_usu.Name = "cb_tip_usu";
+            this.cb_tip_usu.Size = new System.Drawing.Size(121, 21);
+            this.cb_tip_usu.TabIndex = 1;
+            this.cb_tip_usu.SelectedIndexChanged += new System.EventHandler(this.cb_tip_usu_SelectedIndexChanged);
             // 
-            // btn_modificar
+            // groupBox3
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(571, 260);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(119, 33);
-            this.btn_modificar.TabIndex = 5;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.rbt_dni);
+            this.groupBox3.Controls.Add(this.rbt_nom_apepatymat);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.dgv_usuarios);
+            this.groupBox3.Location = new System.Drawing.Point(730, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(478, 460);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Busqueda por";
             // 
-            // btn_limpiar
+            // rbt_dni
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(119, 33);
-            this.btn_limpiar.TabIndex = 5;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = true;
+            this.rbt_dni.AutoSize = true;
+            this.rbt_dni.Location = new System.Drawing.Point(97, 21);
+            this.rbt_dni.Name = "rbt_dni";
+            this.rbt_dni.Size = new System.Drawing.Size(41, 17);
+            this.rbt_dni.TabIndex = 10;
+            this.rbt_dni.TabStop = true;
+            this.rbt_dni.Text = "Dni";
+            this.rbt_dni.UseVisualStyleBackColor = true;
             // 
-            // btn_salir
+            // rbt_nom_apepatymat
             // 
-            this.btn_salir.Location = new System.Drawing.Point(571, 379);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(119, 33);
-            this.btn_salir.TabIndex = 5;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
+            this.rbt_nom_apepatymat.AutoSize = true;
+            this.rbt_nom_apepatymat.Location = new System.Drawing.Point(295, 21);
+            this.rbt_nom_apepatymat.Name = "rbt_nom_apepatymat";
+            this.rbt_nom_apepatymat.Size = new System.Drawing.Size(115, 17);
+            this.rbt_nom_apepatymat.TabIndex = 11;
+            this.rbt_nom_apepatymat.TabStop = true;
+            this.rbt_nom_apepatymat.Text = "Nombre y Apellidos";
+            this.rbt_nom_apepatymat.UseVisualStyleBackColor = true;
             // 
-            // txt_cod_estausua
+            // textBox1
             // 
-            this.txt_cod_estausua.Location = new System.Drawing.Point(101, 391);
-            this.txt_cod_estausua.Name = "txt_cod_estausua";
-            this.txt_cod_estausua.Size = new System.Drawing.Size(46, 20);
-            this.txt_cod_estausua.TabIndex = 6;
+            this.textBox1.Location = new System.Drawing.Point(6, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(466, 20);
+            this.textBox1.TabIndex = 9;
             // 
-            // txt_cod_tipusua
+            // dgv_usuarios
             // 
-            this.txt_cod_tipusua.Location = new System.Drawing.Point(101, 417);
-            this.txt_cod_tipusua.Name = "txt_cod_tipusua";
-            this.txt_cod_tipusua.Size = new System.Drawing.Size(46, 20);
-            this.txt_cod_tipusua.TabIndex = 6;
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuarios.Location = new System.Drawing.Point(6, 72);
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.Size = new System.Drawing.Size(466, 367);
+            this.dgv_usuarios.TabIndex = 8;
             // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(738, 484);
+            this.ClientSize = new System.Drawing.Size(1220, 484);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_registrar_usuario";
@@ -502,6 +573,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,5 +626,10 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cb_tip_usu;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbt_dni;
+        private System.Windows.Forms.RadioButton rbt_nom_apepatymat;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgv_usuarios;
     }
 }
