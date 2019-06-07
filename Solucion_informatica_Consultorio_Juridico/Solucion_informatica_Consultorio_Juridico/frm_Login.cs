@@ -86,5 +86,10 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_registrar_usuario fr = new frm_registrar_usuario();
             fr.ShowDialog();
         }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     } }
 

@@ -16,5 +16,22 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             InitializeComponent();
         }
+
+        private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_registrar_usuario u = new frm_registrar_usuario();
+            u.ShowDialog();
+        }
+
+        private void abogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_registrar_abogado ab = new frm_registrar_abogado();
+            ab.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

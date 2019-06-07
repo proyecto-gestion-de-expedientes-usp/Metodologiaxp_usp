@@ -192,6 +192,7 @@
             this.Name = "frm_Login";
             this.Opacity = 0.85D;
             this.Text = "Iniciar Sesión";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
