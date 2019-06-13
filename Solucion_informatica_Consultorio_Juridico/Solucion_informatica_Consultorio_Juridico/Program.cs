@@ -16,7 +16,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_registrar_abogado());
+            Application.Run(new frm_Anexos());
         }
     }
 }

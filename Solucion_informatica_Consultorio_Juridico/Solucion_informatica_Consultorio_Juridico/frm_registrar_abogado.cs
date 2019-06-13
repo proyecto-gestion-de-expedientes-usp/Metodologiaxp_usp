@@ -60,6 +60,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             catch (Exception ex)
             {
+                
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -79,6 +80,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@ab_apellidopat", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@ab_apellidomat", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@ab_dni", SqlDbType.Char, 8);
+
+
 
 
                 cmd.Parameters["@ab_id"].Value = txt_idAbogado.Text;

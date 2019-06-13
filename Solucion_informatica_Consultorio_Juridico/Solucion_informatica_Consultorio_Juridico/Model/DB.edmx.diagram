@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="de6ebb13b2a64356a7db321fab4ee16c" Name="Diagram1">
+        <EntityTypeShape EntityType="consultoriojurModel.Abogado" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Anexos" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Demandado" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Demandante" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Documento" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Estado_Abogado" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Estado_Usu" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Expediente" Width="1.5" PointX="9.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Historial_Juzgado" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Logueo" Width="1.5" PointX="9.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Movimiento_Expediente" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Persona" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Tip_documento" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Tipo_Abogado" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Tipo_Usuario" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.Usuario" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V__lsttipousuarioxtipous" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstabogxestabog" Width="1.5" PointX="11.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstanexmovexp" Width="1.5" PointX="11.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstanxnombre" Width="1.5" PointX="11.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstDemtexPers" Width="1.5" PointX="11.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstDemxPers" Width="1.5" PointX="13.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstdemxreg" Width="1.5" PointX="13.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstdocxexp" Width="1.5" PointX="13.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstDocxnom" Width="1.5" PointX="7.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstDocxnomreal" Width="1.5" PointX="13.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstestabg" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstestusuxcond" Width="1.5" PointX="9.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstexpxhistjuzg" Width="1.5" PointX="11.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstExpxmateria" Width="1.5" PointX="13.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstexpxmovexp" Width="1.5" PointX="15.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstExpxnumero" Width="1.5" PointX="15.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstHistdeJuzgxdescr" Width="1.5" PointX="15.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstHistdeJuzgxFechRec" Width="1.5" PointX="15.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstHistdeJuzgxFechSol" Width="1.5" PointX="15.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstjuzgxexp" Width="1.5" PointX="17.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstmovexpxexp" Width="1.5" PointX="17.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstpersonaxciudad" Width="1.5" PointX="7.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstpersonaxdepartamento" Width="1.5" PointX="17.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstpersonaxprovincia" Width="1.5" PointX="17.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstperxtipdoc" Width="1.5" PointX="13.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipabxabo" Width="1.5" PointX="17.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipAbxdef_inc" Width="1.5" PointX="9.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipAbxestado" Width="1.5" PointX="19.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipdemxreg" Width="1.5" PointX="19.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipdocxnom" Width="1.5" PointX="19.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipousuarioxdescripcion" Width="1.5" PointX="19.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lsttipuxusu" Width="1.5" PointX="19.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstuserxmovexp" Width="1.5" PointX="15.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstusuarioxciudad" Width="1.5" PointX="19.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstusuarioxdepartamento" Width="1.5" PointX="17.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstusuarioxprovincia" Width="1.5" PointX="19.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxapellidospat" Width="1.5" PointX="21.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxdni" Width="1.5" PointX="21.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxestado" Width="1.5" PointX="21.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxfechaing" Width="1.5" PointX="7.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxnombres" Width="1.5" PointX="21.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriojurModel.V_lstxprogreso" Width="1.5" PointX="9.75" PointY="23.5" IsExpanded="true" />
+        <AssociationConnector Association="consultoriojurModel.FK_Abogado_Estado_Abogado" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Abogado_Tipo_Abogado" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Abogado" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Abogado1" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Anexos" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Demandado_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Demandado" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Demandante_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Demandante" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Expediente_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Usuario_Estado_Usu" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Expediente_Historial_Juzgado" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Expediente_Movimiento_Expediente" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Movimiento_Expediente_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Persona_Tip_documento" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriojurModel.FK_Usuario_Tipo_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
