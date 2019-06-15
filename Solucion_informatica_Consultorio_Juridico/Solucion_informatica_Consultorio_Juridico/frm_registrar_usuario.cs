@@ -31,6 +31,8 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_usuario_Load(object sender, EventArgs e)
         {
+              
+
             gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
 
             mostrartipousuario();
