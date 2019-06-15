@@ -19,16 +19,17 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (this.comboBox1.Text == "Seleccionar")
-            {
-                MessageBox.Show("Seleccione Tipo de Usuario", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             Clases.Acceso ace = new Clases.Acceso();
 
             ace.Usuario = txtusu.Text;
             ace.Clave = txtpas.Text;
             ace.Tipo = comboBox1.Text;
+            if (this.comboBox1.Text == "Seleccionar")
+            {
+                MessageBox.Show("Seleccione Tipo de Usuario", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
 
 
 
@@ -65,6 +66,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 }
                 if (comboBox1.Text == "Admin")
                 {
+                    
                     frm_Menu_Admin ma = new frm_Menu_Admin();
                     ma.Show();
                     this.Hide();

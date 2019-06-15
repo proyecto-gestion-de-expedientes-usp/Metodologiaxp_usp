@@ -13,6 +13,8 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_registrar_abogado : Form
     {
+
+        SqlConnection cnn = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
         public frm_registrar_abogado()
         {
             InitializeComponent();
@@ -20,7 +22,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_abogado_Load(object sender, EventArgs e)
         {
-
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+            txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -55,6 +60,11 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cnn.Close();
+
+                SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
+                DataTable sqlex = new DataTable();
+                sda.Fill(sqlex);
+                txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
             }
 
 
@@ -75,7 +85,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ab_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
-                cmd.Parameters.Add("@ab_estado", SqlDbType.Int);
+                cmd.Parameters.Add("@id_estabo", SqlDbType.Int);
                 cmd.Parameters.Add("@ab_nombres", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@ab_apellidopat", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@ab_apellidomat", SqlDbType.VarChar, 30);
@@ -86,7 +96,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                 cmd.Parameters["@ab_id"].Value = txt_idAbogado.Text;
                 cmd.Parameters["@tipb_id"].Value = txt_idtipabogado.Text;
-                cmd.Parameters["@ab_estado"].Value = TXT_IDESTADO.Text;
+                cmd.Parameters["@id_estabo"].Value = TXT_IDESTADO.Text;
                 cmd.Parameters["@ab_nombres"].Value = txt_nomb.Text;
                 cmd.Parameters["@ab_apellidopat"].Value = txt_apepat.Text;
                 cmd.Parameters["@ab_apellidomat"].Value = txt_apemat.Text;

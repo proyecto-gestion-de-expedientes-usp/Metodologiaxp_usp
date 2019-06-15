@@ -11,13 +11,14 @@ using System.Data.SqlClient;
 
 namespace Solucion_informatica_Consultorio_Juridico
 {
-    
+
     public partial class frm_registrar_usuario : Form
     {
         SqlConnection gh;
         string campo;
         DataTable dts = new DataTable();
         DataTable ds = new DataTable();
+
         public frm_registrar_usuario()
         {
             InitializeComponent();
@@ -31,11 +32,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_registrar_usuario_Load(object sender, EventArgs e)
         {
             gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
-            
+
             mostrartipousuario();
 
             mostrarestadousuario();
-            btn_modificar.Enabled = false;
+            //btn_modificar.Enabled = false;
         }
         public void mostrarestadousuario()
         {
@@ -88,7 +89,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@usu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
-                cmd.Parameters.Add("@usu_dni", SqlDbType.Char,8);
+                cmd.Parameters.Add("@usu_dni", SqlDbType.Char, 8);
                 cmd.Parameters.Add("@usu_nombres", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_apellidopat", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_apellidomat", SqlDbType.VarChar, 20);
@@ -101,8 +102,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@usu_ciudad", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_provincia", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@id_estusu", SqlDbType.Int);
-                cmd.Parameters.Add("@usu_departamento", SqlDbType.VarChar,20);
-                cmd.Parameters.Add("@usu_contraseña", SqlDbType.VarChar,30);
+                cmd.Parameters.Add("@usu_departamento", SqlDbType.VarChar, 20);
+                cmd.Parameters.Add("@usu_contraseña", SqlDbType.VarChar, 30);
 
                 cmd.Parameters["@usu_id"].Value = txt_id_usu.Text;
                 cmd.Parameters["@tipusu_id"].Value = txt_cod_tipusua.Text;
@@ -122,7 +123,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@usu_departamento"].Value = txt_dpto.Text;
                 cmd.Parameters["@usu_contraseña"].Value = txt_contra.Text;
 
-                
+
                 cnn.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
@@ -164,7 +165,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@usu_direccion", SqlDbType.VarChar, 40);
                 cmd.Parameters.Add("@usu_sexo", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_correo", SqlDbType.VarChar, 60);
-                cmd.Parameters.Add("@usu_estadocivil", SqlDbType.VarChar, 15);
+                cmd.Parameters.Add("@usu_estadocivil", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_fechanac", SqlDbType.Date);
                 cmd.Parameters.Add("@usu_ciudad", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_provincia", SqlDbType.VarChar, 20);
@@ -201,6 +202,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 MessageBox.Show(ex.ToString());
             }
         }
-        }
+
+    }
     }
 

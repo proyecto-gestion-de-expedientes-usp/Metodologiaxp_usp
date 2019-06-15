@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Acceso.cs" />
+    <Compile Include="Clases\Datos.cs" />
     <Compile Include="frm_Anexos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="frm_Menu_Admin.Designer.cs">
       <DependentUpon>frm_Menu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registrar_persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registrar_persona.Designer.cs">
+      <DependentUpon>frm_registrar_persona.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_recuperar_contra_por_email.cs">
       <SubType>Form</SubType>
@@ -306,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu_Admin.resx">
       <DependentUpon>frm_Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registrar_persona.resx">
+      <DependentUpon>frm_registrar_persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_recuperar_contra_por_email.resx">
       <DependentUpon>frm_recuperar_contra_por_email.cs</DependentUpon>
