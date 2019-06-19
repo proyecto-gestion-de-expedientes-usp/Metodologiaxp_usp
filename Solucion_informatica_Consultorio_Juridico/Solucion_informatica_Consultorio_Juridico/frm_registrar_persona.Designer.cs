@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dp_fenaci = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_buscar_doc = new System.Windows.Forms.TextBox();
+            this.dgv_pers = new System.Windows.Forms.DataGridView();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
@@ -59,12 +65,6 @@
             this.txt_nomb = new System.Windows.Forms.TextBox();
             this.txt_id_tip_doc = new System.Windows.Forms.TextBox();
             this.txt_idper = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgv_pers = new System.Windows.Forms.DataGridView();
-            this.txt_buscar_doc = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dp_fenaci = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pers)).BeginInit();
@@ -113,6 +113,64 @@
             this.groupBox1.Text = "Datos de la Persona";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // dp_fenaci
+            // 
+            this.dp_fenaci.CustomFormat = "yyyy-MM-dd";
+            this.dp_fenaci.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dp_fenaci.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dp_fenaci.Location = new System.Drawing.Point(690, 45);
+            this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
+            this.dp_fenaci.Name = "dp_fenaci";
+            this.dp_fenaci.Size = new System.Drawing.Size(74, 20);
+            this.dp_fenaci.TabIndex = 40;
+            this.dp_fenaci.ValueChanged += new System.EventHandler(this.dp_fenaci_ValueChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(576, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(108, 13);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Fecha de Nacimiento";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.txt_buscar_doc);
+            this.groupBox2.Controls.Add(this.dgv_pers);
+            this.groupBox2.Location = new System.Drawing.Point(323, 97);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(447, 323);
+            this.groupBox2.TabIndex = 38;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscar Persona";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 29);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(213, 13);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "Busqueda por Nro Documento de Identidad";
+            // 
+            // txt_buscar_doc
+            // 
+            this.txt_buscar_doc.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar_doc.Name = "txt_buscar_doc";
+            this.txt_buscar_doc.Size = new System.Drawing.Size(274, 20);
+            this.txt_buscar_doc.TabIndex = 40;
+            this.txt_buscar_doc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_doc_KeyPress);
+            // 
+            // dgv_pers
+            // 
+            this.dgv_pers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pers.Location = new System.Drawing.Point(6, 81);
+            this.dgv_pers.Name = "dgv_pers";
+            this.dgv_pers.Size = new System.Drawing.Size(435, 236);
+            this.dgv_pers.TabIndex = 39;
+            // 
             // btn_modificar
             // 
             this.btn_modificar.Location = new System.Drawing.Point(125, 380);
@@ -121,6 +179,7 @@
             this.btn_modificar.TabIndex = 37;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_guardar
             // 
@@ -356,63 +415,6 @@
             this.txt_idper.Name = "txt_idper";
             this.txt_idper.Size = new System.Drawing.Size(53, 20);
             this.txt_idper.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.txt_buscar_doc);
-            this.groupBox2.Controls.Add(this.dgv_pers);
-            this.groupBox2.Location = new System.Drawing.Point(323, 97);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(447, 323);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar Persona";
-            // 
-            // dgv_pers
-            // 
-            this.dgv_pers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_pers.Location = new System.Drawing.Point(6, 81);
-            this.dgv_pers.Name = "dgv_pers";
-            this.dgv_pers.Size = new System.Drawing.Size(435, 236);
-            this.dgv_pers.TabIndex = 39;
-            // 
-            // txt_buscar_doc
-            // 
-            this.txt_buscar_doc.Location = new System.Drawing.Point(6, 52);
-            this.txt_buscar_doc.Name = "txt_buscar_doc";
-            this.txt_buscar_doc.Size = new System.Drawing.Size(274, 20);
-            this.txt_buscar_doc.TabIndex = 40;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 29);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(213, 13);
-            this.label14.TabIndex = 41;
-            this.label14.Text = "Busqueda por Nro Documento de Identidad";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(576, 48);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 13);
-            this.label15.TabIndex = 39;
-            this.label15.Text = "Fecha de Nacimiento";
-            // 
-            // dp_fenaci
-            // 
-            this.dp_fenaci.CustomFormat = "yyyy-MM-dd";
-            this.dp_fenaci.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dp_fenaci.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dp_fenaci.Location = new System.Drawing.Point(690, 45);
-            this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
-            this.dp_fenaci.Name = "dp_fenaci";
-            this.dp_fenaci.Size = new System.Drawing.Size(74, 20);
-            this.dp_fenaci.TabIndex = 40;
-            this.dp_fenaci.ValueChanged += new System.EventHandler(this.dp_fenaci_ValueChanged);
             // 
             // frm_registrar_persona
             // 

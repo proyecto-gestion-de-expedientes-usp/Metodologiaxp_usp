@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using System.Data;
 
 namespace Solucion_informatica_Consultorio_Juridico.Clases
 {
@@ -15,7 +15,7 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
         private string usuario;
         private string clave;
         private string tipo;
-
+        Conexion con = new Conexion();
 
         public string Mensaje
         {
@@ -91,7 +91,21 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
 
            
         }
+
+
+        public DataTable buscarpersona(string valor)
+        {
+
+            con.AbrirConexion();
+            string sql = "SELECT        dbo.Persona.*, dbo.Tip_documento.tipdoc_nom FROM dbo.Persona INNER JOIN dbo.Tip_documento ON dbo.Persona.id_tipdoc = dbo.Tip_documento.id_tipdoc where pers_numdoc like'" + valor + "%'";
+
+            SqlDataAdapter da = new SqlDataAdapter(sql, con.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.CerrarConexion();
+            return dt;
         }
+    }
     
 }
 

@@ -33,5 +33,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void personaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_registrar_persona sqlex = new frm_registrar_persona();
+            sqlex.ShowDialog();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.maestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // 
             this.maestroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarUsuarioToolStripMenuItem,
-            this.abogadoToolStripMenuItem});
+            this.abogadoToolStripMenuItem,
+            this.personaToolStripMenuItem});
             this.maestroToolStripMenuItem.Name = "maestroToolStripMenuItem";
             this.maestroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.maestroToolStripMenuItem.Text = "Maestro";
@@ -68,6 +70,13 @@
             this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.abogadoToolStripMenuItem.Text = "Abogado";
             this.abogadoToolStripMenuItem.Click += new System.EventHandler(this.abogadoToolStripMenuItem_Click);
+            // 
+            // personaToolStripMenuItem
+            // 
+            this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personaToolStripMenuItem.Text = "Persona";
+            this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
             // 
             // frm_Menu_Admin
             // 
@@ -91,5 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem maestroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abogadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
     }
 }

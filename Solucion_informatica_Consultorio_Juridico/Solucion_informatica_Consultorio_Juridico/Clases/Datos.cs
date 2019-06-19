@@ -11,17 +11,17 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
    
     class Datos
     {
-        public SqlConnection con = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
+        Clases.Conexion con = new Clases.Conexion();
 
         public DataTable mostrar()
         {
 
-            con.Open();
+            con.AbrirConexion();
             string sql = "select * from Persona";
-            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter(sql, con.AbrirConexion());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            con.Close();
+            con.CerrarConexion();
             return dt;
         }
     }
