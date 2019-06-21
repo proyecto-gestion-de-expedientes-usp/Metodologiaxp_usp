@@ -370,6 +370,7 @@
             this.btn_modificar.TabIndex = 8;
             this.btn_modificar.Text = "Modifcar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // button3
             // 
@@ -468,7 +469,7 @@
             this.Controls.Add(this.txt_nom_demandd);
             this.Controls.Add(this.txt_id_usu);
             this.Name = "frm_Registrar_MovimientoExp";
-            this.Text = "Registrar Demandante";
+            this.Text = "Registrar Movimiento de Expediente";
             this.Load += new System.EventHandler(this.frm_Registrar_MovimientoExp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).EndInit();
             this.ResumeLayout(false);

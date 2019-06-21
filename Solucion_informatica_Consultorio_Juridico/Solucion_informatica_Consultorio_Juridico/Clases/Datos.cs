@@ -24,5 +24,18 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
             con.CerrarConexion();
             return dt;
         }
+
+
+        public DataTable mostrarmovexp()
+        {
+
+            con.AbrirConexion();
+            string sql = "select * from Movimiento_Expediente";
+            SqlDataAdapter da = new SqlDataAdapter(sql, con.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.CerrarConexion();
+            return dt;
+        }
     }
 }
