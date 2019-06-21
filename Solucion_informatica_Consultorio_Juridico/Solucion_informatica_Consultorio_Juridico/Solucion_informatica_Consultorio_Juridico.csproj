@@ -333,6 +333,15 @@
     <EmbeddedResource Include="frm_Anexos.resx">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_demandado.resx">
+      <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_demandante.resx">
+      <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_Usuario.resx">
+      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
