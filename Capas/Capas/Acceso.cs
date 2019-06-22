@@ -14,6 +14,11 @@ namespace Capas
             SqlConnection conectar = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
             conectar.Open();
             return conectar;
+
+
         }
+
+        public SqlConnection con = new SqlConnection("database=alquiler;data source=.;integrated security=true");
+
     }
 }

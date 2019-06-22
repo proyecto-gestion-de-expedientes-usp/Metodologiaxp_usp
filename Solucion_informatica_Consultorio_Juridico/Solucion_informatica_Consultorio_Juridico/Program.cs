@@ -8,6 +8,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     static class Program
     {
+
+
+
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -16,7 +20,8 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Registrar_MovimientoExp());
+            //Application.Run(new frm_demandado());
+            Application.Run(new frm_demandante());
         }
     }
 }
