@@ -44,6 +44,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             frm_demandado u = new frm_demandado();
             u.ShowDialog();
+
         }
 
         private void registrarDemandanteToolStripMenuItem_Click(object sender, EventArgs e)
