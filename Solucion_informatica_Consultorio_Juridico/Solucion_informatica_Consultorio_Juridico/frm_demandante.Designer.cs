@@ -167,6 +167,7 @@
             this.label4.Size = new System.Drawing.Size(416, 37);
             this.label4.TabIndex = 22;
             this.label4.Text = "REGISTRO DEMANDANTE";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 

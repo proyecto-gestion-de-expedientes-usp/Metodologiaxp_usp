@@ -11,5 +11,7 @@ namespace Capas
     {
         public SqlConnection con = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
 
+
+
     }
 }

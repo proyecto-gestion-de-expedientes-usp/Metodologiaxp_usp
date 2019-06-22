@@ -33,13 +33,17 @@
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.maestroToolStripMenuItem});
+            this.maestroToolStripMenuItem,
+            this.accionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(682, 24);
@@ -60,23 +64,46 @@
             // registrarUsuarioToolStripMenuItem
             // 
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
             // abogadoToolStripMenuItem
             // 
             this.abogadoToolStripMenuItem.Name = "abogadoToolStripMenuItem";
-            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abogadoToolStripMenuItem.Text = "Abogado";
             this.abogadoToolStripMenuItem.Click += new System.EventHandler(this.abogadoToolStripMenuItem_Click);
             // 
             // personaToolStripMenuItem
             // 
             this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
-            this.personaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.personaToolStripMenuItem.Text = "Persona";
             this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
+            // 
+            // accionesToolStripMenuItem
+            // 
+            this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarDemandadoToolStripMenuItem,
+            this.registrarDemandanteToolStripMenuItem});
+            this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
+            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.accionesToolStripMenuItem.Text = "Acciones";
+            // 
+            // registrarDemandadoToolStripMenuItem
+            // 
+            this.registrarDemandadoToolStripMenuItem.Name = "registrarDemandadoToolStripMenuItem";
+            this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarDemandadoToolStripMenuItem.Text = "Registrar Demandado";
+            this.registrarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandadoToolStripMenuItem_Click);
+            // 
+            // registrarDemandanteToolStripMenuItem
+            // 
+            this.registrarDemandanteToolStripMenuItem.Name = "registrarDemandanteToolStripMenuItem";
+            this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarDemandanteToolStripMenuItem.Text = "Registrar Demandante";
+            this.registrarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandanteToolStripMenuItem_Click);
             // 
             // frm_Menu_Admin
             // 
@@ -101,5 +128,8 @@
         private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abogadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarDemandadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarDemandanteToolStripMenuItem;
     }
 }

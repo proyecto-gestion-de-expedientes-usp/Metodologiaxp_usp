@@ -199,5 +199,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             // frm.Show();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,8 @@ namespace Capas
 
         }
 
+
+
         public SqlConnection con = new SqlConnection("database=alquiler;data source=.;integrated security=true");
 
     }
