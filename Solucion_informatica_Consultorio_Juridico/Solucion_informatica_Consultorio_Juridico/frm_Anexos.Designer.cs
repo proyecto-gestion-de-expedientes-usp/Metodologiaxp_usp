@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dp_fecha = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_abrir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dp_fecha = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,6 +73,23 @@
             this.splitContainer1.Size = new System.Drawing.Size(711, 392);
             this.splitContainer1.SplitterDistance = 170;
             this.splitContainer1.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(130, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Fecha";
+            // 
+            // dp_fecha
+            // 
+            this.dp_fecha.Enabled = false;
+            this.dp_fecha.Location = new System.Drawing.Point(179, 109);
+            this.dp_fecha.Name = "dp_fecha";
+            this.dp_fecha.Size = new System.Drawing.Size(200, 20);
+            this.dp_fecha.TabIndex = 29;
             // 
             // button3
             // 
@@ -160,28 +177,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // dp_fecha
-            // 
-            this.dp_fecha.Enabled = false;
-            this.dp_fecha.Location = new System.Drawing.Point(179, 109);
-            this.dp_fecha.Name = "dp_fecha";
-            this.dp_fecha.Size = new System.Drawing.Size(200, 20);
-            this.dp_fecha.TabIndex = 29;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(130, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Fecha";
-            // 
             // frm_Anexos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 419);
+            this.ClientSize = new System.Drawing.Size(731, 419);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_Anexos";
             this.Text = "frm_Anexos";
