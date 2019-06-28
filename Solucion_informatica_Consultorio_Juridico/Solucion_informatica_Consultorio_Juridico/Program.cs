@@ -20,11 +20,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frm_demandado());
-
-            //Application.Run(new frm_demandante());
             Application.Run(new frm_Menu_Admin());
 
+            //Application.Run(new frm_Anexos());
         }
     }
 }
