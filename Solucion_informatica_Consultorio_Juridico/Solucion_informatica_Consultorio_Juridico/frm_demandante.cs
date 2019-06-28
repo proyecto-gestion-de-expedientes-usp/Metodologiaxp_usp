@@ -185,9 +185,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_buscar.Text = "";
 
             txt_idper.Focus();
-
-
-
+            
         }
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)

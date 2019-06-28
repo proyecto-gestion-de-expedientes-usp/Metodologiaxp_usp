@@ -175,6 +175,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_nomper.Text = "";
             txt_reg.Text= "";
             txt_buscar.Text = "";
+
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)

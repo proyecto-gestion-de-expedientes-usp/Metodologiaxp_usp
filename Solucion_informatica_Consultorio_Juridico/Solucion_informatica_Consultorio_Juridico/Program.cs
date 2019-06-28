@@ -24,6 +24,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             //Application.Run(new frm_demandante());
             Application.Run(new frm_Menu_Admin());
+
         }
     }
 }
