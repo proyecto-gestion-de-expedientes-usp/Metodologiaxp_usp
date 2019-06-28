@@ -60,9 +60,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Buscar por ---:";
+            this.label1.Text = "Buscar por --:";
             // 
             // dataGridView1
             // 
