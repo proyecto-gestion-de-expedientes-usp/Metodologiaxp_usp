@@ -74,7 +74,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.Columns[0].HeaderText = "ID";
             dgdatos.Columns[1].HeaderText = "ID_PERSONA";
-            dgdatos.Columns[2].HeaderText = "REGISTRO";
+            dgdatos.Columns[2].HeaderText = "PERSONA";
+            dgdatos.Columns[3].HeaderText = "NUM_DOC";
+            dgdatos.Columns[4].HeaderText = "REGISTRO";
    
 
         }
@@ -82,7 +84,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
             cone.con.Open();
-            string sql = "select * from Demandado";
+            string sql = "select * from View_Demandado";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -104,7 +106,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_iddo.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
            txt_idper.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
-            txt_reg.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
+            txt_nomper.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
+            txt_reg.Text = dgdatos.CurrentRow.Cells[4].Value.ToString();
+
 
         }
 
@@ -168,7 +172,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             txt_idper.Text = "";
             txt_iddo.Text = "";
+            txt_nomper.Text = "";
             txt_reg.Text= "";
+            txt_buscar.Text = "";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -188,7 +194,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
             cone.con.Open();
-            string sql = "select * from Demandado where " + campo + " like '" + valor + "%'";
+            string sql = "select * from View_Demandado where " + campo + " like '" + valor + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -205,6 +211,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             campo = "demdo_registro";
+            txt_buscar.Focus();
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "pers_numdoc";
             txt_buscar.Focus();
         }
     }

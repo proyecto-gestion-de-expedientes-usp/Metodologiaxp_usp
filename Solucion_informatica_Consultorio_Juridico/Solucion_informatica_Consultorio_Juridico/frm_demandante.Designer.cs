@@ -82,10 +82,10 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(130, 17);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(81, 17);
+            this.radioButton3.Size = new System.Drawing.Size(88, 17);
             this.radioButton3.TabIndex = 30;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "ID_Persona";
+            this.radioButton3.Text = "Numero_Doc";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -151,9 +151,9 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(372, 148);
+            this.dgdatos.Location = new System.Drawing.Point(346, 135);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(339, 172);
+            this.dgdatos.Size = new System.Drawing.Size(380, 197);
             this.dgdatos.TabIndex = 23;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             this.dgdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellContentClick);

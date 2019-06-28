@@ -71,7 +71,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
             cone.con.Open();
-            string sql = "select * from Demandante";
+            string sql = "select * from View_Demandante";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -84,11 +84,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.Columns[0].HeaderText = "ID";
             dgdatos.Columns[1].HeaderText = "ID_PERSONA";
-            dgdatos.Columns[2].HeaderText = "REGISTRO";
-
-
+            dgdatos.Columns[2].HeaderText = "PERSONA";
+            dgdatos.Columns[3].HeaderText = "NUM_DOC";
+            dgdatos.Columns[4].HeaderText = "REGISTRO";
         }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             campo = "demte_id";
@@ -114,7 +113,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
             cone.con.Open();
-            string sql = "select * from Demandante where " + campo + " like '" + valor + "%'";
+            string sql = "select * from View_Demandante where " + campo + " like '" + valor + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -124,7 +123,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "pers_id";
+            campo = "pers_numdoc";
             txt_buscar.Focus();
         }
 
@@ -181,7 +180,14 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             txt_idper.Text = "";
             txt_iddo.Text = "";
+            txt_nomper.Text = "";
             txt_reg.Text = "";
+            txt_buscar.Text = "";
+
+            txt_idper.Focus();
+
+
+
         }
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,7 +196,8 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_iddo.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
             txt_idper.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
-            txt_reg.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
+            txt_nomper.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
+            txt_reg.Text = dgdatos.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
