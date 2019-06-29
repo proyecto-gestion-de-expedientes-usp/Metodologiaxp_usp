@@ -52,5 +52,12 @@ namespace Solucion_informatica_Consultorio_Juridico
            frm_demandante u = new frm_demandante();
             u.ShowDialog();
         }
+
+        private void registrarExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Registrar_Expediente sqlex = new frm_Registrar_Expediente();
+            sqlex.ShowDialog();
+            
+        }
     }
 }

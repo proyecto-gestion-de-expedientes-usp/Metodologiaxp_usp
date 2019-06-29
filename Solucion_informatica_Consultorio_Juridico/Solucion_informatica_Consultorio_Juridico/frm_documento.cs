@@ -91,6 +91,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             sda.Fill(sqlex);
             txt_id.Text = sqlex.Rows[0][0].ToString();
 
+
         }
+        
     }
 }

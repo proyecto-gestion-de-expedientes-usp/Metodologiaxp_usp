@@ -22,7 +22,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_Registrar_MovimientoExp_Load(object sender, EventArgs e)
         {
-            //generarid();
+            generarid();
             mostrar();
 
         }
