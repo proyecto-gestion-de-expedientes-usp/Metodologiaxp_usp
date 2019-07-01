@@ -98,6 +98,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
+
             col();
         }
 
