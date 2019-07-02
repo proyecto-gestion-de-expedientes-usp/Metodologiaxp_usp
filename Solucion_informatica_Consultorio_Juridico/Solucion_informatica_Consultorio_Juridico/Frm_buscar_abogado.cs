@@ -55,8 +55,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_buscar_abogado_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
-
-            col();
+                        col();
         }
         public void col()
         {
