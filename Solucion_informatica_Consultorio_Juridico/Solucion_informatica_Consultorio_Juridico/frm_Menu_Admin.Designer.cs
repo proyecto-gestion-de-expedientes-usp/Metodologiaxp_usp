@@ -37,6 +37,15 @@
             this.registrarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bùsquedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarMovimientoExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarHistorialJuzgadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +53,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.maestroToolStripMenuItem,
-            this.accionesToolStripMenuItem});
+            this.accionesToolStripMenuItem,
+            this.bùsquedasToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(682, 24);
@@ -65,21 +76,21 @@
             // registrarUsuarioToolStripMenuItem
             // 
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
             // abogadoToolStripMenuItem
             // 
             this.abogadoToolStripMenuItem.Name = "abogadoToolStripMenuItem";
-            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abogadoToolStripMenuItem.Text = "Abogado";
             this.abogadoToolStripMenuItem.Click += new System.EventHandler(this.abogadoToolStripMenuItem_Click);
             // 
             // personaToolStripMenuItem
             // 
             this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
-            this.personaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.personaToolStripMenuItem.Text = "Persona";
             this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
             // 
@@ -88,7 +99,9 @@
             this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarDemandadoToolStripMenuItem,
             this.registrarDemandanteToolStripMenuItem,
-            this.registrarExpedienteToolStripMenuItem});
+            this.registrarExpedienteToolStripMenuItem,
+            this.registrarMovimientoExpedienteToolStripMenuItem,
+            this.registrarHistorialJuzgadoToolStripMenuItem});
             this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
             this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.accionesToolStripMenuItem.Text = "Acciones";
@@ -96,23 +109,90 @@
             // registrarDemandadoToolStripMenuItem
             // 
             this.registrarDemandadoToolStripMenuItem.Name = "registrarDemandadoToolStripMenuItem";
-            this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandadoToolStripMenuItem.Text = "Registrar Demandado";
             this.registrarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandadoToolStripMenuItem_Click);
             // 
             // registrarDemandanteToolStripMenuItem
             // 
             this.registrarDemandanteToolStripMenuItem.Name = "registrarDemandanteToolStripMenuItem";
-            this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandanteToolStripMenuItem.Text = "Registrar Demandante";
             this.registrarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandanteToolStripMenuItem_Click);
             // 
             // registrarExpedienteToolStripMenuItem
             // 
             this.registrarExpedienteToolStripMenuItem.Name = "registrarExpedienteToolStripMenuItem";
-            this.registrarExpedienteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarExpedienteToolStripMenuItem.Text = "Registrar Expediente";
             this.registrarExpedienteToolStripMenuItem.Click += new System.EventHandler(this.registrarExpedienteToolStripMenuItem_Click);
+            // 
+            // bùsquedasToolStripMenuItem
+            // 
+            this.bùsquedasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarAbogadoToolStripMenuItem,
+            this.buscarDemandadoToolStripMenuItem,
+            this.buscarDemandanteToolStripMenuItem,
+            this.buscarPersonaToolStripMenuItem,
+            this.buscarUsuarioToolStripMenuItem});
+            this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
+            this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.bùsquedasToolStripMenuItem.Text = "Bùsquedas";
+            // 
+            // registrarMovimientoExpedienteToolStripMenuItem
+            // 
+            this.registrarMovimientoExpedienteToolStripMenuItem.Name = "registrarMovimientoExpedienteToolStripMenuItem";
+            this.registrarMovimientoExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.registrarMovimientoExpedienteToolStripMenuItem.Text = "Registrar Movimiento Expediente";
+            this.registrarMovimientoExpedienteToolStripMenuItem.Click += new System.EventHandler(this.registrarMovimientoExpedienteToolStripMenuItem_Click);
+            // 
+            // registrarHistorialJuzgadoToolStripMenuItem
+            // 
+            this.registrarHistorialJuzgadoToolStripMenuItem.Name = "registrarHistorialJuzgadoToolStripMenuItem";
+            this.registrarHistorialJuzgadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.registrarHistorialJuzgadoToolStripMenuItem.Text = "Registrar Historial Juzgado";
+            this.registrarHistorialJuzgadoToolStripMenuItem.Click += new System.EventHandler(this.registrarHistorialJuzgadoToolStripMenuItem_Click);
+            // 
+            // buscarAbogadoToolStripMenuItem
+            // 
+            this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
+            this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
+            this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
+            // 
+            // buscarDemandadoToolStripMenuItem
+            // 
+            this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
+            this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
+            this.buscarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandadoToolStripMenuItem_Click);
+            // 
+            // buscarDemandanteToolStripMenuItem
+            // 
+            this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
+            this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
+            this.buscarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandanteToolStripMenuItem_Click);
+            // 
+            // buscarPersonaToolStripMenuItem
+            // 
+            this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
+            this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
+            this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
+            // 
+            // buscarUsuarioToolStripMenuItem
+            // 
+            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
+            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
+            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // frm_Menu_Admin
             // 
@@ -141,5 +221,14 @@
         private System.Windows.Forms.ToolStripMenuItem registrarDemandadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarDemandanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarMovimientoExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarHistorialJuzgadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bùsquedasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarAbogadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarDemandadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarDemandanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarPersonaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
     }
 }

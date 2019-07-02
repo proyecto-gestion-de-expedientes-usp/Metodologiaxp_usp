@@ -59,5 +59,47 @@ namespace Solucion_informatica_Consultorio_Juridico
             sqlex.ShowDialog();
             
         }
+
+        private void registrarMovimientoExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Registrar_MovimientoExp u = new frm_Registrar_MovimientoExp();
+            u.ShowDialog();
+        }
+
+        private void registrarHistorialJuzgadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_reg_historialjuzg u = new Frm_reg_historialjuzg();
+            u.ShowDialog();
+        }
+
+        private void buscarAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_abogado u = new Frm_buscar_abogado();
+            u.ShowDialog();
+        }
+
+        private void buscarDemandadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Frm_buscar_demandado u = new Frm_buscar_demandado();
+            u.ShowDialog();
+        }
+
+        private void buscarDemandanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Frm_buscar_demandante u = new Frm_buscar_demandante();
+            u.ShowDialog();
+        }
+
+        private void buscarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_persona u = new Frm_buscar_persona();
+            u.ShowDialog();
+        }
+
+        private void buscarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_Usuario u = new Frm_buscar_Usuario();
+            u.ShowDialog();
+        }
     }
 }
