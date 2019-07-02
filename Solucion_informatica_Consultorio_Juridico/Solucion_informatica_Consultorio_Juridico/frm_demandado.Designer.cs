@@ -121,7 +121,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(180, 9);
+            this.label4.Location = new System.Drawing.Point(140, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(399, 37);
             this.label4.TabIndex = 8;
@@ -175,10 +175,11 @@
             this.groupBox1.Controls.Add(this.btn_buscar1);
             this.groupBox1.Location = new System.Drawing.Point(317, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 69);
+            this.groupBox1.Size = new System.Drawing.Size(400, 69);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton4
             // 

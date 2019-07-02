@@ -75,29 +75,38 @@
     <Compile Include="frm_Anexos.Designer.cs">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_buscar_demandado.cs">
+    <Compile Include="frm_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_documento.Designer.cs">
+      <DependentUpon>frm_documento.cs</DependentUpon>
+    </Compile>
+	 <Compile Include="Frm_buscar_abogado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	  <Compile Include="Frm_buscar_demandado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_buscar_demandado.Designer.cs">
       <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_buscar_demandante.cs">
+	<Compile Include="Frm_buscar_demandante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_buscar_demandante.Designer.cs">
       <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_buscar_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_buscar_Usuario.Designer.cs">
-      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_demandado.cs">
+	 <Compile Include="frm_demandado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_demandado.Designer.cs">
       <DependentUpon>frm_demandado.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Frm_reg_historialjuzg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_reg_historialjuzg.Designer.cs">
+      <DependentUpon>Frm_reg_historialjuzg.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_demandante.cs">
       <SubType>Form</SubType>
@@ -105,11 +114,20 @@
     <Compile Include="frm_demandante.Designer.cs">
       <DependentUpon>frm_demandante.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_documento.cs">
+	<Compile Include="Frm_buscar_persona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_documento.Designer.cs">
-      <DependentUpon>frm_documento.cs</DependentUpon>
+    <Compile Include="Frm_buscar_persona.Designer.cs">
+      <DependentUpon>Frm_buscar_persona.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Frm_buscar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_Usuario.Designer.cs">
+      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_abogado.Designer.cs">
+      <DependentUpon>Frm_buscar_abogado.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
@@ -359,21 +377,6 @@
     <EmbeddedResource Include="frm_Anexos.resx">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_buscar_demandado.resx">
-      <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_buscar_demandante.resx">
-      <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_buscar_Usuario.resx">
-      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_demandado.resx">
-      <DependentUpon>frm_demandado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_demandante.resx">
-      <DependentUpon>frm_demandante.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_documento.resx">
       <DependentUpon>frm_documento.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +385,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu_Admin.resx">
       <DependentUpon>frm_Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Frm_buscar_abogado.resx">
+      <DependentUpon>Frm_buscar_abogado.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Frm_buscar_demandado.resx">
+      <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Frm_buscar_demandante.resx">
+      <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Frm_buscar_persona.resx">
+      <DependentUpon>Frm_buscar_persona.cs</DependentUpon>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="Frm_buscar_Usuario.resx">
+      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="frm_demandado.resx">
+      <DependentUpon>frm_demandado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_demandante.resx">
+      <DependentUpon>frm_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+	 <EmbeddedResource Include="Frm_reg_historialjuzg.resx">
+      <DependentUpon>Frm_reg_historialjuzg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Registrar_Expediente.resx">
       <DependentUpon>frm_Registrar_Expediente.cs</DependentUpon>

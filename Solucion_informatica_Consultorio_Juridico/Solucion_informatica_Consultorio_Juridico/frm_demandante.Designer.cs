@@ -256,6 +256,7 @@
             this.Controls.Add(this.txt_iddo);
             this.Name = "frm_demandante";
             this.Text = "frm_demandante";
+            this.Activated += new System.EventHandler(this.frm_demandante_Activated);
             this.Load += new System.EventHandler(this.frm_demandante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

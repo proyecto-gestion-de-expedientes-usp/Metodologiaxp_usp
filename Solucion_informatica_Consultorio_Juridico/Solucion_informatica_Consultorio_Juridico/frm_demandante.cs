@@ -98,7 +98,6 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
-
             col();
         }
 
@@ -186,7 +185,9 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_buscar.Text = "";
 
             txt_idper.Focus();
-            
+
+
+
         }
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -201,9 +202,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //frm_registrar_persona frm = new frm_registrar_persona();
+            Frm_buscar_persona frm = new Frm_buscar_persona();
 
-            // frm.Show();
+            frm.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -214,6 +215,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void dgdatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void frm_demandante_Activated(object sender, EventArgs e)
+        {
+            radioButton2.Checked = true;
         }
     }
 }

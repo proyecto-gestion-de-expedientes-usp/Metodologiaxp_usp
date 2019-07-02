@@ -9,21 +9,40 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Solucion_informatica_Consultorio_Juridico
 {
-    public partial class Frm_buscar_demandado : Form
+    public partial class Frm_buscar_persona : Form
     {
         string campo;
 
         Capas.conexion cone = new Capas.conexion();
-        public Frm_buscar_demandado()
+        public Frm_buscar_persona()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string valor = txt_buscar.Text;
+            dgdatos.DataSource = buscar(campo, valor);
+
+            txt_buscar.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgdatos.DataSource = mostrar();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "demdo_id";
+            campo = "pers_ubigeo";
             txt_buscar.Focus();
         }
 
@@ -35,62 +54,54 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "demdo_registro";
-            txt_buscar.Focus();
-        }
-
-        private void Frm_buscar_demandado_Load(object sender, EventArgs e)
-        {
-            dgdatos.DataSource = mostrar();
-
-            col();
-        }
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID";
-            dgdatos.Columns[1].HeaderText = "ID_PERSONA";
-            dgdatos.Columns[2].HeaderText = "PERSONA";
-            dgdatos.Columns[3].HeaderText = "NUM_DOC";
-            dgdatos.Columns[4].HeaderText = "REGISTRO";
-        }
-        public DataTable mostrar()
-        {
-            cone.con.Open();
-            string sql = "select * from View_Demandado";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            cone.con.Close();
-            return dt;
-        }
-
-        private void Frm_buscar_demandado_Activated(object sender, EventArgs e)
-        {
-            radioButton2.Checked = true;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string valor = txt_buscar.Text;
-            dgdatos.DataSource = buscar(campo, valor);
-
+            campo = "pers_email";
             txt_buscar.Focus();
         }
         public DataTable buscar(string campo, string valor)
         {
 
             cone.con.Open();
-            string sql = "select * from View_Demandado where " + campo + " like '" + valor + "%'";
+            string sql = "select * from View_Persona where " + campo + " like '" + valor + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cone.con.Close();
             return dt;
         }
+        public void col()
+        {
+            dgdatos.Columns[0].HeaderText = "ID";
+            dgdatos.Columns[1].HeaderText = "PERSONA";
+            dgdatos.Columns[2].HeaderText = "UBIGEO";
+            dgdatos.Columns[3].HeaderText = "TIPO_DOC";
+            dgdatos.Columns[4].HeaderText = "NUM_DOC";
+            dgdatos.Columns[5].HeaderText = "EMAIL";
 
-        private void button2_Click(object sender, EventArgs e)
+
+        }
+        public DataTable mostrar()
+        {
+
+            cone.con.Open();
+            string sql = "select * from View_View_Persona";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cone.con.Close();
+            return dt;
+
+        }
+
+        private void Frm_buscar_persona_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+
+            col();
+        }
+
+        private void Frm_buscar_persona_Activated(object sender, EventArgs e)
+        {
+            radioButton2.Checked = true;
         }
     }
 }
