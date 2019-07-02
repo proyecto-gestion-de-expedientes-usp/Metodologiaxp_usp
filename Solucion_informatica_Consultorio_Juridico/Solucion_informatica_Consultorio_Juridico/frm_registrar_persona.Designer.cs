@@ -231,6 +231,7 @@
             this.txt_telf.Name = "txt_telf";
             this.txt_telf.Size = new System.Drawing.Size(138, 20);
             this.txt_telf.TabIndex = 31;
+            this.txt_telf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telf_KeyPress);
             // 
             // label11
             // 
@@ -366,6 +367,7 @@
             this.txt_depart.Name = "txt_depart";
             this.txt_depart.Size = new System.Drawing.Size(138, 20);
             this.txt_depart.TabIndex = 14;
+            this.txt_depart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_depart_KeyPress);
             // 
             // txt_prov
             // 
@@ -373,6 +375,7 @@
             this.txt_prov.Name = "txt_prov";
             this.txt_prov.Size = new System.Drawing.Size(138, 20);
             this.txt_prov.TabIndex = 13;
+            this.txt_prov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_prov_KeyPress);
             // 
             // txt_ciud
             // 
@@ -380,6 +383,7 @@
             this.txt_ciud.Name = "txt_ciud";
             this.txt_ciud.Size = new System.Drawing.Size(138, 20);
             this.txt_ciud.TabIndex = 12;
+            this.txt_ciud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ciud_KeyPress);
             // 
             // txt_ape_mat
             // 
@@ -387,6 +391,7 @@
             this.txt_ape_mat.Name = "txt_ape_mat";
             this.txt_ape_mat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_mat.TabIndex = 11;
+            this.txt_ape_mat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ape_mat_KeyPress);
             // 
             // txt_ape_pat
             // 
@@ -394,6 +399,7 @@
             this.txt_ape_pat.Name = "txt_ape_pat";
             this.txt_ape_pat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_pat.TabIndex = 10;
+            this.txt_ape_pat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ape_pat_KeyPress);
             // 
             // txt_nomb
             // 
@@ -401,6 +407,7 @@
             this.txt_nomb.Name = "txt_nomb";
             this.txt_nomb.Size = new System.Drawing.Size(180, 20);
             this.txt_nomb.TabIndex = 9;
+            this.txt_nomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nomb_KeyPress);
             // 
             // txt_id_tip_doc
             // 

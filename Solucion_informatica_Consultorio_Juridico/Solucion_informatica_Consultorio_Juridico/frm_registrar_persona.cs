@@ -14,6 +14,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class frm_registrar_persona : Form
 
     {
+        Clases.Validacioes validadcion = new Clases.Validacioes();
 
         Clases.Acceso xd = new Clases.Acceso();
         string campo;
@@ -184,6 +185,41 @@ namespace Solucion_informatica_Consultorio_Juridico
             dgv_pers.DataSource = xd.buscarpersona(valor);
 
             txt_buscar_doc.Focus();
+        }
+
+        private void txt_nomb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_ape_pat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_ape_mat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_ciud_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_prov_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_depart_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_telf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloNumeros(e);
         }
     }
 }

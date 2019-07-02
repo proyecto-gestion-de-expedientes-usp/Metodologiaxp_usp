@@ -12,8 +12,11 @@ using System.Data.SqlClient;
 namespace Solucion_informatica_Consultorio_Juridico
 {
 
+    
+
     public partial class frm_registrar_usuario : Form
     {
+        Clases.Validacioes validadcion = new Clases.Validacioes();
         SqlConnection gh;
         string campo;
         DataTable dts = new DataTable();
@@ -205,6 +208,45 @@ namespace Solucion_informatica_Consultorio_Juridico
             }
         }
 
+        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloNumeros(e);
+        }
+
+        private void txt_cel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloNumeros(e);
+        }
+
+        private void txt_nombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_apepat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_apemat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_dpto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_provincia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
+
+        private void txt_distrito_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
     }
     }
 

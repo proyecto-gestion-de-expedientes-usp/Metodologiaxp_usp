@@ -302,9 +302,11 @@
             // txt_dni
             // 
             this.txt_dni.Location = new System.Drawing.Point(101, 39);
+            this.txt_dni.MaxLength = 8;
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(130, 20);
             this.txt_dni.TabIndex = 3;
+            this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
             // 
             // txt_nombres
             // 
@@ -312,6 +314,7 @@
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(204, 20);
             this.txt_nombres.TabIndex = 3;
+            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             // 
             // txt_apepat
             // 
@@ -319,6 +322,7 @@
             this.txt_apepat.Name = "txt_apepat";
             this.txt_apepat.Size = new System.Drawing.Size(179, 20);
             this.txt_apepat.TabIndex = 3;
+            this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
             // 
             // txt_apemat
             // 
@@ -326,13 +330,16 @@
             this.txt_apemat.Name = "txt_apemat";
             this.txt_apemat.Size = new System.Drawing.Size(179, 20);
             this.txt_apemat.TabIndex = 3;
+            this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
             // 
             // txt_cel
             // 
             this.txt_cel.Location = new System.Drawing.Point(101, 143);
+            this.txt_cel.MaxLength = 9;
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(121, 20);
             this.txt_cel.TabIndex = 3;
+            this.txt_cel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cel_KeyPress);
             // 
             // txt_domici
             // 
@@ -355,6 +362,7 @@
             this.txt_dpto.Name = "txt_dpto";
             this.txt_dpto.Size = new System.Drawing.Size(157, 20);
             this.txt_dpto.TabIndex = 3;
+            this.txt_dpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dpto_KeyPress);
             // 
             // txt_provincia
             // 
@@ -362,6 +370,7 @@
             this.txt_provincia.Name = "txt_provincia";
             this.txt_provincia.Size = new System.Drawing.Size(100, 20);
             this.txt_provincia.TabIndex = 3;
+            this.txt_provincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_provincia_KeyPress);
             // 
             // txt_distrito
             // 
@@ -369,6 +378,7 @@
             this.txt_distrito.Name = "txt_distrito";
             this.txt_distrito.Size = new System.Drawing.Size(100, 20);
             this.txt_distrito.TabIndex = 3;
+            this.txt_distrito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_distrito_KeyPress);
             // 
             // txt_contra
             // 

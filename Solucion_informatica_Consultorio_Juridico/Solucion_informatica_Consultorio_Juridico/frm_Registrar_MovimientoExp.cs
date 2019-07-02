@@ -13,6 +13,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_Registrar_MovimientoExp : Form
     {
+        Clases.Validacioes validadcion = new Clases.Validacioes();
         Clases.Conexion con = new Clases.Conexion();
         Clases.Datos sad = new Clases.Datos();
         public frm_Registrar_MovimientoExp()
@@ -142,6 +143,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             DataTable sqlex = new DataTable();
             sda.Fill(sqlex);
             txt_id_movexp.Text = sqlex.Rows[0][0].ToString();
+        }
+
+        private void txt_cantfol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloNumeros(e);
         }
     }
 }

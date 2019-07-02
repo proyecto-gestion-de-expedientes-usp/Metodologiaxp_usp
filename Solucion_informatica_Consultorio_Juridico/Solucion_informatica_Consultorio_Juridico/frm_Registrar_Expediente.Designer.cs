@@ -460,6 +460,7 @@
             this.txt_ciudad.Name = "txt_ciudad";
             this.txt_ciudad.Size = new System.Drawing.Size(100, 20);
             this.txt_ciudad.TabIndex = 30;
+            this.txt_ciudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ciudad_KeyPress);
             // 
             // txt_sentencia
             // 
@@ -467,6 +468,7 @@
             this.txt_sentencia.Name = "txt_sentencia";
             this.txt_sentencia.Size = new System.Drawing.Size(100, 20);
             this.txt_sentencia.TabIndex = 39;
+            this.txt_sentencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sentencia_KeyPress);
             // 
             // txt_id_exp
             // 

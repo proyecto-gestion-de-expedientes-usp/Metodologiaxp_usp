@@ -30,31 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registrar_abogado));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_idAbogado = new System.Windows.Forms.TextBox();
-            this.txt_idtipabogado = new System.Windows.Forms.TextBox();
-            this.txt_nomb = new System.Windows.Forms.TextBox();
-            this.txt_apepat = new System.Windows.Forms.TextBox();
-            this.txt_apemat = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cb_estado = new System.Windows.Forms.ComboBox();
+            this.cb_nombre = new System.Windows.Forms.ComboBox();
             this.txt_dni = new System.Windows.Forms.TextBox();
+            this.txt_apemat = new System.Windows.Forms.TextBox();
+            this.txt_apepat = new System.Windows.Forms.TextBox();
+            this.txt_nomb = new System.Windows.Forms.TextBox();
+            this.TXT_IDESTADO = new System.Windows.Forms.TextBox();
+            this.txt_idtipabogado = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_idAbogado = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.rbt_dni = new System.Windows.Forms.RadioButton();
             this.rbt_nombape = new System.Windows.Forms.RadioButton();
-            this.cb_nombre = new System.Windows.Forms.ComboBox();
-            this.cb_estado = new System.Windows.Forms.ComboBox();
-            this.TXT_IDESTADO = new System.Windows.Forms.TextBox();
+            this.rbt_dni = new System.Windows.Forms.RadioButton();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
@@ -85,87 +85,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Abogado";
             // 
-            // label1
+            // cb_estado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id Abogado";
+            this.cb_estado.FormattingEnabled = true;
+            this.cb_estado.Location = new System.Drawing.Point(158, 240);
+            this.cb_estado.Name = "cb_estado";
+            this.cb_estado.Size = new System.Drawing.Size(114, 21);
+            this.cb_estado.TabIndex = 2;
             // 
-            // label2
+            // cb_nombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Id Tipo de Abogado";
+            this.cb_nombre.FormattingEnabled = true;
+            this.cb_nombre.Location = new System.Drawing.Point(158, 67);
+            this.cb_nombre.Name = "cb_nombre";
+            this.cb_nombre.Size = new System.Drawing.Size(114, 21);
+            this.cb_nombre.TabIndex = 2;
             // 
-            // label3
+            // txt_dni
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombres";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Apellido Paterno";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Apellido Materno";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Estado";
-            // 
-            // txt_idAbogado
-            // 
-            this.txt_idAbogado.Location = new System.Drawing.Point(105, 27);
-            this.txt_idAbogado.Name = "txt_idAbogado";
-            this.txt_idAbogado.Size = new System.Drawing.Size(100, 20);
-            this.txt_idAbogado.TabIndex = 1;
-            // 
-            // txt_idtipabogado
-            // 
-            this.txt_idtipabogado.Location = new System.Drawing.Point(105, 67);
-            this.txt_idtipabogado.Name = "txt_idtipabogado";
-            this.txt_idtipabogado.Size = new System.Drawing.Size(47, 20);
-            this.txt_idtipabogado.TabIndex = 1;
-            // 
-            // txt_nomb
-            // 
-            this.txt_nomb.Location = new System.Drawing.Point(105, 110);
-            this.txt_nomb.Name = "txt_nomb";
-            this.txt_nomb.Size = new System.Drawing.Size(118, 20);
-            this.txt_nomb.TabIndex = 1;
-            // 
-            // txt_apepat
-            // 
-            this.txt_apepat.Location = new System.Drawing.Point(105, 153);
-            this.txt_apepat.Name = "txt_apepat";
-            this.txt_apepat.Size = new System.Drawing.Size(118, 20);
-            this.txt_apepat.TabIndex = 1;
+            this.txt_dni.Location = new System.Drawing.Point(105, 279);
+            this.txt_dni.Name = "txt_dni";
+            this.txt_dni.Size = new System.Drawing.Size(118, 20);
+            this.txt_dni.TabIndex = 1;
+            this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
             // 
             // txt_apemat
             // 
@@ -173,6 +115,37 @@
             this.txt_apemat.Name = "txt_apemat";
             this.txt_apemat.Size = new System.Drawing.Size(118, 20);
             this.txt_apemat.TabIndex = 1;
+            this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
+            // 
+            // txt_apepat
+            // 
+            this.txt_apepat.Location = new System.Drawing.Point(105, 153);
+            this.txt_apepat.Name = "txt_apepat";
+            this.txt_apepat.Size = new System.Drawing.Size(118, 20);
+            this.txt_apepat.TabIndex = 1;
+            this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
+            // 
+            // txt_nomb
+            // 
+            this.txt_nomb.Location = new System.Drawing.Point(105, 110);
+            this.txt_nomb.Name = "txt_nomb";
+            this.txt_nomb.Size = new System.Drawing.Size(118, 20);
+            this.txt_nomb.TabIndex = 1;
+            this.txt_nomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nomb_KeyPress);
+            // 
+            // TXT_IDESTADO
+            // 
+            this.TXT_IDESTADO.Location = new System.Drawing.Point(105, 240);
+            this.TXT_IDESTADO.Name = "TXT_IDESTADO";
+            this.TXT_IDESTADO.Size = new System.Drawing.Size(47, 20);
+            this.TXT_IDESTADO.TabIndex = 1;
+            // 
+            // txt_idtipabogado
+            // 
+            this.txt_idtipabogado.Location = new System.Drawing.Point(105, 67);
+            this.txt_idtipabogado.Name = "txt_idtipabogado";
+            this.txt_idtipabogado.Size = new System.Drawing.Size(47, 20);
+            this.txt_idtipabogado.TabIndex = 1;
             // 
             // label7
             // 
@@ -183,12 +156,66 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Dni";
             // 
-            // txt_dni
+            // txt_idAbogado
             // 
-            this.txt_dni.Location = new System.Drawing.Point(105, 279);
-            this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(118, 20);
-            this.txt_dni.TabIndex = 1;
+            this.txt_idAbogado.Location = new System.Drawing.Point(105, 27);
+            this.txt_idAbogado.Name = "txt_idAbogado";
+            this.txt_idAbogado.Size = new System.Drawing.Size(100, 20);
+            this.txt_idAbogado.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Estado";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Apellido Materno";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Apellido Paterno";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombres";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Id Tipo de Abogado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id Abogado";
             // 
             // btn_guardar
             // 
@@ -241,20 +268,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda Por";
             // 
-            // dgv_datos_abo
+            // rbt_nombape
             // 
-            this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
-            this.dgv_datos_abo.Name = "dgv_datos_abo";
-            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
-            this.dgv_datos_abo.TabIndex = 0;
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(220, 37);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(214, 20);
-            this.txt_buscar.TabIndex = 1;
+            this.rbt_nombape.AutoSize = true;
+            this.rbt_nombape.Location = new System.Drawing.Point(6, 40);
+            this.rbt_nombape.Name = "rbt_nombape";
+            this.rbt_nombape.Size = new System.Drawing.Size(110, 17);
+            this.rbt_nombape.TabIndex = 2;
+            this.rbt_nombape.TabStop = true;
+            this.rbt_nombape.Text = "Nombre y Apellido";
+            this.rbt_nombape.UseVisualStyleBackColor = true;
             // 
             // rbt_dni
             // 
@@ -267,39 +290,20 @@
             this.rbt_dni.Text = "DNI";
             this.rbt_dni.UseVisualStyleBackColor = true;
             // 
-            // rbt_nombape
+            // txt_buscar
             // 
-            this.rbt_nombape.AutoSize = true;
-            this.rbt_nombape.Location = new System.Drawing.Point(6, 40);
-            this.rbt_nombape.Name = "rbt_nombape";
-            this.rbt_nombape.Size = new System.Drawing.Size(110, 17);
-            this.rbt_nombape.TabIndex = 2;
-            this.rbt_nombape.TabStop = true;
-            this.rbt_nombape.Text = "Nombre y Apellido";
-            this.rbt_nombape.UseVisualStyleBackColor = true;
+            this.txt_buscar.Location = new System.Drawing.Point(220, 37);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(214, 20);
+            this.txt_buscar.TabIndex = 1;
             // 
-            // cb_nombre
+            // dgv_datos_abo
             // 
-            this.cb_nombre.FormattingEnabled = true;
-            this.cb_nombre.Location = new System.Drawing.Point(158, 67);
-            this.cb_nombre.Name = "cb_nombre";
-            this.cb_nombre.Size = new System.Drawing.Size(114, 21);
-            this.cb_nombre.TabIndex = 2;
-            // 
-            // cb_estado
-            // 
-            this.cb_estado.FormattingEnabled = true;
-            this.cb_estado.Location = new System.Drawing.Point(158, 240);
-            this.cb_estado.Name = "cb_estado";
-            this.cb_estado.Size = new System.Drawing.Size(114, 21);
-            this.cb_estado.TabIndex = 2;
-            // 
-            // TXT_IDESTADO
-            // 
-            this.TXT_IDESTADO.Location = new System.Drawing.Point(105, 240);
-            this.TXT_IDESTADO.Name = "TXT_IDESTADO";
-            this.TXT_IDESTADO.Size = new System.Drawing.Size(47, 20);
-            this.TXT_IDESTADO.TabIndex = 1;
+            this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
+            this.dgv_datos_abo.Name = "dgv_datos_abo";
+            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
+            this.dgv_datos_abo.TabIndex = 0;
             // 
             // frm_registrar_abogado
             // 

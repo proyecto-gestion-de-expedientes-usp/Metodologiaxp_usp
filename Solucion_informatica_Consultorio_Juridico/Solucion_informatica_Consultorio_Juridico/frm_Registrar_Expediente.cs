@@ -13,6 +13,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_Registrar_Expediente : Form
     {
+        Clases.Validacioes validadcion = new Clases.Validacioes();
         Capas.conexion cone = new Capas.conexion();
         Clases.Datos sad = new Clases.Datos();
         public frm_Registrar_Expediente()
@@ -143,5 +144,14 @@ namespace Solucion_informatica_Consultorio_Juridico
             dgv_datos.DataSource = sad.mostrarexp();
         }
 
+        private void txt_sentencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloNumeros(e);
+        }
+
+        private void txt_ciudad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validadcion.soloLetras(e);
+        }
     }
 }

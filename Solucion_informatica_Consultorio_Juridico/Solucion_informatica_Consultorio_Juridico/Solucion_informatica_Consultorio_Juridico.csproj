@@ -68,6 +68,7 @@
     <Compile Include="Clases\Acceso.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Clases\Validacioes.cs" />
     <Compile Include="frm_Anexos.cs">
       <SubType>Form</SubType>
     </Compile>

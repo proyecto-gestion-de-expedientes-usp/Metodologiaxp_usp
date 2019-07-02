@@ -13,6 +13,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_registrar_abogado : Form
     {
+        Clases.Validacioes validacion = new Clases.Validacioes();
 
         SqlConnection cnn = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
         public frm_registrar_abogado()
@@ -116,6 +117,26 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txt_nomb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.soloLetras(e);
+        }
+
+        private void txt_apepat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.soloLetras(e);
+        }
+
+        private void txt_apemat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.soloLetras(e);
+        }
+
+        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.soloNumeros(e);
         }
     }
 }

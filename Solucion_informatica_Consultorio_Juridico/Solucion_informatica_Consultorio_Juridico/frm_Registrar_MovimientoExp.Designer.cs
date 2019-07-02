@@ -351,6 +351,7 @@
             this.txt_cantfol.Name = "txt_cantfol";
             this.txt_cantfol.Size = new System.Drawing.Size(70, 20);
             this.txt_cantfol.TabIndex = 0;
+            this.txt_cantfol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantfol_KeyPress);
             // 
             // btn_guardar
             // 
