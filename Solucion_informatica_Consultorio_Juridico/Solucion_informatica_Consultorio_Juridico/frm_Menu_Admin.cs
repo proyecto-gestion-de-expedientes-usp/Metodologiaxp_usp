@@ -13,7 +13,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class frm_Menu_Admin : Form
     {
         public frm_Menu_Admin()
-        {
+        { 
             InitializeComponent();
         }
 
