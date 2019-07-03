@@ -83,7 +83,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
             cone.con.Open();
-            string sql = "select * from View_View_Persona";
+            string sql = "select * from View_Persona";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -102,6 +102,18 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_buscar_persona_Activated(object sender, EventArgs e)
         {
             radioButton2.Checked = true;
+        }
+
+        private void dgdatos_DoubleClick(object sender, EventArgs e)
+        {
+            Program.idper = Convert.ToString(dgdatos.CurrentRow.Cells[0].Value);
+            Program.nomper = Convert.ToString(dgdatos.CurrentRow.Cells[1].Value);
+
+            Program.idpers = Convert.ToString(dgdatos.CurrentRow.Cells[0].Value);
+            Program.nompers = Convert.ToString(dgdatos.CurrentRow.Cells[1].Value);
+
+
+            Hide();
         }
     }
 }

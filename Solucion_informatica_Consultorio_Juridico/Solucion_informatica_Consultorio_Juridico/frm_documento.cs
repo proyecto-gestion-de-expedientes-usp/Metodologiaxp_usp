@@ -11,11 +11,14 @@ using System.IO;
 using System.Diagnostics;
 using System.Data.SqlClient;
 
+
 namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_documento : Form
     {
+        string campo;
 
+     
         Capas.conexion xd = new Capas.conexion();
         public frm_documento()
         {
@@ -83,6 +86,27 @@ namespace Solucion_informatica_Consultorio_Juridico
             Refresh();
             generarid();
         }
+        public DataTable buscar(string campo, string valor)
+        {
+
+           xd.con.Open();
+            string sql = "select * from Documento where " + campo + " like '" + valor + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, xd.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            xd.con.Close();
+            return dt;
+        }
+        public DataTable mostrar()
+        {
+            xd.con.Open();
+            string sql = "select * from Documento";
+            SqlDataAdapter da = new SqlDataAdapter(sql, xd.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            xd.con.Close();
+            return dt;
+        }
         public void generarid()
         {
 
@@ -93,6 +117,30 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
         }
-        
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string valor = txt_buscar.Text;
+            dgvLista.DataSource = buscar(campo, valor);
+
+            txt_buscar.Focus();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dgvLista.DataSource = mostrar();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "doc_nombre";
+            txt_buscar.Focus();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "doc_nombrereal";
+            txt_buscar.Focus();
+        }
     }
 }

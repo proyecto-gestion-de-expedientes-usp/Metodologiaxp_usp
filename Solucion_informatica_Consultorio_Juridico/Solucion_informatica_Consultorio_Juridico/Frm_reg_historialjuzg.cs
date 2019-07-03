@@ -81,6 +81,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -135,6 +136,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -220,7 +222,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             txt_descripcion.Text = "";
             txt_pronunciamiento.Text = "";
-            txt_buscar.Text = ""; 
+            txt_buscar.Text = "";
+            txt_descripcion.Focus();
+            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
         }
 
         private void Frm_reg_historialjuzg_Activated(object sender, EventArgs e)

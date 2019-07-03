@@ -55,6 +55,7 @@
             // 
             this.txt_iddo.Location = new System.Drawing.Point(58, 87);
             this.txt_iddo.Name = "txt_iddo";
+            this.txt_iddo.ReadOnly = true;
             this.txt_iddo.Size = new System.Drawing.Size(100, 20);
             this.txt_iddo.TabIndex = 0;
             // 

@@ -55,6 +55,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -165,6 +166,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -183,9 +185,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_nomper.Text = "";
             txt_reg.Text = "";
             txt_buscar.Text = "";
-
-            txt_idper.Focus();
-
+            txt_buscar.Focus();
+            txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
 
 
         }
@@ -219,6 +220,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_demandante_Activated(object sender, EventArgs e)
         {
+            txt_idper.Text = Program.idpers;
+            txt_nomper.Text = Program.nompers;
+            txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+
             radioButton2.Checked = true;
         }
     }

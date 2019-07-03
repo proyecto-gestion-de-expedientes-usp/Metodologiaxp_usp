@@ -58,6 +58,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -96,11 +97,32 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_demandado_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
-
             col();
-           
-        }
 
+          
+        }
+        //private void generador_codigodo()
+        //{
+        //    string codigo;
+        //    int cal, tol;
+        //    cal = dgdatos.RowCount - 1;
+        //    tol = cal + 1;
+        //    if (tol < 10)
+        //    {
+        //        codigo = "DO0" + tol.ToString();
+        //       txt_iddo.Text = Convert.ToString(codigo);
+        //    }
+        //    else if (tol < 100)
+        //    {
+        //        codigo = "DO00" + tol.ToString();
+        //        txt_iddo.Text = Convert.ToString(codigo);
+        //    }
+        //    else if (tol < 1000)
+        //    {
+        //        codigo = "DO000" + tol.ToString();
+        //        txt_iddo.Text = Convert.ToString(codigo);
+        //    }
+        //}
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pos = dgdatos.CurrentRow.Index;
@@ -122,9 +144,12 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_demandado_Activated(object sender, EventArgs e)
         {
-            //txt_idper.Text = Program.id_per;
-            //txt_nomper.Text = Program.nomper;
             radioButton2.Checked = true;
+            txt_idper.Text = Program.idper;
+            txt_nomper.Text = Program.nomper;
+            txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+
+            //generador_codigodo();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -159,6 +184,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
+                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -177,6 +203,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_nomper.Text = "";
             txt_reg.Text= "";
             txt_buscar.Text = "";
+            txt_buscar.Focus();
+            txt_iddo.Text = Convert.ToString(dgdatos.RowCount-1);
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)

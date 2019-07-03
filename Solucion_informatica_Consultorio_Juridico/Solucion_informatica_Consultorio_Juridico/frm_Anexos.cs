@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Data.SqlClient;
 namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class frm_Anexos : Form
     {
+        string campo;
+
+        Capas.conexion cone = new Capas.conexion();
         public frm_Anexos()
         {
             InitializeComponent();
@@ -76,5 +80,61 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Refresh();
         }
+        public DataTable buscar(string campo, string valor)
+        {
+
+            cone.con.Open();
+            string sql = "select * from Anexos where " + campo + " like '" + valor + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cone.con.Close();
+            return dt;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "anexo_nombre";
+            txt_buscar.Focus();
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string valor = txt_buscar.Text;
+           dgvLista.DataSource = buscar(campo, valor);
+
+            txt_buscar.Focus();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dgvLista.DataSource = mostrar();
+        }
+        public DataTable mostrar()
+        {
+            cone.con.Open();
+            string sql = "select * from Anexos";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cone.con.Close();
+            return dt;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "anexo_nombrereal";
+            txt_buscar.Focus();
+        }
+
+        private void dgvLista_DoubleClick(object sender, EventArgs e)
+        {
+            Program.anid = Convert.ToString(dgvLista.CurrentRow.Cells[0].Value);
+            Program.anom = Convert.ToString(dgvLista.CurrentRow.Cells[1].Value);
+            Program.anomr = Convert.ToString(dgvLista.CurrentRow.Cells[2].Value);
+            Program.adoc = Convert.ToString(dgvLista.CurrentRow.Cells[3].Value);
+            Program.afech = Convert.ToString(dgvLista.CurrentRow.Cells[4].Value);
+            Hide();
+    }
     }
 }
