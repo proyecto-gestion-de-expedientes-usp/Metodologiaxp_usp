@@ -101,5 +101,17 @@ namespace Solucion_informatica_Consultorio_Juridico
             Frm_buscar_Usuario u = new Frm_buscar_Usuario();
             u.ShowDialog();
         }
+
+        private void registrarDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frm_documento u = new frm_documento();
+            u.ShowDialog();
+        }
+
+        private void registrarAnexosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Anexos u = new frm_Anexos();
+            u.ShowDialog();
+        }
     }
 }
