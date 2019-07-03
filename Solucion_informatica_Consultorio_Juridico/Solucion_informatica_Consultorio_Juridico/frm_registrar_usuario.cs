@@ -277,6 +277,62 @@ namespace Solucion_informatica_Consultorio_Juridico
             }
 
         }
+
+        private void txt_nombres_Validated(object sender, EventArgs e)
+        {
+            if (txt_nombres.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_nombres, "Ingrese Nombres...");
+            }
+        }
+
+        private void txt_apepat_Validated(object sender, EventArgs e)
+        {
+            if (txt_apepat.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_apepat, "Ingrese Apellido Paterno...");
+            }
+        }
+
+        private void txt_apemat_Validated(object sender, EventArgs e)
+        {
+            if (txt_apemat.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_apemat, "Ingrese Apellido Materno...");
+            }
+        }
+
+        private void txt_dpto_Validated(object sender, EventArgs e)
+        {
+            if (txt_dpto.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_dpto, "Ingrese Departamento...");
+            }
+        }
+
+        private void txt_provincia_Validated(object sender, EventArgs e)
+        {
+            if (txt_provincia.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_provincia, "Ingrese Provincia...");
+            }
+        }
+
+        private void txt_distrito_Validated(object sender, EventArgs e)
+        {
+            if (txt_distrito.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_distrito, "Ingrese Distrito...");
+            }
+        }
+
+        private void txt_domici_Validated(object sender, EventArgs e)
+        {
+            if (txt_domici.Text.Trim() == "")
+            {
+                errorNombre.SetError(txt_domici, "Ingrese Domicilio...");
+            }
+        }
     }
     }
 

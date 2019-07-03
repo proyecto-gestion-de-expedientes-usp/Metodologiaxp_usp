@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registrar_usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,10 +79,24 @@
             this.rbt_nom_apepatymat = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.errorNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorApePaterno = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorApeMaterno = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDomicilio = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDepar = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApePaterno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApeMaterno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDomicilio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDepar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDistri)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -315,6 +330,7 @@
             this.txt_nombres.Size = new System.Drawing.Size(204, 20);
             this.txt_nombres.TabIndex = 3;
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
+            this.txt_nombres.Validated += new System.EventHandler(this.txt_nombres_Validated);
             // 
             // txt_apepat
             // 
@@ -323,6 +339,7 @@
             this.txt_apepat.Size = new System.Drawing.Size(179, 20);
             this.txt_apepat.TabIndex = 3;
             this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
+            this.txt_apepat.Validated += new System.EventHandler(this.txt_apepat_Validated);
             // 
             // txt_apemat
             // 
@@ -331,6 +348,7 @@
             this.txt_apemat.Size = new System.Drawing.Size(179, 20);
             this.txt_apemat.TabIndex = 3;
             this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
+            this.txt_apemat.Validated += new System.EventHandler(this.txt_apemat_Validated);
             // 
             // txt_cel
             // 
@@ -348,6 +366,7 @@
             this.txt_domici.Name = "txt_domici";
             this.txt_domici.Size = new System.Drawing.Size(251, 60);
             this.txt_domici.TabIndex = 3;
+            this.txt_domici.Validated += new System.EventHandler(this.txt_domici_Validated);
             // 
             // txt_correo
             // 
@@ -364,6 +383,7 @@
             this.txt_dpto.Size = new System.Drawing.Size(157, 20);
             this.txt_dpto.TabIndex = 3;
             this.txt_dpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dpto_KeyPress);
+            this.txt_dpto.Validated += new System.EventHandler(this.txt_dpto_Validated);
             // 
             // txt_provincia
             // 
@@ -372,6 +392,7 @@
             this.txt_provincia.Size = new System.Drawing.Size(100, 20);
             this.txt_provincia.TabIndex = 3;
             this.txt_provincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_provincia_KeyPress);
+            this.txt_provincia.Validated += new System.EventHandler(this.txt_provincia_Validated);
             // 
             // txt_distrito
             // 
@@ -380,6 +401,7 @@
             this.txt_distrito.Size = new System.Drawing.Size(100, 20);
             this.txt_distrito.TabIndex = 3;
             this.txt_distrito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_distrito_KeyPress);
+            this.txt_distrito.Validated += new System.EventHandler(this.txt_distrito_Validated);
             // 
             // txt_contra
             // 
@@ -569,6 +591,34 @@
             this.dgv_usuarios.Size = new System.Drawing.Size(466, 367);
             this.dgv_usuarios.TabIndex = 8;
             // 
+            // errorNombre
+            // 
+            this.errorNombre.ContainerControl = this;
+            // 
+            // errorApePaterno
+            // 
+            this.errorApePaterno.ContainerControl = this;
+            // 
+            // errorApeMaterno
+            // 
+            this.errorApeMaterno.ContainerControl = this;
+            // 
+            // errorDomicilio
+            // 
+            this.errorDomicilio.ContainerControl = this;
+            // 
+            // errorDepar
+            // 
+            this.errorDepar.ContainerControl = this;
+            // 
+            // errorProv
+            // 
+            this.errorProv.ContainerControl = this;
+            // 
+            // errorDistri
+            // 
+            this.errorDistri.ContainerControl = this;
+            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,6 +639,13 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApePaterno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApeMaterno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDomicilio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDepar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDistri)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -644,5 +701,12 @@
         private System.Windows.Forms.RadioButton rbt_nom_apepatymat;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgv_usuarios;
+        private System.Windows.Forms.ErrorProvider errorNombre;
+        private System.Windows.Forms.ErrorProvider errorApePaterno;
+        private System.Windows.Forms.ErrorProvider errorApeMaterno;
+        private System.Windows.Forms.ErrorProvider errorDomicilio;
+        private System.Windows.Forms.ErrorProvider errorDepar;
+        private System.Windows.Forms.ErrorProvider errorProv;
+        private System.Windows.Forms.ErrorProvider errorDistri;
     }
 }
