@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Solucion_informatica_Consultorio_Juridico
 {
@@ -246,6 +247,35 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_distrito_KeyPress(object sender, KeyPressEventArgs e)
         {
             validadcion.soloLetras(e);
+        }
+        public static bool Valorreo(string email)
+        {
+            string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                { return true; }
+                else
+                { return false; }
+            }
+            else
+            { return false; }
+        }
+        private void txt_correo_Leave(object sender, EventArgs e)
+        {
+            if (Valorreo(txt_correo.Text))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Dirección de correo electrónico no valido, el correo debe tener el formato: nombre@dominio.com, " +
+                    " por favor ingrese un correo válido", "Alerta", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                txt_correo.SelectAll();
+                txt_correo.Focus();
+            }
+
         }
     }
     }

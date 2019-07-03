@@ -58,6 +58,7 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
 
             }
         }
+
     }
 }
 

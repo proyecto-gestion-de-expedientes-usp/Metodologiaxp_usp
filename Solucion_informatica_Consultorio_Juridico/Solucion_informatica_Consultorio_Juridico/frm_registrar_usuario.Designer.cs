@@ -355,6 +355,7 @@
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(207, 20);
             this.txt_correo.TabIndex = 3;
+            this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
             // txt_dpto
             // 

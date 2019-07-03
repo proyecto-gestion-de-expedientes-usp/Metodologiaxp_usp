@@ -153,5 +153,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validadcion.soloLetras(e);
         }
+
+        private void txt_resolucion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

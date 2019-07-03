@@ -224,6 +224,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(180, 20);
             this.txt_email.TabIndex = 32;
+            this.txt_email.Leave += new System.EventHandler(this.txt_email_Leave);
             // 
             // txt_telf
             // 
@@ -346,6 +347,7 @@
             this.txt_nro_documento.Name = "txt_nro_documento";
             this.txt_nro_documento.Size = new System.Drawing.Size(100, 20);
             this.txt_nro_documento.TabIndex = 17;
+            this.txt_nro_documento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nro_documento_KeyPress);
             // 
             // txt_domilega
             // 

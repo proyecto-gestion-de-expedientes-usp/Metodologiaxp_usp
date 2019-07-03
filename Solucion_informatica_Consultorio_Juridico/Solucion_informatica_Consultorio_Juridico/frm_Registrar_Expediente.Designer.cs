@@ -383,6 +383,7 @@
             this.txt_resolucion.Name = "txt_resolucion";
             this.txt_resolucion.Size = new System.Drawing.Size(100, 20);
             this.txt_resolucion.TabIndex = 38;
+            this.txt_resolucion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_resolucion_KeyPress);
             // 
             // txt_materia
             // 
