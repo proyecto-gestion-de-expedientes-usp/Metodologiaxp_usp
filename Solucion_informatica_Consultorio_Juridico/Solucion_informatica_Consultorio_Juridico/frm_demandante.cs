@@ -24,9 +24,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_reg_Click(object sender, EventArgs e)
         {
-            if (txt_iddo.Text.Trim() == "" || txt_idper.Text.Trim() == "" || txt_reg.Text.Trim() == "")
+            if (txt_iddo.Text.Trim() == "" || txt_idper.Text.Trim() == "" || txt_nomper.Text.Trim() == "")
             {
-                MessageBox.Show("SE PROHIBEN CAMPOS VACIOS");
+                MessageBox.Show("Debe seleccionar a la persona Demandante");
             }
             else
             {
@@ -136,9 +136,18 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            if (txt_iddo.Text.Trim() == "" || txt_idper.Text.Trim() == "" || txt_reg.Text.Trim() == "")
+            int seleccionar;
+            seleccionar = this.dgdatos.SelectedRows.Count;
+
+            if (seleccionar == 0)
+
             {
-                MessageBox.Show("SE PROHIBEN CAMPOS VACIOS");
+                MessageBox.Show("Para modificar debe seleccionar una Fila en la tabla");
+
+                if (txt_idper.Text.Trim() == "" || txt_nomper.Text.Trim() == "")
+                {
+                    MessageBox.Show("Debe seleccionar a la Persona demandante");
+                }
             }
             else
             {
@@ -183,7 +192,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_idper.Text = "";
             txt_iddo.Text = "";
             txt_nomper.Text = "";
-            txt_reg.Text = "";
+
             txt_buscar.Text = "";
             txt_buscar.Focus();
             txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);

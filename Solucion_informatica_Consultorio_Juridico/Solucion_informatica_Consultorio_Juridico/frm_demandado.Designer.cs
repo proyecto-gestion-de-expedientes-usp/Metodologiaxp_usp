@@ -34,7 +34,6 @@
             this.txt_idper = new System.Windows.Forms.TextBox();
             this.txt_nomper = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_reg = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dgdatos = new System.Windows.Forms.DataGridView();
@@ -47,6 +46,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.btn_buscar1 = new System.Windows.Forms.Button();
+            this.txt_reg = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,7 @@
             // 
             this.txt_idper.Location = new System.Drawing.Point(81, 136);
             this.txt_idper.Name = "txt_idper";
+            this.txt_idper.ReadOnly = true;
             this.txt_idper.Size = new System.Drawing.Size(44, 20);
             this.txt_idper.TabIndex = 2;
             // 
@@ -88,6 +89,7 @@
             // 
             this.txt_nomper.Location = new System.Drawing.Point(131, 136);
             this.txt_nomper.Name = "txt_nomper";
+            this.txt_nomper.ReadOnly = true;
             this.txt_nomper.Size = new System.Drawing.Size(143, 20);
             this.txt_nomper.TabIndex = 4;
             // 
@@ -99,13 +101,6 @@
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Registro";
-            // 
-            // txt_reg
-            // 
-            this.txt_reg.Location = new System.Drawing.Point(81, 186);
-            this.txt_reg.Name = "txt_reg";
-            this.txt_reg.Size = new System.Drawing.Size(160, 20);
-            this.txt_reg.TabIndex = 6;
             // 
             // button1
             // 
@@ -235,11 +230,24 @@
             this.btn_buscar1.UseVisualStyleBackColor = true;
             this.btn_buscar1.Click += new System.EventHandler(this.btn_buscar1_Click);
             // 
+            // txt_reg
+            // 
+            this.txt_reg.FormattingEnabled = true;
+            this.txt_reg.Items.AddRange(new object[] {
+            "ConsultorioUSP",
+            "Fuera de Consultorio"});
+            this.txt_reg.Location = new System.Drawing.Point(81, 189);
+            this.txt_reg.Name = "txt_reg";
+            this.txt_reg.Size = new System.Drawing.Size(107, 21);
+            this.txt_reg.TabIndex = 14;
+            this.txt_reg.Text = "ConsultorioUSP";
+            // 
             // frm_demandado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 337);
+            this.Controls.Add(this.txt_reg);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_modificar);
@@ -247,7 +255,6 @@
             this.Controls.Add(this.dgdatos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txt_reg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_nomper);
             this.Controls.Add(this.label2);
@@ -274,7 +281,6 @@
         private System.Windows.Forms.TextBox txt_idper;
         private System.Windows.Forms.TextBox txt_nomper;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_reg;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgdatos;
@@ -287,5 +293,6 @@
         private System.Windows.Forms.Button btn_buscar1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.ComboBox txt_reg;
     }
 }

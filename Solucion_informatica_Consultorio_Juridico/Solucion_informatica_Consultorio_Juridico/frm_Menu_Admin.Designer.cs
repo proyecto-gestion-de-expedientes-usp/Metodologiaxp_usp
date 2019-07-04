@@ -58,8 +58,8 @@
             this.maestroToolStripMenuItem,
             this.accionesToolStripMenuItem,
             this.bùsquedasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.documentosToolStripMenuItem});
+            this.documentosToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(682, 24);
@@ -80,21 +80,21 @@
             // registrarUsuarioToolStripMenuItem
             // 
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
             // abogadoToolStripMenuItem
             // 
             this.abogadoToolStripMenuItem.Name = "abogadoToolStripMenuItem";
-            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abogadoToolStripMenuItem.Text = "Abogado";
             this.abogadoToolStripMenuItem.Click += new System.EventHandler(this.abogadoToolStripMenuItem_Click);
             // 
             // personaToolStripMenuItem
             // 
             this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
-            this.personaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.personaToolStripMenuItem.Text = "Persona";
             this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
             // 

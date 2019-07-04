@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="Capas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Capas\Capas\obj\Debug\Capas.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Desktop\Capas.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -75,6 +75,30 @@
     <Compile Include="frm_Anexos.Designer.cs">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_buscar_estado_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_estado_usuario.Designer.cs">
+      <DependentUpon>frm_buscar_estado_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipoabog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipoabog.Designer.cs">
+      <DependentUpon>frm_buscar_tipoabog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_documento.Designer.cs">
+      <DependentUpon>frm_buscar_tipo_documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_usuario.Designer.cs">
+      <DependentUpon>frm_buscar_tipo_usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_documento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +125,18 @@
     </Compile>
     <Compile Include="frm_demandado.Designer.cs">
       <DependentUpon>frm_demandado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Estadoabog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Estadoabog.Designer.cs">
+      <DependentUpon>Frm_Estadoabog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Estado_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Estado_Usuario.Designer.cs">
+      <DependentUpon>Frm_Estado_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_reg_historialjuzg.cs">
       <SubType>Form</SubType>
@@ -170,6 +206,30 @@
     </Compile>
     <Compile Include="frm_registrar_usuario.Designer.cs">
       <DependentUpon>frm_registrar_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_tipo_abogadocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_tipo_abogadocs.Designer.cs">
+      <DependentUpon>Frm_tipo_abogadocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipo_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipo_documento.Designer.cs">
+      <DependentUpon>frm_tipo_documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipo_usuario.Designer.cs">
+      <DependentUpon>frm_tipo_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Trabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Trabajador.Designer.cs">
+      <DependentUpon>Menu_Trabajador.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Abogado.cs">
       <DependentUpon>DB.tt</DependentUpon>
@@ -377,8 +437,26 @@
     <EmbeddedResource Include="frm_Anexos.resx">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_estado_usuario.resx">
+      <DependentUpon>frm_buscar_estado_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipoabog.resx">
+      <DependentUpon>frm_buscar_tipoabog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipo_documento.resx">
+      <DependentUpon>frm_buscar_tipo_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipo_usuario.resx">
+      <DependentUpon>frm_buscar_tipo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_documento.resx">
       <DependentUpon>frm_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Estadoabog.resx">
+      <DependentUpon>Frm_Estadoabog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Estado_Usuario.resx">
+      <DependentUpon>Frm_Estado_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -424,6 +502,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_registrar_usuario.resx">
       <DependentUpon>frm_registrar_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_tipo_abogadocs.resx">
+      <DependentUpon>Frm_tipo_abogadocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipo_documento.resx">
+      <DependentUpon>frm_tipo_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipo_usuario.resx">
+      <DependentUpon>frm_tipo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Trabajador.resx">
+      <DependentUpon>Menu_Trabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
