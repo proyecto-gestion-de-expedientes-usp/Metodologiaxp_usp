@@ -59,7 +59,7 @@
             this.groupBox1.Size = new System.Drawing.Size(402, 96);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar Estado  :";
+            this.groupBox1.Text = "Buscar Tipo Documento :";
             // 
             // radioButton2
             // 
@@ -121,6 +121,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_buscar_tipo_documento";
             this.Text = "Buscar Tipo Documento";
+            this.Activated += new System.EventHandler(this.frm_buscar_tipo_documento_Activated);
             this.Load += new System.EventHandler(this.frm_buscar_tipo_documento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);

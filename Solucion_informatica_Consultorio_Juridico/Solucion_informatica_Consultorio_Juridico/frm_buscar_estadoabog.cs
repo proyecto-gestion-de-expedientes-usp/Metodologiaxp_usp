@@ -81,5 +81,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void frm_buscar_estadoabog_Activated(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+        }
     }
 }

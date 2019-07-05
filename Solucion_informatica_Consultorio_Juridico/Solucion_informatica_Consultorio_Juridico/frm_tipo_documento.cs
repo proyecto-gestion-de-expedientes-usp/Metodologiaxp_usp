@@ -28,7 +28,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 SqlCommand cmd = new SqlCommand("sp_insertar_tipodoc", cone.con);
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 20);
+                cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 35);
                 cmd.Parameters["@tipdoc_nom"].Value = cmb_condi.Text;
                 cone.con.Open();
                 cmd.ExecuteNonQuery();
@@ -73,7 +73,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add("@id_tipdoc", SqlDbType.Int);
-                    cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 20);
+                    cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 35);
 
 
 

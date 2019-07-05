@@ -42,12 +42,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frm_Menu_Admin());
+            Application.Run(new frm_Menu_Admin());
             //Application.Run(new frm_demandado());
             //Application.Run(new frm_demandante());
             //Application.Run(new Frm_Estado_Usuario());
             //Application.Run(new frm_buscar_estadousu());
-            Application.Run(new Frm_Estadoabog());
+            //Application.Run(new Frm_Estadoabog());
             //Application.Run(new frm_Anexos());
         }
     }

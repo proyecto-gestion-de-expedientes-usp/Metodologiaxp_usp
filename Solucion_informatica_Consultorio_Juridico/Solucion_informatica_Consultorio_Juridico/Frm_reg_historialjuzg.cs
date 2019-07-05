@@ -95,9 +95,19 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            int seleccionar;
+            seleccionar = this.dgdatos.SelectedRows.Count;
+
+            if (seleccionar == 0)
+
+            {
+                MessageBox.Show("Para modificar debe seleccionar una Fila en la tabla");
+           
             if (txt_id.Text.Trim() == "" || txt_descripcion.Text.Trim() == "" || txt_pronunciamiento.Text.Trim() == "")
             {
-                MessageBox.Show("SE PROHIBEN CAMPOS VACIOS");
+                MessageBox.Show("Se Prohiben Campos Vacios");
+            }
             }
             else
             {

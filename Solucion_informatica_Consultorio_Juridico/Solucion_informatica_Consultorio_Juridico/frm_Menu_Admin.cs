@@ -113,5 +113,65 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_Anexos u = new frm_Anexos();
             u.ShowDialog();
         }
+
+        private void registrarTipoAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_tipoabog u = new frm_buscar_tipoabog();
+            u.ShowDialog();
+        }
+
+        private void registrarTipoDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frm_tipo_documento u = new frm_tipo_documento();
+            u.ShowDialog();
+        }
+
+        private void registrarEstadoAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Estadoabog u = new Frm_Estadoabog();
+            u.ShowDialog();
+        }
+
+        private void registrarDocumentoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_Estado_Usuario u = new Frm_Estado_Usuario();
+            u.ShowDialog();
+        }
+
+        private void registrarTipoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_tipo_usuario u = new frm_tipo_usuario();
+            u.ShowDialog();
+        }
+
+        private void buscarEstadoAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_estadoabog u = new frm_buscar_estadoabog();
+            u.ShowDialog();
+        }
+
+        private void buscarEstadoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_estadousu u = new frm_buscar_estadousu();
+            u.ShowDialog();
+        }
+
+        private void buscarTipoDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_tipo_documento u = new frm_buscar_tipo_documento();
+            u.ShowDialog();
+        }
+
+        private void buscarTipoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frm_buscar_tipo_usuario u = new frm_buscar_tipo_usuario();
+            u.ShowDialog();
+        }
+
+        private void buscarTipoAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_tipoabog u = new frm_buscar_tipoabog();
+            u.ShowDialog();
+        }
     }
 }

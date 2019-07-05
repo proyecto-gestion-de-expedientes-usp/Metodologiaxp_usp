@@ -75,5 +75,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
         }
+
+        private void frm_buscar_tipo_documento_Activated(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+        }
     }
 }

@@ -122,6 +122,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_buscar_estadoabog";
             this.Text = "Buscar Estado Abogado";
+            this.Activated += new System.EventHandler(this.frm_buscar_estadoabog_Activated);
             this.Load += new System.EventHandler(this.frm_buscar_estadoabog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
