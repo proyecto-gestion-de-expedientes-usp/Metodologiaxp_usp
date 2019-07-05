@@ -25,7 +25,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_Estado_Usuario_Activated(object sender, EventArgs e)
         {
             cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-            radioButton2.Checked = true;
+            radioButton1.Checked = true;
         }
 
         private void Frm_Estado_Usuario_Load(object sender, EventArgs e)
@@ -50,8 +50,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-           
+        {     
                 try
                 {
 
@@ -70,8 +69,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 {
                     cone.con.Close();
                     MessageBox.Show(ex.Message, "Error al Grabar");
-                }
-            
+                }           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -150,7 +148,6 @@ namespace Solucion_informatica_Consultorio_Juridico
         }
         public DataTable buscar(string campo, string valor)
         {
-
             cone.con.Open();
             string sql = "select * from Estado_Usu where " + campo + " like '" + valor + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
@@ -178,6 +175,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
             cmb_condi.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
          
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dgdatos.DataSource = mostrar();
         }
     }
 }
