@@ -35,18 +35,18 @@
             this.registrarExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarMovimientoExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarHistorialJuzgadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,32 +78,44 @@
             // registrarDemandadoToolStripMenuItem
             // 
             this.registrarDemandadoToolStripMenuItem.Name = "registrarDemandadoToolStripMenuItem";
-            this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandadoToolStripMenuItem.Text = "Registrar Demandado";
+            this.registrarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandadoToolStripMenuItem_Click);
             // 
             // registrarDemandanteToolStripMenuItem
             // 
             this.registrarDemandanteToolStripMenuItem.Name = "registrarDemandanteToolStripMenuItem";
-            this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandanteToolStripMenuItem.Text = "Registrar Demandante";
+            this.registrarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.registrarDemandanteToolStripMenuItem_Click);
             // 
             // registrarExpedienteToolStripMenuItem
             // 
             this.registrarExpedienteToolStripMenuItem.Name = "registrarExpedienteToolStripMenuItem";
-            this.registrarExpedienteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registrarExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarExpedienteToolStripMenuItem.Text = "Registrar Expediente";
+            this.registrarExpedienteToolStripMenuItem.Click += new System.EventHandler(this.registrarExpedienteToolStripMenuItem_Click);
             // 
             // registrarMovimientoExpedienteToolStripMenuItem
             // 
             this.registrarMovimientoExpedienteToolStripMenuItem.Name = "registrarMovimientoExpedienteToolStripMenuItem";
             this.registrarMovimientoExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarMovimientoExpedienteToolStripMenuItem.Text = "Registrar Movimiento Expediente";
+            this.registrarMovimientoExpedienteToolStripMenuItem.Click += new System.EventHandler(this.registrarMovimientoExpedienteToolStripMenuItem_Click);
             // 
             // registrarHistorialJuzgadoToolStripMenuItem
             // 
             this.registrarHistorialJuzgadoToolStripMenuItem.Name = "registrarHistorialJuzgadoToolStripMenuItem";
             this.registrarHistorialJuzgadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarHistorialJuzgadoToolStripMenuItem.Text = "Registrar Historial Juzgado";
+            this.registrarHistorialJuzgadoToolStripMenuItem.Click += new System.EventHandler(this.registrarHistorialJuzgadoToolStripMenuItem_Click);
+            // 
+            // registrarPersonaToolStripMenuItem
+            // 
+            this.registrarPersonaToolStripMenuItem.Name = "registrarPersonaToolStripMenuItem";
+            this.registrarPersonaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.registrarPersonaToolStripMenuItem.Text = "Registrar Persona";
+            this.registrarPersonaToolStripMenuItem.Click += new System.EventHandler(this.registrarPersonaToolStripMenuItem_Click);
             // 
             // busquedasToolStripMenuItem
             // 
@@ -124,30 +136,48 @@
             this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
             this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
+            this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
             // 
             // buscarDemandanteToolStripMenuItem
             // 
             this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
             this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
+            this.buscarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandanteToolStripMenuItem_Click);
             // 
             // buscarDemandadoToolStripMenuItem
             // 
             this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
             this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
+            this.buscarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandadoToolStripMenuItem_Click);
             // 
             // buscarPersonaToolStripMenuItem
             // 
             this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
             this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
+            this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
             // 
             // buscarUsuarioToolStripMenuItem
             // 
             this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
             this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
+            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
+            // 
+            // buscarDocumentoToolStripMenuItem
+            // 
+            this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
+            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDocumentoToolStripMenuItem.Text = "Buscar Documento";
+            this.buscarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarDocumentoToolStripMenuItem_Click);
+            // 
+            // buscarAnexoToolStripMenuItem
+            // 
+            this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
+            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
             // 
             // filesToolStripMenuItem
             // 
@@ -163,30 +193,14 @@
             this.registrarDocumentoToolStripMenuItem.Name = "registrarDocumentoToolStripMenuItem";
             this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.registrarDocumentoToolStripMenuItem.Text = "Registrar Documento";
+            this.registrarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.registrarDocumentoToolStripMenuItem_Click);
             // 
             // registrarAnexoToolStripMenuItem
             // 
             this.registrarAnexoToolStripMenuItem.Name = "registrarAnexoToolStripMenuItem";
             this.registrarAnexoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.registrarAnexoToolStripMenuItem.Text = "Registrar Anexo";
-            // 
-            // buscarDocumentoToolStripMenuItem
-            // 
-            this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
-            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarDocumentoToolStripMenuItem.Text = "Buscar Documento";
-            // 
-            // buscarAnexoToolStripMenuItem
-            // 
-            this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
-            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
-            // 
-            // registrarPersonaToolStripMenuItem
-            // 
-            this.registrarPersonaToolStripMenuItem.Name = "registrarPersonaToolStripMenuItem";
-            this.registrarPersonaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.registrarPersonaToolStripMenuItem.Text = "Registrar Persona";
+            this.registrarAnexoToolStripMenuItem.Click += new System.EventHandler(this.registrarAnexoToolStripMenuItem_Click);
             // 
             // Menu_Trabajador
             // 

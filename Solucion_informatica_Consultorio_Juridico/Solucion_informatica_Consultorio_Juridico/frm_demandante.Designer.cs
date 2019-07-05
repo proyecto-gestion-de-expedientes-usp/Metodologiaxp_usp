@@ -47,12 +47,14 @@
             this.txt_idper = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_iddo = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
@@ -60,7 +62,7 @@
             this.groupBox1.Controls.Add(this.btn_buscar1);
             this.groupBox1.Location = new System.Drawing.Point(332, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 69);
+            this.groupBox1.Size = new System.Drawing.Size(479, 69);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
@@ -153,7 +155,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(346, 135);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(380, 197);
+            this.dgdatos.Size = new System.Drawing.Size(465, 197);
             this.dgdatos.TabIndex = 23;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             this.dgdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellContentClick);
@@ -236,11 +238,21 @@
             this.txt_iddo.Size = new System.Drawing.Size(100, 20);
             this.txt_iddo.TabIndex = 14;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(385, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 47);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Mostrar Todo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frm_demandante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 360);
+            this.ClientSize = new System.Drawing.Size(842, 360);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_modificar);
@@ -288,5 +300,6 @@
         private System.Windows.Forms.TextBox txt_idper;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_iddo;
+        private System.Windows.Forms.Button button3;
     }
 }

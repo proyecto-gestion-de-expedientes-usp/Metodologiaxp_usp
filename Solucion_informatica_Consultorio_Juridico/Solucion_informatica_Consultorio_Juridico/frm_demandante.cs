@@ -235,5 +235,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             radioButton2.Checked = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgdatos.DataSource = mostrar();
+        }
     }
 }

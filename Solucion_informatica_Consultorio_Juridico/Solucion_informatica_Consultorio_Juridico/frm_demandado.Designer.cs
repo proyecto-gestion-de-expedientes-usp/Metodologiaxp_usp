@@ -47,6 +47,7 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.btn_buscar1 = new System.Windows.Forms.Button();
             this.txt_reg = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +165,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
@@ -171,7 +173,7 @@
             this.groupBox1.Controls.Add(this.btn_buscar1);
             this.groupBox1.Location = new System.Drawing.Point(317, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 69);
+            this.groupBox1.Size = new System.Drawing.Size(473, 69);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
@@ -242,6 +244,16 @@
             this.txt_reg.TabIndex = 14;
             this.txt_reg.Text = "ConsultorioUSP";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(385, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 23);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Mostrar Todo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frm_demandado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +306,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.ComboBox txt_reg;
+        private System.Windows.Forms.Button button3;
     }
 }

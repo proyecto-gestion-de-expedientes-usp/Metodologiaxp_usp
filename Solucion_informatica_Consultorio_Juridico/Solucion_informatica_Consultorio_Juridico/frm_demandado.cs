@@ -31,8 +31,6 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show("Debe seleccionar a la persona Demandada");
             }
-
-
             else
             {
                 try
@@ -46,24 +44,16 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.Parameters.Add("@pers_id", SqlDbType.Int);
                     cmd.Parameters.Add("@demdo_registro", SqlDbType.VarChar, 20);
 
-
                     cmd.Parameters["@demdo_id"].Value = txt_iddo.Text;
                     cmd.Parameters["@pers_id"].Value = txt_idper.Text;
                     cmd.Parameters["@demdo_registro"].Value = txt_reg.Text;
-
-
                     cone.con.Open();
-
                     cmd.ExecuteNonQuery();
-
                     MessageBox.Show("Los datos fueron insertados correctamente");
-
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
                     txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
-
-
                 catch (Exception ex)
                 {
                     cone.con.Close();
@@ -80,12 +70,9 @@ namespace Solucion_informatica_Consultorio_Juridico
             dgdatos.Columns[2].HeaderText = "PERSONA";
             dgdatos.Columns[3].HeaderText = "NUM_DOC";
             dgdatos.Columns[4].HeaderText = "REGISTRO";
-   
-
-        }
+           }
         public DataTable mostrar()
         {
-
             cone.con.Open();
             string sql = "select * from View_Demandado";
             SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
@@ -93,16 +80,14 @@ namespace Solucion_informatica_Consultorio_Juridico
             da.Fill(dt);
             cone.con.Close();
             return dt;
-
         }
 
         private void frm_demandado_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
-            col();
-
-          
+            col();          
         }
+
         //private void generador_codigodo()
         //{
         //    string codigo;
@@ -128,14 +113,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pos = dgdatos.CurrentRow.Index;
-
             txt_iddo.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
            txt_idper.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
             txt_nomper.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
-            txt_reg.Text = dgdatos.CurrentRow.Cells[4].Value.ToString();
-
-          
-
+            txt_reg.Text = dgdatos.CurrentRow.Cells[4].Value.ToString();        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -264,7 +245,11 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgdatos.DataSource = mostrar();
         }
     }
 
