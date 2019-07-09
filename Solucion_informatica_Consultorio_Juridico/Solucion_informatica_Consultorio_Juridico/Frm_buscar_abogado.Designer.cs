@@ -82,17 +82,17 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(138, 26);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(59, 17);
+            this.radioButton4.Size = new System.Drawing.Size(89, 17);
             this.radioButton4.TabIndex = 35;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Ubigeo";
+            this.radioButton4.Text = "Tipo Defensa";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(199, 26);
+            this.radioButton1.Location = new System.Drawing.Point(233, 26);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(123, 17);
             this.radioButton1.TabIndex = 34;
@@ -119,6 +119,7 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(254, 20);
             this.txt_buscar.TabIndex = 2;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // label1
             // 

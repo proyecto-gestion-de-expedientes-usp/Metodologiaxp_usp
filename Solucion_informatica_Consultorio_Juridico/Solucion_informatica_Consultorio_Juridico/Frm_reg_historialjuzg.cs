@@ -241,6 +241,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             radioButton1.Checked = true;
             radioButton3.Checked = true;
+            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -296,6 +297,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             dt_resolucion.Text = dgdatos.CurrentRow.Cells[5].Value.ToString();
             dt_notificacion.Text = dgdatos.CurrentRow.Cells[6].Value.ToString();
             dt_solucion.Text = dgdatos.CurrentRow.Cells[7].Value.ToString();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,16 +43,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
-            col();
+            //col();
         }
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID";
-            dgdatos.Columns[1].HeaderText = "ID_PERSONA";
-            dgdatos.Columns[2].HeaderText = "PERSONA";
-            dgdatos.Columns[3].HeaderText = "NUM_DOC";
-            dgdatos.Columns[4].HeaderText = "REGISTRO";
-        }
+        //public void col()
+        //{
+        //    dgdatos.Columns[0].HeaderText = "ID";
+        //    dgdatos.Columns[1].HeaderText = "ID_PERSONA";
+        //    dgdatos.Columns[2].HeaderText = "PERSONA";
+        //    dgdatos.Columns[3].HeaderText = "NUM_DOC";
+        //    dgdatos.Columns[4].HeaderText = "REGISTRO";
+        //}
         public DataTable mostrar()
         {
             cone.con.Open();

@@ -244,6 +244,7 @@
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(100, 20);
             this.txt_estado.TabIndex = 43;
+            this.txt_estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_estado_KeyPress);
             // 
             // cmb_condi
             // 
@@ -251,6 +252,7 @@
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(100, 20);
             this.cmb_condi.TabIndex = 44;
+            this.cmb_condi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_condi_KeyPress);
             // 
             // Frm_tipo_abogadocs
             // 

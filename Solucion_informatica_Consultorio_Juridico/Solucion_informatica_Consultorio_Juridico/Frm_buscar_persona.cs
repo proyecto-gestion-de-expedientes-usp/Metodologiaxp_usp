@@ -42,8 +42,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "pers_ubigeo";
-            txt_buscar.Focus();
+          
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -68,17 +67,17 @@ namespace Solucion_informatica_Consultorio_Juridico
             cone.con.Close();
             return dt;
         }
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID";
-            dgdatos.Columns[1].HeaderText = "PERSONA";
-            dgdatos.Columns[2].HeaderText = "UBIGEO";
-            dgdatos.Columns[3].HeaderText = "TIPO_DOC";
-            dgdatos.Columns[4].HeaderText = "NUM_DOC";
-            dgdatos.Columns[5].HeaderText = "EMAIL";
+        //public void col()
+        //{
+        //    dgdatos.Columns[0].HeaderText = "ID";
+        //    dgdatos.Columns[1].HeaderText = "PERSONA";
+        //    dgdatos.Columns[2].HeaderText = "UBIGEO";
+        //    dgdatos.Columns[3].HeaderText = "TIPO_DOC";
+        //    dgdatos.Columns[4].HeaderText = "NUM_DOC";
+        //    dgdatos.Columns[5].HeaderText = "EMAIL";
 
 
-        }
+        //}
         public DataTable mostrar()
         {
 
@@ -96,12 +95,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
-            col();
+            //col();
         }
 
         private void Frm_buscar_persona_Activated(object sender, EventArgs e)
         {
-            radioButton2.Checked = true;
+            radioButton4.Checked = true;
         }
 
         private void dgdatos_DoubleClick(object sender, EventArgs e)

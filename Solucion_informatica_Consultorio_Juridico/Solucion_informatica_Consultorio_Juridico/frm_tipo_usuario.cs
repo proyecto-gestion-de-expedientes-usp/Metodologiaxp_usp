@@ -25,9 +25,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             try
             {
-
                 SqlCommand cmd = new SqlCommand("sp_insertar_tipo_usuario", cone.con);
-
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipusu_tipousuario", SqlDbType.VarChar,20);
@@ -42,8 +40,9 @@ namespace Solucion_informatica_Consultorio_Juridico
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cone.con.Close();
                 dgdatos.DataSource = mostrar();
-                txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
-                limpiar();
+         
+                txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+           
             }
             catch (Exception ex)
             {
@@ -95,7 +94,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cone.con.Close();
                     limpiar();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
                     limpiar();
                 }
 
@@ -119,14 +118,16 @@ namespace Solucion_informatica_Consultorio_Juridico
             txtdescripcion.Text = "";
             txttipousu.Text = "";
             txt_buscar.Focus();
-            txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
+        {         
             campo = "tipusu_id";
             txt_buscar.Focus();
         }
+
+   
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -135,8 +136,49 @@ namespace Solucion_informatica_Consultorio_Juridico
             
         }
 
+        class Validar
+      {
+          public static void SoloLetras(KeyPressEventArgs V)
+            {
+                if (Char.IsLetter(V.KeyChar))
+                {
+                    V.Handled = false;
+                }
+                else if (Char.IsControl(V.KeyChar))
+                { V.Handled = false;
+                }
+                else if (Char.IsSeparator(V.KeyChar))
+                { V.Handled = false;
+                }
+                else
+                { V.Handled = true;       
+                }
+            }
+            public static void SoloNumeros(KeyPressEventArgs V)
+            {
+                if (Char.IsDigit(V.KeyChar))
+                {
+                    V.Handled = false;
+                }
+                else if (Char.IsSeparator(V.KeyChar))
+                {
+                    V.Handled = false;
+                }
+                else if (Char.IsControl(V.KeyChar))
+                {
+                    V.Handled = false;
+                }
+                else
+                {
+                    V.Handled = true;             
+                }
+            }
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
+
+          
             string valor = txt_buscar.Text;
             dgdatos.DataSource = buscar(campo, valor);
 
@@ -150,10 +192,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_tipo_usuario_Activated(object sender, EventArgs e)
         {
-            radioButton2.Checked = true;
+            radioButton1.Checked = true;
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
-            txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
             //cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
@@ -190,6 +232,45 @@ namespace Solucion_informatica_Consultorio_Juridico
             dgdatos.Columns[2].HeaderText = "DESCRIPCION";
         }
 
+        private void txttipousu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
 
+        private void radioButton1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Validar.SoloNumeros(e);
+        }
+
+        private void radioButton2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Validar.SoloLetras(e);
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {              
+            if (radioButton1.Checked == true)
+            {
+                Validar.SoloNumeros(e);  
+            }
+
+            if (radioButton2.Checked == true)
+            {
+                Validar.SoloLetras(e);
+            }
+        }
+
+        private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pos = dgdatos.CurrentRow.Index;
+            txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
+          txttipousu.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
+            txtdescripcion.Text = dgdatos.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,18 +55,18 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_buscar_abogado_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
-                        col();
+                        //col();
         }
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID_ABOGADO";
-            dgdatos.Columns[1].HeaderText = "ESTADO";
-            dgdatos.Columns[2].HeaderText = "PARTE";
-            dgdatos.Columns[3].HeaderText = "NOMBRES";
-            dgdatos.Columns[4].HeaderText = "APELLIDO_P";
-            dgdatos.Columns[5].HeaderText = "APELLIDO_M";
-            dgdatos.Columns[6].HeaderText = "DNI";
-        }
+        //public void col()
+        //{
+        //    dgdatos.Columns[0].HeaderText = "ID_ABOGADO";
+        //    dgdatos.Columns[1].HeaderText = "ESTADO";
+        //    dgdatos.Columns[2].HeaderText = "PARTE";
+        //    dgdatos.Columns[3].HeaderText = "NOMBRES";
+        //    dgdatos.Columns[4].HeaderText = "APELLIDO_P";
+        //    dgdatos.Columns[5].HeaderText = "APELLIDO_M";
+        //    dgdatos.Columns[6].HeaderText = "DNI";
+        //}
         public DataTable mostrar()
         {
             cone.con.Open();
@@ -93,6 +93,19 @@ namespace Solucion_informatica_Consultorio_Juridico
             da.Fill(dt);
             cone.con.Close();
             return dt;
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Validar.SoloNumeros(e);
+            }
+
+            if (radioButton2.Checked == true)
+            {
+                Validar.SoloLetras(e);
+            }
         }
     }
 }

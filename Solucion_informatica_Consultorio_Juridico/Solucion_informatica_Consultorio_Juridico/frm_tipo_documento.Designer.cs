@@ -213,6 +213,7 @@
             this.txtnombdocum.Name = "txtnombdocum";
             this.txtnombdocum.Size = new System.Drawing.Size(100, 20);
             this.txtnombdocum.TabIndex = 25;
+            this.txtnombdocum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombdocum_KeyPress);
             // 
             // frm_tipo_documento
             // 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -40,14 +41,13 @@
             this.dgdatos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txt_reg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nomper = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_idper = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_iddo = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txt_reg = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,16 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(385, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 47);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Mostrar Todo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // radioButton1
             // 
@@ -182,13 +192,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txt_reg
-            // 
-            this.txt_reg.Location = new System.Drawing.Point(96, 200);
-            this.txt_reg.Name = "txt_reg";
-            this.txt_reg.Size = new System.Drawing.Size(160, 20);
-            this.txt_reg.TabIndex = 20;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -202,6 +205,7 @@
             // 
             this.txt_nomper.Location = new System.Drawing.Point(146, 150);
             this.txt_nomper.Name = "txt_nomper";
+            this.txt_nomper.ReadOnly = true;
             this.txt_nomper.Size = new System.Drawing.Size(143, 20);
             this.txt_nomper.TabIndex = 18;
             // 
@@ -218,6 +222,7 @@
             // 
             this.txt_idper.Location = new System.Drawing.Point(96, 150);
             this.txt_idper.Name = "txt_idper";
+            this.txt_idper.ReadOnly = true;
             this.txt_idper.Size = new System.Drawing.Size(44, 20);
             this.txt_idper.TabIndex = 16;
             // 
@@ -238,21 +243,24 @@
             this.txt_iddo.Size = new System.Drawing.Size(100, 20);
             this.txt_iddo.TabIndex = 14;
             // 
-            // button3
+            // txt_reg
             // 
-            this.button3.Location = new System.Drawing.Point(385, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 47);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Mostrar Todo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.txt_reg.FormattingEnabled = true;
+            this.txt_reg.Items.AddRange(new object[] {
+            "ConsultorioUSP",
+            "Fuera de Consultorio"});
+            this.txt_reg.Location = new System.Drawing.Point(96, 200);
+            this.txt_reg.Name = "txt_reg";
+            this.txt_reg.Size = new System.Drawing.Size(121, 21);
+            this.txt_reg.TabIndex = 28;
+            this.txt_reg.Text = "ConsultorioUSP";
             // 
             // frm_demandante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 360);
+            this.Controls.Add(this.txt_reg);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_modificar);
@@ -260,7 +268,6 @@
             this.Controls.Add(this.dgdatos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txt_reg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_nomper);
             this.Controls.Add(this.label2);
@@ -293,7 +300,6 @@
         private System.Windows.Forms.DataGridView dgdatos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_reg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nomper;
         private System.Windows.Forms.Label label2;
@@ -301,5 +307,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_iddo;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox txt_reg;
     }
 }

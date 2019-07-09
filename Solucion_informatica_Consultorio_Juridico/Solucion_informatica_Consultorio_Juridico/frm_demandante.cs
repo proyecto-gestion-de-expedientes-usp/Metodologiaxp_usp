@@ -196,8 +196,6 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_buscar.Text = "";
             txt_buscar.Focus();
             txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
-
-
         }
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -232,13 +230,27 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_idper.Text = Program.idpers;
             txt_nomper.Text = Program.nompers;
             txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
-
+            txt_reg.DropDownStyle = ComboBoxStyle.DropDownList;
             radioButton2.Checked = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+        }
+
+        private void txt_reg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar))
+            { e.Handled = false; }
+            else
+            { e.Handled = true; }
         }
     }
 }

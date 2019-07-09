@@ -213,6 +213,7 @@
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(100, 20);
             this.cmb_condi.TabIndex = 27;
+            this.cmb_condi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_condi_KeyPress);
             // 
             // Frm_Estadoabog
             // 

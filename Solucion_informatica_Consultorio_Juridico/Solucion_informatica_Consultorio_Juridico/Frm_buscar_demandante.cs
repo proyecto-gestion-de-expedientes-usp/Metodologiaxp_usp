@@ -56,7 +56,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
-            col();
+            //col();
         }
         public DataTable mostrar()
         {
@@ -71,14 +71,14 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         }
 
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID";
-            dgdatos.Columns[1].HeaderText = "ID_PERSONA";
-            dgdatos.Columns[2].HeaderText = "PERSONA";
-            dgdatos.Columns[3].HeaderText = "NUM_DOC";
-            dgdatos.Columns[4].HeaderText = "REGISTRO";
-        }
+        //public void col()
+        //{
+        //    dgdatos.Columns[0].HeaderText = "ID";
+        //    dgdatos.Columns[1].HeaderText = "ID_PERSONA";
+        //    dgdatos.Columns[2].HeaderText = "PERSONA";
+        //    dgdatos.Columns[3].HeaderText = "NUM_DOC";
+        //    dgdatos.Columns[4].HeaderText = "REGISTRO";
+        //}
 
         public DataTable buscar(string campo, string valor)
         {
@@ -95,6 +95,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_buscar_demandante_Activated(object sender, EventArgs e)
         {
             radioButton2.Checked = true;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -103,6 +103,7 @@
             this.dgdatos.Name = "dgdatos";
             this.dgdatos.Size = new System.Drawing.Size(391, 172);
             this.dgdatos.TabIndex = 30;
+            this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             // 
             // groupBox1
             // 
@@ -129,6 +130,7 @@
             this.radioButton2.Text = "Tipo Usuario";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radioButton2_KeyPress);
             // 
             // radioButton1
             // 
@@ -141,6 +143,7 @@
             this.radioButton1.Text = "ID";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radioButton1_KeyPress);
             // 
             // button4
             // 
@@ -168,6 +171,8 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // label3
             // 
@@ -212,6 +217,7 @@
             this.txttipousu.Name = "txttipousu";
             this.txttipousu.Size = new System.Drawing.Size(100, 20);
             this.txttipousu.TabIndex = 37;
+            this.txttipousu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipousu_KeyPress);
             // 
             // frm_tipo_usuario
             // 

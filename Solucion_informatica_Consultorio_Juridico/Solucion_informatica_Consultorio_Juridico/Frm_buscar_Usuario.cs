@@ -50,25 +50,25 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             dgdatos.DataSource = mostrar();
 
-            col();
+            //col();
         }
-        public void col()
-        {
-            dgdatos.Columns[0].HeaderText = "ID_USUARIO";
-            dgdatos.Columns[1].HeaderText = "TIPO";
-            dgdatos.Columns[2].HeaderText = "DNI";
-            dgdatos.Columns[3].HeaderText = "NOMBRES";
-            dgdatos.Columns[4].HeaderText = "APELLIDO_P";
-            dgdatos.Columns[5].HeaderText = "APELLIDO_M";
-            dgdatos.Columns[6].HeaderText = "TELEFONO";
-            dgdatos.Columns[7].HeaderText = "DIRECCION";
-            dgdatos.Columns[8].HeaderText = "SEXO";
-            dgdatos.Columns[9].HeaderText = "CORREO";
-            dgdatos.Columns[10].HeaderText = "ESTADO_CIV";        
-            dgdatos.Columns[11].HeaderText = "PROVINCIA";
-            dgdatos.Columns[12].HeaderText = "CONDICION";
+        //public void col()
+        //{
+        //    dgdatos.Columns[0].HeaderText = "ID_USUARIO";
+        //    dgdatos.Columns[1].HeaderText = "TIPO";
+        //    dgdatos.Columns[2].HeaderText = "DNI";
+        //    dgdatos.Columns[3].HeaderText = "NOMBRES";
+        //    dgdatos.Columns[4].HeaderText = "APELLIDO_P";
+        //    dgdatos.Columns[5].HeaderText = "APELLIDO_M";
+        //    dgdatos.Columns[6].HeaderText = "TELEFONO";
+        //    dgdatos.Columns[7].HeaderText = "DIRECCION";
+        //    dgdatos.Columns[8].HeaderText = "SEXO";
+        //    dgdatos.Columns[9].HeaderText = "CORREO";
+        //    dgdatos.Columns[10].HeaderText = "ESTADO_CIV";        
+        //    dgdatos.Columns[11].HeaderText = "PROVINCIA";
+        //    dgdatos.Columns[12].HeaderText = "CONDICION";
         
-        }
+        //}
         public DataTable mostrar()
         {
             cone.con.Open();
