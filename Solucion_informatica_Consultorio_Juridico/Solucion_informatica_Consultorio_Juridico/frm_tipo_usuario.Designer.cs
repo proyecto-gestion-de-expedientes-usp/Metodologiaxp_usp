@@ -30,7 +30,6 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
-            this.cmb_condi = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,7 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtdescripcion = new System.Windows.Forms.RichTextBox();
+            this.txttipousu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,26 +65,6 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
             this.txt_id.TabIndex = 37;
-            // 
-            // cmb_condi
-            // 
-            this.cmb_condi.AutoCompleteCustomSource.AddRange(new string[] {
-            "Practicante",
-            "Contratado",
-            "Adminitrador"});
-            this.cmb_condi.FormattingEnabled = true;
-            this.cmb_condi.Items.AddRange(new object[] {
-            "DNI",
-            "Pasaporte",
-            "Carnet Militar",
-            "Tarjeta de Identidad",
-            "Tarjeta de Pasaporte",
-            "Carnet de Identidad"});
-            this.cmb_condi.Location = new System.Drawing.Point(130, 165);
-            this.cmb_condi.Name = "cmb_condi";
-            this.cmb_condi.Size = new System.Drawing.Size(100, 21);
-            this.cmb_condi.TabIndex = 34;
-            this.cmb_condi.Text = "Practicante";
             // 
             // button3
             // 
@@ -217,24 +197,32 @@
             this.label6.TabIndex = 39;
             this.label6.Text = "Descripcion";
             // 
-            // richTextBox1
+            // txtdescripcion
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(129, 213);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(162, 49);
-            this.richTextBox1.TabIndex = 40;
-            this.richTextBox1.Text = "";
+            this.txtdescripcion.Location = new System.Drawing.Point(129, 213);
+            this.txtdescripcion.MaxLength = 30;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(162, 49);
+            this.txtdescripcion.TabIndex = 40;
+            this.txtdescripcion.Text = "";
+            // 
+            // txttipousu
+            // 
+            this.txttipousu.Location = new System.Drawing.Point(129, 165);
+            this.txttipousu.Name = "txttipousu";
+            this.txttipousu.Size = new System.Drawing.Size(100, 20);
+            this.txttipousu.TabIndex = 37;
             // 
             // frm_tipo_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 409);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txttipousu);
             this.Controls.Add(this.txt_id);
-            this.Controls.Add(this.cmb_condi);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -258,7 +246,6 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_id;
-        private System.Windows.Forms.ComboBox cmb_condi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -272,6 +259,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtdescripcion;
+        private System.Windows.Forms.TextBox txttipousu;
     }
 }

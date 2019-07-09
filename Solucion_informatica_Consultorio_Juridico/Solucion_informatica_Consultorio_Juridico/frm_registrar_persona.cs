@@ -57,7 +57,6 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@pers_ciudad", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_provincia", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20);
-                cmd.Parameters.Add("@pers_ubigeo", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_domlegal", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_telefono", SqlDbType.VarChar, 13);
                 cmd.Parameters.Add("@pers_email", SqlDbType.VarChar, 30);
@@ -72,7 +71,6 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@pers_ciudad"].Value = txt_ciud.Text;
                 cmd.Parameters["@pers_provincia"].Value = txt_prov.Text;
                 cmd.Parameters["@pers_departamento"].Value = txt_depart.Text;
-                cmd.Parameters["@pers_ubigeo"].Value = txt_ubigeo.Text;
                 cmd.Parameters["@pers_domlegal"].Value = txt_domilega.Text;
                 cmd.Parameters["@pers_telefono"].Value = txt_telf.Text;
                 cmd.Parameters["@pers_email"].Value = txt_email.Text;
@@ -141,7 +139,6 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@pers_ciudad", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_provincia", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20);
-                cmd.Parameters.Add("@pers_ubigeo", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_domlegal", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_telefono", SqlDbType.VarChar, 13);
                 cmd.Parameters.Add("@pers_email", SqlDbType.VarChar, 30);
@@ -156,7 +153,6 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@pers_ciudad"].Value = txt_ciud.Text;
                 cmd.Parameters["@pers_provincia"].Value = txt_prov.Text;
                 cmd.Parameters["@pers_departamento"].Value = txt_depart.Text;
-                cmd.Parameters["@pers_ubigeo"].Value = txt_ubigeo.Text;
                 cmd.Parameters["@pers_domlegal"].Value = txt_domilega.Text;
                 cmd.Parameters["@pers_telefono"].Value = txt_telf.Text;
                 cmd.Parameters["@pers_email"].Value = txt_email.Text;

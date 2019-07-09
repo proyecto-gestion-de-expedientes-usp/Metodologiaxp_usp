@@ -34,15 +34,16 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@tipusu_descripcion", SqlDbType.VarChar, 30);
 
                 cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
-                cmd.Parameters["@tipusu_tipousuario"].Value = cmb_condi.Text;
-                cmd.Parameters["@tipusu_descripcion"].Value = richTextBox1.Text;
+                cmd.Parameters["@tipusu_tipousuario"].Value = txttipousu.Text;
+                cmd.Parameters["@tipusu_descripcion"].Value = txtdescripcion.Text;
 
                 cone.con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cone.con.Close();
                 dgdatos.DataSource = mostrar();
-                txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+                limpiar();
             }
             catch (Exception ex)
             {
@@ -61,7 +62,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show("Para modificar debe seleccionar una Fila en la tabla");
 
-                if (txt_id.Text.Trim() == "" || richTextBox1.Text.Trim() == "")
+                if (txt_id.Text.Trim() == "" || txtdescripcion.Text.Trim() == "")
                 {
                     MessageBox.Show("Se Prohiben Campos Vacios");
                 }
@@ -81,8 +82,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.Parameters.Add("@tipusu_descripcion", SqlDbType.VarChar, 30);
 
                     cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
-                    cmd.Parameters["@tipusu_tipousuario"].Value = cmb_condi.Text;
-                    cmd.Parameters["@tipusu_descripcion"].Value = richTextBox1.Text;
+                    cmd.Parameters["@tipusu_tipousuario"].Value = txttipousu.Text;
+                    cmd.Parameters["@tipusu_descripcion"].Value = txtdescripcion.Text;
 
 
                     cone.con.Open();
@@ -94,8 +95,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cone.con.Close();
                     limpiar();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-
+                    txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+                    limpiar();
                 }
 
 
@@ -115,9 +116,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             txt_id.Text = "";
             txt_buscar.Text = "";
-            richTextBox1.Text = "";
+            txtdescripcion.Text = "";
+            txttipousu.Text = "";
             txt_buscar.Focus();
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -151,9 +153,9 @@ namespace Solucion_informatica_Consultorio_Juridico
             radioButton2.Checked = true;
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-       
+            txt_id.Text = Convert.ToString(dgdatos.RowCount + 1);
+            //cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void frm_tipo_usuario_Load(object sender, EventArgs e)

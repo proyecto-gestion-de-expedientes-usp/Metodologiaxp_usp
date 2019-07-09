@@ -52,6 +52,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
                     txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    txt_descripcion.Text = "";
                 }
                 catch (Exception ex)
                 {
@@ -104,6 +105,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
                     txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    txt_descripcion.Text = "";
                 }
 
 

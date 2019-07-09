@@ -29,12 +29,13 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 35);
-                cmd.Parameters["@tipdoc_nom"].Value = cmb_condi.Text;
+                cmd.Parameters["@tipdoc_nom"].Value = txtnombdocum.Text;
                 cone.con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cone.con.Close();
                 dgdatos.DataSource = mostrar();
+                txtnombdocum.Text = "";
             }
             catch (Exception ex)
             {
@@ -78,7 +79,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
                     cmd.Parameters["@id_tipdoc"].Value = txt_id.Text;
-                    cmd.Parameters["@tipdoc_nom"].Value = cmb_condi.Text;
+                    cmd.Parameters["@tipdoc_nom"].Value = txtnombdocum.Text;
 
 
                     cone.con.Open();
@@ -143,13 +144,13 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             int pos = dgdatos.CurrentRow.Index;
             txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
-            cmb_condi.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
+            txtnombdocum.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void frm_tipo_documento_Activated(object sender, EventArgs e)
         {
-            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-            radioButton1.Checked = true;
+            //cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
+            //radioButton1.Checked = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -175,6 +176,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             campo = "tipdoc_nom";
             txt_buscar.Focus();
+        }
+
+        private void cmb_condi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

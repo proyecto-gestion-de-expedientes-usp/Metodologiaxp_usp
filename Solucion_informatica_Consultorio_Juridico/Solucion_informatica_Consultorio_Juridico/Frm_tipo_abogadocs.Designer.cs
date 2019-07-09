@@ -94,7 +94,7 @@
             this.cmb_condi.Items.AddRange(new object[] {
             "Defensa Inculpado",
             "Defensa Acusadora"});
-            this.cmb_condi.Location = new System.Drawing.Point(86, 188);
+            this.cmb_condi.Location = new System.Drawing.Point(86, 189);
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(122, 21);
             this.cmb_condi.TabIndex = 34;
@@ -244,6 +244,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(86, 280);
+            this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(215, 61);
             this.txt_descripcion.TabIndex = 41;

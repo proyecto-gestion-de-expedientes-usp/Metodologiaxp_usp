@@ -45,7 +45,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cb_tip_Doc = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nro_documento = new System.Windows.Forms.TextBox();
             this.txt_domilega = new System.Windows.Forms.TextBox();
-            this.txt_ubigeo = new System.Windows.Forms.TextBox();
             this.txt_depart = new System.Windows.Forms.TextBox();
             this.txt_prov = new System.Windows.Forms.TextBox();
             this.txt_ciud = new System.Windows.Forms.TextBox();
@@ -85,7 +83,6 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.cb_tip_Doc);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -96,7 +93,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_nro_documento);
             this.groupBox1.Controls.Add(this.txt_domilega);
-            this.groupBox1.Controls.Add(this.txt_ubigeo);
             this.groupBox1.Controls.Add(this.txt_depart);
             this.groupBox1.Controls.Add(this.txt_prov);
             this.groupBox1.Controls.Add(this.txt_ciud);
@@ -203,7 +199,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(59, 308);
+            this.label13.Location = new System.Drawing.Point(59, 286);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 34;
@@ -212,7 +208,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(59, 282);
+            this.label12.Location = new System.Drawing.Point(59, 260);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 33;
@@ -220,7 +216,7 @@
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(122, 305);
+            this.txt_email.Location = new System.Drawing.Point(122, 283);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(180, 20);
             this.txt_email.TabIndex = 32;
@@ -228,7 +224,7 @@
             // 
             // txt_telf
             // 
-            this.txt_telf.Location = new System.Drawing.Point(122, 279);
+            this.txt_telf.Location = new System.Drawing.Point(122, 257);
             this.txt_telf.Name = "txt_telf";
             this.txt_telf.Size = new System.Drawing.Size(138, 20);
             this.txt_telf.TabIndex = 31;
@@ -254,20 +250,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(38, 256);
+            this.label10.Location = new System.Drawing.Point(38, 234);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "Domicilio Legal";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(75, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 13);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Ubigeo";
             // 
             // label8
             // 
@@ -351,17 +338,10 @@
             // 
             // txt_domilega
             // 
-            this.txt_domilega.Location = new System.Drawing.Point(122, 253);
+            this.txt_domilega.Location = new System.Drawing.Point(122, 231);
             this.txt_domilega.Name = "txt_domilega";
             this.txt_domilega.Size = new System.Drawing.Size(180, 20);
             this.txt_domilega.TabIndex = 16;
-            // 
-            // txt_ubigeo
-            // 
-            this.txt_ubigeo.Location = new System.Drawing.Point(122, 227);
-            this.txt_ubigeo.Name = "txt_ubigeo";
-            this.txt_ubigeo.Size = new System.Drawing.Size(100, 20);
-            this.txt_ubigeo.TabIndex = 15;
             // 
             // txt_depart
             // 
@@ -406,6 +386,7 @@
             // txt_nomb
             // 
             this.txt_nomb.Location = new System.Drawing.Point(122, 71);
+            this.txt_nomb.MaxLength = 20;
             this.txt_nomb.Name = "txt_nomb";
             this.txt_nomb.Size = new System.Drawing.Size(180, 20);
             this.txt_nomb.TabIndex = 9;
@@ -457,7 +438,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cb_tip_Doc;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -468,7 +448,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_nro_documento;
         private System.Windows.Forms.TextBox txt_domilega;
-        private System.Windows.Forms.TextBox txt_ubigeo;
         private System.Windows.Forms.TextBox txt_depart;
         private System.Windows.Forms.TextBox txt_prov;
         private System.Windows.Forms.TextBox txt_ciud;

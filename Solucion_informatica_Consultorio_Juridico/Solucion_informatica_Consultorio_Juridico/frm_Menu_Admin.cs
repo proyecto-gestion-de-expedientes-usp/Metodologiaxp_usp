@@ -116,7 +116,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void registrarTipoAbogadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_buscar_tipoabog u = new frm_buscar_tipoabog();
+            Frm_tipo_abogadocs u = new Frm_tipo_abogadocs();
             u.ShowDialog();
         }
 

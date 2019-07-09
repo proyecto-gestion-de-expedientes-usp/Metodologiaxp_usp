@@ -32,7 +32,6 @@
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb_condi = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtnombdocum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -83,22 +83,6 @@
             this.label1.Size = new System.Drawing.Size(225, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Nota : Los tipos de documentos pueden variar";
-            // 
-            // cmb_condi
-            // 
-            this.cmb_condi.FormattingEnabled = true;
-            this.cmb_condi.Items.AddRange(new object[] {
-            "DNI",
-            "Pasaporte",
-            "Carnet Militar",
-            "Tarjeta de Identidad",
-            "Tarjeta de Pasaporte",
-            "Carnet de Identidad"});
-            this.cmb_condi.Location = new System.Drawing.Point(101, 206);
-            this.cmb_condi.Name = "cmb_condi";
-            this.cmb_condi.Size = new System.Drawing.Size(100, 21);
-            this.cmb_condi.TabIndex = 22;
-            this.cmb_condi.Text = "DNI";
             // 
             // button3
             // 
@@ -223,16 +207,23 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Nombre";
             // 
+            // txtnombdocum
+            // 
+            this.txtnombdocum.Location = new System.Drawing.Point(100, 209);
+            this.txtnombdocum.Name = "txtnombdocum";
+            this.txtnombdocum.Size = new System.Drawing.Size(100, 20);
+            this.txtnombdocum.TabIndex = 25;
+            // 
             // frm_tipo_documento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 396);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtnombdocum);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmb_condi);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -258,7 +249,6 @@
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb_condi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -271,5 +261,6 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtnombdocum;
     }
 }

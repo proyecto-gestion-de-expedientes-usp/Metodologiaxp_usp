@@ -335,6 +335,7 @@
             // txt_apepat
             // 
             this.txt_apepat.Location = new System.Drawing.Point(101, 91);
+            this.txt_apepat.MaxLength = 20;
             this.txt_apepat.Name = "txt_apepat";
             this.txt_apepat.Size = new System.Drawing.Size(179, 20);
             this.txt_apepat.TabIndex = 3;
@@ -344,6 +345,7 @@
             // txt_apemat
             // 
             this.txt_apemat.Location = new System.Drawing.Point(101, 117);
+            this.txt_apemat.MaxLength = 20;
             this.txt_apemat.Name = "txt_apemat";
             this.txt_apemat.Size = new System.Drawing.Size(179, 20);
             this.txt_apemat.TabIndex = 3;
@@ -353,7 +355,7 @@
             // txt_cel
             // 
             this.txt_cel.Location = new System.Drawing.Point(101, 143);
-            this.txt_cel.MaxLength = 9;
+            this.txt_cel.MaxLength = 15;
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(121, 20);
             this.txt_cel.TabIndex = 3;
@@ -362,6 +364,7 @@
             // txt_domici
             // 
             this.txt_domici.Location = new System.Drawing.Point(101, 169);
+            this.txt_domici.MaxLength = 40;
             this.txt_domici.Multiline = true;
             this.txt_domici.Name = "txt_domici";
             this.txt_domici.Size = new System.Drawing.Size(251, 60);
@@ -371,6 +374,7 @@
             // txt_correo
             // 
             this.txt_correo.Location = new System.Drawing.Point(50, 27);
+            this.txt_correo.MaxLength = 60;
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(207, 20);
             this.txt_correo.TabIndex = 3;
@@ -379,6 +383,7 @@
             // txt_dpto
             // 
             this.txt_dpto.Location = new System.Drawing.Point(101, 313);
+            this.txt_dpto.MaxLength = 20;
             this.txt_dpto.Name = "txt_dpto";
             this.txt_dpto.Size = new System.Drawing.Size(157, 20);
             this.txt_dpto.TabIndex = 3;
@@ -388,6 +393,7 @@
             // txt_provincia
             // 
             this.txt_provincia.Location = new System.Drawing.Point(101, 339);
+            this.txt_provincia.MaxLength = 20;
             this.txt_provincia.Name = "txt_provincia";
             this.txt_provincia.Size = new System.Drawing.Size(100, 20);
             this.txt_provincia.TabIndex = 3;
@@ -397,6 +403,7 @@
             // txt_distrito
             // 
             this.txt_distrito.Location = new System.Drawing.Point(101, 365);
+            this.txt_distrito.MaxLength = 20;
             this.txt_distrito.Name = "txt_distrito";
             this.txt_distrito.Size = new System.Drawing.Size(100, 20);
             this.txt_distrito.TabIndex = 3;
@@ -406,6 +413,7 @@
             // txt_contra
             // 
             this.txt_contra.Location = new System.Drawing.Point(128, 72);
+            this.txt_contra.MaxLength = 30;
             this.txt_contra.Name = "txt_contra";
             this.txt_contra.Size = new System.Drawing.Size(129, 20);
             this.txt_contra.TabIndex = 3;
@@ -413,6 +421,7 @@
             // txt_confi_contra
             // 
             this.txt_confi_contra.Location = new System.Drawing.Point(128, 120);
+            this.txt_confi_contra.MaxLength = 30;
             this.txt_confi_contra.Name = "txt_confi_contra";
             this.txt_confi_contra.Size = new System.Drawing.Size(129, 20);
             this.txt_confi_contra.TabIndex = 3;
