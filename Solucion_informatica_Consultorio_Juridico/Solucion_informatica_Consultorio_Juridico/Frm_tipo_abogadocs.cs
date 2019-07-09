@@ -125,7 +125,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_buscar.Text = "";
             txt_buscar.Focus();
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);   
         }
 
         private void Frm_tipo_abogadocs_Load(object sender, EventArgs e)
