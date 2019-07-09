@@ -32,7 +32,6 @@
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb_condi = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,7 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.RichTextBox();
-            this.txt_estado = new System.Windows.Forms.ComboBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.cmb_condi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -87,18 +87,6 @@
             this.label1.Size = new System.Drawing.Size(225, 13);
             this.label1.TabIndex = 35;
             this.label1.Text = "Nota : Los tipos de documentos pueden variar";
-            // 
-            // cmb_condi
-            // 
-            this.cmb_condi.FormattingEnabled = true;
-            this.cmb_condi.Items.AddRange(new object[] {
-            "Defensa Inculpado",
-            "Defensa Acusadora"});
-            this.cmb_condi.Location = new System.Drawing.Point(86, 189);
-            this.cmb_condi.Name = "cmb_condi";
-            this.cmb_condi.Size = new System.Drawing.Size(122, 21);
-            this.cmb_condi.TabIndex = 34;
-            this.cmb_condi.Text = "Defensa Inculpado";
             // 
             // button3
             // 
@@ -252,21 +240,24 @@
             // 
             // txt_estado
             // 
-            this.txt_estado.FormattingEnabled = true;
-            this.txt_estado.Items.AddRange(new object[] {
-            "En actividad",
-            "Retirado"});
-            this.txt_estado.Location = new System.Drawing.Point(86, 235);
+            this.txt_estado.Location = new System.Drawing.Point(86, 238);
             this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(91, 21);
-            this.txt_estado.TabIndex = 42;
-            this.txt_estado.Text = "En actividad";
+            this.txt_estado.Size = new System.Drawing.Size(100, 20);
+            this.txt_estado.TabIndex = 43;
+            // 
+            // cmb_condi
+            // 
+            this.cmb_condi.Location = new System.Drawing.Point(86, 191);
+            this.cmb_condi.Name = "cmb_condi";
+            this.cmb_condi.Size = new System.Drawing.Size(100, 20);
+            this.cmb_condi.TabIndex = 44;
             // 
             // Frm_tipo_abogadocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 401);
+            this.Controls.Add(this.cmb_condi);
             this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.label7);
@@ -275,7 +266,6 @@
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmb_condi);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -301,7 +291,6 @@
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb_condi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -317,6 +306,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox txt_descripcion;
-        private System.Windows.Forms.ComboBox txt_estado;
+        private System.Windows.Forms.TextBox txt_estado;
+        private System.Windows.Forms.TextBox cmb_condi;
     }
 }

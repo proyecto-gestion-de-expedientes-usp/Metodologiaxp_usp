@@ -197,8 +197,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
             txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-           txt_estado.DropDownStyle = ComboBoxStyle.DropDownList;
+           // cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
+           //txt_estado.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

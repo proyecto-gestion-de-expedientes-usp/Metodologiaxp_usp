@@ -24,7 +24,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void Frm_Estado_Usuario_Activated(object sender, EventArgs e)
         {
-            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
+            //cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
             radioButton1.Checked = true;
         }
 
