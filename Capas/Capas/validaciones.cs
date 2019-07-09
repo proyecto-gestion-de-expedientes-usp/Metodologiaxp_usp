@@ -11,7 +11,7 @@ namespace Capas
     public class validaciones
     {
 
-            public static void SoloLetras(KeyPressEventArgs V)
+            public void  SoloLetras(KeyPressEventArgs V)
             {
                 if (Char.IsLetter(V.KeyChar))
                 {
@@ -30,7 +30,7 @@ namespace Capas
                     V.Handled = true;
                 }
             }
-            public static void SoloNumeros(KeyPressEventArgs V)
+            public void SoloNumeros(KeyPressEventArgs V)
             {
                 if (Char.IsDigit(V.KeyChar))
                 {

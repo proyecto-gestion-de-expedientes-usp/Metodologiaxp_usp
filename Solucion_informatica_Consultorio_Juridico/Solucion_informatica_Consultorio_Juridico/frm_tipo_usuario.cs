@@ -16,6 +16,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     {
         string campo;
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public frm_tipo_usuario()
         {
             InitializeComponent();
@@ -136,49 +137,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             
         }
 
-        class Validar
-      {
-          public static void SoloLetras(KeyPressEventArgs V)
-            {
-                if (Char.IsLetter(V.KeyChar))
-                {
-                    V.Handled = false;
-                }
-                else if (Char.IsControl(V.KeyChar))
-                { V.Handled = false;
-                }
-                else if (Char.IsSeparator(V.KeyChar))
-                { V.Handled = false;
-                }
-                else
-                { V.Handled = true;       
-                }
-            }
-            public static void SoloNumeros(KeyPressEventArgs V)
-            {
-                if (Char.IsDigit(V.KeyChar))
-                {
-                    V.Handled = false;
-                }
-                else if (Char.IsSeparator(V.KeyChar))
-                {
-                    V.Handled = false;
-                }
-                else if (Char.IsControl(V.KeyChar))
-                {
-                    V.Handled = false;
-                }
-                else
-                {
-                    V.Handled = true;             
-                }
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e )
         {
-
-          
             string valor = txt_buscar.Text;
             dgdatos.DataSource = buscar(campo, valor);
 
@@ -234,29 +194,29 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txttipousu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.SoloLetras(e);
+            val.SoloLetras(e);
         }
 
         private void radioButton1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Validar.SoloNumeros(e);
+        
         }
 
         private void radioButton2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Validar.SoloLetras(e);
+         
         }
 
         private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
-        {              
+        {
             if (radioButton1.Checked == true)
             {
-                Validar.SoloNumeros(e);  
+                val.SoloNumeros(e);
             }
-
+      
             if (radioButton2.Checked == true)
             {
-                Validar.SoloLetras(e);
+                val.SoloLetras(e);
             }
         }
 
