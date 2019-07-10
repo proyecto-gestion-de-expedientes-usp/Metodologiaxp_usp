@@ -17,17 +17,9 @@ namespace Capas
             InitializeComponent();
         }
         public Boolean Validar
-
         {
             set;
             get;
-
-
         }
-
-
     }
-
-
-
 }

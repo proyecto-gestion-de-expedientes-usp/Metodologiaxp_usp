@@ -78,13 +78,6 @@ namespace Capas
         }
 
     }
-
-
-
-
-
-
-
 }
 
 
