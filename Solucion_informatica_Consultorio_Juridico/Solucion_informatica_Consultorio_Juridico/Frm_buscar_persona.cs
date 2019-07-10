@@ -17,6 +17,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         string campo;
 
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public Frm_buscar_persona()
         {
             InitializeComponent();
@@ -113,6 +114,20 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
             Hide();
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton4.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+        
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         string c;
 
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public Frm_reg_historialjuzg()
         {
             InitializeComponent();
@@ -302,6 +303,32 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.SoloNumeros(e);
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton8.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+            
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "juzg_id";
+            txt_buscar.Focus();
         }
     }
 }

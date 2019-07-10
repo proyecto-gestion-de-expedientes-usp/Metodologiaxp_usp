@@ -119,6 +119,7 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(271, 20);
             this.txt_buscar.TabIndex = 27;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // btn_buscar1
             // 
@@ -242,6 +243,7 @@
             this.txt_iddo.ReadOnly = true;
             this.txt_iddo.Size = new System.Drawing.Size(100, 20);
             this.txt_iddo.TabIndex = 14;
+            this.txt_iddo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_iddo_KeyPress);
             // 
             // txt_reg
             // 

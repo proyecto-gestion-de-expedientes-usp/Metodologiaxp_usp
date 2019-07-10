@@ -65,6 +65,7 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
             this.txt_id.TabIndex = 37;
+            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // button3
             // 
@@ -168,6 +169,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
@@ -214,6 +216,7 @@
             // txttipousu
             // 
             this.txttipousu.Location = new System.Drawing.Point(129, 165);
+            this.txttipousu.MaxLength = 20;
             this.txttipousu.Name = "txttipousu";
             this.txttipousu.Size = new System.Drawing.Size(100, 20);
             this.txttipousu.TabIndex = 37;

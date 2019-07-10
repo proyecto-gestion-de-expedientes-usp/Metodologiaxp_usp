@@ -41,13 +41,13 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.btn_buscar1 = new System.Windows.Forms.Button();
             this.txt_reg = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,7 @@
             this.txt_iddo.ReadOnly = true;
             this.txt_iddo.Size = new System.Drawing.Size(100, 20);
             this.txt_iddo.TabIndex = 0;
+            this.txt_iddo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_iddo_KeyPress);
             // 
             // label1
             // 
@@ -179,6 +180,16 @@
             this.groupBox1.Text = "Buscar por :";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(385, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 23);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Mostrar Todo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
@@ -221,6 +232,7 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(271, 20);
             this.txt_buscar.TabIndex = 27;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // btn_buscar1
             // 
@@ -243,16 +255,6 @@
             this.txt_reg.Size = new System.Drawing.Size(107, 21);
             this.txt_reg.TabIndex = 14;
             this.txt_reg.Text = "ConsultorioUSP";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(385, 41);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 23);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Mostrar Todo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frm_demandado
             // 

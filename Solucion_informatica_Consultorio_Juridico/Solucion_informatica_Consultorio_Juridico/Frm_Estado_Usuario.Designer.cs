@@ -129,9 +129,11 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar.MaxLength = 20;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // dgdatos
             // 
@@ -197,6 +199,7 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
             this.txt_id.TabIndex = 13;
+            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // label5
             // 
@@ -210,6 +213,7 @@
             // cmb_condi
             // 
             this.cmb_condi.Location = new System.Drawing.Point(102, 206);
+            this.cmb_condi.MaxLength = 20;
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(100, 20);
             this.cmb_condi.TabIndex = 15;

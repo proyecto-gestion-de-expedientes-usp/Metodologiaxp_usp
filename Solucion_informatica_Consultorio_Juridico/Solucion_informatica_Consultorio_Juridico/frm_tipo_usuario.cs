@@ -195,6 +195,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txttipousu_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.SoloLetras(e);
+         
         }
 
         private void radioButton1_KeyPress(object sender, KeyPressEventArgs e)
@@ -208,15 +209,25 @@ namespace Solucion_informatica_Consultorio_Juridico
         }
 
         private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {       
             if (radioButton1.Checked == true)
             {
                 val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
             }
-      
+          
             if (radioButton2.Checked == true)
             {
                 val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
             }
         }
 
@@ -231,6 +242,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_buscar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.SoloNumeros(e);
         }
     }
 }

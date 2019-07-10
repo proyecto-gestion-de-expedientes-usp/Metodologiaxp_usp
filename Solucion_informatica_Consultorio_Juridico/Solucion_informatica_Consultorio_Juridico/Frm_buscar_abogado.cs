@@ -98,7 +98,26 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-       
+           
+            if (radioButton1.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+            if (radioButton4.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
         }
     }
 }

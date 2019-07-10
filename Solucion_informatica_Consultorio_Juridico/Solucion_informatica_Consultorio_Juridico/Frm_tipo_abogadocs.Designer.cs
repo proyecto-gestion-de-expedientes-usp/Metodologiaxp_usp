@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.RichTextBox();
             this.txt_estado = new System.Windows.Forms.TextBox();
-            this.cmb_condi = new System.Windows.Forms.TextBox();
+            this.cmb_condi = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
             this.txt_id.TabIndex = 37;
+            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // label4
             // 
@@ -188,9 +189,11 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar.MaxLength = 50;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // label3
             // 
@@ -237,10 +240,12 @@
             this.txt_descripcion.Size = new System.Drawing.Size(215, 61);
             this.txt_descripcion.TabIndex = 41;
             this.txt_descripcion.Text = "";
+            this.txt_descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_KeyPress);
             // 
             // txt_estado
             // 
             this.txt_estado.Location = new System.Drawing.Point(86, 238);
+            this.txt_estado.MaxLength = 20;
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(100, 20);
             this.txt_estado.TabIndex = 43;
@@ -248,11 +253,15 @@
             // 
             // cmb_condi
             // 
-            this.cmb_condi.Location = new System.Drawing.Point(86, 191);
+            this.cmb_condi.FormattingEnabled = true;
+            this.cmb_condi.Items.AddRange(new object[] {
+            "Defensa Demandante",
+            "Defensa Demandado"});
+            this.cmb_condi.Location = new System.Drawing.Point(87, 191);
             this.cmb_condi.Name = "cmb_condi";
-            this.cmb_condi.Size = new System.Drawing.Size(100, 20);
-            this.cmb_condi.TabIndex = 44;
-            this.cmb_condi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_condi_KeyPress);
+            this.cmb_condi.Size = new System.Drawing.Size(121, 21);
+            this.cmb_condi.TabIndex = 45;
+            this.cmb_condi.Text = "Defensa Demandante";
             // 
             // Frm_tipo_abogadocs
             // 
@@ -309,6 +318,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox txt_descripcion;
         private System.Windows.Forms.TextBox txt_estado;
-        private System.Windows.Forms.TextBox cmb_condi;
+        private System.Windows.Forms.ComboBox cmb_condi;
     }
 }

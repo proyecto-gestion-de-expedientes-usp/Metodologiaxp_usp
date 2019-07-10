@@ -15,6 +15,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     {
         string campo;
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public frm_tipo_documento()
         {
             InitializeComponent();
@@ -185,16 +186,35 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txtnombdocum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            val.SoloLetras(e);
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton1.Checked == true)
             {
-                e.Handled = false;
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
             }
-            else if (Char.IsControl(e.KeyChar))
-            { e.Handled = false; }
-            else if (Char.IsSeparator(e.KeyChar))
-            { e.Handled = false; }
-            else
-            { e.Handled = true; }
+
+            if (radioButton2.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.SoloNumeros(e);
         }
     }
 }

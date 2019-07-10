@@ -14,6 +14,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class frm_buscar_estadousu : Form
     {
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
 
         string campo;
 
@@ -81,6 +82,30 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_buscar_estadousu_Activated(object sender, EventArgs e)
         {
             radioButton1.Checked = true;
+        }
+
+        private void frm_buscar_estadousu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+
+            if (radioButton2.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
         }
     }
 }

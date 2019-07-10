@@ -17,6 +17,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     {
         string campo;
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public Frm_tipo_abogadocs()
         {
             InitializeComponent();
@@ -197,8 +198,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
             txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-           // cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-           //txt_estado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
+            //txt_estado.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -209,16 +210,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txt_estado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            { e.Handled = false; }
-            else if (Char.IsSeparator(e.KeyChar))
-            { e.Handled = false; }
-            else
-            { e.Handled = true; }
+            val.SoloLetras(e);
         }
 
         private void cmb_condi_KeyPress(object sender, KeyPressEventArgs e)
@@ -233,6 +225,39 @@ namespace Solucion_informatica_Consultorio_Juridico
             { e.Handled = false; }
             else
             { e.Handled = true; }
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.SoloNumeros(e);
+        }
+
+        private void txt_descripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+            if (radioButton1.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
         }
     }
 }

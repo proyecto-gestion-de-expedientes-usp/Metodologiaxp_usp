@@ -111,6 +111,7 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // frm_buscar_tipo_documento
             // 

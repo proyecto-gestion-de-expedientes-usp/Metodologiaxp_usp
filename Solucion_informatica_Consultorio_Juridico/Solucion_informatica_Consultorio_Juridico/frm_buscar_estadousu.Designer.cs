@@ -123,6 +123,7 @@
             this.Text = "Frm Buscar Estado Usuario";
             this.Activated += new System.EventHandler(this.frm_buscar_estadousu_Activated);
             this.Load += new System.EventHandler(this.frm_buscar_estadousu_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frm_buscar_estadousu_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

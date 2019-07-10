@@ -63,6 +63,7 @@
             this.dt1 = new System.Windows.Forms.DateTimePicker();
             this.button5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,6 +85,7 @@
             this.txt_id.ReadOnly = true;
             this.txt_id.Size = new System.Drawing.Size(75, 20);
             this.txt_id.TabIndex = 1;
+            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // dgdatos
             // 
@@ -96,6 +98,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton8);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.button4);
@@ -110,7 +113,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(117, 18);
+            this.radioButton2.Location = new System.Drawing.Point(178, 16);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(104, 17);
             this.radioButton2.TabIndex = 29;
@@ -122,9 +125,11 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(11, 49);
+            this.txt_buscar.MaxLength = 50;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(240, 20);
             this.txt_buscar.TabIndex = 28;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // button4
             // 
@@ -139,7 +144,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(26, 20);
+            this.radioButton1.Location = new System.Drawing.Point(91, 18);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 17);
             this.radioButton1.TabIndex = 0;
@@ -224,6 +229,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(83, 73);
+            this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(217, 34);
             this.txt_descripcion.TabIndex = 19;
@@ -241,6 +247,7 @@
             // txt_pronunciamiento
             // 
             this.txt_pronunciamiento.Location = new System.Drawing.Point(104, 159);
+            this.txt_pronunciamiento.MaxLength = 50;
             this.txt_pronunciamiento.Name = "txt_pronunciamiento";
             this.txt_pronunciamiento.Size = new System.Drawing.Size(217, 34);
             this.txt_pronunciamiento.TabIndex = 21;
@@ -419,6 +426,18 @@
             this.label10.Text = "Nota : No podràs modificar la fecha de Recepciòn";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(18, 19);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(36, 17);
+            this.radioButton8.TabIndex = 30;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "ID";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
+            // 
             // Frm_reg_historialjuzg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,5 +517,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton radioButton8;
     }
 }

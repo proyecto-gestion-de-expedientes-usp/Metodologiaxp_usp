@@ -14,6 +14,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class Frm_Estadoabog : Form
     {
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
 
         string campo;
         public Frm_Estadoabog()
@@ -180,16 +181,37 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void cmb_condi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            val.SoloLetras(e);
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+       
+                val.SoloNumeros(e);
+           
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton1.Checked == true)
             {
-                e.Handled = false;
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
             }
-            else if (Char.IsControl(e.KeyChar))
-            { e.Handled = false; }
-            else if (Char.IsSeparator(e.KeyChar))
-            { e.Handled = false; }
-            else
-            { e.Handled = true; }
+
+            if (radioButton2.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
         }
     }
 }

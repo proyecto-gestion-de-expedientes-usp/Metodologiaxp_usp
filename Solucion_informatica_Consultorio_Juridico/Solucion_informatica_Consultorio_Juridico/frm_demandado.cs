@@ -17,8 +17,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         string campo;
 
         Capas.conexion cone = new Capas.conexion();
-        //componentes.c_exp otn = new componentes.c_exp();
-
+        Capas.validaciones val = new Capas.validaciones();
 
         public frm_demandado()
         {
@@ -250,6 +249,43 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void button3_Click(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+            if (radioButton4.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+            if (radioButton1.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+        }
+
+        private void txt_iddo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.SoloNumeros(e);
         }
     }
 

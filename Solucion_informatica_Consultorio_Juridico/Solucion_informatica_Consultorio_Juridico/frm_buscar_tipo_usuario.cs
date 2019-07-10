@@ -15,6 +15,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     {
         string campo;
         Capas.conexion cone = new Capas.conexion();
+        Capas.validaciones val = new Capas.validaciones();
         public frm_buscar_tipo_usuario()
         {
             InitializeComponent();
@@ -93,6 +94,30 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_buscar_tipo_usuario_Activated(object sender, EventArgs e)
         {
             radioButton1.Checked = true;
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                val.SoloNumeros(e);
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
+
+
+            if (radioButton2.Checked == true)
+            {
+                val.SoloLetras(e);
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    txt_buscar.Clear();
+                }
+            }
         }
     }
 }
