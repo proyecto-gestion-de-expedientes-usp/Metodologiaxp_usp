@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +45,11 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmb_condi = new System.Windows.Forms.TextBox();
+            this.cmb_condi = new Capas.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -213,11 +216,15 @@
             // cmb_condi
             // 
             this.cmb_condi.Location = new System.Drawing.Point(109, 208);
-            this.cmb_condi.MaxLength = 20;
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(100, 20);
             this.cmb_condi.TabIndex = 27;
-            this.cmb_condi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_condi_KeyPress);
+            this.cmb_condi.Validar = true;
+            this.cmb_condi.TextChanged += new System.EventHandler(this.cmb_condi_TextChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Frm_Estadoabog
             // 
@@ -243,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +274,7 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cmb_condi;
+        private Capas.ErrorTxtBox cmb_condi;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

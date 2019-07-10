@@ -23,26 +23,30 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
+                try
+                {
 
-                SqlCommand cmd = new SqlCommand("sp_insertar_tipodoc", cone.con);
+                    SqlCommand cmd = new SqlCommand("sp_insertar_tipodoc", cone.con);
 
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 35);
-                cmd.Parameters["@tipdoc_nom"].Value = txtnombdocum.Text;
-                cone.con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron insertados correctamente");
-                cone.con.Close();
-                dgdatos.DataSource = mostrar();
-                txtnombdocum.Text = "";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@tipdoc_nom", SqlDbType.VarChar, 35);
+                    cmd.Parameters["@tipdoc_nom"].Value = txtnombdocum.Text;
+                    cone.con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron insertados correctamente");
+                    cone.con.Close();
+                    dgdatos.DataSource = mostrar();
+                    txtnombdocum.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    cone.con.Close();
+                    MessageBox.Show(ex.Message, "Error al Grabar");
+                }
             }
-            catch (Exception ex)
-            {
-                cone.con.Close();
-                MessageBox.Show(ex.Message, "Error al Grabar");
-            }
+            else { }
         }
         public void col()
         {
@@ -215,6 +219,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.SoloNumeros(e);
+        }
+
+        private void txtnombdocum_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

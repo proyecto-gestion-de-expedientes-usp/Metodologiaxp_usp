@@ -50,7 +50,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {     
+        {
+
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
+
+            {
+
                 try
                 {
 
@@ -69,7 +74,15 @@ namespace Solucion_informatica_Consultorio_Juridico
                 {
                     cone.con.Close();
                     MessageBox.Show(ex.Message, "Error al Grabar");
-                }           
+                 
+                }
+            }
+            else
+            {
+                //////////
+
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -222,6 +235,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.SoloNumeros(e);
+        }
+
+        private void cmb_condi_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

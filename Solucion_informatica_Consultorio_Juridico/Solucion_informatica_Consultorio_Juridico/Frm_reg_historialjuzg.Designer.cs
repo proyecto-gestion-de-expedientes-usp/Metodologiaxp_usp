@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.dgdatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -44,9 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_descripcion = new System.Windows.Forms.RichTextBox();
             this.dt_recepcion = new System.Windows.Forms.DateTimePicker();
-            this.txt_pronunciamiento = new System.Windows.Forms.RichTextBox();
             this.dt_derivacion = new System.Windows.Forms.DateTimePicker();
             this.dt_resolucion = new System.Windows.Forms.DateTimePicker();
             this.dt_notificacion = new System.Windows.Forms.DateTimePicker();
@@ -63,10 +63,13 @@
             this.dt1 = new System.Windows.Forms.DateTimePicker();
             this.button5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.txt_descripcion = new Capas.ErrorTxtBox();
+            this.txt_pronunciamiento = new Capas.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +112,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bùsqueda por :";
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(18, 19);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(36, 17);
+            this.radioButton8.TabIndex = 30;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "ID";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -226,15 +241,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Soluciòn";
             // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Location = new System.Drawing.Point(83, 73);
-            this.txt_descripcion.MaxLength = 50;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(217, 34);
-            this.txt_descripcion.TabIndex = 19;
-            this.txt_descripcion.Text = "";
-            // 
             // dt_recepcion
             // 
             this.dt_recepcion.CustomFormat = "dd-MM-yyyy";
@@ -243,15 +249,6 @@
             this.dt_recepcion.Name = "dt_recepcion";
             this.dt_recepcion.Size = new System.Drawing.Size(200, 20);
             this.dt_recepcion.TabIndex = 20;
-            // 
-            // txt_pronunciamiento
-            // 
-            this.txt_pronunciamiento.Location = new System.Drawing.Point(104, 159);
-            this.txt_pronunciamiento.MaxLength = 50;
-            this.txt_pronunciamiento.Name = "txt_pronunciamiento";
-            this.txt_pronunciamiento.Size = new System.Drawing.Size(217, 34);
-            this.txt_pronunciamiento.TabIndex = 21;
-            this.txt_pronunciamiento.Text = "";
             // 
             // dt_derivacion
             // 
@@ -426,23 +423,35 @@
             this.label10.Text = "Nota : No podràs modificar la fecha de Recepciòn";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // radioButton8
+            // txt_descripcion
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(18, 19);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(36, 17);
-            this.radioButton8.TabIndex = 30;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "ID";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
+            this.txt_descripcion.Location = new System.Drawing.Point(97, 73);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(216, 20);
+            this.txt_descripcion.TabIndex = 32;
+            this.txt_descripcion.Validar = true;
+            this.txt_descripcion.TextChanged += new System.EventHandler(this.txt_descripcion_TextChanged);
+            // 
+            // txt_pronunciamiento
+            // 
+            this.txt_pronunciamiento.Location = new System.Drawing.Point(97, 161);
+            this.txt_pronunciamiento.Name = "txt_pronunciamiento";
+            this.txt_pronunciamiento.Size = new System.Drawing.Size(216, 20);
+            this.txt_pronunciamiento.TabIndex = 33;
+            this.txt_pronunciamiento.Validar = true;
+            this.txt_pronunciamiento.TextChanged += new System.EventHandler(this.txt_pronunciamiento_TextChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Frm_reg_historialjuzg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 526);
+            this.Controls.Add(this.txt_pronunciamiento);
+            this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
@@ -451,9 +460,7 @@
             this.Controls.Add(this.dt_notificacion);
             this.Controls.Add(this.dt_resolucion);
             this.Controls.Add(this.dt_derivacion);
-            this.Controls.Add(this.txt_pronunciamiento);
             this.Controls.Add(this.dt_recepcion);
-            this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -475,6 +482,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,9 +503,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox txt_descripcion;
         private System.Windows.Forms.DateTimePicker dt_recepcion;
-        private System.Windows.Forms.RichTextBox txt_pronunciamiento;
         private System.Windows.Forms.DateTimePicker dt_derivacion;
         private System.Windows.Forms.DateTimePicker dt_resolucion;
         private System.Windows.Forms.DateTimePicker dt_notificacion;
@@ -518,5 +524,8 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton radioButton8;
+        private Capas.ErrorTxtBox txt_descripcion;
+        private Capas.ErrorTxtBox txt_pronunciamiento;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

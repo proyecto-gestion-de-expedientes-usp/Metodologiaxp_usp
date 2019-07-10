@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49887D43-EED2-4C56-B58E-0FCF55501595}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solucion_informatica_Consultorio_Juridico</RootNamespace>
+    <AssemblyName>Solucion_informatica_Consultorio_Juridico</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Capas">
+      <HintPath>..\..\..\..\..\..\Desktop\Capas.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Fakes">
+      <HintPath>FakesAssemblies\EntityFramework.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Acceso.cs" />
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Clases\Validacioes.cs" />
+    <Compile Include="frm_Anexos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Anexos.Designer.cs">
+      <DependentUpon>frm_Anexos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_estadoabog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_estadoabog.Designer.cs">
+      <DependentUpon>frm_buscar_estadoabog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_estadousu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_estadousu.Designer.cs">
+      <DependentUpon>frm_buscar_estadousu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipoabog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipoabog.Designer.cs">
+      <DependentUpon>frm_buscar_tipoabog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_documento.Designer.cs">
+      <DependentUpon>frm_buscar_tipo_documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_tipo_usuario.Designer.cs">
+      <DependentUpon>frm_buscar_tipo_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_documento.Designer.cs">
+      <DependentUpon>frm_documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_abogado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_demandado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_demandado.Designer.cs">
+      <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_demandante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_demandante.Designer.cs">
+      <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_demandado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_demandado.Designer.cs">
+      <DependentUpon>frm_demandado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Estadoabog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Estadoabog.Designer.cs">
+      <DependentUpon>Frm_Estadoabog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Estado_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Estado_Usuario.Designer.cs">
+      <DependentUpon>Frm_Estado_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_recuperar_contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_recuperar_contraseña.Designer.cs">
+      <DependentUpon>Frm_recuperar_contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_reg_historialjuzg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_reg_historialjuzg.Designer.cs">
+      <DependentUpon>Frm_reg_historialjuzg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_demandante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_demandante.Designer.cs">
+      <DependentUpon>frm_demandante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_persona.Designer.cs">
+      <DependentUpon>Frm_buscar_persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_buscar_Usuario.Designer.cs">
+      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_buscar_abogado.Designer.cs">
+      <DependentUpon>Frm_buscar_abogado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Menu_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Menu_Admin.Designer.cs">
+      <DependentUpon>frm_Menu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Registrar_Expediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Registrar_Expediente.Designer.cs">
+      <DependentUpon>frm_Registrar_Expediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Registrar_MovimientoExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Registrar_MovimientoExp.Designer.cs">
+      <DependentUpon>frm_Registrar_MovimientoExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registrar_persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registrar_persona.Designer.cs">
+      <DependentUpon>frm_registrar_persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registrar_abogado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registrar_abogado.Designer.cs">
+      <DependentUpon>frm_registrar_abogado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registrar_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registrar_usuario.Designer.cs">
+      <DependentUpon>frm_registrar_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_reporte.Designer.cs">
+      <DependentUpon>Frm_reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_tipo_abogadocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_tipo_abogadocs.Designer.cs">
+      <DependentUpon>Frm_tipo_abogadocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipo_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipo_documento.Designer.cs">
+      <DependentUpon>frm_tipo_documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipo_usuario.Designer.cs">
+      <DependentUpon>frm_tipo_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Trabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Trabajador.Designer.cs">
+      <DependentUpon>Menu_Trabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Abogado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Anexos.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Demandado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Demandante.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Documento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Estado_Abogado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Estado_Usu.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Expediente.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Historial_Juzgado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Logueo.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Movimiento_Expediente.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Persona.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Abogado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Usuario.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tip_documento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Usuario.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ValidarCorreo_Result.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstabogxestabog.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstanexmovexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstanxnombre.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstDemtexPers.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstDemxPers.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstdemxreg.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstdocxexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstDocxnom.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstDocxnomreal.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstestabg.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstestusuxcond.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstexpxhistjuzg.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstExpxmateria.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstexpxmovexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstExpxnumero.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstHistdeJuzgxdescr.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstHistdeJuzgxFechRec.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstHistdeJuzgxFechSol.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstjuzgxexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstmovexpxexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstpersonaxciudad.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstpersonaxdepartamento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstpersonaxprovincia.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstperxtipdoc.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipabxabo.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipAbxdef_inc.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipAbxestado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipdemxreg.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipdocxnom.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipousuarioxdescripcion.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lsttipuxusu.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstuserxmovexp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstusuarioxciudad.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstusuarioxdepartamento.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstusuarioxprovincia.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxapellidospat.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxdni.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxestado.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxfechaing.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxnombres.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V_lstxprogreso.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\V__lsttipousuarioxtipous.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\RPT_Casos_x_Ciclo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Casos_x_Ciclo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frm_Anexos.resx">
+      <DependentUpon>frm_Anexos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_estadoabog.resx">
+      <DependentUpon>frm_buscar_estadoabog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_estadousu.resx">
+      <DependentUpon>frm_buscar_estadousu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipoabog.resx">
+      <DependentUpon>frm_buscar_tipoabog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipo_documento.resx">
+      <DependentUpon>frm_buscar_tipo_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_tipo_usuario.resx">
+      <DependentUpon>frm_buscar_tipo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_documento.resx">
+      <DependentUpon>frm_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Estadoabog.resx">
+      <DependentUpon>Frm_Estadoabog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Estado_Usuario.resx">
+      <DependentUpon>Frm_Estado_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Menu_Admin.resx">
+      <DependentUpon>frm_Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_abogado.resx">
+      <DependentUpon>Frm_buscar_abogado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_demandado.resx">
+      <DependentUpon>Frm_buscar_demandado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_demandante.resx">
+      <DependentUpon>Frm_buscar_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_persona.resx">
+      <DependentUpon>Frm_buscar_persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_buscar_Usuario.resx">
+      <DependentUpon>Frm_buscar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_demandado.resx">
+      <DependentUpon>frm_demandado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_demandante.resx">
+      <DependentUpon>frm_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_recuperar_contraseña.resx">
+      <DependentUpon>Frm_recuperar_contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_reg_historialjuzg.resx">
+      <DependentUpon>Frm_reg_historialjuzg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Registrar_Expediente.resx">
+      <DependentUpon>frm_Registrar_Expediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Registrar_MovimientoExp.resx">
+      <DependentUpon>frm_Registrar_MovimientoExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registrar_persona.resx">
+      <DependentUpon>frm_registrar_persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registrar_abogado.resx">
+      <DependentUpon>frm_registrar_abogado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registrar_usuario.resx">
+      <DependentUpon>frm_registrar_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_reporte.resx">
+      <DependentUpon>Frm_reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_tipo_abogadocs.resx">
+      <DependentUpon>Frm_tipo_abogadocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipo_documento.resx">
+      <DependentUpon>frm_tipo_documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipo_usuario.resx">
+      <DependentUpon>frm_tipo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Trabajador.resx">
+      <DependentUpon>Menu_Trabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reportes\RPT_Casos_x_Ciclo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_Casos_x_Ciclo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <None Include="Model\DB.edmx.diagram">
+      <DependentUpon>DB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resourse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB.Context.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB.edmx</DependentUpon>
+      <LastGenOutput>DB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

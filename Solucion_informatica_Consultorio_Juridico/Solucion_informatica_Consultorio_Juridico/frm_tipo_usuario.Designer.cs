@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,10 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtdescripcion = new System.Windows.Forms.RichTextBox();
-            this.txttipousu = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_id = new Capas.ErrorTxtBox();
+            this.txtdescripcion = new Capas.ErrorTxtBox();
+            this.txttipousu = new Capas.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -57,15 +60,6 @@
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 38;
             this.label5.Text = "ID";
-            // 
-            // txt_id
-            // 
-            this.txt_id.Enabled = false;
-            this.txt_id.Location = new System.Drawing.Point(129, 123);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(100, 20);
-            this.txt_id.TabIndex = 37;
-            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // button3
             // 
@@ -200,38 +194,51 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(47, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Descripcion";
+            this.label6.Text = "Descripcion :";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(129, 126);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 41;
+            this.txt_id.Validar = true;
+            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(129, 213);
-            this.txtdescripcion.MaxLength = 30;
+            this.txtdescripcion.Location = new System.Drawing.Point(46, 240);
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(162, 49);
-            this.txtdescripcion.TabIndex = 40;
-            this.txtdescripcion.Text = "";
+            this.txtdescripcion.Size = new System.Drawing.Size(266, 20);
+            this.txtdescripcion.TabIndex = 42;
+            this.txtdescripcion.Validar = true;
+            this.txtdescripcion.TextChanged += new System.EventHandler(this.txtdescripcion_TextChanged);
             // 
             // txttipousu
             // 
-            this.txttipousu.Location = new System.Drawing.Point(129, 165);
-            this.txttipousu.MaxLength = 20;
+            this.txttipousu.Location = new System.Drawing.Point(129, 177);
             this.txttipousu.Name = "txttipousu";
             this.txttipousu.Size = new System.Drawing.Size(100, 20);
-            this.txttipousu.TabIndex = 37;
-            this.txttipousu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipousu_KeyPress);
+            this.txttipousu.TabIndex = 43;
+            this.txttipousu.Validar = true;
+            this.txttipousu.TextChanged += new System.EventHandler(this.txttipousu_TextChanged);
             // 
             // frm_tipo_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 409);
+            this.Controls.Add(this.txttipousu);
             this.Controls.Add(this.txtdescripcion);
+            this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txttipousu);
-            this.Controls.Add(this.txt_id);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -246,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +262,6 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -268,7 +275,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox txtdescripcion;
-        private System.Windows.Forms.TextBox txttipousu;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Capas.ErrorTxtBox txt_id;
+        private Capas.ErrorTxtBox txttipousu;
+        private Capas.ErrorTxtBox txtdescripcion;
     }
 }

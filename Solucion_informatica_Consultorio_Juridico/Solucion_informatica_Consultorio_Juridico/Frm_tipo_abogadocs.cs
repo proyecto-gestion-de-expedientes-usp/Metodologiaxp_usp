@@ -25,11 +25,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txt_id.Text.Trim() == "" || txt_estado.Text.Trim() == "" || txt_descripcion.Text.Trim() == "")
-            {
-                MessageBox.Show("Se Prohiben Campos Vacios");
-            }
-            else
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
                 try
                 {
@@ -39,7 +35,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
-                    cmd.Parameters.Add("@tipb_def_inc", SqlDbType.VarChar,20);
+                    cmd.Parameters.Add("@tipb_def_inc", SqlDbType.VarChar, 20);
                     cmd.Parameters.Add("@tipb_estado", SqlDbType.VarChar, 20);
                     cmd.Parameters.Add("@tipb_descripcion", SqlDbType.VarChar, 50);
 
@@ -61,6 +57,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                     MessageBox.Show(ex.Message, "Error al Grabar");
                 }
             }
+
+            else { }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -198,8 +196,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
             txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;
-            //txt_estado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;      
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -258,6 +255,21 @@ namespace Solucion_informatica_Consultorio_Juridico
                     txt_buscar.Clear();
                 }
             }
+        }
+
+        private void txt_descripcion_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_estado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_id_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

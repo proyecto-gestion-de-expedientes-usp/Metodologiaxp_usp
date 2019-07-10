@@ -24,32 +24,38 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlCommand cmd = new SqlCommand("sp_insertar_tipo_usuario", cone.con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
-                cmd.Parameters.Add("@tipusu_tipousuario", SqlDbType.VarChar,20);
-                cmd.Parameters.Add("@tipusu_descripcion", SqlDbType.VarChar, 30);
 
-                cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
-                cmd.Parameters["@tipusu_tipousuario"].Value = txttipousu.Text;
-                cmd.Parameters["@tipusu_descripcion"].Value = txtdescripcion.Text;
-
-                cone.con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron insertados correctamente");
-                cone.con.Close();
-                dgdatos.DataSource = mostrar();
-         
-                txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
-           
-            }
-            catch (Exception ex)
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
-                cone.con.Close();
-                MessageBox.Show(ex.Message, "Error al Grabar");
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("sp_insertar_tipo_usuario", cone.con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
+                    cmd.Parameters.Add("@tipusu_tipousuario", SqlDbType.VarChar, 20);
+                    cmd.Parameters.Add("@tipusu_descripcion", SqlDbType.VarChar, 30);
+
+                    cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
+                    cmd.Parameters["@tipusu_tipousuario"].Value = txttipousu.Text;
+                    cmd.Parameters["@tipusu_descripcion"].Value = txtdescripcion.Text;
+
+                    cone.con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron insertados correctamente");
+                    cone.con.Close();
+                    dgdatos.DataSource = mostrar();
+
+                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+
+                }
+                catch (Exception ex)
+                {
+                    cone.con.Close();
+                    MessageBox.Show(ex.Message, "Error al Grabar");
+                }
             }
+
+            else { }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -247,6 +253,21 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.SoloNumeros(e);
+        }
+
+        private void txt_id_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txtdescripcion_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txttipousu_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Capas;
 
 
 namespace Solucion_informatica_Consultorio_Juridico
@@ -26,39 +27,40 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_reg_Click(object sender, EventArgs e)
         {
-            if (txt_iddo.Text.Trim() == "" || txt_idper.Text.Trim() == "" || txt_nomper.Text.Trim() == "")
+
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
-                MessageBox.Show("Debe seleccionar a la persona Demandada");
-            }
+                    try
+                    {
+
+                        SqlCommand cmd = new SqlCommand("sp_insertar_demandado", cone.con);
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@demdo_id", SqlDbType.Int);
+                        cmd.Parameters.Add("@pers_id", SqlDbType.Int);
+                        cmd.Parameters.Add("@demdo_registro", SqlDbType.VarChar, 20);
+
+                        cmd.Parameters["@demdo_id"].Value = txt_iddo.Text;
+                        cmd.Parameters["@pers_id"].Value = txt_idper.Text;
+                        cmd.Parameters["@demdo_registro"].Value = txt_reg.Text;
+                        cone.con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Los datos fueron insertados correctamente");
+                        cone.con.Close();
+                        dgdatos.DataSource = mostrar();
+                        txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    }
+                    catch (Exception ex)
+                    {
+                        cone.con.Close();
+                        MessageBox.Show(ex.Message, "Error al Grabar");
+                    }
+                }
             else
             {
-                try
-                {
-
-                    SqlCommand cmd = new SqlCommand("sp_insertar_demandado", cone.con);
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add("@demdo_id", SqlDbType.Int);
-                    cmd.Parameters.Add("@pers_id", SqlDbType.Int);
-                    cmd.Parameters.Add("@demdo_registro", SqlDbType.VarChar, 20);
-
-                    cmd.Parameters["@demdo_id"].Value = txt_iddo.Text;
-                    cmd.Parameters["@pers_id"].Value = txt_idper.Text;
-                    cmd.Parameters["@demdo_registro"].Value = txt_reg.Text;
-                    cone.con.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datos fueron insertados correctamente");
-                    cone.con.Close();
-                    dgdatos.DataSource = mostrar();
-                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
-                }
-                catch (Exception ex)
-                {
-                    cone.con.Close();
-                    MessageBox.Show(ex.Message, "Error al Grabar");
-                }
             }
+
         }
 
 
@@ -286,6 +288,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_iddo_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.SoloNumeros(e);
+        }
+
+        private void txt_idper_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_nomper_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 

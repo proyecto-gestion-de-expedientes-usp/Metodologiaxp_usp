@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,11 +46,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_descripcion = new System.Windows.Forms.RichTextBox();
-            this.txt_estado = new System.Windows.Forms.TextBox();
             this.cmb_condi = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_id = new Capas.ErrorTxtBox();
+            this.txt_estado = new Capas.ErrorTxtBox();
+            this.txt_descripcion = new Capas.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -62,18 +65,10 @@
             this.label5.TabIndex = 38;
             this.label5.Text = "ID";
             // 
-            // txt_id
-            // 
-            this.txt_id.Enabled = false;
-            this.txt_id.Location = new System.Drawing.Point(86, 145);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(100, 20);
-            this.txt_id.TabIndex = 37;
-            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(55, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(212, 13);
@@ -83,6 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(21, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 13);
@@ -232,25 +228,6 @@
             this.label7.TabIndex = 40;
             this.label7.Text = "Descripcion";
             // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Location = new System.Drawing.Point(86, 280);
-            this.txt_descripcion.MaxLength = 50;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(215, 61);
-            this.txt_descripcion.TabIndex = 41;
-            this.txt_descripcion.Text = "";
-            this.txt_descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_KeyPress);
-            // 
-            // txt_estado
-            // 
-            this.txt_estado.Location = new System.Drawing.Point(86, 238);
-            this.txt_estado.MaxLength = 20;
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(100, 20);
-            this.txt_estado.TabIndex = 43;
-            this.txt_estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_estado_KeyPress);
-            // 
             // cmb_condi
             // 
             this.cmb_condi.FormattingEnabled = true;
@@ -263,18 +240,49 @@
             this.cmb_condi.TabIndex = 45;
             this.cmb_condi.Text = "Defensa Demandante";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(86, 142);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 46;
+            this.txt_id.Validar = true;
+            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
+            // 
+            // txt_estado
+            // 
+            this.txt_estado.Location = new System.Drawing.Point(87, 238);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(100, 20);
+            this.txt_estado.TabIndex = 47;
+            this.txt_estado.Validar = true;
+            this.txt_estado.TextChanged += new System.EventHandler(this.txt_estado_TextChanged);
+            // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Location = new System.Drawing.Point(86, 283);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(100, 20);
+            this.txt_descripcion.TabIndex = 48;
+            this.txt_descripcion.Validar = true;
+            this.txt_descripcion.TextChanged += new System.EventHandler(this.txt_descripcion_TextChanged);
+            // 
             // Frm_tipo_abogadocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 401);
-            this.Controls.Add(this.cmb_condi);
-            this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.txt_descripcion);
+            this.Controls.Add(this.txt_estado);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.cmb_condi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -291,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +308,6 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
@@ -316,8 +324,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox txt_descripcion;
-        private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.ComboBox cmb_condi;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Capas.ErrorTxtBox txt_descripcion;
+        private Capas.ErrorTxtBox txt_estado;
+        private Capas.ErrorTxtBox txt_id;
     }
 }

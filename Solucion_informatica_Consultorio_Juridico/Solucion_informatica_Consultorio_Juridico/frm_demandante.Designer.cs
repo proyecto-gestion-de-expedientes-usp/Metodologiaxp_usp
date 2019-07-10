@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -42,14 +43,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_nomper = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_idper = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_iddo = new System.Windows.Forms.TextBox();
             this.txt_reg = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_idper = new Capas.ErrorTxtBox();
+            this.txt_nomper = new Capas.ErrorTxtBox();
+            this.txt_iddo = new Capas.ErrorTxtBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,7 +63,7 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.btn_buscar1);
-            this.groupBox1.Location = new System.Drawing.Point(332, 63);
+            this.groupBox1.Location = new System.Drawing.Point(385, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(479, 69);
             this.groupBox1.TabIndex = 27;
@@ -164,7 +167,7 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(346, 135);
+            this.dgdatos.Location = new System.Drawing.Point(387, 135);
             this.dgdatos.Name = "dgdatos";
             this.dgdatos.Size = new System.Drawing.Size(465, 197);
             this.dgdatos.TabIndex = 23;
@@ -185,7 +188,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(295, 148);
+            this.button1.Location = new System.Drawing.Point(321, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 23);
             this.button1.TabIndex = 21;
@@ -202,14 +205,6 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Registro";
             // 
-            // txt_nomper
-            // 
-            this.txt_nomper.Location = new System.Drawing.Point(146, 150);
-            this.txt_nomper.Name = "txt_nomper";
-            this.txt_nomper.ReadOnly = true;
-            this.txt_nomper.Size = new System.Drawing.Size(143, 20);
-            this.txt_nomper.TabIndex = 18;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -219,14 +214,6 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Persona";
             // 
-            // txt_idper
-            // 
-            this.txt_idper.Location = new System.Drawing.Point(96, 150);
-            this.txt_idper.Name = "txt_idper";
-            this.txt_idper.ReadOnly = true;
-            this.txt_idper.Size = new System.Drawing.Size(44, 20);
-            this.txt_idper.TabIndex = 16;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -235,15 +222,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "ID";
-            // 
-            // txt_iddo
-            // 
-            this.txt_iddo.Location = new System.Drawing.Point(73, 101);
-            this.txt_iddo.Name = "txt_iddo";
-            this.txt_iddo.ReadOnly = true;
-            this.txt_iddo.Size = new System.Drawing.Size(100, 20);
-            this.txt_iddo.TabIndex = 14;
-            this.txt_iddo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_iddo_KeyPress);
             // 
             // txt_reg
             // 
@@ -257,11 +235,48 @@
             this.txt_reg.TabIndex = 28;
             this.txt_reg.Text = "ConsultorioUSP";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txt_idper
+            // 
+            this.txt_idper.Location = new System.Drawing.Point(84, 150);
+            this.txt_idper.Name = "txt_idper";
+            this.txt_idper.ReadOnly = true;
+            this.txt_idper.Size = new System.Drawing.Size(56, 20);
+            this.txt_idper.TabIndex = 29;
+            this.txt_idper.Validar = true;
+            this.txt_idper.TextChanged += new System.EventHandler(this.txt_idper_TextChanged);
+            // 
+            // txt_nomper
+            // 
+            this.txt_nomper.Location = new System.Drawing.Point(162, 150);
+            this.txt_nomper.Name = "txt_nomper";
+            this.txt_nomper.ReadOnly = true;
+            this.txt_nomper.Size = new System.Drawing.Size(130, 20);
+            this.txt_nomper.TabIndex = 30;
+            this.txt_nomper.Validar = true;
+            this.txt_nomper.TextChanged += new System.EventHandler(this.txt_nomper_TextChanged);
+            // 
+            // txt_iddo
+            // 
+            this.txt_iddo.Location = new System.Drawing.Point(84, 104);
+            this.txt_iddo.Name = "txt_iddo";
+            this.txt_iddo.ReadOnly = true;
+            this.txt_iddo.Size = new System.Drawing.Size(56, 20);
+            this.txt_iddo.TabIndex = 31;
+            this.txt_iddo.Validar = true;
+            this.txt_iddo.TextChanged += new System.EventHandler(this.txt_iddo_TextChanged);
+            // 
             // frm_demandante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 360);
+            this.ClientSize = new System.Drawing.Size(876, 360);
+            this.Controls.Add(this.txt_iddo);
+            this.Controls.Add(this.txt_nomper);
+            this.Controls.Add(this.txt_idper);
             this.Controls.Add(this.txt_reg);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -271,11 +286,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_nomper);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_idper);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_iddo);
             this.Name = "frm_demandante";
             this.Text = "frm_demandante";
             this.Activated += new System.EventHandler(this.frm_demandante_Activated);
@@ -283,6 +295,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,12 +316,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_nomper;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_idper;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_iddo;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox txt_reg;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Capas.ErrorTxtBox txt_nomper;
+        private Capas.ErrorTxtBox txt_idper;
+        private Capas.ErrorTxtBox txt_iddo;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +45,11 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtnombdocum = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtnombdocum = new Capas.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -210,22 +213,26 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Nombre";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // txtnombdocum
             // 
-            this.txtnombdocum.Location = new System.Drawing.Point(100, 209);
-            this.txtnombdocum.MaxLength = 35;
+            this.txtnombdocum.Location = new System.Drawing.Point(100, 206);
             this.txtnombdocum.Name = "txtnombdocum";
             this.txtnombdocum.Size = new System.Drawing.Size(100, 20);
-            this.txtnombdocum.TabIndex = 25;
-            this.txtnombdocum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombdocum_KeyPress);
+            this.txtnombdocum.TabIndex = 27;
+            this.txtnombdocum.Validar = true;
+            this.txtnombdocum.TextChanged += new System.EventHandler(this.txtnombdocum_TextChanged);
             // 
             // frm_tipo_documento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 396);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtnombdocum);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -243,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +274,7 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtnombdocum;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Capas.ErrorTxtBox txtnombdocum;
     }
 }

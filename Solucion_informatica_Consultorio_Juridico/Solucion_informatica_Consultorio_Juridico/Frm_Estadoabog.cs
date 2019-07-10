@@ -24,25 +24,31 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
 
-                SqlCommand cmd = new SqlCommand("sp_insertar_estadoabog", cone.con);
-
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@estabog", SqlDbType.VarChar, 20);
-                cmd.Parameters["@estabog"].Value = cmb_condi.Text;
-                cone.con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron insertados correctamente");
-                cone.con.Close();
-                dgdatos.DataSource = mostrar();
-            }
-            catch (Exception ex)
             {
-                cone.con.Close();
-                MessageBox.Show(ex.Message, "Error al Grabar");
+                try
+                {
+
+                    SqlCommand cmd = new SqlCommand("sp_insertar_estadoabog", cone.con);
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@estabog", SqlDbType.VarChar, 20);
+                    cmd.Parameters["@estabog"].Value = cmb_condi.Text;
+                    cone.con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron insertados correctamente");
+                    cone.con.Close();
+                    dgdatos.DataSource = mostrar();
+                }
+                catch (Exception ex)
+                {
+                    cone.con.Close();
+                    MessageBox.Show(ex.Message, "Error al Grabar");
+                }
             }
+
+            else { }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -212,6 +218,11 @@ namespace Solucion_informatica_Consultorio_Juridico
                     txt_buscar.Clear();
                 }
             }
+        }
+
+        private void cmb_condi_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

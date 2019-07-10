@@ -39,12 +39,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txt_id.Text.Trim() == "" || txt_descripcion.Text.Trim() == "" || txt_pronunciamiento.Text.Trim() == "")
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
+
             {
-                MessageBox.Show("SE PROHIBEN CAMPOS VACIOS");
-            }
-            else
-            {
+
                 try
                 {
 
@@ -55,12 +53,12 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.Parameters.Add("@juzg_id", SqlDbType.Int);
                     cmd.Parameters.Add("@juzg_descripcion", SqlDbType.VarChar, 50);
                     cmd.Parameters.Add("@juzg_fecharecepcion", SqlDbType.Date);
-                    cmd.Parameters.Add("@juzg_pronunciamiento", SqlDbType.VarChar,50);
+                    cmd.Parameters.Add("@juzg_pronunciamiento", SqlDbType.VarChar, 50);
                     cmd.Parameters.Add("@juzg_fechaderivacion", SqlDbType.Date);
                     cmd.Parameters.Add("@juzg_fechaemisionresol", SqlDbType.Date);
                     cmd.Parameters.Add("@juzg_fechanotificacion", SqlDbType.Date);
                     cmd.Parameters.Add("@juzg_fechasolucion", SqlDbType.Date);
-              
+
 
 
                     cmd.Parameters["@juzg_id"].Value = txt_id.Text;
@@ -71,7 +69,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cmd.Parameters["@juzg_fechaemisionresol"].Value = dt_resolucion.Text;
                     cmd.Parameters["@juzg_fechanotificacion"].Value = dt_notificacion.Text;
                     cmd.Parameters["@juzg_fechasolucion"].Value = dt_solucion.Text;
-                
+
 
 
                     cone.con.Open();
@@ -91,6 +89,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                     cone.con.Close();
                     MessageBox.Show(ex.Message, "Error al Grabar");
                 }
+            }
+
+            else {
+
             }
         }
 
@@ -329,6 +331,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             campo = "juzg_id";
             txt_buscar.Focus();
+        }
+
+        private void txt_descripcion_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_pronunciamiento_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

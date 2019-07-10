@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 
 namespace Capas
@@ -50,5 +51,40 @@ namespace Capas
                 }
          
         }
+
+        public static Boolean ValidarFormulario(Control Objeto, ErrorProvider ErrorProvider)
+        {
+            Boolean HayErrores = false;
+            foreach (Control Item in Objeto.Controls)
+            {
+                if (Item is ErrorTxtBox)
+                {
+                    ErrorTxtBox Obj = (ErrorTxtBox)Item;
+                    if (Obj.Validar == true)
+                    {
+                        if (string.IsNullOrEmpty(Obj.Text.Trim()))
+                        {
+                            ErrorProvider.SetError(Obj, "No puede estar Vacio");
+                            HayErrores = true;
+                        }
+                    }
+                    else
+                    {
+                        ErrorProvider.SetError(Obj, "");
+                    }
+                }
+            }
+            return HayErrores;
+        }
+
     }
+
+
+
+
+
+
+
 }
+
+

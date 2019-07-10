@@ -25,12 +25,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_reg_Click(object sender, EventArgs e)
         {
-            if (txt_iddo.Text.Trim() == "" || txt_idper.Text.Trim() == "" || txt_nomper.Text.Trim() == "")
+            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
-                MessageBox.Show("Debe seleccionar a la persona Demandante");
-            }
-            else
-            {
+          
                 try
                 {
 
@@ -66,8 +63,12 @@ namespace Solucion_informatica_Consultorio_Juridico
                     MessageBox.Show(ex.Message, "Error al Grabar");
                 }
             }
-        }
 
+            else
+            {
+
+            }
+        }
 
         public DataTable mostrar()
         {
@@ -290,6 +291,21 @@ namespace Solucion_informatica_Consultorio_Juridico
                     txt_buscar.Clear();
                 }
             }
+        }
+
+        private void txt_idper_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_nomper_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_iddo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }
