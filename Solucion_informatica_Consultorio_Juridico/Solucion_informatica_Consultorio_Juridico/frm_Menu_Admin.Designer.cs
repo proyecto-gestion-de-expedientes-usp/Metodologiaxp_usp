@@ -39,26 +39,28 @@
             this.registrarExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarMovimientoExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarHistorialJuzgadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTipoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarEstadoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDocumentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bùsquedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarAnexosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarTipoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarEstadoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEstadoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEstadoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarTipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarTipoAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarDocumentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarTipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarAnexosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personasDemandadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personasDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,87 +162,6 @@
             this.registrarHistorialJuzgadoToolStripMenuItem.Text = "Registrar Historial Juzgado";
             this.registrarHistorialJuzgadoToolStripMenuItem.Click += new System.EventHandler(this.registrarHistorialJuzgadoToolStripMenuItem_Click);
             // 
-            // bùsquedasToolStripMenuItem
-            // 
-            this.bùsquedasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarAbogadoToolStripMenuItem,
-            this.buscarDemandadoToolStripMenuItem,
-            this.buscarDemandanteToolStripMenuItem,
-            this.buscarPersonaToolStripMenuItem,
-            this.buscarUsuarioToolStripMenuItem,
-            this.buscarEstadoAbogadoToolStripMenuItem,
-            this.buscarEstadoUsuarioToolStripMenuItem,
-            this.buscarTipoDocumentoToolStripMenuItem,
-            this.buscarTipoUsuarioToolStripMenuItem,
-            this.buscarTipoAbogadoToolStripMenuItem});
-            this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
-            this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.bùsquedasToolStripMenuItem.Text = "Bùsquedas";
-            // 
-            // buscarAbogadoToolStripMenuItem
-            // 
-            this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
-            this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
-            this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
-            // 
-            // buscarDemandadoToolStripMenuItem
-            // 
-            this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
-            this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
-            this.buscarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandadoToolStripMenuItem_Click);
-            // 
-            // buscarDemandanteToolStripMenuItem
-            // 
-            this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
-            this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
-            this.buscarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandanteToolStripMenuItem_Click);
-            // 
-            // buscarPersonaToolStripMenuItem
-            // 
-            this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
-            this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
-            this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
-            // 
-            // buscarUsuarioToolStripMenuItem
-            // 
-            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
-            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
-            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
-            // 
-            // documentosToolStripMenuItem
-            // 
-            this.documentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarDocumentoToolStripMenuItem,
-            this.registrarAnexosToolStripMenuItem});
-            this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
-            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.documentosToolStripMenuItem.Text = "Documentos";
-            // 
-            // registrarDocumentoToolStripMenuItem
-            // 
-            this.registrarDocumentoToolStripMenuItem.Name = "registrarDocumentoToolStripMenuItem";
-            this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.registrarDocumentoToolStripMenuItem.Text = "Registrar Documento";
-            this.registrarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.registrarDocumentoToolStripMenuItem_Click);
-            // 
-            // registrarAnexosToolStripMenuItem
-            // 
-            this.registrarAnexosToolStripMenuItem.Name = "registrarAnexosToolStripMenuItem";
-            this.registrarAnexosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.registrarAnexosToolStripMenuItem.Text = "Registrar Anexos";
-            this.registrarAnexosToolStripMenuItem.Click += new System.EventHandler(this.registrarAnexosToolStripMenuItem_Click);
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
             // registrarTipoAbogadoToolStripMenuItem
             // 
             this.registrarTipoAbogadoToolStripMenuItem.Name = "registrarTipoAbogadoToolStripMenuItem";
@@ -261,6 +182,72 @@
             this.registrarEstadoAbogadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarEstadoAbogadoToolStripMenuItem.Text = "Registrar Estado Abogado";
             this.registrarEstadoAbogadoToolStripMenuItem.Click += new System.EventHandler(this.registrarEstadoAbogadoToolStripMenuItem_Click);
+            // 
+            // registrarDocumentoToolStripMenuItem1
+            // 
+            this.registrarDocumentoToolStripMenuItem1.Name = "registrarDocumentoToolStripMenuItem1";
+            this.registrarDocumentoToolStripMenuItem1.Size = new System.Drawing.Size(248, 22);
+            this.registrarDocumentoToolStripMenuItem1.Text = "Registrar Estado Usuario";
+            this.registrarDocumentoToolStripMenuItem1.Click += new System.EventHandler(this.registrarDocumentoToolStripMenuItem1_Click);
+            // 
+            // registrarTipoUsuarioToolStripMenuItem
+            // 
+            this.registrarTipoUsuarioToolStripMenuItem.Name = "registrarTipoUsuarioToolStripMenuItem";
+            this.registrarTipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.registrarTipoUsuarioToolStripMenuItem.Text = "Registrar Tipo Usuario";
+            this.registrarTipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarTipoUsuarioToolStripMenuItem_Click);
+            // 
+            // bùsquedasToolStripMenuItem
+            // 
+            this.bùsquedasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarAbogadoToolStripMenuItem,
+            this.buscarDemandadoToolStripMenuItem,
+            this.buscarDemandanteToolStripMenuItem,
+            this.buscarPersonaToolStripMenuItem,
+            this.buscarUsuarioToolStripMenuItem,
+            this.buscarEstadoAbogadoToolStripMenuItem,
+            this.buscarEstadoUsuarioToolStripMenuItem,
+            this.buscarTipoDocumentoToolStripMenuItem,
+            this.buscarTipoUsuarioToolStripMenuItem,
+            this.buscarTipoAbogadoToolStripMenuItem});
+            this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
+            this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.bùsquedasToolStripMenuItem.Text = "Bùsquedas";
+            // 
+            // buscarAbogadoToolStripMenuItem
+            // 
+            this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
+            this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
+            this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
+            // 
+            // buscarDemandadoToolStripMenuItem
+            // 
+            this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
+            this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
+            this.buscarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandadoToolStripMenuItem_Click);
+            // 
+            // buscarDemandanteToolStripMenuItem
+            // 
+            this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
+            this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
+            this.buscarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandanteToolStripMenuItem_Click);
+            // 
+            // buscarPersonaToolStripMenuItem
+            // 
+            this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
+            this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
+            this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
+            // 
+            // buscarUsuarioToolStripMenuItem
+            // 
+            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
+            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
+            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
             // 
             // buscarEstadoAbogadoToolStripMenuItem
             // 
@@ -297,19 +284,51 @@
             this.buscarTipoAbogadoToolStripMenuItem.Text = "Buscar Tipo Abogado";
             this.buscarTipoAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarTipoAbogadoToolStripMenuItem_Click);
             // 
-            // registrarDocumentoToolStripMenuItem1
+            // documentosToolStripMenuItem
             // 
-            this.registrarDocumentoToolStripMenuItem1.Name = "registrarDocumentoToolStripMenuItem1";
-            this.registrarDocumentoToolStripMenuItem1.Size = new System.Drawing.Size(248, 22);
-            this.registrarDocumentoToolStripMenuItem1.Text = "Registrar Estado Usuario";
-            this.registrarDocumentoToolStripMenuItem1.Click += new System.EventHandler(this.registrarDocumentoToolStripMenuItem1_Click);
+            this.documentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarDocumentoToolStripMenuItem,
+            this.registrarAnexosToolStripMenuItem});
+            this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
+            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.documentosToolStripMenuItem.Text = "Documentos";
             // 
-            // registrarTipoUsuarioToolStripMenuItem
+            // registrarDocumentoToolStripMenuItem
             // 
-            this.registrarTipoUsuarioToolStripMenuItem.Name = "registrarTipoUsuarioToolStripMenuItem";
-            this.registrarTipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.registrarTipoUsuarioToolStripMenuItem.Text = "Registrar Tipo Usuario";
-            this.registrarTipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarTipoUsuarioToolStripMenuItem_Click);
+            this.registrarDocumentoToolStripMenuItem.Name = "registrarDocumentoToolStripMenuItem";
+            this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registrarDocumentoToolStripMenuItem.Text = "Registrar Documento";
+            this.registrarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.registrarDocumentoToolStripMenuItem_Click);
+            // 
+            // registrarAnexosToolStripMenuItem
+            // 
+            this.registrarAnexosToolStripMenuItem.Name = "registrarAnexosToolStripMenuItem";
+            this.registrarAnexosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registrarAnexosToolStripMenuItem.Text = "Registrar Anexos";
+            this.registrarAnexosToolStripMenuItem.Click += new System.EventHandler(this.registrarAnexosToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personasDemandadasToolStripMenuItem,
+            this.personasDemandanteToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // personasDemandadasToolStripMenuItem
+            // 
+            this.personasDemandadasToolStripMenuItem.Name = "personasDemandadasToolStripMenuItem";
+            this.personasDemandadasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.personasDemandadasToolStripMenuItem.Text = "Personas Demandadas";
+            this.personasDemandadasToolStripMenuItem.Click += new System.EventHandler(this.personasDemandadasToolStripMenuItem_Click);
+            // 
+            // personasDemandanteToolStripMenuItem
+            // 
+            this.personasDemandanteToolStripMenuItem.Name = "personasDemandanteToolStripMenuItem";
+            this.personasDemandanteToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.personasDemandanteToolStripMenuItem.Text = "Personas Demandante";
+            this.personasDemandanteToolStripMenuItem.Click += new System.EventHandler(this.personasDemandanteToolStripMenuItem_Click);
             // 
             // frm_Menu_Admin
             // 
@@ -360,5 +379,7 @@
         private System.Windows.Forms.ToolStripMenuItem buscarTipoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarTipoAbogadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarTipoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personasDemandadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personasDemandanteToolStripMenuItem;
     }
 }

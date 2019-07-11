@@ -231,6 +231,18 @@
     <Compile Include="Frm_reporte.Designer.cs">
       <DependentUpon>Frm_reporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_RPT_PERSXDDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPT_PERSXDDO.Designer.cs">
+      <DependentUpon>frm_RPT_PERSXDDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_RPT_PERSXDTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPT_PERSXDTE.Designer.cs">
+      <DependentUpon>frm_RPT_PERSXDTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_tipo_abogadocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +476,18 @@
       <DependentUpon>RPT_Casos_x_Ciclo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\RPT_PERSXDDO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_PERSXDDO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RPT_PERSXDTE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_PERSXDTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="frm_Anexos.resx">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </EmbeddedResource>
@@ -542,6 +566,12 @@
     <EmbeddedResource Include="Frm_reporte.resx">
       <DependentUpon>Frm_reporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPT_PERSXDDO.resx">
+      <DependentUpon>frm_RPT_PERSXDDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPT_PERSXDTE.resx">
+      <DependentUpon>frm_RPT_PERSXDTE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_tipo_abogadocs.resx">
       <DependentUpon>Frm_tipo_abogadocs.cs</DependentUpon>
     </EmbeddedResource>
@@ -566,6 +596,14 @@
     <EmbeddedResource Include="Reportes\RPT_Casos_x_Ciclo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPT_Casos_x_Ciclo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RPT_PERSXDDO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_PERSXDDO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RPT_PERSXDTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_PERSXDTE.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="Model\DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

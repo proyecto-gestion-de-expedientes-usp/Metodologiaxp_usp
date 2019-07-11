@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
 
 namespace Solucion_informatica_Consultorio_Juridico
 {
@@ -172,6 +175,31 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             frm_buscar_tipoabog u = new frm_buscar_tipoabog();
             u.ShowDialog();
+        }
+
+        private void personasDemandadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            frm_RPT_PERSXDDO form = new frm_RPT_PERSXDDO();
+            form.ShowDialog();
+            ReportDocument oRep = new ReportDocument();           
+            oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;      
+            oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandado.pdf");
+
+       
+
+        }
+
+        private void personasDemandanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frm_RPT_PERSXDTE form = new frm_RPT_PERSXDTE();
+            form.ShowDialog();
+            ReportDocument oRep = new ReportDocument();
+            oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;
+            oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandante.pdf");
         }
     }
 }
