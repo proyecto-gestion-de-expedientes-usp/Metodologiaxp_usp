@@ -119,5 +119,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 }
             }
         }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

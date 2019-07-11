@@ -204,6 +204,7 @@
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(129, 126);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
@@ -214,6 +215,7 @@
             // txtdescripcion
             // 
             this.txtdescripcion.Location = new System.Drawing.Point(46, 240);
+            this.txtdescripcion.MaxLength = 30;
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(266, 20);
             this.txtdescripcion.TabIndex = 42;
@@ -223,6 +225,7 @@
             // txttipousu
             // 
             this.txttipousu.Location = new System.Drawing.Point(129, 177);
+            this.txttipousu.MaxLength = 20;
             this.txttipousu.Name = "txttipousu";
             this.txttipousu.Size = new System.Drawing.Size(100, 20);
             this.txttipousu.TabIndex = 43;

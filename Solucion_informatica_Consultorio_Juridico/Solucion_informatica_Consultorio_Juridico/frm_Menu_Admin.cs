@@ -201,5 +201,26 @@ namespace Solucion_informatica_Consultorio_Juridico
             form.crystalReportViewer1.ReportSource = oRep;
             oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandante.pdf");
         }
+
+        private void casosPorCicloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_reporte gg = new Frm_reporte();
+            gg.ShowDialog();
+        }
+
+        private void bùsquedasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

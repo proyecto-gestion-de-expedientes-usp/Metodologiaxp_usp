@@ -61,6 +61,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personasDemandadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personasDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.casosPorCicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,6 +214,7 @@
             this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
             this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.bùsquedasToolStripMenuItem.Text = "Bùsquedas";
+            this.bùsquedasToolStripMenuItem.Click += new System.EventHandler(this.bùsquedasToolStripMenuItem_Click);
             // 
             // buscarAbogadoToolStripMenuItem
             // 
@@ -292,6 +294,7 @@
             this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
             this.documentosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.documentosToolStripMenuItem.Text = "Documentos";
+            this.documentosToolStripMenuItem.Click += new System.EventHandler(this.documentosToolStripMenuItem_Click);
             // 
             // registrarDocumentoToolStripMenuItem
             // 
@@ -311,10 +314,12 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personasDemandadasToolStripMenuItem,
-            this.personasDemandanteToolStripMenuItem});
+            this.personasDemandanteToolStripMenuItem,
+            this.casosPorCicloToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // personasDemandadasToolStripMenuItem
             // 
@@ -329,6 +334,13 @@
             this.personasDemandanteToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.personasDemandanteToolStripMenuItem.Text = "Personas Demandante";
             this.personasDemandanteToolStripMenuItem.Click += new System.EventHandler(this.personasDemandanteToolStripMenuItem_Click);
+            // 
+            // casosPorCicloToolStripMenuItem
+            // 
+            this.casosPorCicloToolStripMenuItem.Name = "casosPorCicloToolStripMenuItem";
+            this.casosPorCicloToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.casosPorCicloToolStripMenuItem.Text = "Casos por Ciclo";
+            this.casosPorCicloToolStripMenuItem.Click += new System.EventHandler(this.casosPorCicloToolStripMenuItem_Click);
             // 
             // frm_Menu_Admin
             // 
@@ -381,5 +393,6 @@
         private System.Windows.Forms.ToolStripMenuItem registrarTipoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personasDemandadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personasDemandanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem casosPorCicloToolStripMenuItem;
     }
 }

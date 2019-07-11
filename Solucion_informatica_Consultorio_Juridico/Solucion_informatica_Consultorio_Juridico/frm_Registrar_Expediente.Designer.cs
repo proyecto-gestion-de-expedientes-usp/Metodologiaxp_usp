@@ -127,6 +127,7 @@
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // radioButton3
             // 
@@ -164,6 +165,7 @@
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(16, 56);
+            this.textBox9.MaxLength = 30;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(521, 20);
             this.textBox9.TabIndex = 33;
@@ -380,6 +382,7 @@
             // txt_resolucion
             // 
             this.txt_resolucion.Location = new System.Drawing.Point(481, 143);
+            this.txt_resolucion.MaxLength = 30;
             this.txt_resolucion.Name = "txt_resolucion";
             this.txt_resolucion.Size = new System.Drawing.Size(100, 20);
             this.txt_resolucion.TabIndex = 38;
@@ -388,12 +391,14 @@
             // txt_materia
             // 
             this.txt_materia.Location = new System.Drawing.Point(150, 141);
+            this.txt_materia.MaxLength = 30;
             this.txt_materia.Name = "txt_materia";
-            this.txt_materia.Size = new System.Drawing.Size(49, 20);
+            this.txt_materia.Size = new System.Drawing.Size(108, 20);
             this.txt_materia.TabIndex = 37;
             // 
             // txt_id_doc
             // 
+            this.txt_id_doc.Enabled = false;
             this.txt_id_doc.Location = new System.Drawing.Point(150, 115);
             this.txt_id_doc.Name = "txt_id_doc";
             this.txt_id_doc.Size = new System.Drawing.Size(49, 20);
@@ -402,12 +407,14 @@
             // txt_vistos
             // 
             this.txt_vistos.Location = new System.Drawing.Point(697, 111);
+            this.txt_vistos.MaxLength = 30;
             this.txt_vistos.Name = "txt_vistos";
             this.txt_vistos.Size = new System.Drawing.Size(100, 20);
             this.txt_vistos.TabIndex = 35;
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(205, 89);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 20);
@@ -416,12 +423,14 @@
             // txt_secretaria_juzgado
             // 
             this.txt_secretaria_juzgado.Location = new System.Drawing.Point(481, 89);
+            this.txt_secretaria_juzgado.MaxLength = 30;
             this.txt_secretaria_juzgado.Name = "txt_secretaria_juzgado";
             this.txt_secretaria_juzgado.Size = new System.Drawing.Size(100, 20);
             this.txt_secretaria_juzgado.TabIndex = 34;
             // 
             // textBox14
             // 
+            this.textBox14.Enabled = false;
             this.textBox14.Location = new System.Drawing.Point(205, 63);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 20);
@@ -429,6 +438,7 @@
             // 
             // txt_id_juzgados
             // 
+            this.txt_id_juzgados.Enabled = false;
             this.txt_id_juzgados.Location = new System.Drawing.Point(150, 89);
             this.txt_id_juzgados.Name = "txt_id_juzgados";
             this.txt_id_juzgados.Size = new System.Drawing.Size(49, 20);
@@ -437,12 +447,14 @@
             // txt_expediente
             // 
             this.txt_expediente.Location = new System.Drawing.Point(481, 63);
+            this.txt_expediente.MaxLength = 30;
             this.txt_expediente.Name = "txt_expediente";
             this.txt_expediente.Size = new System.Drawing.Size(100, 20);
             this.txt_expediente.TabIndex = 32;
             // 
             // textBox16
             // 
+            this.textBox16.Enabled = false;
             this.textBox16.Location = new System.Drawing.Point(205, 115);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 20);
@@ -450,6 +462,7 @@
             // 
             // txt_id_mov_exp
             // 
+            this.txt_id_mov_exp.Enabled = false;
             this.txt_id_mov_exp.Location = new System.Drawing.Point(150, 63);
             this.txt_id_mov_exp.Name = "txt_id_mov_exp";
             this.txt_id_mov_exp.Size = new System.Drawing.Size(49, 20);
@@ -458,6 +471,7 @@
             // txt_ciudad
             // 
             this.txt_ciudad.Location = new System.Drawing.Point(697, 59);
+            this.txt_ciudad.MaxLength = 30;
             this.txt_ciudad.Name = "txt_ciudad";
             this.txt_ciudad.Size = new System.Drawing.Size(100, 20);
             this.txt_ciudad.TabIndex = 30;
@@ -466,6 +480,7 @@
             // txt_sentencia
             // 
             this.txt_sentencia.Location = new System.Drawing.Point(481, 37);
+            this.txt_sentencia.MaxLength = 30;
             this.txt_sentencia.Name = "txt_sentencia";
             this.txt_sentencia.Size = new System.Drawing.Size(100, 20);
             this.txt_sentencia.TabIndex = 39;
@@ -473,6 +488,7 @@
             // 
             // txt_id_exp
             // 
+            this.txt_id_exp.Enabled = false;
             this.txt_id_exp.Location = new System.Drawing.Point(150, 37);
             this.txt_id_exp.Name = "txt_id_exp";
             this.txt_id_exp.Size = new System.Drawing.Size(49, 20);
@@ -533,7 +549,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_resolucion;
-        private System.Windows.Forms.TextBox txt_materia;
         private System.Windows.Forms.TextBox txt_id_doc;
         private System.Windows.Forms.TextBox txt_vistos;
         private System.Windows.Forms.TextBox textBox15;
@@ -546,5 +561,6 @@
         private System.Windows.Forms.TextBox txt_ciudad;
         private System.Windows.Forms.TextBox txt_sentencia;
         private System.Windows.Forms.TextBox txt_id_exp;
+        private System.Windows.Forms.TextBox txt_materia;
     }
 }

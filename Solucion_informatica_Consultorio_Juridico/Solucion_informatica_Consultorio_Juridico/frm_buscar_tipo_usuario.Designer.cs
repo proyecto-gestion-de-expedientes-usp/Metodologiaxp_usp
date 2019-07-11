@@ -110,9 +110,11 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // frm_buscar_tipo_usuario

@@ -309,6 +309,7 @@
             // 
             // txt_id_usu
             // 
+            this.txt_id_usu.Enabled = false;
             this.txt_id_usu.Location = new System.Drawing.Point(101, 13);
             this.txt_id_usu.Name = "txt_id_usu";
             this.txt_id_usu.Size = new System.Drawing.Size(62, 20);
@@ -326,6 +327,7 @@
             // txt_nombres
             // 
             this.txt_nombres.Location = new System.Drawing.Point(101, 65);
+            this.txt_nombres.MaxLength = 20;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(204, 20);
             this.txt_nombres.TabIndex = 3;
@@ -588,6 +590,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 46);
+            this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(466, 20);
             this.textBox1.TabIndex = 9;

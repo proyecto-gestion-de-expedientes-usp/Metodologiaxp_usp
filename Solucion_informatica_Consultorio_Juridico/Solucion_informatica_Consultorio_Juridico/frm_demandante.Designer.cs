@@ -119,6 +119,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 43);
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(271, 20);
             this.txt_buscar.TabIndex = 27;
@@ -225,6 +226,7 @@
             // 
             // txt_reg
             // 
+            this.txt_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_reg.FormattingEnabled = true;
             this.txt_reg.Items.AddRange(new object[] {
             "ConsultorioUSP",
@@ -233,7 +235,7 @@
             this.txt_reg.Name = "txt_reg";
             this.txt_reg.Size = new System.Drawing.Size(121, 21);
             this.txt_reg.TabIndex = 28;
-            this.txt_reg.Text = "ConsultorioUSP";
+            this.txt_reg.SelectedIndexChanged += new System.EventHandler(this.txt_reg_SelectedIndexChanged);
             // 
             // errorProvider1
             // 
@@ -241,6 +243,7 @@
             // 
             // txt_idper
             // 
+            this.txt_idper.Enabled = false;
             this.txt_idper.Location = new System.Drawing.Point(84, 150);
             this.txt_idper.Name = "txt_idper";
             this.txt_idper.ReadOnly = true;
@@ -251,6 +254,7 @@
             // 
             // txt_nomper
             // 
+            this.txt_nomper.Enabled = false;
             this.txt_nomper.Location = new System.Drawing.Point(162, 150);
             this.txt_nomper.Name = "txt_nomper";
             this.txt_nomper.ReadOnly = true;
@@ -261,6 +265,7 @@
             // 
             // txt_iddo
             // 
+            this.txt_iddo.Enabled = false;
             this.txt_iddo.Location = new System.Drawing.Point(84, 104);
             this.txt_iddo.Name = "txt_iddo";
             this.txt_iddo.ReadOnly = true;

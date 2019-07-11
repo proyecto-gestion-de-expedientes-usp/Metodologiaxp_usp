@@ -188,7 +188,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
-            this.txt_buscar.MaxLength = 35;
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
@@ -220,6 +220,7 @@
             // txtnombdocum
             // 
             this.txtnombdocum.Location = new System.Drawing.Point(100, 206);
+            this.txtnombdocum.MaxLength = 35;
             this.txtnombdocum.Name = "txtnombdocum";
             this.txtnombdocum.Size = new System.Drawing.Size(100, 20);
             this.txtnombdocum.TabIndex = 27;

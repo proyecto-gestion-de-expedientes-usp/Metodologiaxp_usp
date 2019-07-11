@@ -185,7 +185,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
-            this.txt_buscar.MaxLength = 50;
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
@@ -246,9 +246,10 @@
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(86, 142);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.Size = new System.Drawing.Size(53, 20);
             this.txt_id.TabIndex = 46;
             this.txt_id.Validar = true;
             this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
@@ -256,6 +257,7 @@
             // txt_estado
             // 
             this.txt_estado.Location = new System.Drawing.Point(87, 238);
+            this.txt_estado.MaxLength = 20;
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(100, 20);
             this.txt_estado.TabIndex = 47;
@@ -265,8 +267,10 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(86, 283);
+            this.txt_descripcion.MaxLength = 50;
+            this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(100, 20);
+            this.txt_descripcion.Size = new System.Drawing.Size(214, 59);
             this.txt_descripcion.TabIndex = 48;
             this.txt_descripcion.Validar = true;
             this.txt_descripcion.TextChanged += new System.EventHandler(this.txt_descripcion_TextChanged);

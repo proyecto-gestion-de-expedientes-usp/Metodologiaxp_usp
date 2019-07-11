@@ -207,6 +207,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 43);
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(271, 20);
             this.txt_buscar.TabIndex = 27;
@@ -240,6 +241,7 @@
             // 
             // txt_idper
             // 
+            this.txt_idper.Enabled = false;
             this.txt_idper.Location = new System.Drawing.Point(69, 137);
             this.txt_idper.Name = "txt_idper";
             this.txt_idper.ReadOnly = true;
@@ -250,6 +252,7 @@
             // 
             // txt_nomper
             // 
+            this.txt_nomper.Enabled = false;
             this.txt_nomper.Location = new System.Drawing.Point(173, 137);
             this.txt_nomper.Name = "txt_nomper";
             this.txt_nomper.ReadOnly = true;
@@ -260,6 +263,7 @@
             // 
             // txt_iddo
             // 
+            this.txt_iddo.Enabled = false;
             this.txt_iddo.Location = new System.Drawing.Point(69, 87);
             this.txt_iddo.Name = "txt_iddo";
             this.txt_iddo.ReadOnly = true;

@@ -75,6 +75,7 @@
             // 
             // txt_id_usu
             // 
+            this.txt_id_usu.Enabled = false;
             this.txt_id_usu.Location = new System.Drawing.Point(108, 49);
             this.txt_id_usu.Name = "txt_id_usu";
             this.txt_id_usu.Size = new System.Drawing.Size(64, 20);
@@ -82,6 +83,7 @@
             // 
             // txt_nom_demandd
             // 
+            this.txt_nom_demandd.Enabled = false;
             this.txt_nom_demandd.Location = new System.Drawing.Point(178, 75);
             this.txt_nom_demandd.Name = "txt_nom_demandd";
             this.txt_nom_demandd.Size = new System.Drawing.Size(100, 20);
@@ -89,6 +91,7 @@
             // 
             // txt_id_demandd
             // 
+            this.txt_id_demandd.Enabled = false;
             this.txt_id_demandd.Location = new System.Drawing.Point(108, 75);
             this.txt_id_demandd.Name = "txt_id_demandd";
             this.txt_id_demandd.Size = new System.Drawing.Size(64, 20);
@@ -96,6 +99,7 @@
             // 
             // txt_id_demandt
             // 
+            this.txt_id_demandt.Enabled = false;
             this.txt_id_demandt.Location = new System.Drawing.Point(108, 101);
             this.txt_id_demandt.Name = "txt_id_demandt";
             this.txt_id_demandt.Size = new System.Drawing.Size(64, 20);
@@ -103,6 +107,7 @@
             // 
             // txt_nom_demandt
             // 
+            this.txt_nom_demandt.Enabled = false;
             this.txt_nom_demandt.Location = new System.Drawing.Point(178, 101);
             this.txt_nom_demandt.Name = "txt_nom_demandt";
             this.txt_nom_demandt.Size = new System.Drawing.Size(100, 20);
@@ -110,6 +115,7 @@
             // 
             // txt_id_abo
             // 
+            this.txt_id_abo.Enabled = false;
             this.txt_id_abo.Location = new System.Drawing.Point(108, 153);
             this.txt_id_abo.Name = "txt_id_abo";
             this.txt_id_abo.Size = new System.Drawing.Size(64, 20);
@@ -117,6 +123,7 @@
             // 
             // txt_id_anex
             // 
+            this.txt_id_anex.Enabled = false;
             this.txt_id_anex.Location = new System.Drawing.Point(108, 127);
             this.txt_id_anex.Name = "txt_id_anex";
             this.txt_id_anex.Size = new System.Drawing.Size(64, 20);
@@ -124,6 +131,7 @@
             // 
             // txt_nom_anex
             // 
+            this.txt_nom_anex.Enabled = false;
             this.txt_nom_anex.Location = new System.Drawing.Point(178, 127);
             this.txt_nom_anex.Name = "txt_nom_anex";
             this.txt_nom_anex.Size = new System.Drawing.Size(100, 20);
@@ -131,6 +139,7 @@
             // 
             // txt_id_movexp
             // 
+            this.txt_id_movexp.Enabled = false;
             this.txt_id_movexp.Location = new System.Drawing.Point(108, 23);
             this.txt_id_movexp.Name = "txt_id_movexp";
             this.txt_id_movexp.Size = new System.Drawing.Size(64, 20);
@@ -138,6 +147,7 @@
             // 
             // txt_nom_abo
             // 
+            this.txt_nom_abo.Enabled = false;
             this.txt_nom_abo.Location = new System.Drawing.Point(178, 153);
             this.txt_nom_abo.Name = "txt_nom_abo";
             this.txt_nom_abo.Size = new System.Drawing.Size(100, 20);
@@ -146,6 +156,7 @@
             // txt_asunto
             // 
             this.txt_asunto.Location = new System.Drawing.Point(108, 205);
+            this.txt_asunto.MaxLength = 30;
             this.txt_asunto.Multiline = true;
             this.txt_asunto.Name = "txt_asunto";
             this.txt_asunto.Size = new System.Drawing.Size(200, 20);
@@ -153,6 +164,7 @@
             // 
             // txt_nom_usu
             // 
+            this.txt_nom_usu.Enabled = false;
             this.txt_nom_usu.Location = new System.Drawing.Point(178, 49);
             this.txt_nom_usu.Name = "txt_nom_usu";
             this.txt_nom_usu.Size = new System.Drawing.Size(100, 20);
@@ -315,7 +327,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(34, 281);
+            this.label11.Location = new System.Drawing.Point(42, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 13);
             this.label11.TabIndex = 6;
@@ -324,7 +336,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(34, 306);
+            this.label12.Location = new System.Drawing.Point(39, 404);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 13);
             this.label12.TabIndex = 6;
@@ -332,22 +344,26 @@
             // 
             // txt_descrip
             // 
-            this.txt_descrip.Location = new System.Drawing.Point(108, 308);
+            this.txt_descrip.Location = new System.Drawing.Point(108, 383);
+            this.txt_descrip.MaxLength = 50;
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
-            this.txt_descrip.Size = new System.Drawing.Size(279, 160);
+            this.txt_descrip.Size = new System.Drawing.Size(279, 64);
             this.txt_descrip.TabIndex = 7;
             // 
             // txt_progre
             // 
             this.txt_progre.Location = new System.Drawing.Point(108, 282);
+            this.txt_progre.MaxLength = 250;
+            this.txt_progre.Multiline = true;
             this.txt_progre.Name = "txt_progre";
-            this.txt_progre.Size = new System.Drawing.Size(200, 20);
+            this.txt_progre.Size = new System.Drawing.Size(279, 82);
             this.txt_progre.TabIndex = 0;
             // 
             // txt_cantfol
             // 
             this.txt_cantfol.Location = new System.Drawing.Point(108, 257);
+            this.txt_cantfol.MaxLength = 10;
             this.txt_cantfol.Name = "txt_cantfol";
             this.txt_cantfol.Size = new System.Drawing.Size(70, 20);
             this.txt_cantfol.TabIndex = 0;
@@ -355,7 +371,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(280, 508);
+            this.btn_guardar.Location = new System.Drawing.Point(464, 516);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 8;
@@ -365,7 +381,7 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(382, 508);
+            this.btn_modificar.Location = new System.Drawing.Point(566, 516);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_modificar.TabIndex = 8;
@@ -375,7 +391,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(487, 508);
+            this.button3.Location = new System.Drawing.Point(671, 516);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -393,6 +409,7 @@
             // txt_buscar_movimient
             // 
             this.txt_buscar_movimient.Location = new System.Drawing.Point(393, 45);
+            this.txt_buscar_movimient.MaxLength = 30;
             this.txt_buscar_movimient.Name = "txt_buscar_movimient";
             this.txt_buscar_movimient.Size = new System.Drawing.Size(296, 20);
             this.txt_buscar_movimient.TabIndex = 10;

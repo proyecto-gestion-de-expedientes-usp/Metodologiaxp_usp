@@ -83,6 +83,7 @@
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(83, 40);
             this.txt_id.Name = "txt_id";
             this.txt_id.ReadOnly = true;
@@ -140,7 +141,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(11, 49);
-            this.txt_buscar.MaxLength = 50;
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(240, 20);
             this.txt_buscar.TabIndex = 28;
@@ -426,6 +427,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(97, 73);
+            this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(216, 20);
             this.txt_descripcion.TabIndex = 32;
@@ -435,6 +437,7 @@
             // txt_pronunciamiento
             // 
             this.txt_pronunciamiento.Location = new System.Drawing.Point(97, 161);
+            this.txt_pronunciamiento.MaxLength = 50;
             this.txt_pronunciamiento.Name = "txt_pronunciamiento";
             this.txt_pronunciamiento.Size = new System.Drawing.Size(216, 20);
             this.txt_pronunciamiento.TabIndex = 33;

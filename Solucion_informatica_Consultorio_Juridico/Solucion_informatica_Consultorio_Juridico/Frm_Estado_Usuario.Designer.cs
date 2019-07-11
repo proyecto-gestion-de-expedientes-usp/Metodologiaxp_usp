@@ -132,7 +132,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(6, 52);
-            this.txt_buscar.MaxLength = 20;
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(208, 20);
             this.txt_buscar.TabIndex = 11;
@@ -216,6 +216,7 @@
             // cmb_condi
             // 
             this.cmb_condi.Location = new System.Drawing.Point(102, 206);
+            this.cmb_condi.MaxLength = 20;
             this.cmb_condi.Name = "cmb_condi";
             this.cmb_condi.Size = new System.Drawing.Size(100, 20);
             this.cmb_condi.TabIndex = 16;

@@ -154,6 +154,7 @@
             // txt_buscar_doc
             // 
             this.txt_buscar_doc.Location = new System.Drawing.Point(6, 52);
+            this.txt_buscar_doc.MaxLength = 30;
             this.txt_buscar_doc.Name = "txt_buscar_doc";
             this.txt_buscar_doc.Size = new System.Drawing.Size(274, 20);
             this.txt_buscar_doc.TabIndex = 40;
@@ -217,6 +218,7 @@
             // txt_email
             // 
             this.txt_email.Location = new System.Drawing.Point(122, 283);
+            this.txt_email.MaxLength = 30;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(180, 20);
             this.txt_email.TabIndex = 32;
@@ -225,6 +227,7 @@
             // txt_telf
             // 
             this.txt_telf.Location = new System.Drawing.Point(122, 257);
+            this.txt_telf.MaxLength = 15;
             this.txt_telf.Name = "txt_telf";
             this.txt_telf.Size = new System.Drawing.Size(138, 20);
             this.txt_telf.TabIndex = 31;
@@ -331,6 +334,7 @@
             // txt_nro_documento
             // 
             this.txt_nro_documento.Location = new System.Drawing.Point(470, 45);
+            this.txt_nro_documento.MaxLength = 8;
             this.txt_nro_documento.Name = "txt_nro_documento";
             this.txt_nro_documento.Size = new System.Drawing.Size(100, 20);
             this.txt_nro_documento.TabIndex = 17;
@@ -339,6 +343,7 @@
             // txt_domilega
             // 
             this.txt_domilega.Location = new System.Drawing.Point(122, 231);
+            this.txt_domilega.MaxLength = 20;
             this.txt_domilega.Name = "txt_domilega";
             this.txt_domilega.Size = new System.Drawing.Size(180, 20);
             this.txt_domilega.TabIndex = 16;
@@ -346,6 +351,7 @@
             // txt_depart
             // 
             this.txt_depart.Location = new System.Drawing.Point(122, 201);
+            this.txt_depart.MaxLength = 20;
             this.txt_depart.Name = "txt_depart";
             this.txt_depart.Size = new System.Drawing.Size(138, 20);
             this.txt_depart.TabIndex = 14;
@@ -354,6 +360,7 @@
             // txt_prov
             // 
             this.txt_prov.Location = new System.Drawing.Point(122, 175);
+            this.txt_prov.MaxLength = 20;
             this.txt_prov.Name = "txt_prov";
             this.txt_prov.Size = new System.Drawing.Size(138, 20);
             this.txt_prov.TabIndex = 13;
@@ -362,6 +369,7 @@
             // txt_ciud
             // 
             this.txt_ciud.Location = new System.Drawing.Point(122, 149);
+            this.txt_ciud.MaxLength = 20;
             this.txt_ciud.Name = "txt_ciud";
             this.txt_ciud.Size = new System.Drawing.Size(138, 20);
             this.txt_ciud.TabIndex = 12;
@@ -370,6 +378,7 @@
             // txt_ape_mat
             // 
             this.txt_ape_mat.Location = new System.Drawing.Point(122, 123);
+            this.txt_ape_mat.MaxLength = 20;
             this.txt_ape_mat.Name = "txt_ape_mat";
             this.txt_ape_mat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_mat.TabIndex = 11;
@@ -378,6 +387,7 @@
             // txt_ape_pat
             // 
             this.txt_ape_pat.Location = new System.Drawing.Point(122, 97);
+            this.txt_ape_pat.MaxLength = 25;
             this.txt_ape_pat.Name = "txt_ape_pat";
             this.txt_ape_pat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_pat.TabIndex = 10;
@@ -394,6 +404,7 @@
             // 
             // txt_id_tip_doc
             // 
+            this.txt_id_tip_doc.Enabled = false;
             this.txt_id_tip_doc.Location = new System.Drawing.Point(122, 45);
             this.txt_id_tip_doc.Name = "txt_id_tip_doc";
             this.txt_id_tip_doc.Size = new System.Drawing.Size(53, 20);
@@ -401,6 +412,7 @@
             // 
             // txt_idper
             // 
+            this.txt_idper.Enabled = false;
             this.txt_idper.Location = new System.Drawing.Point(122, 19);
             this.txt_idper.Name = "txt_idper";
             this.txt_idper.Size = new System.Drawing.Size(53, 20);

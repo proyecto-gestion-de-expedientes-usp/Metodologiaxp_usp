@@ -99,5 +99,15 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_Anexos u = new frm_Anexos();
             u.ShowDialog();
         }
+
+        private void busquedasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Trabajador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

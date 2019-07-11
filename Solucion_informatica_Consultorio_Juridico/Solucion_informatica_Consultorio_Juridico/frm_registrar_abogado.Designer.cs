@@ -104,6 +104,7 @@
             // txt_dni
             // 
             this.txt_dni.Location = new System.Drawing.Point(105, 279);
+            this.txt_dni.MaxLength = 8;
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(118, 20);
             this.txt_dni.TabIndex = 1;
@@ -112,6 +113,7 @@
             // txt_apemat
             // 
             this.txt_apemat.Location = new System.Drawing.Point(105, 197);
+            this.txt_apemat.MaxLength = 20;
             this.txt_apemat.Name = "txt_apemat";
             this.txt_apemat.Size = new System.Drawing.Size(118, 20);
             this.txt_apemat.TabIndex = 1;
@@ -120,6 +122,7 @@
             // txt_apepat
             // 
             this.txt_apepat.Location = new System.Drawing.Point(105, 153);
+            this.txt_apepat.MaxLength = 20;
             this.txt_apepat.Name = "txt_apepat";
             this.txt_apepat.Size = new System.Drawing.Size(118, 20);
             this.txt_apepat.TabIndex = 1;
@@ -128,6 +131,7 @@
             // txt_nomb
             // 
             this.txt_nomb.Location = new System.Drawing.Point(105, 110);
+            this.txt_nomb.MaxLength = 20;
             this.txt_nomb.Name = "txt_nomb";
             this.txt_nomb.Size = new System.Drawing.Size(118, 20);
             this.txt_nomb.TabIndex = 1;
@@ -142,6 +146,7 @@
             // 
             // txt_idtipabogado
             // 
+            this.txt_idtipabogado.Enabled = false;
             this.txt_idtipabogado.Location = new System.Drawing.Point(105, 67);
             this.txt_idtipabogado.Name = "txt_idtipabogado";
             this.txt_idtipabogado.Size = new System.Drawing.Size(47, 20);
@@ -158,6 +163,7 @@
             // 
             // txt_idAbogado
             // 
+            this.txt_idAbogado.Enabled = false;
             this.txt_idAbogado.Location = new System.Drawing.Point(105, 27);
             this.txt_idAbogado.Name = "txt_idAbogado";
             this.txt_idAbogado.Size = new System.Drawing.Size(100, 20);
@@ -293,6 +299,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(220, 37);
+            this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(214, 20);
             this.txt_buscar.TabIndex = 1;

@@ -307,5 +307,10 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             errorProvider1.Clear();
         }
+
+        private void txt_reg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

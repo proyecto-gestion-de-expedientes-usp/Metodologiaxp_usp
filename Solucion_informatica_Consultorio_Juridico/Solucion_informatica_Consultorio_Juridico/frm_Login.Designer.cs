@@ -114,6 +114,7 @@
             // txtpas
             // 
             this.txtpas.Location = new System.Drawing.Point(120, 62);
+            this.txtpas.MaxLength = 30;
             this.txtpas.Name = "txtpas";
             this.txtpas.PasswordChar = '*';
             this.txtpas.Size = new System.Drawing.Size(124, 21);
@@ -122,6 +123,7 @@
             // txtusu
             // 
             this.txtusu.Location = new System.Drawing.Point(120, 14);
+            this.txtusu.MaxLength = 8;
             this.txtusu.Name = "txtusu";
             this.txtusu.Size = new System.Drawing.Size(124, 21);
             this.txtusu.TabIndex = 2;

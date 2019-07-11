@@ -41,7 +41,6 @@
             this.buscarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,12 +123,12 @@
             this.buscarDemandanteToolStripMenuItem,
             this.buscarDemandadoToolStripMenuItem,
             this.buscarPersonaToolStripMenuItem,
-            this.buscarUsuarioToolStripMenuItem,
             this.buscarDocumentoToolStripMenuItem,
             this.buscarAnexoToolStripMenuItem});
             this.busquedasToolStripMenuItem.Name = "busquedasToolStripMenuItem";
             this.busquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.busquedasToolStripMenuItem.Text = "Busquedas";
+            this.busquedasToolStripMenuItem.Click += new System.EventHandler(this.busquedasToolStripMenuItem_Click);
             // 
             // buscarAbogadoToolStripMenuItem
             // 
@@ -158,13 +157,6 @@
             this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
             this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
-            // 
-            // buscarUsuarioToolStripMenuItem
-            // 
-            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
-            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
-            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
             // 
             // buscarDocumentoToolStripMenuItem
             // 
@@ -211,6 +203,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_Trabajador";
             this.Text = "Menu Trabajador";
+            this.Load += new System.EventHandler(this.Menu_Trabajador_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,7 +225,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarDemandanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDemandadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarPersonaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarAnexoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
