@@ -200,5 +200,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_buscar.Focus();
         }
+
+        private void dgv_datos_abo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -317,6 +317,7 @@
             this.dgv_datos_abo.Name = "dgv_datos_abo";
             this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
             this.dgv_datos_abo.TabIndex = 0;
+            this.dgv_datos_abo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_datos_abo_CellClick);
             // 
             // label8
             // 
