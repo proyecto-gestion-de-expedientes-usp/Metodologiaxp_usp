@@ -63,6 +63,7 @@
             this.personasDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casosPorCicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.casosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -319,7 +320,8 @@
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personasDemandadasToolStripMenuItem,
             this.personasDemandanteToolStripMenuItem,
-            this.casosPorCicloToolStripMenuItem});
+            this.casosPorCicloToolStripMenuItem,
+            this.casosPorUsuarioToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -351,6 +353,13 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // casosPorUsuarioToolStripMenuItem
+            // 
+            this.casosPorUsuarioToolStripMenuItem.Name = "casosPorUsuarioToolStripMenuItem";
+            this.casosPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.casosPorUsuarioToolStripMenuItem.Text = "Casos por Usuario";
+            this.casosPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.casosPorUsuarioToolStripMenuItem_Click);
             // 
             // frm_Menu_Admin
             // 
@@ -406,5 +415,6 @@
         private System.Windows.Forms.ToolStripMenuItem personasDemandanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casosPorCicloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem casosPorUsuarioToolStripMenuItem;
     }
 }

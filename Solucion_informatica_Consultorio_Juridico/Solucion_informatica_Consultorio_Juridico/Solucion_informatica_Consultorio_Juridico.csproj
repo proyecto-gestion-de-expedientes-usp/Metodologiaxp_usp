@@ -34,12 +34,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Capas">
-      <HintPath>..\..\Capas\Capas\obj\Debug\Capas.dll</HintPath>
+      <HintPath>..\..\Capas\Capas\bin\Debug\Capas.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -236,6 +248,12 @@
     </Compile>
     <Compile Include="Frm_reporte.Designer.cs">
       <DependentUpon>Frm_reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Rpt_Casos_x_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Rpt_Casos_x_usuarios.Designer.cs">
+      <DependentUpon>frm_Rpt_Casos_x_usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_RPT_PERSXDDO.cs">
       <SubType>Form</SubType>
@@ -482,6 +500,12 @@
       <DependentUpon>RPT_Casos_x_Ciclo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\RPT_Caso_usuario_ciclo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Caso_usuario_ciclo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\RPT_PERSXDDO.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +599,9 @@
     <EmbeddedResource Include="Frm_reporte.resx">
       <DependentUpon>Frm_reporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Rpt_Casos_x_usuarios.resx">
+      <DependentUpon>frm_Rpt_Casos_x_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_RPT_PERSXDDO.resx">
       <DependentUpon>frm_RPT_PERSXDDO.cs</DependentUpon>
     </EmbeddedResource>
@@ -605,6 +632,10 @@
     <EmbeddedResource Include="Reportes\RPT_Casos_x_Ciclo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPT_Casos_x_Ciclo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RPT_Caso_usuario_ciclo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_Caso_usuario_ciclo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RPT_PERSXDDO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

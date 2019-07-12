@@ -237,5 +237,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void casosPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Rpt_Casos_x_usuarios sqlex = new frm_Rpt_Casos_x_usuarios();
+            sqlex.ShowDialog();
+        }
     }
 }
