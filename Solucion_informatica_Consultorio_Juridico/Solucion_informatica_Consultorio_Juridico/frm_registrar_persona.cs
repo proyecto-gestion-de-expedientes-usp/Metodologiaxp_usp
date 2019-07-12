@@ -16,7 +16,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
     {
         Clases.Validacioes validadcion = new Clases.Validacioes();
-
+        SqlConnection gh;
+        DataTable ds = new DataTable();
+        DataTable dts = new DataTable();
+        DataTable dx = new DataTable();
         Clases.Acceso xd = new Clases.Acceso();
         string campo;
         Clases.Datos sad = new Clases.Datos();
@@ -34,13 +37,13 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_persona_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(pers_id as int)),0)+1 from Persona", cnn.AbrirConexion());
-            DataTable sqlex = new DataTable();
-            sda.Fill(sqlex);
-            txt_idper.Text = sqlex.Rows[0][0].ToString();
+            gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
+            generar_id();
             mostrar();
-            
+            mostrar_tipDoc();
            
+
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -64,19 +67,19 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@pers_numdoc", SqlDbType.VarChar, 11);
                 cmd.Parameters.Add("@pers_fenaci", SqlDbType.Date);
 
-                cmd.Parameters["@pers_id"].Value = txt_idper.Text;
-                cmd.Parameters["@pers_nombres"].Value = txt_nomb.Text;
-                cmd.Parameters["@pers_apepat"].Value = txt_ape_pat.Text;
-                cmd.Parameters["@pers_apemat"].Value = txt_ape_mat.Text;
-                cmd.Parameters["@pers_ciudad"].Value = txt_ciud.Text;
-                cmd.Parameters["@pers_provincia"].Value = txt_prov.Text;
-                cmd.Parameters["@pers_departamento"].Value = txt_depart.Text;
-                cmd.Parameters["@pers_domlegal"].Value = txt_domilega.Text;
-                cmd.Parameters["@pers_telefono"].Value = txt_telf.Text;
-                cmd.Parameters["@pers_email"].Value = txt_email.Text;
-                cmd.Parameters["@id_tipdoc"].Value = txt_id_tip_doc.Text;
-                cmd.Parameters["@pers_numdoc"].Value = txt_nro_documento.Text;
-                cmd.Parameters["@pers_fenaci"].Value = dp_fenaci.Text;
+                cmd.Parameters["@pers_id"].Value = txt_id_persoJ.Text;
+                cmd.Parameters["@pers_nombres"].Value = txt_nom_persoJ.Text;
+                cmd.Parameters["@pers_apepat"].Value = txt_ape_pat;
+                cmd.Parameters["@pers_apemat"].Value = txt_ape_mat;
+                cmd.Parameters["@pers_ciudad"].Value = cb_distritos_persoJ.Text;
+                cmd.Parameters["@pers_provincia"].Value = cb_provin_persoJ.Text;
+                cmd.Parameters["@pers_departamento"].Value = cb_dpto_persoJ.Text;
+                cmd.Parameters["@pers_domlegal"].Value = txt_domic_persoJ.Text;
+                cmd.Parameters["@pers_telefono"].Value = txt_tel_persoJ.Text;
+                cmd.Parameters["@pers_email"].Value = txt_email_persoJ.Text;
+                cmd.Parameters["@id_tipdoc"].Value = txt_id_Doc_persoJ.Text;
+                cmd.Parameters["@pers_numdoc"].Value = txt_ruc_persoJ.Text;
+                cmd.Parameters["@pers_fenaci"].Value = dp_cre_persoJ.Text;
 
 
 
@@ -84,6 +87,8 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cnn.CerrarConexion();
+                generar_id();
+               
             }
 
 
@@ -93,17 +98,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             }
 
 
-            //try
-            //{
-            //    objetoCN.Insertar(txt_idper.Text, txt_nomb.Text, txt_ape_pat.Text, txtPrecio.Text, txtStock.Text);
-            //    MessageBox.Show("se inserto correctamente");
-            //    mostrar();
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("no se pudo insertar los datos por: " + ex);
-            //}
+           
 
 
         }
@@ -117,6 +112,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
             dgv_pers.DataSource = sad.mostrar();
+            dgv_jurid.DataSource = sad.mostrar();
 
         }
 
@@ -218,6 +214,32 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validadcion.soloNumeros(e);
         }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(pers_id as int)),0)+1 from Persona", cnn.AbrirConexion());
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+            txt_idper.Text = sqlex.Rows[0][0].ToString();
+            txt_id_persoJ.Text = sqlex.Rows[0][0].ToString();
+        }
+        public void mostrar_tipDoc()
+        {
+
+            gh.Open();
+            string sql = "select * from Tip_documento";
+            SqlDataAdapter da = new SqlDataAdapter(sql, gh);
+            da.Fill(ds);
+            cb_tip_Doc.DataSource = ds;
+
+            cb_tip_Doc.DisplayMember = "tipdoc_nom";
+            da.Fill(dx);
+            comboBox1.DataSource = dx;
+
+            comboBox1.DisplayMember = "tipdoc_nom";
+
+            gh.Close();
+        }
+      
         public static bool Valorreo(string email)
         {
             string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
@@ -278,6 +300,122 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_buscar_doc_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guar_perj_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("insertar_Persona", cnn.AbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@pers_id", SqlDbType.Int);
+            cmd.Parameters.Add("@pers_nombres", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_apepat", SqlDbType.VarChar, 25);
+            cmd.Parameters.Add("@pers_apemat", SqlDbType.VarChar, 25);
+            cmd.Parameters.Add("@pers_ciudad", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_provincia", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_domlegal", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_telefono", SqlDbType.VarChar, 13);
+            cmd.Parameters.Add("@pers_email", SqlDbType.VarChar, 30);
+            cmd.Parameters.Add("@id_tipdoc", SqlDbType.Int);
+            cmd.Parameters.Add("@pers_numdoc", SqlDbType.VarChar, 11);
+            cmd.Parameters.Add("@pers_fenaci", SqlDbType.Date);
+
+            cmd.Parameters["@pers_id"].Value = txt_id_persoJ.Text;
+            cmd.Parameters["@pers_nombres"].Value = txt_nom_persoJ.Text;
+            cmd.Parameters["@pers_apepat"].Value = "NULL";
+            cmd.Parameters["@pers_apemat"].Value = "NULL";
+            cmd.Parameters["@pers_ciudad"].Value = cb_distritos_persoJ.Text;
+            cmd.Parameters["@pers_provincia"].Value = cb_provin_persoJ.Text;
+            cmd.Parameters["@pers_departamento"].Value = cb_dpto_persoJ.Text;
+            cmd.Parameters["@pers_domlegal"].Value = txt_domic_persoJ.Text;
+            cmd.Parameters["@pers_telefono"].Value = txt_tel_persoJ.Text;
+            cmd.Parameters["@pers_email"].Value = txt_email_persoJ.Text;
+            cmd.Parameters["@id_tipdoc"].Value = txt_id_Doc_persoJ.Text;
+            cmd.Parameters["@pers_numdoc"].Value = txt_ruc_persoJ.Text;
+            cmd.Parameters["@pers_fenaci"].Value = dp_cre_persoJ.Text;
+
+
+
+            cnn.AbrirConexion();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron insertados correctamente");
+            cnn.CerrarConexion();
+            generar_id();
+        }
+
+        private void btn_mod_pj_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("actualizar_pers", cnn.AbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@pers_id", SqlDbType.Int);
+            cmd.Parameters.Add("@pers_nombres", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_apepat", SqlDbType.VarChar, 25);
+            cmd.Parameters.Add("@pers_apemat", SqlDbType.VarChar, 25);
+            cmd.Parameters.Add("@pers_ciudad", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_provincia", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_domlegal", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_telefono", SqlDbType.VarChar, 13);
+            cmd.Parameters.Add("@pers_email", SqlDbType.VarChar, 30);
+            cmd.Parameters.Add("@id_tipdoc", SqlDbType.Int);
+            cmd.Parameters.Add("@pers_numdoc", SqlDbType.VarChar, 11);
+            cmd.Parameters.Add("@pers_fenaci", SqlDbType.Date);
+
+            cmd.Parameters["@pers_id"].Value = txt_id_persoJ.Text;
+            cmd.Parameters["@pers_nombres"].Value = txt_nom_persoJ.Text;
+            cmd.Parameters["@pers_apepat"].Value = "NULL";
+            cmd.Parameters["@pers_apemat"].Value = "NULL";
+            cmd.Parameters["@pers_ciudad"].Value = cb_distritos_persoJ.Text;
+            cmd.Parameters["@pers_provincia"].Value = cb_provin_persoJ.Text;
+            cmd.Parameters["@pers_departamento"].Value = cb_dpto_persoJ.Text;
+            cmd.Parameters["@pers_domlegal"].Value = txt_domic_persoJ.Text;
+            cmd.Parameters["@pers_telefono"].Value = txt_tel_persoJ.Text;
+            cmd.Parameters["@pers_email"].Value = txt_email_persoJ.Text;
+            cmd.Parameters["@id_tipdoc"].Value = txt_id_Doc_persoJ.Text;
+            cmd.Parameters["@pers_numdoc"].Value = txt_ruc_persoJ.Text;
+            cmd.Parameters["@pers_fenaci"].Value = dp_cre_persoJ.Text;
+
+
+
+            cnn.AbrirConexion();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron insertados correctamente");
+            cnn.CerrarConexion();
+            generar_id();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ruc_bus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string valor = txt_ruc_bus.Text;
+            dgv_jurid.DataSource = xd.buscarpersona(valor);
+            txt_ruc_bus.Focus();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = comboBox1.SelectedIndex;
+            txt_id_Doc_persoJ.Text = dx.Rows[a]["id_tipdoc"].ToString();
+        }
+
+        private void cb_tip_Doc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = cb_tip_Doc.SelectedIndex;
+            txt_id_tip_doc.Text = ds.Rows[a]["id_tipdoc"].ToString();
         }
     }
 }
