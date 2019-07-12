@@ -48,18 +48,18 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 if (comboBox1.Text == "Alumno")
                 {
-                    //frm_Administracion_Alumno inicia = new frm_Administracion_Alumno();
-                    //inicia.Show();
-                    //this.Hide();
+                    Menu_Trabajador inicia = new Menu_Trabajador();
+                    inicia.Show();
+                    this.Hide();
 
                     //inicia.toolStripStatusLabel2.Text = "Usuario: " + txtusu.Text + "  *** " + " Cargo: " + comboBox1.Text.ToString();
 
                 }
                 if (comboBox1.Text == "Asesor")
                 {
-                    //frm_Administracion_Asesor inicia = new frm_Administracion_Asesor();
-                    //inicia.Show();
-                    //this.Hide();
+                    Menu_Trabajador inicia = new Menu_Trabajador();
+                    inicia.Show();
+                    this.Hide();
 
                     //inicia.toolStripStatusLabel2.Text = "Usuario: " + txtusu.Text + "  *** " + " Cargo: " + comboBox1.Text.ToString();
 

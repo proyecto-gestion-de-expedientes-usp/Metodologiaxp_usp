@@ -538,6 +538,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(993, 534);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_limpiar);
@@ -546,7 +547,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_Registrar_Expediente";
-            this.Text = "frm_Registrar_Expediente";
+            this.Text = "Registrar Expediente";
             this.Activated += new System.EventHandler(this.frm_Registrar_Expediente_Activated);
             this.Load += new System.EventHandler(this.frm_Registrar_Expediente_Load);
             this.groupBox2.ResumeLayout(false);

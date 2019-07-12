@@ -282,11 +282,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(784, 524);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_documento";
-            this.Text = "frm_documento";
+            this.Text = "Registrar Documento";
             this.Load += new System.EventHandler(this.frm_documento_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

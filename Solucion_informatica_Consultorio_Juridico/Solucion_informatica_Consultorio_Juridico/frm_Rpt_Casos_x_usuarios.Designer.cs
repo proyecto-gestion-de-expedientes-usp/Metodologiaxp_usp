@@ -112,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_reporte);
             this.Controls.Add(this.crystalReportViewer1);
@@ -122,7 +123,7 @@
             this.Controls.Add(this.dp_fini);
             this.Controls.Add(this.dp_ini);
             this.Name = "frm_Rpt_Casos_x_usuarios";
-            this.Text = "frm_Rpt_Casos_x_usuarios";
+            this.Text = "Reporte Casos por Usuarios";
             this.ResumeLayout(false);
             this.PerformLayout();
 

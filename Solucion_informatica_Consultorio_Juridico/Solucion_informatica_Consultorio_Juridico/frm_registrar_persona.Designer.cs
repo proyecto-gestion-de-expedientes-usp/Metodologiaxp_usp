@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_distr = new System.Windows.Forms.ComboBox();
+            this.cb_pro = new System.Windows.Forms.ComboBox();
+            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.dp_fenaci = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -64,9 +67,16 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_mod_pj = new System.Windows.Forms.Button();
+            this.btn_guar_perj = new System.Windows.Forms.Button();
+            this.cb_distritos_persoJ = new System.Windows.Forms.ComboBox();
+            this.cb_provin_persoJ = new System.Windows.Forms.ComboBox();
+            this.cb_dpto_persoJ = new System.Windows.Forms.ComboBox();
             this.dp_cre_persoJ = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_ruc_bus = new System.Windows.Forms.TextBox();
+            this.dgv_jurid = new System.Windows.Forms.DataGridView();
             this.label16 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -87,16 +97,6 @@
             this.txt_nom_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_Doc_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_persoJ = new System.Windows.Forms.TextBox();
-            this.cb_distritos_persoJ = new System.Windows.Forms.ComboBox();
-            this.cb_provin_persoJ = new System.Windows.Forms.ComboBox();
-            this.cb_dpto_persoJ = new System.Windows.Forms.ComboBox();
-            this.btn_guar_perj = new System.Windows.Forms.Button();
-            this.btn_mod_pj = new System.Windows.Forms.Button();
-            this.dgv_jurid = new System.Windows.Forms.DataGridView();
-            this.txt_ruc_bus = new System.Windows.Forms.TextBox();
-            this.cb_distr = new System.Windows.Forms.ComboBox();
-            this.cb_pro = new System.Windows.Forms.ComboBox();
-            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pers)).BeginInit();
@@ -110,6 +110,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Controls.Add(this.cb_distr);
             this.groupBox1.Controls.Add(this.cb_pro);
             this.groupBox1.Controls.Add(this.cb_dpto);
@@ -148,6 +149,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cb_distr
+            // 
+            this.cb_distr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distr.FormattingEnabled = true;
+            this.cb_distr.Location = new System.Drawing.Point(122, 200);
+            this.cb_distr.Name = "cb_distr";
+            this.cb_distr.Size = new System.Drawing.Size(121, 21);
+            this.cb_distr.TabIndex = 44;
+            // 
+            // cb_pro
+            // 
+            this.cb_pro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_pro.FormattingEnabled = true;
+            this.cb_pro.Location = new System.Drawing.Point(122, 176);
+            this.cb_pro.Name = "cb_pro";
+            this.cb_pro.Size = new System.Drawing.Size(121, 21);
+            this.cb_pro.TabIndex = 45;
+            this.cb_pro.SelectedIndexChanged += new System.EventHandler(this.cb_pro_SelectedIndexChanged);
+            // 
+            // cb_dpto
+            // 
+            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.FormattingEnabled = true;
+            this.cb_dpto.Location = new System.Drawing.Point(122, 153);
+            this.cb_dpto.Name = "cb_dpto";
+            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
+            this.cb_dpto.TabIndex = 46;
+            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
             // 
             // dp_fenaci
             // 
@@ -504,6 +534,55 @@
             this.groupBox3.Text = "Datos de la Persona";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btn_mod_pj
+            // 
+            this.btn_mod_pj.Location = new System.Drawing.Point(122, 322);
+            this.btn_mod_pj.Name = "btn_mod_pj";
+            this.btn_mod_pj.Size = new System.Drawing.Size(75, 23);
+            this.btn_mod_pj.TabIndex = 45;
+            this.btn_mod_pj.Text = "Modificar";
+            this.btn_mod_pj.UseVisualStyleBackColor = true;
+            this.btn_mod_pj.Click += new System.EventHandler(this.btn_mod_pj_Click);
+            // 
+            // btn_guar_perj
+            // 
+            this.btn_guar_perj.Location = new System.Drawing.Point(31, 322);
+            this.btn_guar_perj.Name = "btn_guar_perj";
+            this.btn_guar_perj.Size = new System.Drawing.Size(75, 23);
+            this.btn_guar_perj.TabIndex = 44;
+            this.btn_guar_perj.Text = "Guardar";
+            this.btn_guar_perj.UseVisualStyleBackColor = true;
+            this.btn_guar_perj.Click += new System.EventHandler(this.btn_guar_perj_Click);
+            // 
+            // cb_distritos_persoJ
+            // 
+            this.cb_distritos_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distritos_persoJ.FormattingEnabled = true;
+            this.cb_distritos_persoJ.Location = new System.Drawing.Point(122, 144);
+            this.cb_distritos_persoJ.Name = "cb_distritos_persoJ";
+            this.cb_distritos_persoJ.Size = new System.Drawing.Size(121, 21);
+            this.cb_distritos_persoJ.TabIndex = 41;
+            // 
+            // cb_provin_persoJ
+            // 
+            this.cb_provin_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_provin_persoJ.FormattingEnabled = true;
+            this.cb_provin_persoJ.Location = new System.Drawing.Point(122, 120);
+            this.cb_provin_persoJ.Name = "cb_provin_persoJ";
+            this.cb_provin_persoJ.Size = new System.Drawing.Size(121, 21);
+            this.cb_provin_persoJ.TabIndex = 42;
+            this.cb_provin_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_provin_persoJ_SelectedIndexChanged);
+            // 
+            // cb_dpto_persoJ
+            // 
+            this.cb_dpto_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto_persoJ.FormattingEnabled = true;
+            this.cb_dpto_persoJ.Location = new System.Drawing.Point(122, 97);
+            this.cb_dpto_persoJ.Name = "cb_dpto_persoJ";
+            this.cb_dpto_persoJ.Size = new System.Drawing.Size(121, 21);
+            this.cb_dpto_persoJ.TabIndex = 43;
+            this.cb_dpto_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_persoJ_SelectedIndexChanged);
+            // 
             // dp_cre_persoJ
             // 
             this.dp_cre_persoJ.CustomFormat = "yyyy-MM-dd";
@@ -537,6 +616,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buscar Persona Juridica";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // txt_ruc_bus
+            // 
+            this.txt_ruc_bus.Location = new System.Drawing.Point(9, 52);
+            this.txt_ruc_bus.MaxLength = 13;
+            this.txt_ruc_bus.Name = "txt_ruc_bus";
+            this.txt_ruc_bus.Size = new System.Drawing.Size(191, 20);
+            this.txt_ruc_bus.TabIndex = 43;
+            this.txt_ruc_bus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ruc_bus_KeyPress);
+            // 
+            // dgv_jurid
+            // 
+            this.dgv_jurid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_jurid.Location = new System.Drawing.Point(9, 78);
+            this.dgv_jurid.Name = "dgv_jurid";
+            this.dgv_jurid.Size = new System.Drawing.Size(432, 239);
+            this.dgv_jurid.TabIndex = 42;
             // 
             // label16
             // 
@@ -718,105 +814,11 @@
             this.txt_id_persoJ.TabIndex = 8;
             this.txt_id_persoJ.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
-            // cb_distritos_persoJ
-            // 
-            this.cb_distritos_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_distritos_persoJ.FormattingEnabled = true;
-            this.cb_distritos_persoJ.Location = new System.Drawing.Point(122, 144);
-            this.cb_distritos_persoJ.Name = "cb_distritos_persoJ";
-            this.cb_distritos_persoJ.Size = new System.Drawing.Size(121, 21);
-            this.cb_distritos_persoJ.TabIndex = 41;
-            // 
-            // cb_provin_persoJ
-            // 
-            this.cb_provin_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_provin_persoJ.FormattingEnabled = true;
-            this.cb_provin_persoJ.Location = new System.Drawing.Point(122, 120);
-            this.cb_provin_persoJ.Name = "cb_provin_persoJ";
-            this.cb_provin_persoJ.Size = new System.Drawing.Size(121, 21);
-            this.cb_provin_persoJ.TabIndex = 42;
-            this.cb_provin_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_provin_persoJ_SelectedIndexChanged);
-            // 
-            // cb_dpto_persoJ
-            // 
-            this.cb_dpto_persoJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_dpto_persoJ.FormattingEnabled = true;
-            this.cb_dpto_persoJ.Location = new System.Drawing.Point(122, 97);
-            this.cb_dpto_persoJ.Name = "cb_dpto_persoJ";
-            this.cb_dpto_persoJ.Size = new System.Drawing.Size(121, 21);
-            this.cb_dpto_persoJ.TabIndex = 43;
-            this.cb_dpto_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_persoJ_SelectedIndexChanged);
-            // 
-            // btn_guar_perj
-            // 
-            this.btn_guar_perj.Location = new System.Drawing.Point(31, 322);
-            this.btn_guar_perj.Name = "btn_guar_perj";
-            this.btn_guar_perj.Size = new System.Drawing.Size(75, 23);
-            this.btn_guar_perj.TabIndex = 44;
-            this.btn_guar_perj.Text = "Guardar";
-            this.btn_guar_perj.UseVisualStyleBackColor = true;
-            this.btn_guar_perj.Click += new System.EventHandler(this.btn_guar_perj_Click);
-            // 
-            // btn_mod_pj
-            // 
-            this.btn_mod_pj.Location = new System.Drawing.Point(122, 322);
-            this.btn_mod_pj.Name = "btn_mod_pj";
-            this.btn_mod_pj.Size = new System.Drawing.Size(75, 23);
-            this.btn_mod_pj.TabIndex = 45;
-            this.btn_mod_pj.Text = "Modificar";
-            this.btn_mod_pj.UseVisualStyleBackColor = true;
-            this.btn_mod_pj.Click += new System.EventHandler(this.btn_mod_pj_Click);
-            // 
-            // dgv_jurid
-            // 
-            this.dgv_jurid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_jurid.Location = new System.Drawing.Point(9, 78);
-            this.dgv_jurid.Name = "dgv_jurid";
-            this.dgv_jurid.Size = new System.Drawing.Size(432, 239);
-            this.dgv_jurid.TabIndex = 42;
-            // 
-            // txt_ruc_bus
-            // 
-            this.txt_ruc_bus.Location = new System.Drawing.Point(9, 52);
-            this.txt_ruc_bus.MaxLength = 13;
-            this.txt_ruc_bus.Name = "txt_ruc_bus";
-            this.txt_ruc_bus.Size = new System.Drawing.Size(191, 20);
-            this.txt_ruc_bus.TabIndex = 43;
-            this.txt_ruc_bus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ruc_bus_KeyPress);
-            // 
-            // cb_distr
-            // 
-            this.cb_distr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_distr.FormattingEnabled = true;
-            this.cb_distr.Location = new System.Drawing.Point(122, 200);
-            this.cb_distr.Name = "cb_distr";
-            this.cb_distr.Size = new System.Drawing.Size(121, 21);
-            this.cb_distr.TabIndex = 44;
-            // 
-            // cb_pro
-            // 
-            this.cb_pro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_pro.FormattingEnabled = true;
-            this.cb_pro.Location = new System.Drawing.Point(122, 176);
-            this.cb_pro.Name = "cb_pro";
-            this.cb_pro.Size = new System.Drawing.Size(121, 21);
-            this.cb_pro.TabIndex = 45;
-            this.cb_pro.SelectedIndexChanged += new System.EventHandler(this.cb_pro_SelectedIndexChanged);
-            // 
-            // cb_dpto
-            // 
-            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_dpto.FormattingEnabled = true;
-            this.cb_dpto.Location = new System.Drawing.Point(122, 153);
-            this.cb_dpto.Name = "cb_dpto";
-            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
-            this.cb_dpto.TabIndex = 46;
-            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
-            // 
             // frm_registrar_persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(856, 525);
             this.Controls.Add(this.tabControl1);
             this.Name = "frm_registrar_persona";

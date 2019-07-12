@@ -44,12 +44,12 @@
             this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.buscarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -179,6 +179,13 @@
             this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
             this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
             // 
+            // buscarTipoDocumentoToolStripMenuItem
+            // 
+            this.buscarTipoDocumentoToolStripMenuItem.Name = "buscarTipoDocumentoToolStripMenuItem";
+            this.buscarTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarTipoDocumentoToolStripMenuItem.Text = "Buscar Tipo Documento";
+            this.buscarTipoDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarTipoDocumentoToolStripMenuItem_Click);
+            // 
             // filesToolStripMenuItem
             // 
             this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -207,7 +214,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(104, 173);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(494, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(483, 171);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -221,13 +228,6 @@
             this.label1.Size = new System.Drawing.Size(356, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "\"CONSULTORIO JURÌDICO USP\"";
-            // 
-            // buscarTipoDocumentoToolStripMenuItem
-            // 
-            this.buscarTipoDocumentoToolStripMenuItem.Name = "buscarTipoDocumentoToolStripMenuItem";
-            this.buscarTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.buscarTipoDocumentoToolStripMenuItem.Text = "Buscar Tipo Documento";
-            this.buscarTipoDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarTipoDocumentoToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -244,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(730, 414);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

@@ -78,11 +78,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(455, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "frm_buscar_historial_juz";
-            this.Text = "frm_buscar_historial_juz";
+            this.Text = "Buscar Historial Juzgado";
             this.Load += new System.EventHandler(this.frm_buscar_historial_juz_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

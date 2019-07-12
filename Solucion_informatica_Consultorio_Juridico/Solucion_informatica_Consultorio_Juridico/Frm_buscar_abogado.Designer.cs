@@ -145,11 +145,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(471, 424);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "Frm_buscar_abogado";
-            this.Text = "Buscar_abogado";
+            this.Text = "Buscar Abogado";
             this.Activated += new System.EventHandler(this.Frm_buscar_abogado_Activated);
             this.Load += new System.EventHandler(this.Frm_buscar_abogado_Load);
             this.groupBox1.ResumeLayout(false);

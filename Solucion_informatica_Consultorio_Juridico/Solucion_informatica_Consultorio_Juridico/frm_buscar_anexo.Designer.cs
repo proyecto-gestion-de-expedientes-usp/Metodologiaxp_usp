@@ -30,8 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.dgdatos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgdatos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.SuspendLayout();
@@ -57,15 +57,6 @@
             this.txt_buscar.TabIndex = 2;
             this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
-            // dgdatos
-            // 
-            this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(18, 152);
-            this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(432, 274);
-            this.dgdatos.TabIndex = 4;
-            this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -75,15 +66,25 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar por Nombre Archivo:";
             // 
+            // dgdatos
+            // 
+            this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdatos.Location = new System.Drawing.Point(18, 152);
+            this.dgdatos.Name = "dgdatos";
+            this.dgdatos.Size = new System.Drawing.Size(432, 274);
+            this.dgdatos.TabIndex = 4;
+            this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
+            // 
             // frm_buscar_anexo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(467, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "frm_buscar_anexo";
-            this.Text = "frm_buscar_anexo";
+            this.Text = "Buscar Anexo";
             this.Load += new System.EventHandler(this.frm_buscar_anexo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
