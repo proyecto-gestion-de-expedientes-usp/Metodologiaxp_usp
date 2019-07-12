@@ -24,6 +24,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_registrar_abogado_Load(object sender, EventArgs e)
         {
             generar_cod();
+            dgv_datos_abo.DataSource = mostrar();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -119,6 +120,27 @@ namespace Solucion_informatica_Consultorio_Juridico
             sda.Fill(sqlex);
             txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
         }
+        public DataTable mostrar()
+        {
+            cnn.Open();
+            string sql = "select * from View_Abogado";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cnn.Close();
+            return dt;
+        }
+        public DataTable buscar(string valor)
+        {
+
+            cnn.Open();
+            string sql = "select * from View_Abogado where DNI like '" + valor + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cnn.Close();
+            return dt;
+        }
         private void txt_nomb_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.soloLetras(e);
@@ -169,6 +191,14 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 errorDNI.SetError(txt_dni, "Ingrese DNI");
             }
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string valor = txt_buscar.Text;
+            dgv_datos_abo.DataSource = buscar(valor);
+
+            txt_buscar.Focus();
         }
     }
 }

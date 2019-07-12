@@ -52,21 +52,20 @@
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbt_nombape = new System.Windows.Forms.RadioButton();
-            this.rbt_dni = new System.Windows.Forms.RadioButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
             this.errornombreabog = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorApePat = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorApeMat = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDNI = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -276,10 +275,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rbt_nombape);
-            this.groupBox2.Controls.Add(this.rbt_dni);
             this.groupBox2.Controls.Add(this.txt_buscar);
             this.groupBox2.Controls.Add(this.dgv_datos_abo);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(346, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(442, 426);
@@ -287,43 +285,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda Por";
             // 
-            // rbt_nombape
-            // 
-            this.rbt_nombape.AutoSize = true;
-            this.rbt_nombape.Location = new System.Drawing.Point(6, 40);
-            this.rbt_nombape.Name = "rbt_nombape";
-            this.rbt_nombape.Size = new System.Drawing.Size(110, 17);
-            this.rbt_nombape.TabIndex = 2;
-            this.rbt_nombape.TabStop = true;
-            this.rbt_nombape.Text = "Nombre y Apellido";
-            this.rbt_nombape.UseVisualStyleBackColor = true;
-            // 
-            // rbt_dni
-            // 
-            this.rbt_dni.AutoSize = true;
-            this.rbt_dni.Location = new System.Drawing.Point(170, 40);
-            this.rbt_dni.Name = "rbt_dni";
-            this.rbt_dni.Size = new System.Drawing.Size(44, 17);
-            this.rbt_dni.TabIndex = 2;
-            this.rbt_dni.TabStop = true;
-            this.rbt_dni.Text = "DNI";
-            this.rbt_dni.UseVisualStyleBackColor = true;
-            // 
             // txt_buscar
             // 
-            this.txt_buscar.Location = new System.Drawing.Point(220, 37);
+            this.txt_buscar.Location = new System.Drawing.Point(84, 37);
             this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(214, 20);
             this.txt_buscar.TabIndex = 1;
-            // 
-            // dgv_datos_abo
-            // 
-            this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
-            this.dgv_datos_abo.Name = "dgv_datos_abo";
-            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
-            this.dgv_datos_abo.TabIndex = 0;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // errornombreabog
             // 
@@ -340,6 +309,23 @@
             // errorDNI
             // 
             this.errorDNI.ContainerControl = this;
+            // 
+            // dgv_datos_abo
+            // 
+            this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
+            this.dgv_datos_abo.Name = "dgv_datos_abo";
+            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
+            this.dgv_datos_abo.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 40);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "dni";
             // 
             // frm_registrar_abogado
             // 
@@ -361,11 +347,11 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,9 +377,6 @@
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgv_datos_abo;
-        private System.Windows.Forms.RadioButton rbt_nombape;
-        private System.Windows.Forms.RadioButton rbt_dni;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.ComboBox cb_estado;
         private System.Windows.Forms.ComboBox cb_nombre;
@@ -402,5 +385,7 @@
         private System.Windows.Forms.ErrorProvider errorApePat;
         private System.Windows.Forms.ErrorProvider errorApeMat;
         private System.Windows.Forms.ErrorProvider errorDNI;
+        private System.Windows.Forms.DataGridView dgv_datos_abo;
+        private System.Windows.Forms.Label label8;
     }
 }
