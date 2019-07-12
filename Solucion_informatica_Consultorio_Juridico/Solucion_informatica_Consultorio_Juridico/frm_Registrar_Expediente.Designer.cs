@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
@@ -71,9 +72,19 @@
             this.txt_ciudad = new System.Windows.Forms.TextBox();
             this.txt_sentencia = new System.Windows.Forms.TextBox();
             this.txt_id_exp = new System.Windows.Forms.TextBox();
+            this.errormateria = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNROSentencia = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorExpe = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorSecretaria = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNroResol = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errormateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNROSentencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorExpe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSecretaria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNroResol)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -214,7 +225,7 @@
             this.groupBox1.Controls.Add(this.txt_id_exp);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(824, 182);
+            this.groupBox1.Size = new System.Drawing.Size(969, 182);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Expediente";
@@ -319,7 +330,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(622, 88);
+            this.label12.Location = new System.Drawing.Point(636, 89);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 45;
@@ -387,6 +398,7 @@
             this.txt_resolucion.Size = new System.Drawing.Size(100, 20);
             this.txt_resolucion.TabIndex = 38;
             this.txt_resolucion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_resolucion_KeyPress);
+            this.txt_resolucion.Validated += new System.EventHandler(this.txt_resolucion_Validated);
             // 
             // txt_materia
             // 
@@ -395,6 +407,7 @@
             this.txt_materia.Name = "txt_materia";
             this.txt_materia.Size = new System.Drawing.Size(108, 20);
             this.txt_materia.TabIndex = 37;
+            this.txt_materia.Validated += new System.EventHandler(this.txt_materia_Validated);
             // 
             // txt_id_doc
             // 
@@ -427,6 +440,7 @@
             this.txt_secretaria_juzgado.Name = "txt_secretaria_juzgado";
             this.txt_secretaria_juzgado.Size = new System.Drawing.Size(100, 20);
             this.txt_secretaria_juzgado.TabIndex = 34;
+            this.txt_secretaria_juzgado.Validated += new System.EventHandler(this.txt_secretaria_juzgado_Validated);
             // 
             // textBox14
             // 
@@ -451,6 +465,7 @@
             this.txt_expediente.Name = "txt_expediente";
             this.txt_expediente.Size = new System.Drawing.Size(100, 20);
             this.txt_expediente.TabIndex = 32;
+            this.txt_expediente.Validated += new System.EventHandler(this.txt_expediente_Validated);
             // 
             // textBox16
             // 
@@ -476,6 +491,7 @@
             this.txt_ciudad.Size = new System.Drawing.Size(100, 20);
             this.txt_ciudad.TabIndex = 30;
             this.txt_ciudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ciudad_KeyPress);
+            this.txt_ciudad.Validated += new System.EventHandler(this.txt_ciudad_Validated);
             // 
             // txt_sentencia
             // 
@@ -485,6 +501,7 @@
             this.txt_sentencia.Size = new System.Drawing.Size(100, 20);
             this.txt_sentencia.TabIndex = 39;
             this.txt_sentencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sentencia_KeyPress);
+            this.txt_sentencia.Validated += new System.EventHandler(this.txt_sentencia_Validated);
             // 
             // txt_id_exp
             // 
@@ -494,11 +511,31 @@
             this.txt_id_exp.Size = new System.Drawing.Size(49, 20);
             this.txt_id_exp.TabIndex = 29;
             // 
+            // errormateria
+            // 
+            this.errormateria.ContainerControl = this;
+            // 
+            // errorNROSentencia
+            // 
+            this.errorNROSentencia.ContainerControl = this;
+            // 
+            // errorExpe
+            // 
+            this.errorExpe.ContainerControl = this;
+            // 
+            // errorSecretaria
+            // 
+            this.errorSecretaria.ContainerControl = this;
+            // 
+            // errorNroResol
+            // 
+            this.errorNroResol.ContainerControl = this;
+            // 
             // frm_Registrar_Expediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 534);
+            this.ClientSize = new System.Drawing.Size(993, 534);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_modificar);
@@ -513,6 +550,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errormateria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNROSentencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorExpe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSecretaria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNroResol)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -562,5 +604,10 @@
         private System.Windows.Forms.TextBox txt_sentencia;
         private System.Windows.Forms.TextBox txt_id_exp;
         private System.Windows.Forms.TextBox txt_materia;
+        private System.Windows.Forms.ErrorProvider errormateria;
+        private System.Windows.Forms.ErrorProvider errorNROSentencia;
+        private System.Windows.Forms.ErrorProvider errorExpe;
+        private System.Windows.Forms.ErrorProvider errorSecretaria;
+        private System.Windows.Forms.ErrorProvider errorNroResol;
     }
 }

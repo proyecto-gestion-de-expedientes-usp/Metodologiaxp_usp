@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registrar_abogado));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_estado = new System.Windows.Forms.ComboBox();
@@ -55,9 +56,17 @@
             this.rbt_dni = new System.Windows.Forms.RadioButton();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
+            this.errornombreabog = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorApePat = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorApeMat = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDNI = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +118,7 @@
             this.txt_dni.Size = new System.Drawing.Size(118, 20);
             this.txt_dni.TabIndex = 1;
             this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
+            this.txt_dni.Validated += new System.EventHandler(this.txt_dni_Validated);
             // 
             // txt_apemat
             // 
@@ -118,6 +128,7 @@
             this.txt_apemat.Size = new System.Drawing.Size(118, 20);
             this.txt_apemat.TabIndex = 1;
             this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
+            this.txt_apemat.Validated += new System.EventHandler(this.txt_apemat_Validated);
             // 
             // txt_apepat
             // 
@@ -127,6 +138,7 @@
             this.txt_apepat.Size = new System.Drawing.Size(118, 20);
             this.txt_apepat.TabIndex = 1;
             this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
+            this.txt_apepat.Validated += new System.EventHandler(this.txt_apepat_Validated);
             // 
             // txt_nomb
             // 
@@ -136,6 +148,7 @@
             this.txt_nomb.Size = new System.Drawing.Size(118, 20);
             this.txt_nomb.TabIndex = 1;
             this.txt_nomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nomb_KeyPress);
+            this.txt_nomb.Validated += new System.EventHandler(this.txt_nomb_Validated);
             // 
             // TXT_IDESTADO
             // 
@@ -312,6 +325,22 @@
             this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
             this.dgv_datos_abo.TabIndex = 0;
             // 
+            // errornombreabog
+            // 
+            this.errornombreabog.ContainerControl = this;
+            // 
+            // errorApePat
+            // 
+            this.errorApePat.ContainerControl = this;
+            // 
+            // errorApeMat
+            // 
+            this.errorApeMat.ContainerControl = this;
+            // 
+            // errorDNI
+            // 
+            this.errorDNI.ContainerControl = this;
+            // 
             // frm_registrar_abogado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +362,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,5 +398,9 @@
         private System.Windows.Forms.ComboBox cb_estado;
         private System.Windows.Forms.ComboBox cb_nombre;
         private System.Windows.Forms.TextBox TXT_IDESTADO;
+        private System.Windows.Forms.ErrorProvider errornombreabog;
+        private System.Windows.Forms.ErrorProvider errorApePat;
+        private System.Windows.Forms.ErrorProvider errorApeMat;
+        private System.Windows.Forms.ErrorProvider errorDNI;
     }
 }

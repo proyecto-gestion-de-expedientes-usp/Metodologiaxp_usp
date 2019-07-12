@@ -149,5 +149,37 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validadcion.soloNumeros(e);
         }
+
+        private void txt_asunto_Validated(object sender, EventArgs e)
+        {
+            if (txt_asunto.Text.Trim() == "")
+            {
+                errorAsunto.SetError(txt_asunto, "Ingrese Asunto");
+            }
+        }
+
+        private void txt_progre_Validated(object sender, EventArgs e)
+        {
+            if (txt_progre.Text.Trim() == "")
+            {
+                errorProgreso.SetError(txt_progre, "Ingrese Progreso");
+            }
+        }
+
+        private void txt_descrip_Validated(object sender, EventArgs e)
+        {
+            if (txt_descrip.Text.Trim() == "")
+            {
+                errorDescrip.SetError(txt_descrip, "Ingrese Descripción");
+            }
+        }
+
+        private void txt_cantfol_Validated(object sender, EventArgs e)
+        {
+            if (txt_cantfol.Text.Trim() == "")
+            {
+                errorFolios.SetError(txt_cantfol, "Ingrese Cantidad de Folios");
+            }
+        }
     }
 }

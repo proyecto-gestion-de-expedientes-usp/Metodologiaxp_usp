@@ -86,6 +86,7 @@
             this.errorDepar = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -97,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorDepar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDistri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -635,6 +637,10 @@
             // 
             this.errorDistri.ContainerControl = this;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,6 +668,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorDepar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDistri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -724,5 +731,6 @@
         private System.Windows.Forms.ErrorProvider errorDepar;
         private System.Windows.Forms.ErrorProvider errorProv;
         private System.Windows.Forms.ErrorProvider errorDistri;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

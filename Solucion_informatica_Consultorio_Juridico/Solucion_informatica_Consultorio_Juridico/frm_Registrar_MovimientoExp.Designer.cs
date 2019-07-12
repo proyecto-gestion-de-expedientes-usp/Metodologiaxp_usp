@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_id_usu = new System.Windows.Forms.TextBox();
             this.txt_nom_demandd = new System.Windows.Forms.TextBox();
             this.txt_id_demandd = new System.Windows.Forms.TextBox();
@@ -70,7 +71,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_nroexp = new System.Windows.Forms.TextBox();
+            this.errorProgreso = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDescrip = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorAsunto = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorFolios = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProgreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDescrip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAsunto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorFolios)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_id_usu
@@ -161,6 +170,7 @@
             this.txt_asunto.Name = "txt_asunto";
             this.txt_asunto.Size = new System.Drawing.Size(200, 20);
             this.txt_asunto.TabIndex = 0;
+            this.txt_asunto.Validated += new System.EventHandler(this.txt_asunto_Validated);
             // 
             // txt_nom_usu
             // 
@@ -350,6 +360,7 @@
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(279, 64);
             this.txt_descrip.TabIndex = 7;
+            this.txt_descrip.Validated += new System.EventHandler(this.txt_descrip_Validated);
             // 
             // txt_progre
             // 
@@ -359,6 +370,7 @@
             this.txt_progre.Name = "txt_progre";
             this.txt_progre.Size = new System.Drawing.Size(279, 82);
             this.txt_progre.TabIndex = 0;
+            this.txt_progre.Validated += new System.EventHandler(this.txt_progre_Validated);
             // 
             // txt_cantfol
             // 
@@ -368,6 +380,7 @@
             this.txt_cantfol.Size = new System.Drawing.Size(70, 20);
             this.txt_cantfol.TabIndex = 0;
             this.txt_cantfol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantfol_KeyPress);
+            this.txt_cantfol.Validated += new System.EventHandler(this.txt_cantfol_Validated);
             // 
             // btn_guardar
             // 
@@ -401,14 +414,14 @@
             // dgv_datos
             // 
             this.dgv_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_datos.Location = new System.Drawing.Point(393, 71);
+            this.dgv_datos.Location = new System.Drawing.Point(449, 78);
             this.dgv_datos.Name = "dgv_datos";
             this.dgv_datos.Size = new System.Drawing.Size(395, 397);
             this.dgv_datos.TabIndex = 9;
             // 
             // txt_buscar_movimient
             // 
-            this.txt_buscar_movimient.Location = new System.Drawing.Point(393, 45);
+            this.txt_buscar_movimient.Location = new System.Drawing.Point(449, 52);
             this.txt_buscar_movimient.MaxLength = 30;
             this.txt_buscar_movimient.Name = "txt_buscar_movimient";
             this.txt_buscar_movimient.Size = new System.Drawing.Size(296, 20);
@@ -417,7 +430,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(390, 29);
+            this.label13.Location = new System.Drawing.Point(446, 36);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(154, 13);
             this.label13.TabIndex = 11;
@@ -439,11 +452,27 @@
             this.txt_nroexp.Size = new System.Drawing.Size(54, 20);
             this.txt_nroexp.TabIndex = 13;
             // 
+            // errorProgreso
+            // 
+            this.errorProgreso.ContainerControl = this;
+            // 
+            // errorDescrip
+            // 
+            this.errorDescrip.ContainerControl = this;
+            // 
+            // errorAsunto
+            // 
+            this.errorAsunto.ContainerControl = this;
+            // 
+            // errorFolios
+            // 
+            this.errorFolios.ContainerControl = this;
+            // 
             // frm_Registrar_MovimientoExp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.ClientSize = new System.Drawing.Size(858, 568);
             this.Controls.Add(this.txt_nroexp);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -490,6 +519,10 @@
             this.Text = "Registrar Movimiento de Expediente";
             this.Load += new System.EventHandler(this.frm_Registrar_MovimientoExp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProgreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDescrip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAsunto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorFolios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,5 +572,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_nroexp;
+        private System.Windows.Forms.ErrorProvider errorProgreso;
+        private System.Windows.Forms.ErrorProvider errorDescrip;
+        private System.Windows.Forms.ErrorProvider errorAsunto;
+        private System.Windows.Forms.ErrorProvider errorFolios;
     }
 }

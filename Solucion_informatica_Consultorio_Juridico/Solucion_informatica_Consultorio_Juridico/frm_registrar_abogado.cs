@@ -138,5 +138,37 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validacion.soloNumeros(e);
         }
+
+        private void txt_nomb_Validated(object sender, EventArgs e)
+        {
+            if (txt_nomb.Text.Trim() == "")
+            {
+                errornombreabog.SetError(txt_nomb, "Ingrese Nombre");
+            }
+        }
+
+        private void txt_apepat_Validated(object sender, EventArgs e)
+        {
+            if (txt_apepat.Text.Trim() == "")
+            {
+                errorApePat.SetError(txt_apepat, "Ingrese Apellido Paterno");
+            }
+        }
+
+        private void txt_apemat_Validated(object sender, EventArgs e)
+        {
+            if (txt_apemat.Text.Trim() == "")
+            {
+                errorApeMat.SetError(txt_apemat, "Ingrese Apellido Materno");
+            }
+        }
+
+        private void txt_dni_Validated(object sender, EventArgs e)
+        {
+            if (txt_dni.Text.Trim() == "")
+            {
+                errorDNI.SetError(txt_dni, "Ingrese DNI");
+            }
+        }
     }
 }

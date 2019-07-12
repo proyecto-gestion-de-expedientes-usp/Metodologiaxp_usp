@@ -163,5 +163,50 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void txt_materia_Validated(object sender, EventArgs e)
+        {
+            if (txt_materia.Text.Trim() == "")
+            {
+                errormateria.SetError(txt_materia, "Ingrese Materia");
+            }
+        }
+
+        private void txt_sentencia_Validated(object sender, EventArgs e)
+        {
+            if (txt_sentencia.Text.Trim() == "")
+            {
+                errorNROSentencia.SetError(txt_sentencia, "Ingrese Nro Sentencia");
+            }
+        }
+
+        private void txt_expediente_Validated(object sender, EventArgs e)
+        {
+            if (txt_expediente.Text.Trim() == "")
+            {
+                errorExpe.SetError(txt_expediente, "Ingrese Exppediente");
+            }
+        }
+
+        private void txt_secretaria_juzgado_Validated(object sender, EventArgs e)
+        {
+            if (txt_secretaria_juzgado.Text.Trim() == "")
+            {
+                errorSecretaria.SetError(txt_secretaria_juzgado, "Ingrese Secretaria Juzgado");
+            }
+        }
+
+        private void txt_resolucion_Validated(object sender, EventArgs e)
+        {
+            if (txt_resolucion.Text.Trim() == "")
+            {
+                errorNroResol.SetError(txt_resolucion, "Ingrese Nro Resolución");
+            }
+        }
+
+        private void txt_ciudad_Validated(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
