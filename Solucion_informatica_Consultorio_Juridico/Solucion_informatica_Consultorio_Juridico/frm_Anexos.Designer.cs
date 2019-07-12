@@ -146,6 +146,7 @@
             // 
             // txtFile
             // 
+            this.txtFile.Enabled = false;
             this.txtFile.Location = new System.Drawing.Point(179, 74);
             this.txtFile.Name = "txtFile";
             this.txtFile.Size = new System.Drawing.Size(390, 20);

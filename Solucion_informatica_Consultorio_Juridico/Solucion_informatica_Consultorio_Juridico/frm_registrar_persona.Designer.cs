@@ -158,6 +158,7 @@
             this.txt_buscar_doc.Name = "txt_buscar_doc";
             this.txt_buscar_doc.Size = new System.Drawing.Size(274, 20);
             this.txt_buscar_doc.TabIndex = 40;
+            this.txt_buscar_doc.TextChanged += new System.EventHandler(this.txt_buscar_doc_TextChanged);
             this.txt_buscar_doc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_doc_KeyPress);
             // 
             // dgv_pers
@@ -338,7 +339,9 @@
             this.txt_nro_documento.Name = "txt_nro_documento";
             this.txt_nro_documento.Size = new System.Drawing.Size(100, 20);
             this.txt_nro_documento.TabIndex = 17;
+            this.txt_nro_documento.TextChanged += new System.EventHandler(this.txt_nro_documento_TextChanged);
             this.txt_nro_documento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nro_documento_KeyPress);
+            this.txt_nro_documento.Validated += new System.EventHandler(this.txt_nro_documento_Validated);
             // 
             // txt_domilega
             // 

@@ -150,6 +150,12 @@
     <Compile Include="Frm_Estado_Usuario.Designer.cs">
       <DependentUpon>Frm_Estado_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_menu_asesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menu_asesor.Designer.cs">
+      <DependentUpon>frm_menu_asesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_recuperar_contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -541,6 +547,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_demandante.resx">
       <DependentUpon>frm_demandante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menu_asesor.resx">
+      <DependentUpon>frm_menu_asesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_recuperar_contraseña.resx">
       <DependentUpon>Frm_recuperar_contraseña.cs</DependentUpon>

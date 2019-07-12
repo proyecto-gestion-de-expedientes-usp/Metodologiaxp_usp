@@ -333,6 +333,39 @@ namespace Solucion_informatica_Consultorio_Juridico
                 errorNombre.SetError(txt_domici, "Ingrese Domicilio...");
             }
         }
+
+        private void txt_dni_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_dni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_dni_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_dni.Text;
+            if (cadena.Length > 8)
+            {
+                txt_dni.Focus();
+                MessageBox.Show("El dni solo tiene 8 digitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 8)
+                {
+                    MessageBox.Show("Ingrese los 8 digitos del DNI 😎", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
     }
 

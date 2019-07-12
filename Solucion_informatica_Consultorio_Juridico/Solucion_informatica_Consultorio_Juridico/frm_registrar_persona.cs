@@ -251,5 +251,33 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validadcion.soloNumeros(e);
         }
+
+        private void txt_nro_documento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nro_documento_Validated(object sender, EventArgs e)
+        {
+            var cadena = txt_nro_documento.Text;
+            if (cadena.Length > 8)
+            {
+                txt_nro_documento.Focus();
+                MessageBox.Show("El dni solo tiene 8 digitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 8)
+                {
+                    MessageBox.Show("Ingrese los 8 digitos del DNI 😎", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void txt_buscar_doc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

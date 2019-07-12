@@ -157,11 +157,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(49, 146);
+            this.label7.Location = new System.Drawing.Point(9, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.Size = new System.Drawing.Size(89, 13);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Celular:";
+            this.label7.Text = "Teléfono/Celular:";
             // 
             // label8
             // 
@@ -322,7 +322,10 @@
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(130, 20);
             this.txt_dni.TabIndex = 3;
+            this.txt_dni.TextChanged += new System.EventHandler(this.txt_dni_TextChanged);
             this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
+            this.txt_dni.Validating += new System.ComponentModel.CancelEventHandler(this.txt_dni_Validating);
+            this.txt_dni.Validated += new System.EventHandler(this.txt_dni_Validated);
             // 
             // txt_nombres
             // 
@@ -357,10 +360,11 @@
             // txt_cel
             // 
             this.txt_cel.Location = new System.Drawing.Point(101, 143);
-            this.txt_cel.MaxLength = 15;
+            this.txt_cel.MaxLength = 10;
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(121, 20);
             this.txt_cel.TabIndex = 3;
+            this.txt_cel.TextChanged += new System.EventHandler(this.txt_cel_TextChanged);
             this.txt_cel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cel_KeyPress);
             // 
             // txt_domici

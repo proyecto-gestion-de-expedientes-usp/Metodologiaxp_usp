@@ -222,5 +222,20 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void frm_Menu_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maestroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

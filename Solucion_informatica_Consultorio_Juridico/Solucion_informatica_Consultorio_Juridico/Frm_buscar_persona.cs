@@ -48,13 +48,13 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "pers_numdoc";
+            campo = "NUMDOC";
             txt_buscar.Focus();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "pers_email";
+            campo = "EMAIL";
             txt_buscar.Focus();
         }
         public DataTable buscar(string campo, string valor)
