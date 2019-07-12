@@ -62,12 +62,12 @@
             this.txt_materia = new System.Windows.Forms.TextBox();
             this.txt_id_doc = new System.Windows.Forms.TextBox();
             this.txt_vistos = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txt_juz = new System.Windows.Forms.TextBox();
             this.txt_secretaria_juzgado = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txt_moxep = new System.Windows.Forms.TextBox();
             this.txt_id_juzgados = new System.Windows.Forms.TextBox();
             this.txt_expediente = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_doc = new System.Windows.Forms.TextBox();
             this.txt_id_mov_exp = new System.Windows.Forms.TextBox();
             this.txt_ciudad = new System.Windows.Forms.TextBox();
             this.txt_sentencia = new System.Windows.Forms.TextBox();
@@ -213,12 +213,12 @@
             this.groupBox1.Controls.Add(this.txt_materia);
             this.groupBox1.Controls.Add(this.txt_id_doc);
             this.groupBox1.Controls.Add(this.txt_vistos);
-            this.groupBox1.Controls.Add(this.textBox15);
+            this.groupBox1.Controls.Add(this.txt_juz);
             this.groupBox1.Controls.Add(this.txt_secretaria_juzgado);
-            this.groupBox1.Controls.Add(this.textBox14);
+            this.groupBox1.Controls.Add(this.txt_moxep);
             this.groupBox1.Controls.Add(this.txt_id_juzgados);
             this.groupBox1.Controls.Add(this.txt_expediente);
-            this.groupBox1.Controls.Add(this.textBox16);
+            this.groupBox1.Controls.Add(this.txt_doc);
             this.groupBox1.Controls.Add(this.txt_id_mov_exp);
             this.groupBox1.Controls.Add(this.txt_ciudad);
             this.groupBox1.Controls.Add(this.txt_sentencia);
@@ -238,6 +238,7 @@
             this.btn_buscar_doc.TabIndex = 55;
             this.btn_buscar_doc.Text = "....";
             this.btn_buscar_doc.UseVisualStyleBackColor = true;
+            this.btn_buscar_doc.Click += new System.EventHandler(this.btn_buscar_doc_Click);
             // 
             // btn_buscar_juzgado
             // 
@@ -247,6 +248,7 @@
             this.btn_buscar_juzgado.TabIndex = 55;
             this.btn_buscar_juzgado.Text = "....";
             this.btn_buscar_juzgado.UseVisualStyleBackColor = true;
+            this.btn_buscar_juzgado.Click += new System.EventHandler(this.btn_buscar_juzgado_Click);
             // 
             // btn_buscar_movExp
             // 
@@ -256,6 +258,7 @@
             this.btn_buscar_movExp.TabIndex = 55;
             this.btn_buscar_movExp.Text = "....";
             this.btn_buscar_movExp.UseVisualStyleBackColor = true;
+            this.btn_buscar_movExp.Click += new System.EventHandler(this.btn_buscar_movExp_Click);
             // 
             // dp_fin
             // 
@@ -425,13 +428,13 @@
             this.txt_vistos.Size = new System.Drawing.Size(100, 20);
             this.txt_vistos.TabIndex = 35;
             // 
-            // textBox15
+            // txt_juz
             // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(205, 89);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 34;
+            this.txt_juz.Enabled = false;
+            this.txt_juz.Location = new System.Drawing.Point(205, 89);
+            this.txt_juz.Name = "txt_juz";
+            this.txt_juz.Size = new System.Drawing.Size(100, 20);
+            this.txt_juz.TabIndex = 34;
             // 
             // txt_secretaria_juzgado
             // 
@@ -442,13 +445,13 @@
             this.txt_secretaria_juzgado.TabIndex = 34;
             this.txt_secretaria_juzgado.Validated += new System.EventHandler(this.txt_secretaria_juzgado_Validated);
             // 
-            // textBox14
+            // txt_moxep
             // 
-            this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(205, 63);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 32;
+            this.txt_moxep.Enabled = false;
+            this.txt_moxep.Location = new System.Drawing.Point(205, 63);
+            this.txt_moxep.Name = "txt_moxep";
+            this.txt_moxep.Size = new System.Drawing.Size(100, 20);
+            this.txt_moxep.TabIndex = 32;
             // 
             // txt_id_juzgados
             // 
@@ -467,13 +470,13 @@
             this.txt_expediente.TabIndex = 32;
             this.txt_expediente.Validated += new System.EventHandler(this.txt_expediente_Validated);
             // 
-            // textBox16
+            // txt_doc
             // 
-            this.textBox16.Enabled = false;
-            this.textBox16.Location = new System.Drawing.Point(205, 115);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 39;
+            this.txt_doc.Enabled = false;
+            this.txt_doc.Location = new System.Drawing.Point(205, 115);
+            this.txt_doc.Name = "txt_doc";
+            this.txt_doc.Size = new System.Drawing.Size(100, 20);
+            this.txt_doc.TabIndex = 39;
             // 
             // txt_id_mov_exp
             // 
@@ -544,6 +547,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_Registrar_Expediente";
             this.Text = "frm_Registrar_Expediente";
+            this.Activated += new System.EventHandler(this.frm_Registrar_Expediente_Activated);
             this.Load += new System.EventHandler(this.frm_Registrar_Expediente_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -593,12 +597,12 @@
         private System.Windows.Forms.TextBox txt_resolucion;
         private System.Windows.Forms.TextBox txt_id_doc;
         private System.Windows.Forms.TextBox txt_vistos;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txt_juz;
         private System.Windows.Forms.TextBox txt_secretaria_juzgado;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_moxep;
         private System.Windows.Forms.TextBox txt_id_juzgados;
         private System.Windows.Forms.TextBox txt_expediente;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_doc;
         private System.Windows.Forms.TextBox txt_id_mov_exp;
         private System.Windows.Forms.TextBox txt_ciudad;
         private System.Windows.Forms.TextBox txt_sentencia;

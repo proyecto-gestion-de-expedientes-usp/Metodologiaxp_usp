@@ -208,5 +208,38 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
            
         }
+
+        private void frm_Registrar_Expediente_Activated(object sender, EventArgs e)
+        {
+            txt_id_mov_exp.Text = Program.idmovexp;
+            txt_moxep.Text = Program.nromovexp;
+
+            txt_id_juzgados.Text = Program.idjuzgado;
+            txt_juz.Text = Program.juzgadonom;
+
+            txt_id_doc.Text = Program.iddocumen;
+            txt_doc.Text = Program.nomdocum;
+
+            
+            
+        }
+
+        private void btn_buscar_movExp_Click(object sender, EventArgs e)
+        {
+            frm_buscar_movimiento_Exp v = new frm_buscar_movimiento_Exp();
+            v.ShowDialog();
+        }
+
+        private void btn_buscar_juzgado_Click(object sender, EventArgs e)
+        {
+            frm_buscar_historial_juz l = new frm_buscar_historial_juz();
+            l.ShowDialog();
+        }
+
+        private void btn_buscar_doc_Click(object sender, EventArgs e)
+        {
+            frm_buscar_documento o = new frm_buscar_documento();
+            o.ShowDialog();
+        }
     }
 }

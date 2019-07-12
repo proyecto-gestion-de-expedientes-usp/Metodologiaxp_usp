@@ -26,6 +26,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         public static string idabogado;
         public static string nomabogado;
 
+        //para formulario registro exxpediente
+        public static string idmovexp;
+        public static string nromovexp;
+
+        public static string idjuzgado;
+        public static string juzgadonom;
+
+        public static string iddocumen;
+        public static string nomdocum;
+
 
         //para formulario Registro Demandado
 

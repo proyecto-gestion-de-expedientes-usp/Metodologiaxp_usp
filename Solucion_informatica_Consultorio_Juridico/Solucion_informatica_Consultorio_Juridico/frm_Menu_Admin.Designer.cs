@@ -65,6 +65,9 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarMovimientoExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarHistorialJuzgadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -211,13 +214,16 @@
             this.buscarAnexoToolStripMenuItem,
             this.buscarDemandadoToolStripMenuItem,
             this.buscarDemandanteToolStripMenuItem,
+            this.buscarDocumentoToolStripMenuItem,
             this.buscarPersonaToolStripMenuItem,
             this.buscarUsuarioToolStripMenuItem,
             this.buscarEstadoAbogadoToolStripMenuItem,
             this.buscarEstadoUsuarioToolStripMenuItem,
+            this.buscarHistorialJuzgadoToolStripMenuItem,
             this.buscarTipoDocumentoToolStripMenuItem,
             this.buscarTipoUsuarioToolStripMenuItem,
-            this.buscarTipoAbogadoToolStripMenuItem});
+            this.buscarTipoAbogadoToolStripMenuItem,
+            this.buscarMovimientoExpedienteToolStripMenuItem});
             this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
             this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.bùsquedasToolStripMenuItem.Text = "Búsquedas";
@@ -370,6 +376,27 @@
             this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
             this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
             // 
+            // buscarMovimientoExpedienteToolStripMenuItem
+            // 
+            this.buscarMovimientoExpedienteToolStripMenuItem.Name = "buscarMovimientoExpedienteToolStripMenuItem";
+            this.buscarMovimientoExpedienteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.buscarMovimientoExpedienteToolStripMenuItem.Text = "Buscar Movimiento Expediente";
+            this.buscarMovimientoExpedienteToolStripMenuItem.Click += new System.EventHandler(this.buscarMovimientoExpedienteToolStripMenuItem_Click);
+            // 
+            // buscarHistorialJuzgadoToolStripMenuItem
+            // 
+            this.buscarHistorialJuzgadoToolStripMenuItem.Name = "buscarHistorialJuzgadoToolStripMenuItem";
+            this.buscarHistorialJuzgadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.buscarHistorialJuzgadoToolStripMenuItem.Text = "Buscar Historial Juzgado";
+            this.buscarHistorialJuzgadoToolStripMenuItem.Click += new System.EventHandler(this.buscarHistorialJuzgadoToolStripMenuItem_Click);
+            // 
+            // buscarDocumentoToolStripMenuItem
+            // 
+            this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
+            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.buscarDocumentoToolStripMenuItem.Text = "Buscar Documento";
+            this.buscarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarDocumentoToolStripMenuItem_Click);
+            // 
             // frm_Menu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +453,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casosPorUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarAnexoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarMovimientoExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarHistorialJuzgadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarDocumentoToolStripMenuItem;
     }
 }

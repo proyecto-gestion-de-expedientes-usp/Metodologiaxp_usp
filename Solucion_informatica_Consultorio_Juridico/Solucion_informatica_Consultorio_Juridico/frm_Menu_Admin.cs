@@ -254,5 +254,23 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_buscar_anexo b = new frm_buscar_anexo();
             b.ShowDialog();
         }
+
+        private void buscarMovimientoExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_movimiento_Exp m = new frm_buscar_movimiento_Exp();
+            m.ShowDialog();
+        }
+
+        private void buscarHistorialJuzgadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_historial_juz w = new frm_buscar_historial_juz();
+            w.ShowDialog();
+        }
+
+        private void buscarDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_documento k = new frm_buscar_documento();
+            k.ShowDialog();
+        }
     }
 }

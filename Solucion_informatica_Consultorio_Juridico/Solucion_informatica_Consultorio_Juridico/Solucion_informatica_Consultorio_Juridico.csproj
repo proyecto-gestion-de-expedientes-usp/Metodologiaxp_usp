@@ -99,6 +99,12 @@
     <Compile Include="frm_buscar_anexo.Designer.cs">
       <DependentUpon>frm_buscar_anexo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_buscar_documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_documento.Designer.cs">
+      <DependentUpon>frm_buscar_documento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_buscar_estadoabog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,18 @@
     </Compile>
     <Compile Include="frm_buscar_estadousu.Designer.cs">
       <DependentUpon>frm_buscar_estadousu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_historial_juz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_historial_juz.Designer.cs">
+      <DependentUpon>frm_buscar_historial_juz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_movimiento_Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_movimiento_Exp.Designer.cs">
+      <DependentUpon>frm_buscar_movimiento_Exp.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_buscar_tipoabog.cs">
       <SubType>Form</SubType>
@@ -530,11 +548,20 @@
     <EmbeddedResource Include="frm_buscar_anexo.resx">
       <DependentUpon>frm_buscar_anexo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_documento.resx">
+      <DependentUpon>frm_buscar_documento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_buscar_estadoabog.resx">
       <DependentUpon>frm_buscar_estadoabog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_buscar_estadousu.resx">
       <DependentUpon>frm_buscar_estadousu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_historial_juz.resx">
+      <DependentUpon>frm_buscar_historial_juz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_movimiento_Exp.resx">
+      <DependentUpon>frm_buscar_movimiento_Exp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_buscar_tipoabog.resx">
       <DependentUpon>frm_buscar_tipoabog.cs</DependentUpon>
