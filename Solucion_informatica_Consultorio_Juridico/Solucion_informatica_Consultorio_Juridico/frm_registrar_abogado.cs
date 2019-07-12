@@ -23,10 +23,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_abogado_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
-            DataTable sqlex = new DataTable();
-            sda.Fill(sqlex);
-            txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
+            generar_cod();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -60,12 +57,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cnn.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
+                
                 cnn.Close();
 
-                SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
-                DataTable sqlex = new DataTable();
-                sda.Fill(sqlex);
-                txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
+                generar_cod();  
             }
 
 
@@ -118,7 +113,12 @@ namespace Solucion_informatica_Consultorio_Juridico
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        public void generar_cod() {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+            txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
+        }
         private void txt_nomb_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.soloLetras(e);

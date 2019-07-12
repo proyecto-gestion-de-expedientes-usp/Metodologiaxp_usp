@@ -18,12 +18,13 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class frm_registrar_usuario : Form
     {
         Clases.Validacioes validadcion = new Clases.Validacioes();
+        Clases.Conexion cnn = new Clases.Conexion();
         SqlConnection gh;
         string campo;
         string valor;
         DataTable dts = new DataTable();
         DataTable ds = new DataTable();
-        Clases.Conexion cnn = new Clases.Conexion();
+        
         Clases.Datos sad = new Clases.Datos();
 
         public frm_registrar_usuario()
@@ -45,7 +46,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             mostrartipousuario();
             llenar_dpto();
             mostrarestadousuario();
-            //btn_modificar.Enabled = false;
+            btn_modificar.Enabled = false;
 
             SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(usu_id as int)),0)+1 from Usuario", cnn.AbrirConexion());
             DataTable sqlex = new DataTable();
@@ -97,9 +98,8 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             try
             {
-                string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
-                SqlConnection cnn = new SqlConnection(ConnectionString);
-                SqlCommand cmd = new SqlCommand("insertar_Usu", cnn);
+                
+                SqlCommand cmd = new SqlCommand("insertar_Usu", cnn.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@usu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
@@ -138,10 +138,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@usu_contraseña"].Value = txt_contra.Text;
 
 
-                cnn.Open();
+                cnn.AbrirConexion();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
-                cnn.Close();
+                cnn.CerrarConexion();
             }
 
 
@@ -165,9 +165,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             try
             {
-                string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
-                SqlConnection cnn = new SqlConnection(ConnectionString);
-                SqlCommand cmd = new SqlCommand("actualizar_Usu", cnn);
+                //string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
+                //SqlConnection cnn = new SqlConnection(ConnectionString);
+                SqlCommand cmd = new SqlCommand("actualizar_Usu", cnn.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@usu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
@@ -206,10 +206,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@usu_contraseña"].Value = txt_contra.Text;
 
 
-                cnn.Open();
+                cnn.AbrirConexion();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron modificados correctamente");
-                cnn.Close();
+                cnn.CerrarConexion();
             }
             catch (Exception ex)
             {
@@ -553,6 +553,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_cod_estausua.Text = dgv_usuarios.CurrentRow.Cells[14].Value.ToString();
             cb_dpto .Text= dgv_usuarios.CurrentRow.Cells[15].Value.ToString();
             txt_contra.Text = dgv_usuarios.CurrentRow.Cells[16].Value.ToString();
+
+            btn_modificar.Enabled =true;
         }
     }
     }
