@@ -55,9 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nro_documento = new System.Windows.Forms.TextBox();
             this.txt_domilega = new System.Windows.Forms.TextBox();
-            this.txt_depart = new System.Windows.Forms.TextBox();
-            this.txt_prov = new System.Windows.Forms.TextBox();
-            this.txt_ciud = new System.Windows.Forms.TextBox();
             this.txt_ape_mat = new System.Windows.Forms.TextBox();
             this.txt_ape_pat = new System.Windows.Forms.TextBox();
             this.txt_nomb = new System.Windows.Forms.TextBox();
@@ -97,6 +94,9 @@
             this.btn_mod_pj = new System.Windows.Forms.Button();
             this.dgv_jurid = new System.Windows.Forms.DataGridView();
             this.txt_ruc_bus = new System.Windows.Forms.TextBox();
+            this.cb_distr = new System.Windows.Forms.ComboBox();
+            this.cb_pro = new System.Windows.Forms.ComboBox();
+            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pers)).BeginInit();
@@ -110,6 +110,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_distr);
+            this.groupBox1.Controls.Add(this.cb_pro);
+            this.groupBox1.Controls.Add(this.cb_dpto);
             this.groupBox1.Controls.Add(this.dp_fenaci);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -133,9 +136,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_nro_documento);
             this.groupBox1.Controls.Add(this.txt_domilega);
-            this.groupBox1.Controls.Add(this.txt_depart);
-            this.groupBox1.Controls.Add(this.txt_prov);
-            this.groupBox1.Controls.Add(this.txt_ciud);
             this.groupBox1.Controls.Add(this.txt_ape_mat);
             this.groupBox1.Controls.Add(this.txt_ape_pat);
             this.groupBox1.Controls.Add(this.txt_nomb);
@@ -221,7 +221,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(29, 380);
+            this.btn_guardar.Location = new System.Drawing.Point(28, 380);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 36;
@@ -304,7 +304,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 204);
+            this.label8.Location = new System.Drawing.Point(42, 153);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 25;
@@ -322,11 +322,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 156);
+            this.label6.Location = new System.Drawing.Point(64, 203);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Ciudad";
+            this.label6.Text = "Distrito";
             // 
             // label5
             // 
@@ -391,33 +391,6 @@
             this.txt_domilega.Name = "txt_domilega";
             this.txt_domilega.Size = new System.Drawing.Size(180, 20);
             this.txt_domilega.TabIndex = 16;
-            // 
-            // txt_depart
-            // 
-            this.txt_depart.Location = new System.Drawing.Point(122, 201);
-            this.txt_depart.MaxLength = 20;
-            this.txt_depart.Name = "txt_depart";
-            this.txt_depart.Size = new System.Drawing.Size(138, 20);
-            this.txt_depart.TabIndex = 14;
-            this.txt_depart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_depart_KeyPress);
-            // 
-            // txt_prov
-            // 
-            this.txt_prov.Location = new System.Drawing.Point(122, 175);
-            this.txt_prov.MaxLength = 20;
-            this.txt_prov.Name = "txt_prov";
-            this.txt_prov.Size = new System.Drawing.Size(138, 20);
-            this.txt_prov.TabIndex = 13;
-            this.txt_prov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_prov_KeyPress);
-            // 
-            // txt_ciud
-            // 
-            this.txt_ciud.Location = new System.Drawing.Point(122, 149);
-            this.txt_ciud.MaxLength = 20;
-            this.txt_ciud.Name = "txt_ciud";
-            this.txt_ciud.Size = new System.Drawing.Size(138, 20);
-            this.txt_ciud.TabIndex = 12;
-            this.txt_ciud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ciud_KeyPress);
             // 
             // txt_ape_mat
             // 
@@ -608,7 +581,7 @@
             this.txt_email_persoJ.Name = "txt_email_persoJ";
             this.txt_email_persoJ.Size = new System.Drawing.Size(180, 20);
             this.txt_email_persoJ.TabIndex = 32;
-            this.txt_email_persoJ.Leave += new System.EventHandler(this.txt_email_Leave);
+            this.txt_email_persoJ.Leave += new System.EventHandler(this.txt_email_persoJ_Leave);
             // 
             // txt_tel_persoJ
             // 
@@ -708,7 +681,7 @@
             this.txt_ruc_persoJ.Size = new System.Drawing.Size(100, 20);
             this.txt_ruc_persoJ.TabIndex = 17;
             this.txt_ruc_persoJ.TextChanged += new System.EventHandler(this.txt_nro_documento_TextChanged);
-            this.txt_ruc_persoJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nro_documento_KeyPress);
+            this.txt_ruc_persoJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ruc_persoJ_KeyPress);
             this.txt_ruc_persoJ.Validated += new System.EventHandler(this.txt_nro_documento_Validated);
             // 
             // txt_domic_persoJ
@@ -762,6 +735,7 @@
             this.cb_provin_persoJ.Name = "cb_provin_persoJ";
             this.cb_provin_persoJ.Size = new System.Drawing.Size(121, 21);
             this.cb_provin_persoJ.TabIndex = 42;
+            this.cb_provin_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_provin_persoJ_SelectedIndexChanged);
             // 
             // cb_dpto_persoJ
             // 
@@ -771,6 +745,7 @@
             this.cb_dpto_persoJ.Name = "cb_dpto_persoJ";
             this.cb_dpto_persoJ.Size = new System.Drawing.Size(121, 21);
             this.cb_dpto_persoJ.TabIndex = 43;
+            this.cb_dpto_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_persoJ_SelectedIndexChanged);
             // 
             // btn_guar_perj
             // 
@@ -778,7 +753,7 @@
             this.btn_guar_perj.Name = "btn_guar_perj";
             this.btn_guar_perj.Size = new System.Drawing.Size(75, 23);
             this.btn_guar_perj.TabIndex = 44;
-            this.btn_guar_perj.Text = "button1";
+            this.btn_guar_perj.Text = "Guardar";
             this.btn_guar_perj.UseVisualStyleBackColor = true;
             this.btn_guar_perj.Click += new System.EventHandler(this.btn_guar_perj_Click);
             // 
@@ -788,7 +763,7 @@
             this.btn_mod_pj.Name = "btn_mod_pj";
             this.btn_mod_pj.Size = new System.Drawing.Size(75, 23);
             this.btn_mod_pj.TabIndex = 45;
-            this.btn_mod_pj.Text = "button1";
+            this.btn_mod_pj.Text = "Modificar";
             this.btn_mod_pj.UseVisualStyleBackColor = true;
             this.btn_mod_pj.Click += new System.EventHandler(this.btn_mod_pj_Click);
             // 
@@ -808,6 +783,35 @@
             this.txt_ruc_bus.Size = new System.Drawing.Size(191, 20);
             this.txt_ruc_bus.TabIndex = 43;
             this.txt_ruc_bus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ruc_bus_KeyPress);
+            // 
+            // cb_distr
+            // 
+            this.cb_distr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distr.FormattingEnabled = true;
+            this.cb_distr.Location = new System.Drawing.Point(122, 200);
+            this.cb_distr.Name = "cb_distr";
+            this.cb_distr.Size = new System.Drawing.Size(121, 21);
+            this.cb_distr.TabIndex = 44;
+            // 
+            // cb_pro
+            // 
+            this.cb_pro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_pro.FormattingEnabled = true;
+            this.cb_pro.Location = new System.Drawing.Point(122, 176);
+            this.cb_pro.Name = "cb_pro";
+            this.cb_pro.Size = new System.Drawing.Size(121, 21);
+            this.cb_pro.TabIndex = 45;
+            this.cb_pro.SelectedIndexChanged += new System.EventHandler(this.cb_pro_SelectedIndexChanged);
+            // 
+            // cb_dpto
+            // 
+            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.FormattingEnabled = true;
+            this.cb_dpto.Location = new System.Drawing.Point(122, 153);
+            this.cb_dpto.Name = "cb_dpto";
+            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
+            this.cb_dpto.TabIndex = 46;
+            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
             // 
             // frm_registrar_persona
             // 
@@ -859,9 +863,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_nro_documento;
         private System.Windows.Forms.TextBox txt_domilega;
-        private System.Windows.Forms.TextBox txt_depart;
-        private System.Windows.Forms.TextBox txt_prov;
-        private System.Windows.Forms.TextBox txt_ciud;
         private System.Windows.Forms.TextBox txt_ape_mat;
         private System.Windows.Forms.TextBox txt_ape_pat;
         private System.Windows.Forms.TextBox txt_nomb;
@@ -906,5 +907,8 @@
         private System.Windows.Forms.Button btn_mod_pj;
         private System.Windows.Forms.DataGridView dgv_jurid;
         private System.Windows.Forms.TextBox txt_ruc_bus;
+        private System.Windows.Forms.ComboBox cb_distr;
+        private System.Windows.Forms.ComboBox cb_pro;
+        private System.Windows.Forms.ComboBox cb_dpto;
     }
 }
