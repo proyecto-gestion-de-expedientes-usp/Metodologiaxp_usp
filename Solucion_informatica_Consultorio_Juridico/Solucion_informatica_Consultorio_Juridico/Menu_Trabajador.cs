@@ -85,7 +85,8 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void buscarDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            frm_documento u = new frm_documento();
+            u.ShowDialog();
         }
 
         private void registrarDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +109,18 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Menu_Trabajador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buscarTipoDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_tipo_documento u = new frm_buscar_tipo_documento();
+            u.ShowDialog();
+        }
+
+        private void buscarAnexoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Anexos u = new frm_Anexos();
+            u.ShowDialog();
         }
     }
 }

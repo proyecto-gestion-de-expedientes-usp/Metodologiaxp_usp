@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Trabajador));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,12 @@
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buscarTipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -124,7 +130,8 @@
             this.buscarDemandadoToolStripMenuItem,
             this.buscarPersonaToolStripMenuItem,
             this.buscarDocumentoToolStripMenuItem,
-            this.buscarAnexoToolStripMenuItem});
+            this.buscarAnexoToolStripMenuItem,
+            this.buscarTipoDocumentoToolStripMenuItem});
             this.busquedasToolStripMenuItem.Name = "busquedasToolStripMenuItem";
             this.busquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.busquedasToolStripMenuItem.Text = "Busquedas";
@@ -133,43 +140,44 @@
             // buscarAbogadoToolStripMenuItem
             // 
             this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
-            this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
             this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
             // 
             // buscarDemandanteToolStripMenuItem
             // 
             this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
-            this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
             this.buscarDemandanteToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandanteToolStripMenuItem_Click);
             // 
             // buscarDemandadoToolStripMenuItem
             // 
             this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
-            this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
             this.buscarDemandadoToolStripMenuItem.Click += new System.EventHandler(this.buscarDemandadoToolStripMenuItem_Click);
             // 
             // buscarPersonaToolStripMenuItem
             // 
             this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
-            this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
             this.buscarPersonaToolStripMenuItem.Click += new System.EventHandler(this.buscarPersonaToolStripMenuItem_Click);
             // 
             // buscarDocumentoToolStripMenuItem
             // 
             this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
-            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarDocumentoToolStripMenuItem.Text = "Buscar Documento";
             this.buscarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarDocumentoToolStripMenuItem_Click);
             // 
             // buscarAnexoToolStripMenuItem
             // 
             this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
-            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
+            this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
             // 
             // filesToolStripMenuItem
             // 
@@ -194,11 +202,52 @@
             this.registrarAnexoToolStripMenuItem.Text = "Registrar Anexo";
             this.registrarAnexoToolStripMenuItem.Click += new System.EventHandler(this.registrarAnexoToolStripMenuItem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(104, 173);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(494, 177);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(175, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "\"CONSULTORIO JURÌDICO USP\"";
+            // 
+            // buscarTipoDocumentoToolStripMenuItem
+            // 
+            this.buscarTipoDocumentoToolStripMenuItem.Name = "buscarTipoDocumentoToolStripMenuItem";
+            this.buscarTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarTipoDocumentoToolStripMenuItem.Text = "Buscar Tipo Documento";
+            this.buscarTipoDocumentoToolStripMenuItem.Click += new System.EventHandler(this.buscarTipoDocumentoToolStripMenuItem_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(266, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "MENÙ USUARIO";
+            // 
             // Menu_Trabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 414);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_Trabajador";
@@ -206,6 +255,7 @@
             this.Load += new System.EventHandler(this.Menu_Trabajador_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +281,9 @@
         private System.Windows.Forms.ToolStripMenuItem registrarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarAnexoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarPersonaToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem buscarTipoDocumentoToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }

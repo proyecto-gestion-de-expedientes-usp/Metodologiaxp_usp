@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu_Admin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.maestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,7 @@
             this.registrarTipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bùsquedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAbogadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,10 +64,13 @@
             this.personasDemandadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personasDemandanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casosPorCicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -230,6 +235,13 @@
             this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
             this.buscarAbogadoToolStripMenuItem.Click += new System.EventHandler(this.buscarAbogadoToolStripMenuItem_Click);
             // 
+            // buscarAnexoToolStripMenuItem
+            // 
+            this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
+            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
+            this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
+            // 
             // buscarDemandadoToolStripMenuItem
             // 
             this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
@@ -350,12 +362,6 @@
             this.casosPorCicloToolStripMenuItem.Text = "Casos por Ciclo";
             this.casosPorCicloToolStripMenuItem.Click += new System.EventHandler(this.casosPorCicloToolStripMenuItem_Click);
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
             // casosPorUsuarioToolStripMenuItem
             // 
             this.casosPorUsuarioToolStripMenuItem.Name = "casosPorUsuarioToolStripMenuItem";
@@ -363,18 +369,51 @@
             this.casosPorUsuarioToolStripMenuItem.Text = "Casos por Usuario";
             this.casosPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.casosPorUsuarioToolStripMenuItem_Click);
             // 
-            // buscarAnexoToolStripMenuItem
+            // salirToolStripMenuItem
             // 
-            this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
-            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
-            this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(88, 159);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(491, 183);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(141, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "\"CONSULTORIO JURÌDICO USP\"";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(198, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(272, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "MENÙ ADMINISTRADOR";
             // 
             // frm_Menu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 392);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Menu_Admin";
@@ -382,6 +421,7 @@
             this.Load += new System.EventHandler(this.frm_Menu_Admin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +466,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casosPorUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarAnexoToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
