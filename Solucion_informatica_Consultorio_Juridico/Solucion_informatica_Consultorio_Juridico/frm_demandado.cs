@@ -89,28 +89,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             col();          
         }
 
-        //private void generador_codigodo()
-        //{
-        //    string codigo;
-        //    int cal, tol;
-        //    cal = dgdatos.RowCount - 1;
-        //    tol = cal + 1;
-        //    if (tol < 10)
-        //    {
-        //        codigo = "DO0" + tol.ToString();
-        //       txt_iddo.Text = Convert.ToString(codigo);
-        //    }
-        //    else if (tol < 100)
-        //    {
-        //        codigo = "DO00" + tol.ToString();
-        //        txt_iddo.Text = Convert.ToString(codigo);
-        //    }
-        //    else if (tol < 1000)
-        //    {
-        //        codigo = "DO000" + tol.ToString();
-        //        txt_iddo.Text = Convert.ToString(codigo);
-        //    }
-        //}
+     
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pos = dgdatos.CurrentRow.Index;
@@ -134,7 +113,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_nomper.Text = Program.nomper;
             txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
             txt_reg.DropDownStyle = ComboBoxStyle.DropDownList;
-            //generador_codigodo();
+            
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)

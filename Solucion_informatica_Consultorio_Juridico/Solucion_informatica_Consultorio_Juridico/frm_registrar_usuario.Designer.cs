@@ -60,9 +60,6 @@
             this.txt_cel = new System.Windows.Forms.TextBox();
             this.txt_domici = new System.Windows.Forms.TextBox();
             this.txt_correo = new System.Windows.Forms.TextBox();
-            this.txt_dpto = new System.Windows.Forms.TextBox();
-            this.txt_provincia = new System.Windows.Forms.TextBox();
-            this.txt_distrito = new System.Windows.Forms.TextBox();
             this.txt_contra = new System.Windows.Forms.TextBox();
             this.txt_confi_contra = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -87,6 +84,9 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cb_distritos = new System.Windows.Forms.ComboBox();
+            this.cb_provin = new System.Windows.Forms.ComboBox();
+            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -231,7 +231,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(39, 368);
+            this.label15.Location = new System.Drawing.Point(39, 363);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 13);
             this.label15.TabIndex = 0;
@@ -303,10 +303,12 @@
             // dp_fenaci
             // 
             this.dp_fenaci.Location = new System.Drawing.Point(138, 287);
+            this.dp_fenaci.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
             this.dp_fenaci.Name = "dp_fenaci";
             this.dp_fenaci.Size = new System.Drawing.Size(214, 20);
             this.dp_fenaci.TabIndex = 2;
+            this.dp_fenaci.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             this.dp_fenaci.ValueChanged += new System.EventHandler(this.dp_fenaci_ValueChanged);
             // 
             // txt_id_usu
@@ -388,36 +390,6 @@
             this.txt_correo.TabIndex = 3;
             this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
-            // txt_dpto
-            // 
-            this.txt_dpto.Location = new System.Drawing.Point(101, 313);
-            this.txt_dpto.MaxLength = 20;
-            this.txt_dpto.Name = "txt_dpto";
-            this.txt_dpto.Size = new System.Drawing.Size(157, 20);
-            this.txt_dpto.TabIndex = 3;
-            this.txt_dpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dpto_KeyPress);
-            this.txt_dpto.Validated += new System.EventHandler(this.txt_dpto_Validated);
-            // 
-            // txt_provincia
-            // 
-            this.txt_provincia.Location = new System.Drawing.Point(101, 339);
-            this.txt_provincia.MaxLength = 20;
-            this.txt_provincia.Name = "txt_provincia";
-            this.txt_provincia.Size = new System.Drawing.Size(100, 20);
-            this.txt_provincia.TabIndex = 3;
-            this.txt_provincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_provincia_KeyPress);
-            this.txt_provincia.Validated += new System.EventHandler(this.txt_provincia_Validated);
-            // 
-            // txt_distrito
-            // 
-            this.txt_distrito.Location = new System.Drawing.Point(101, 365);
-            this.txt_distrito.MaxLength = 20;
-            this.txt_distrito.Name = "txt_distrito";
-            this.txt_distrito.Size = new System.Drawing.Size(100, 20);
-            this.txt_distrito.TabIndex = 3;
-            this.txt_distrito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_distrito_KeyPress);
-            this.txt_distrito.Validated += new System.EventHandler(this.txt_distrito_Validated);
-            // 
             // txt_contra
             // 
             this.txt_contra.Location = new System.Drawing.Point(128, 72);
@@ -436,6 +408,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_distritos);
+            this.groupBox1.Controls.Add(this.cb_provin);
+            this.groupBox1.Controls.Add(this.cb_dpto);
             this.groupBox1.Controls.Add(this.txt_cod_tipusua);
             this.groupBox1.Controls.Add(this.txt_cod_estausua);
             this.groupBox1.Controls.Add(this.btn_salir);
@@ -446,11 +421,8 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_distrito);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_provincia);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txt_dpto);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txt_domici);
@@ -581,17 +553,19 @@
             this.rbt_dni.TabStop = true;
             this.rbt_dni.Text = "Dni";
             this.rbt_dni.UseVisualStyleBackColor = true;
+            this.rbt_dni.CheckedChanged += new System.EventHandler(this.rbt_dni_CheckedChanged);
             // 
             // rbt_nom_apepatymat
             // 
             this.rbt_nom_apepatymat.AutoSize = true;
             this.rbt_nom_apepatymat.Location = new System.Drawing.Point(295, 21);
             this.rbt_nom_apepatymat.Name = "rbt_nom_apepatymat";
-            this.rbt_nom_apepatymat.Size = new System.Drawing.Size(115, 17);
+            this.rbt_nom_apepatymat.Size = new System.Drawing.Size(67, 17);
             this.rbt_nom_apepatymat.TabIndex = 11;
             this.rbt_nom_apepatymat.TabStop = true;
-            this.rbt_nom_apepatymat.Text = "Nombre y Apellidos";
+            this.rbt_nom_apepatymat.Text = "Apellidos";
             this.rbt_nom_apepatymat.UseVisualStyleBackColor = true;
+            this.rbt_nom_apepatymat.CheckedChanged += new System.EventHandler(this.rbt_nom_apepatymat_CheckedChanged);
             // 
             // textBox1
             // 
@@ -600,6 +574,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(466, 20);
             this.textBox1.TabIndex = 9;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // dgv_usuarios
             // 
@@ -608,6 +583,7 @@
             this.dgv_usuarios.Name = "dgv_usuarios";
             this.dgv_usuarios.Size = new System.Drawing.Size(466, 367);
             this.dgv_usuarios.TabIndex = 8;
+            this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
             // 
             // errorNombre
             // 
@@ -640,6 +616,36 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // cb_distritos
+            // 
+            this.cb_distritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distritos.FormattingEnabled = true;
+            this.cb_distritos.Location = new System.Drawing.Point(94, 360);
+            this.cb_distritos.Name = "cb_distritos";
+            this.cb_distritos.Size = new System.Drawing.Size(121, 21);
+            this.cb_distritos.TabIndex = 7;
+            this.cb_distritos.SelectedIndexChanged += new System.EventHandler(this.cb_distritos_SelectedIndexChanged);
+            // 
+            // cb_provin
+            // 
+            this.cb_provin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_provin.FormattingEnabled = true;
+            this.cb_provin.Location = new System.Drawing.Point(94, 336);
+            this.cb_provin.Name = "cb_provin";
+            this.cb_provin.Size = new System.Drawing.Size(121, 21);
+            this.cb_provin.TabIndex = 8;
+            this.cb_provin.SelectedIndexChanged += new System.EventHandler(this.cb_provin_SelectedIndexChanged);
+            // 
+            // cb_dpto
+            // 
+            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.FormattingEnabled = true;
+            this.cb_dpto.Location = new System.Drawing.Point(94, 313);
+            this.cb_dpto.Name = "cb_dpto";
+            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
+            this.cb_dpto.TabIndex = 9;
+            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
             // 
             // frm_registrar_usuario
             // 
@@ -705,9 +711,6 @@
         private System.Windows.Forms.TextBox txt_cel;
         private System.Windows.Forms.TextBox txt_domici;
         private System.Windows.Forms.TextBox txt_correo;
-        private System.Windows.Forms.TextBox txt_dpto;
-        private System.Windows.Forms.TextBox txt_provincia;
-        private System.Windows.Forms.TextBox txt_distrito;
         private System.Windows.Forms.TextBox txt_contra;
         private System.Windows.Forms.TextBox txt_confi_contra;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -732,5 +735,8 @@
         private System.Windows.Forms.ErrorProvider errorProv;
         private System.Windows.Forms.ErrorProvider errorDistri;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cb_distritos;
+        private System.Windows.Forms.ComboBox cb_provin;
+        private System.Windows.Forms.ComboBox cb_dpto;
     }
 }

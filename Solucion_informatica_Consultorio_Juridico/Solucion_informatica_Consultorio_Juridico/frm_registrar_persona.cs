@@ -21,7 +21,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         string campo;
         Clases.Datos sad = new Clases.Datos();
         Clases.Conexion cnn = new Clases.Conexion();
-        //SqlConnection cnn = new SqlConnection("database = consultoriojur; data source =.; integrated security = sspi");
+      
         public frm_registrar_persona()
         {
             InitializeComponent();

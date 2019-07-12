@@ -20,8 +20,11 @@ namespace Solucion_informatica_Consultorio_Juridico
         Clases.Validacioes validadcion = new Clases.Validacioes();
         SqlConnection gh;
         string campo;
+        string valor;
         DataTable dts = new DataTable();
         DataTable ds = new DataTable();
+        Clases.Conexion cnn = new Clases.Conexion();
+        Clases.Datos sad = new Clases.Datos();
 
         public frm_registrar_usuario()
         {
@@ -40,9 +43,14 @@ namespace Solucion_informatica_Consultorio_Juridico
             gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
 
             mostrartipousuario();
-
+            llenar_dpto();
             mostrarestadousuario();
             //btn_modificar.Enabled = false;
+
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(usu_id as int)),0)+1 from Usuario", cnn.AbrirConexion());
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+            txt_id_usu.Text = sqlex.Rows[0][0].ToString();
         }
         public void mostrarestadousuario()
         {
@@ -123,10 +131,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@usu_correo"].Value = txt_correo.Text;
                 cmd.Parameters["@usu_estadocivil"].Value = cb_estadoci.Text;
                 cmd.Parameters["@usu_fechanac"].Value = dp_fenaci.Text;
-                cmd.Parameters["@usu_ciudad"].Value = txt_distrito.Text;
-                cmd.Parameters["@usu_provincia"].Value = txt_provincia.Text;
+                cmd.Parameters["@usu_ciudad"].Value = cb_distritos.Text;
+                cmd.Parameters["@usu_provincia"].Value = cb_provin.Text;
                 cmd.Parameters["@id_estusu"].Value = txt_cod_estausua.Text;
-                cmd.Parameters["@usu_departamento"].Value = txt_dpto.Text;
+                cmd.Parameters["@usu_departamento"].Value = cb_dpto.Text;
                 cmd.Parameters["@usu_contraseña"].Value = txt_contra.Text;
 
 
@@ -191,10 +199,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters["@usu_correo"].Value = txt_correo.Text;
                 cmd.Parameters["@usu_estadocivil"].Value = cb_estadoci.Text;
                 cmd.Parameters["@usu_fechanac"].Value = dp_fenaci.Text;
-                cmd.Parameters["@usu_ciudad"].Value = txt_distrito.Text;
-                cmd.Parameters["@usu_provincia"].Value = txt_provincia.Text;
+                cmd.Parameters["@usu_ciudad"].Value = cb_distritos.Text;
+                cmd.Parameters["@usu_provincia"].Value = cb_provin.Text;
                 cmd.Parameters["@id_estusu"].Value = txt_cod_estausua.Text;
-                cmd.Parameters["@usu_departamento"].Value = txt_dpto.Text;
+                cmd.Parameters["@usu_departamento"].Value = cb_dpto.Text;
                 cmd.Parameters["@usu_contraseña"].Value = txt_contra.Text;
 
 
@@ -304,25 +312,25 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txt_dpto_Validated(object sender, EventArgs e)
         {
-            if (txt_dpto.Text.Trim() == "")
+            if (cb_dpto.Text.Trim() == "")
             {
-                errorNombre.SetError(txt_dpto, "Ingrese Departamento...");
+                errorNombre.SetError(cb_dpto, "Ingrese Departamento...");
             }
         }
 
         private void txt_provincia_Validated(object sender, EventArgs e)
         {
-            if (txt_provincia.Text.Trim() == "")
+            if (cb_provin.Text.Trim() == "")
             {
-                errorNombre.SetError(txt_provincia, "Ingrese Provincia...");
+                errorNombre.SetError(cb_provin, "Ingrese Provincia...");
             }
         }
 
         private void txt_distrito_Validated(object sender, EventArgs e)
         {
-            if (txt_distrito.Text.Trim() == "")
+            if (cb_distritos.Text.Trim() == "")
             {
-                errorNombre.SetError(txt_distrito, "Ingrese Distrito...");
+                errorNombre.SetError(cb_distritos, "Ingrese Distrito...");
             }
         }
 
@@ -365,6 +373,186 @@ namespace Solucion_informatica_Consultorio_Juridico
                     MessageBox.Show("Ingrese los 8 digitos del DNI 😎", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+        public void llenar_dpto()
+        {
+            cb_dpto.Items.Add("Amazonas");
+            cb_dpto.Items.Add("Áncash");
+            cb_dpto.Items.Add("Apurímac");
+            cb_dpto.Items.Add("Arequipa");
+            cb_dpto.Items.Add("Ayacucho");
+            cb_dpto.Items.Add("Cajamarca");
+            cb_dpto.Items.Add("Callao");
+            cb_dpto.Items.Add("Cuzco");
+            cb_dpto.Items.Add("Huancavelica");
+            cb_dpto.Items.Add("Huánuco");
+            cb_dpto.Items.Add("Ica");
+            cb_dpto.Items.Add("Junín");
+            cb_dpto.Items.Add("La Libertad");
+            cb_dpto.Items.Add("Lambayeque");
+            cb_dpto.Items.Add("Lima");
+            cb_dpto.Items.Add("Loreto");
+            cb_dpto.Items.Add("Madre de Dios");
+            cb_dpto.Items.Add("Moquegua");
+            cb_dpto.Items.Add("Pasco");
+            cb_dpto.Items.Add("Piura");
+            cb_dpto.Items.Add("Puno");
+            cb_dpto.Items.Add("San Martín");
+            cb_dpto.Items.Add("Tacna");
+            cb_dpto.Items.Add("Tumbes");
+            cb_dpto.Items.Add("Ucayali");
+        }
+
+        private void cb_dpto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            llenar_dpto();
+            if (cb_dpto.SelectedItem.Equals("Amazonas"))
+            {
+                cb_provin.Items.Clear();
+                cb_provin.Items.Add("Chachapoyas");
+                cb_provin.Items.Add("Bagua");
+                cb_provin.Items.Add("Bongara");
+                cb_provin.Items.Add("Condorcanqui");
+                cb_provin.Items.Add("Luya");
+                cb_provin.Items.Add("Rodríguez de Mendoza");
+                cb_provin.Items.Add("Utcubamba");
+
+            }
+            if (cb_dpto.SelectedItem.Equals("Áncash"))
+            {
+                cb_provin.Items.Clear();
+                cb_provin.Items.Add("Huaraz");
+                cb_provin.Items.Add("Aija");
+                cb_provin.Items.Add("Antonio raymondi");
+                cb_provin.Items.Add("Asunción");
+                cb_provin.Items.Add("Bolognesi");
+                cb_provin.Items.Add("Carhuaz");
+                cb_provin.Items.Add("Carlos Fermín Fitzcarrald");
+                cb_provin.Items.Add("Casma");
+                cb_provin.Items.Add("Corongo");
+                cb_provin.Items.Add("Huari");
+                cb_provin.Items.Add("Huarmey");
+                cb_provin.Items.Add("Huaylas");
+                cb_provin.Items.Add("Mariscal Luzuriaga");
+                cb_provin.Items.Add("Ocros");
+                cb_provin.Items.Add("Pallasca");
+                cb_provin.Items.Add("Pomabamba");
+                cb_provin.Items.Add("Recuay");
+                cb_provin.Items.Add("Santa");
+                cb_provin.Items.Add("Sihuas");
+                cb_provin.Items.Add("Yungay");
+
+
+
+
+            }
+            if (cb_dpto.SelectedItem.Equals("Apurímac"))
+            {
+                cb_provin.Items.Clear();
+
+                cb_provin.Items.Add("Abancay");
+                cb_provin.Items.Add("Andahuaylas");
+                cb_provin.Items.Add("Antabamba");
+                cb_provin.Items.Add("Aymaraes");
+                cb_provin.Items.Add("Cotabambas");
+                cb_provin.Items.Add("Chincheros");
+                cb_provin.Items.Add("Grau");
+            }
+            if (cb_dpto.SelectedItem.Equals("Arequipa"))
+            {
+
+                cb_provin.Items.Clear();
+                cb_provin.Items.Add("Arequipa");
+                cb_provin.Items.Add("Camana");
+                cb_provin.Items.Add("Caraveli");
+                cb_provin.Items.Add("Caylloma");
+                cb_provin.Items.Add("Condesuyos");
+                cb_provin.Items.Add("Islay");
+                cb_provin.Items.Add("La unión");
+
+            }
+            if (cb_dpto.SelectedItem.Equals("Ayacucho"))
+            {
+
+                cb_provin.Items.Clear();
+                cb_provin.Items.Add("Huamanga");
+                cb_provin.Items.Add("Cangallo");
+                cb_provin.Items.Add("Huanca sancos");
+                cb_provin.Items.Add("Huanta");
+                cb_provin.Items.Add("La Mar");
+                cb_provin.Items.Add("Lucanas");
+                cb_provin.Items.Add("Parinacochas");
+                cb_provin.Items.Add("Páucar del Sara Sara");
+                cb_provin.Items.Add("Víctor Fajardo");
+                cb_provin.Items.Add("Vilcas Huaman");
+                cb_provin.Items.Add("Parinacochas");
+
+            }
+        }
+
+        private void cb_distritos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cb_provin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_provin.SelectedItem.Equals("Santa"))
+            {
+                cb_distritos.Items.Clear();
+                cb_distritos.Items.Add("Cáceres Del Perú");
+                cb_distritos.Items.Add("Chimbote");
+                cb_distritos.Items.Add("Coishco");
+                cb_distritos.Items.Add("Macate");
+                cb_distritos.Items.Add("Moro");
+                cb_distritos.Items.Add("Nepeña");
+                cb_distritos.Items.Add("Nuevo Chimbote");
+                cb_distritos.Items.Add("Samanco");
+                cb_distritos.Items.Add("Santa");
+
+            }
+
+        }
+
+        private void rbt_dni_CheckedChanged(object sender, EventArgs e)
+        {
+            campo = "usu_dni";
+        }
+
+        private void rbt_nom_apepatymat_CheckedChanged(object sender, EventArgs e)
+        {
+            campo ="usu_apellidopat";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string valor = textBox1.Text;
+
+            dgv_usuarios.DataSource = sad.mostrarusu(campo,valor);
+
+            textBox1.Focus();
+        }
+
+        private void dgv_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pos = dgv_usuarios.CurrentRow.Index;
+            txt_id_usu.Text = dgv_usuarios.CurrentRow.Cells[0].Value.ToString();
+            txt_cod_tipusua.Text = dgv_usuarios.CurrentRow.Cells[1].Value.ToString();
+            txt_dni.Text = dgv_usuarios.CurrentRow.Cells[2].Value.ToString();
+            txt_nombres.Text = dgv_usuarios.CurrentRow.Cells[3].Value.ToString();
+            txt_apepat.Text = dgv_usuarios.CurrentRow.Cells[4].Value.ToString();
+            txt_apemat.Text = dgv_usuarios.CurrentRow.Cells[5].Value.ToString();
+            txt_cel.Text = dgv_usuarios.CurrentRow.Cells[6].Value.ToString();
+            txt_domici.Text = dgv_usuarios.CurrentRow.Cells[7].Value.ToString();
+            cb_Sexo.Text = dgv_usuarios.CurrentRow.Cells[8].Value.ToString();
+            txt_correo.Text = dgv_usuarios.CurrentRow.Cells[9].Value.ToString();
+            cb_estadoci.Text = dgv_usuarios.CurrentRow.Cells[10].Value.ToString();
+            dp_fenaci.Text = dgv_usuarios.CurrentRow.Cells[11].Value.ToString();
+            cb_distritos.Text = dgv_usuarios.CurrentRow.Cells[12].Value.ToString();
+            cb_provin.Text = dgv_usuarios.CurrentRow.Cells[13].Value.ToString();
+            txt_cod_estausua.Text = dgv_usuarios.CurrentRow.Cells[14].Value.ToString();
+            cb_dpto .Text= dgv_usuarios.CurrentRow.Cells[15].Value.ToString();
+            txt_contra.Text = dgv_usuarios.CurrentRow.Cells[16].Value.ToString();
         }
     }
     }

@@ -49,5 +49,14 @@ namespace Solucion_informatica_Consultorio_Juridico.Clases
             con.CerrarConexion();
             return dt;
         }
+        public DataTable mostrarusu(string campo,string valor) {
+            con.AbrirConexion();
+            string sql = "select * from Usuario where "+campo+ " like '" + valor + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, con.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.CerrarConexion();
+            return dt;
+        }
     }
 }
