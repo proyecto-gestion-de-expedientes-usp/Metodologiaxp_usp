@@ -179,27 +179,32 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void personasDemandadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frm_RPT_PERSXDDO gg = new frm_RPT_PERSXDDO();
+            gg.ShowDialog();
+
+            //frm_RPT_PERSXDDO form = new frm_RPT_PERSXDDO();
+            //form.ShowDialog();
+            //ReportDocument oRep = new ReportDocument();           
+            //oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
+            //form.crystalReportViewer1.ReportSource = oRep;      
+            //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandado.pdf");
 
 
-            frm_RPT_PERSXDDO form = new frm_RPT_PERSXDDO();
-            form.ShowDialog();
-            ReportDocument oRep = new ReportDocument();           
-            oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
-            form.crystalReportViewer1.ReportSource = oRep;      
-            oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandado.pdf");
-
-       
 
         }
 
         private void personasDemandanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           frm_RPT_PERSXDTE form = new frm_RPT_PERSXDTE();
-            form.ShowDialog();
-            ReportDocument oRep = new ReportDocument();
-            oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
-            form.crystalReportViewer1.ReportSource = oRep;
-            oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandante.pdf");
+
+            frm_RPT_PERSXDTE gg = new frm_RPT_PERSXDTE();
+            gg.ShowDialog();
+
+            //frm_RPT_PERSXDTE form = new frm_RPT_PERSXDTE();
+            // form.ShowDialog();
+            // ReportDocument oRep = new ReportDocument();
+            // oRep.Load(@"C:\Users\Usuario\Source\Repos\proyecto-gestion-de-expedientes-usp\Metodologiaxp_usp\Solucion_informatica_Consultorio_Juridico\Solucion_informatica_Consultorio_Juridico\Reportes\RPT_PERSXDDO.rpt");
+            // form.crystalReportViewer1.ReportSource = oRep;
+            // oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Desktop\reporte_demandante.pdf");
         }
 
         private void casosPorCicloToolStripMenuItem_Click(object sender, EventArgs e)
