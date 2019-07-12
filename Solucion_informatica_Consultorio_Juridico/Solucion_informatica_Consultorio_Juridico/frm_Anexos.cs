@@ -135,6 +135,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             Program.adoc = Convert.ToString(dgvLista.CurrentRow.Cells[3].Value);
             Program.afech = Convert.ToString(dgvLista.CurrentRow.Cells[4].Value);
             Hide();
-    }
+        }
+
+        private void dgvLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
     }
 }

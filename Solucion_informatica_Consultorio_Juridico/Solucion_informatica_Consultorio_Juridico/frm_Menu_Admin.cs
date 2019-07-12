@@ -243,5 +243,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_Rpt_Casos_x_usuarios sqlex = new frm_Rpt_Casos_x_usuarios();
             sqlex.ShowDialog();
         }
+
+        private void buscarAnexoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_buscar_anexo b = new frm_buscar_anexo();
+            b.ShowDialog();
+        }
     }
 }

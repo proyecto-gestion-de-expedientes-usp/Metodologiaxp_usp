@@ -242,6 +242,7 @@
             this.btn_usu.TabIndex = 2;
             this.btn_usu.Text = "...";
             this.btn_usu.UseVisualStyleBackColor = true;
+            this.btn_usu.Click += new System.EventHandler(this.btn_usu_Click);
             // 
             // btn_demandd
             // 
@@ -251,6 +252,7 @@
             this.btn_demandd.TabIndex = 2;
             this.btn_demandd.Text = "...";
             this.btn_demandd.UseVisualStyleBackColor = true;
+            this.btn_demandd.Click += new System.EventHandler(this.btn_demandd_Click);
             // 
             // btn_demandt
             // 
@@ -260,6 +262,7 @@
             this.btn_demandt.TabIndex = 2;
             this.btn_demandt.Text = "...";
             this.btn_demandt.UseVisualStyleBackColor = true;
+            this.btn_demandt.Click += new System.EventHandler(this.btn_demandt_Click);
             // 
             // btn_abog
             // 
@@ -269,6 +272,7 @@
             this.btn_abog.TabIndex = 2;
             this.btn_abog.Text = "...";
             this.btn_abog.UseVisualStyleBackColor = true;
+            this.btn_abog.Click += new System.EventHandler(this.btn_abog_Click);
             // 
             // btn_anex
             // 
@@ -278,6 +282,7 @@
             this.btn_anex.TabIndex = 2;
             this.btn_anex.Text = "...";
             this.btn_anex.UseVisualStyleBackColor = true;
+            this.btn_anex.Click += new System.EventHandler(this.btn_anex_Click);
             // 
             // dp_fecha
             // 
@@ -517,6 +522,7 @@
             this.Controls.Add(this.txt_id_usu);
             this.Name = "frm_Registrar_MovimientoExp";
             this.Text = "Registrar Movimiento de Expediente";
+            this.Activated += new System.EventHandler(this.frm_Registrar_MovimientoExp_Activated);
             this.Load += new System.EventHandler(this.frm_Registrar_MovimientoExp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProgreso)).EndInit();

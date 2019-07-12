@@ -9,6 +9,24 @@ namespace Solucion_informatica_Consultorio_Juridico
     static class Program
     {
 
+        //para formulario Registro Movimiento Expediente
+
+        public static string idusu;
+        public static string nomusu;
+
+        public static string id_demandado;
+        public static string nom_demandado;
+
+        public static string id_demandante;
+        public static string nom_demandante;
+
+        public static string idanexo;
+        public static string nomanexo;
+
+        public static string idabogado;
+        public static string nomabogado;
+
+
         //para formulario Registro Demandado
 
         public static string idper;

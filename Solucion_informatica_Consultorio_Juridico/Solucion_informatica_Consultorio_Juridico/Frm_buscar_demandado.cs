@@ -119,5 +119,12 @@ namespace Solucion_informatica_Consultorio_Juridico
                 }
             }
         }
+
+        private void dgdatos_DoubleClick(object sender, EventArgs e)
+        {
+            Program.id_demandado = Convert.ToString(dgdatos.CurrentRow.Cells[0].Value);
+            Program.nom_demandado = Convert.ToString(dgdatos.CurrentRow.Cells[2].Value);
+            this.Hide();
+        }
     }
 }

@@ -124,6 +124,7 @@
             this.dgdatos.Name = "dgdatos";
             this.dgdatos.Size = new System.Drawing.Size(427, 274);
             this.dgdatos.TabIndex = 0;
+            this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
             // 
             // Frm_buscar_demandado
             // 

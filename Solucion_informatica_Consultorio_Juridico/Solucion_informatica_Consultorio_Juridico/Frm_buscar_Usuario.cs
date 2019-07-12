@@ -131,5 +131,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
+
+        private void dgdatos_DoubleClick(object sender, EventArgs e)
+        {
+            Program.idusu = Convert.ToString(dgdatos.CurrentRow.Cells[0].Value);
+            Program.nomusu = Convert.ToString(dgdatos.CurrentRow.Cells[3].Value);
+            this.Hide();
+        }
     }
 }

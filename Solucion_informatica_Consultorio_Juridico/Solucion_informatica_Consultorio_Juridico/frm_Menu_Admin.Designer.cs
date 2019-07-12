@@ -64,6 +64,7 @@
             this.casosPorCicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarAnexoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,6 +208,7 @@
             // 
             this.bùsquedasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarAbogadoToolStripMenuItem,
+            this.buscarAnexoToolStripMenuItem,
             this.buscarDemandadoToolStripMenuItem,
             this.buscarDemandanteToolStripMenuItem,
             this.buscarPersonaToolStripMenuItem,
@@ -361,6 +363,13 @@
             this.casosPorUsuarioToolStripMenuItem.Text = "Casos por Usuario";
             this.casosPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.casosPorUsuarioToolStripMenuItem_Click);
             // 
+            // buscarAnexoToolStripMenuItem
+            // 
+            this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
+            this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
+            this.buscarAnexoToolStripMenuItem.Click += new System.EventHandler(this.buscarAnexoToolStripMenuItem_Click);
+            // 
             // frm_Menu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,5 +425,6 @@
         private System.Windows.Forms.ToolStripMenuItem casosPorCicloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casosPorUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarAnexoToolStripMenuItem;
     }
 }

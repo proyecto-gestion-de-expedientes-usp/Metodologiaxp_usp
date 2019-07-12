@@ -181,5 +181,60 @@ namespace Solucion_informatica_Consultorio_Juridico
                 errorFolios.SetError(txt_cantfol, "Ingrese Cantidad de Folios");
             }
         }
+
+        private void frm_Registrar_MovimientoExp_Activated(object sender, EventArgs e)
+        {
+            txt_id_usu.Text = Program.idusu;
+            txt_nom_usu.Text = Program.nomusu;
+
+            txt_id_demandd.Text = Program.id_demandado;
+            txt_nom_demandd.Text = Program.nom_demandado;
+
+            txt_id_demandt.Text = Program.id_demandante;
+            txt_nom_demandt.Text = Program.nom_demandante;
+
+            txt_id_anex.Text = Program.idanexo;
+            txt_nom_anex.Text = Program.nomanexo;
+
+            txt_id_abo.Text = Program.anid;
+
+           txt_nom_abo.Text = Program.anom;
+
+            txt_id_abo.Text = Program.idabogado;
+            txt_nom_abo.Text = Program.nomabogado;
+
+
+        }
+
+        private void btn_usu_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_Usuario x = new Frm_buscar_Usuario();
+            x.ShowDialog();
+        }
+
+        private void btn_demandd_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_demandado sa = new Frm_buscar_demandado();
+            sa.ShowDialog();
+      
+        }
+
+        private void btn_demandt_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_demandante z = new Frm_buscar_demandante();
+            z.ShowDialog();
+        }
+
+        private void btn_anex_Click(object sender, EventArgs e)
+        {
+            frm_buscar_anexo q = new frm_buscar_anexo();
+            q.ShowDialog();
+        }
+
+        private void btn_abog_Click(object sender, EventArgs e)
+        {
+            Frm_buscar_abogado d = new Frm_buscar_abogado();
+            d.ShowDialog();
+        }
     }
 }

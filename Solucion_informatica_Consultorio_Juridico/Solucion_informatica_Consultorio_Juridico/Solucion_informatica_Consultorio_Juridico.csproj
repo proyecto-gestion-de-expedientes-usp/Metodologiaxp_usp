@@ -93,6 +93,12 @@
     <Compile Include="frm_Anexos.Designer.cs">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_buscar_anexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_anexo.Designer.cs">
+      <DependentUpon>frm_buscar_anexo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_buscar_estadoabog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -520,6 +526,9 @@
     </Compile>
     <EmbeddedResource Include="frm_Anexos.resx">
       <DependentUpon>frm_Anexos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_anexo.resx">
+      <DependentUpon>frm_buscar_anexo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_buscar_estadoabog.resx">
       <DependentUpon>frm_buscar_estadoabog.cs</DependentUpon>
