@@ -30,21 +30,17 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_buscar.Focus();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            campo = "demte_id";
-            txt_buscar.Focus();
-        }
+        
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "pers_numdoc";
+            campo = "NUM_DOC";
             txt_buscar.Focus();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "demte_registro";
+            campo = "REGISTRO";
             txt_buscar.Focus();
         }
 
@@ -95,7 +91,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void Frm_buscar_demandante_Activated(object sender, EventArgs e)
         {
-            radioButton2.Checked = true;
+            radioButton4.Checked = true;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -105,7 +101,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (radioButton2.Checked == true)
+            if (radioButton4.Checked == true)
             {
                 val.SoloNumeros(e);
                 if (Char.IsLetter(e.KeyChar))

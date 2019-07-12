@@ -44,7 +44,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(12, 110);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(391, 172);
+            this.dgdatos.Size = new System.Drawing.Size(402, 172);
             this.dgdatos.TabIndex = 10;
             // 
             // groupBox1
@@ -88,7 +88,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(238, 49);
+            this.button4.Location = new System.Drawing.Point(220, 50);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -98,7 +98,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(316, 39);
+            this.button5.Location = new System.Drawing.Point(301, 39);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 44);
             this.button5.TabIndex = 12;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 299);
+            this.ClientSize = new System.Drawing.Size(422, 299);
             this.Controls.Add(this.dgdatos);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_buscar_estadoabog";

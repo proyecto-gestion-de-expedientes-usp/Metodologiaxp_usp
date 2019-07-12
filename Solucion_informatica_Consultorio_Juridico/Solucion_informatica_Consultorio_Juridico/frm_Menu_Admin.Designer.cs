@@ -217,7 +217,7 @@
             this.buscarTipoAbogadoToolStripMenuItem});
             this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
             this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.bùsquedasToolStripMenuItem.Text = "Bùsquedas";
+            this.bùsquedasToolStripMenuItem.Text = "Búsquedas";
             this.bùsquedasToolStripMenuItem.Click += new System.EventHandler(this.bùsquedasToolStripMenuItem_Click);
             // 
             // buscarAbogadoToolStripMenuItem

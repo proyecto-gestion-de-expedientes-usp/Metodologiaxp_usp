@@ -39,6 +39,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             dgdatos.Columns[0].HeaderText = "ID";
             dgdatos.Columns[1].HeaderText = "NOMBRE";
             dgdatos.Columns[2].HeaderText = "DESCRIPCION";
+            dgdatos.Columns[3].HeaderText = "TIPO";
 
         }
 
@@ -71,13 +72,13 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "tipusu_id";
+            campo = "tipb_id";
             txt_buscar.Focus();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "tipusu_tipousuario";
+            campo = "tipb_def_inc";
             txt_buscar.Focus();
         }
 

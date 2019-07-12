@@ -220,7 +220,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+               
         }
 
         private void frm_Menu_Admin_Load(object sender, EventArgs e)

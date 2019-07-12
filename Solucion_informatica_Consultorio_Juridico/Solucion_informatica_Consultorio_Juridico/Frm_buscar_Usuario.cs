@@ -37,13 +37,13 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "usu_dni";
+            campo = "DNI";
             txt_buscar.Focus();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "usu_correo";
+            campo = "CORREO";
             txt_buscar.Focus();
         }
 
@@ -99,7 +99,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            campo = "est_condi";
+            campo = "CONDICION";
             txt_buscar.Focus();
         }
 
@@ -125,6 +125,11 @@ namespace Solucion_informatica_Consultorio_Juridico
                     txt_buscar.Clear();
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
