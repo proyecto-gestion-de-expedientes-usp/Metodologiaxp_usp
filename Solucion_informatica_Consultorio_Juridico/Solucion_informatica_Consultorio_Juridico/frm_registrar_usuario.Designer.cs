@@ -45,7 +45,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cb_Sexo = new System.Windows.Forms.ComboBox();
@@ -61,8 +60,10 @@
             this.txt_domici = new System.Windows.Forms.TextBox();
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.txt_contra = new System.Windows.Forms.TextBox();
-            this.txt_confi_contra = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_distritos = new System.Windows.Forms.ComboBox();
+            this.cb_provin = new System.Windows.Forms.ComboBox();
+            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.txt_cod_tipusua = new System.Windows.Forms.TextBox();
             this.txt_cod_estausua = new System.Windows.Forms.TextBox();
             this.btn_salir = new System.Windows.Forms.Button();
@@ -84,9 +85,6 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cb_distritos = new System.Windows.Forms.ComboBox();
-            this.cb_provin = new System.Windows.Forms.ComboBox();
-            this.cb_dpto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -237,15 +235,6 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Distrito:";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(14, 123);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Confirmar Contraseña:";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -395,16 +384,9 @@
             this.txt_contra.Location = new System.Drawing.Point(128, 72);
             this.txt_contra.MaxLength = 30;
             this.txt_contra.Name = "txt_contra";
+            this.txt_contra.PasswordChar = '*';
             this.txt_contra.Size = new System.Drawing.Size(129, 20);
             this.txt_contra.TabIndex = 3;
-            // 
-            // txt_confi_contra
-            // 
-            this.txt_confi_contra.Location = new System.Drawing.Point(128, 120);
-            this.txt_confi_contra.MaxLength = 30;
-            this.txt_confi_contra.Name = "txt_confi_contra";
-            this.txt_confi_contra.Size = new System.Drawing.Size(129, 20);
-            this.txt_confi_contra.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -452,6 +434,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cb_distritos
+            // 
+            this.cb_distritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distritos.FormattingEnabled = true;
+            this.cb_distritos.Location = new System.Drawing.Point(94, 360);
+            this.cb_distritos.Name = "cb_distritos";
+            this.cb_distritos.Size = new System.Drawing.Size(121, 21);
+            this.cb_distritos.TabIndex = 7;
+            this.cb_distritos.SelectedIndexChanged += new System.EventHandler(this.cb_distritos_SelectedIndexChanged);
+            // 
+            // cb_provin
+            // 
+            this.cb_provin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_provin.FormattingEnabled = true;
+            this.cb_provin.Location = new System.Drawing.Point(94, 336);
+            this.cb_provin.Name = "cb_provin";
+            this.cb_provin.Size = new System.Drawing.Size(121, 21);
+            this.cb_provin.TabIndex = 8;
+            this.cb_provin.SelectedIndexChanged += new System.EventHandler(this.cb_provin_SelectedIndexChanged);
+            // 
+            // cb_dpto
+            // 
+            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.FormattingEnabled = true;
+            this.cb_dpto.Location = new System.Drawing.Point(94, 313);
+            this.cb_dpto.Name = "cb_dpto";
+            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
+            this.cb_dpto.TabIndex = 9;
+            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
             // 
             // txt_cod_tipusua
             // 
@@ -507,15 +519,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_confi_contra);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.txt_contra);
             this.groupBox2.Controls.Add(this.txt_correo);
             this.groupBox2.Location = new System.Drawing.Point(392, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(298, 156);
+            this.groupBox2.Size = new System.Drawing.Size(298, 108);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuario de Sesion";
@@ -617,36 +627,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // cb_distritos
-            // 
-            this.cb_distritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_distritos.FormattingEnabled = true;
-            this.cb_distritos.Location = new System.Drawing.Point(94, 360);
-            this.cb_distritos.Name = "cb_distritos";
-            this.cb_distritos.Size = new System.Drawing.Size(121, 21);
-            this.cb_distritos.TabIndex = 7;
-            this.cb_distritos.SelectedIndexChanged += new System.EventHandler(this.cb_distritos_SelectedIndexChanged);
-            // 
-            // cb_provin
-            // 
-            this.cb_provin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_provin.FormattingEnabled = true;
-            this.cb_provin.Location = new System.Drawing.Point(94, 336);
-            this.cb_provin.Name = "cb_provin";
-            this.cb_provin.Size = new System.Drawing.Size(121, 21);
-            this.cb_provin.TabIndex = 8;
-            this.cb_provin.SelectedIndexChanged += new System.EventHandler(this.cb_provin_SelectedIndexChanged);
-            // 
-            // cb_dpto
-            // 
-            this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_dpto.FormattingEnabled = true;
-            this.cb_dpto.Location = new System.Drawing.Point(94, 313);
-            this.cb_dpto.Name = "cb_dpto";
-            this.cb_dpto.Size = new System.Drawing.Size(121, 21);
-            this.cb_dpto.TabIndex = 9;
-            this.cb_dpto.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_SelectedIndexChanged);
-            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,7 +676,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cb_Sexo;
@@ -712,7 +691,6 @@
         private System.Windows.Forms.TextBox txt_domici;
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.TextBox txt_contra;
-        private System.Windows.Forms.TextBox txt_confi_contra;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_cod_tipusua;
         private System.Windows.Forms.TextBox txt_cod_estausua;
