@@ -245,6 +245,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             radioButton1.Checked = true;
             radioButton3.Checked = true;
             txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            this.dt_recepcion.Enabled = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -341,6 +342,62 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void txt_pronunciamiento_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+        }
+
+        private void dt_recepcion_ValueChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void dt_recepcion_Validating(object sender, CancelEventArgs e)
+        {
+         
+
+      
+
+
+
+        }
+
+        private void dt_derivacion_Validating(object sender, CancelEventArgs e)
+        {
+            if (dt_derivacion.Value < DateTime.Today)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Debe Ingresar una fecha Futura", "Derivaciòn");
+            }
+        }
+
+        private void dt_derivacion_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dt_resolucion_Validating(object sender, CancelEventArgs e)
+        {
+            if (dt_resolucion.Value < DateTime.Today)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Debe Ingresar una fecha Futura", "Resoluciòn");
+            }
+        }
+
+        private void dt_notificacion_Validating(object sender, CancelEventArgs e)
+        {
+            if (dt_notificacion.Value < DateTime.Today)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Debe Ingresar una fecha Futura", "Notificaciòn");
+            }
+        }
+
+        private void dt_solucion_Validating(object sender, CancelEventArgs e)
+        {
+            if (dt_solucion.Value < DateTime.Today)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Debe Ingresar una fecha Futura", "Soluciòn");
+            }
         }
     }
 }

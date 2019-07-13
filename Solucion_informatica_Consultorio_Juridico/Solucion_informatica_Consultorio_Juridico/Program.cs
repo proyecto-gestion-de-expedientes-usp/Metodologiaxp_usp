@@ -71,7 +71,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Frm_reporte());
-            Application.Run(new frm_Login());
+            //Application.Run(new frm_Login());
+            Application.Run(new Frm_reg_historialjuzg());
 
         }
     }
