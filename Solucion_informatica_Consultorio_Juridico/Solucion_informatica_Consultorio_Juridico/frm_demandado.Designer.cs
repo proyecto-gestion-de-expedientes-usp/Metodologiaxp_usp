@@ -49,7 +49,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txt_idper = new Capas.ErrorTxtBox();
             this.txt_nomper = new Capas.ErrorTxtBox();
-            this.txt_iddo = new Capas.ErrorTxtBox();
+            this.txt_iddo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -263,13 +263,11 @@
             // 
             // txt_iddo
             // 
-            this.txt_iddo.Enabled = false;
-            this.txt_iddo.Location = new System.Drawing.Point(69, 87);
+            this.txt_iddo.Location = new System.Drawing.Point(69, 95);
             this.txt_iddo.Name = "txt_iddo";
             this.txt_iddo.ReadOnly = true;
-            this.txt_iddo.Size = new System.Drawing.Size(97, 20);
-            this.txt_iddo.TabIndex = 17;
-            this.txt_iddo.Validar = true;
+            this.txt_iddo.Size = new System.Drawing.Size(100, 20);
+            this.txt_iddo.TabIndex = 18;
             // 
             // frm_demandado
             // 
@@ -325,6 +323,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Capas.ErrorTxtBox txt_idper;
         private Capas.ErrorTxtBox txt_nomper;
-        private Capas.ErrorTxtBox txt_iddo;
+        private System.Windows.Forms.TextBox txt_iddo;
     }
 }

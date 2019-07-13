@@ -86,10 +86,19 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_demandado_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+            generar_id();
             col();          
         }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(demdo_id as int)),0)+1 from Demandado", cone.con);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+          
+            txt_iddo.Text = sqlex.Rows[0][0].ToString();
+        }
 
-     
+
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int pos = dgdatos.CurrentRow.Index;
@@ -111,7 +120,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             radioButton2.Checked = true;
             txt_idper.Text = Program.idper;
             txt_nomper.Text = Program.nomper;
-            txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+            //txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+            generar_id();
             txt_reg.DropDownStyle = ComboBoxStyle.DropDownList;
             
         }
@@ -177,7 +187,8 @@ namespace Solucion_informatica_Consultorio_Juridico
       
             txt_buscar.Text = "";
             txt_buscar.Focus();
-            txt_iddo.Text = Convert.ToString(dgdatos.RowCount-1);
+            //txt_iddo.Text = Convert.ToString(dgdatos.RowCount-1);
+            generar_id();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
