@@ -67,5 +67,13 @@ namespace Solucion_informatica_Consultorio_Juridico
             Frm_buscar_demandante u = new Frm_buscar_demandante();
             u.ShowDialog();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            frm_Login a = new frm_Login();
+            a.ShowDialog();
+        }
     }
 }

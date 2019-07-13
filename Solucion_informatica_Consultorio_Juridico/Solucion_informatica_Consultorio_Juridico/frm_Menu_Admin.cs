@@ -272,5 +272,13 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_buscar_documento k = new frm_buscar_documento();
             k.ShowDialog();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            frm_Login a = new frm_Login();
+            a.ShowDialog();
+        }
     }
 }
