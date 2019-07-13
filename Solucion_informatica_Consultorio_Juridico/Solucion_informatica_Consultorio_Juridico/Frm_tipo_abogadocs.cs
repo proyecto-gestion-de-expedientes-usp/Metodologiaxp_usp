@@ -48,7 +48,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                     MessageBox.Show("Los datos fueron insertados correctamente");
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    generar_id();
                     txt_descripcion.Text = "";
                 }
                 catch (Exception ex)
@@ -103,7 +103,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    generar_id();
                     txt_descripcion.Text = "";
                 }
 
@@ -124,12 +124,21 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_buscar.Text = "";
             txt_buscar.Focus();
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);   
+            generar_id();
+            //txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);   
         }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(tipb_id as int)),0)+1 from Tipo_Abogado", cone.con);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
 
+            txt_id.Text = sqlex.Rows[0][0].ToString();
+        }
         private void Frm_tipo_abogadocs_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+            generar_id();
             col();
         }
 
@@ -195,7 +204,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             radioButton2.Checked = true;
             //txt_idper.Text = Program.idper;
             //txt_nomper.Text = Program.nomper;
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            generar_id();
             cmb_condi.DropDownStyle = ComboBoxStyle.DropDownList;      
         }
 

@@ -53,7 +53,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    generar_id();
                 }
 
 
@@ -100,8 +100,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void frm_demandante_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
-
+            generar_id();
             col();
+        }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(demte_id as int)),0)+1 from Demandante", cone.con);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+
+            txt_iddo.Text = sqlex.Rows[0][0].ToString();
         }
 
         private void btn_buscar1_Click(object sender, EventArgs e)
@@ -177,7 +185,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    generar_id();
                 }
 
 
@@ -231,7 +239,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             txt_idper.Text = Program.idpers;
             txt_nomper.Text = Program.nompers;
-            txt_iddo.Text = Convert.ToString(dgdatos.RowCount - 1);
+            generar_id();
             txt_reg.DropDownStyle = ComboBoxStyle.DropDownList;
             radioButton2.Checked = true;
         }

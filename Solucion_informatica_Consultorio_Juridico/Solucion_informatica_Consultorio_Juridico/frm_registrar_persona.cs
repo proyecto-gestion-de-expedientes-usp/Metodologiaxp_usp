@@ -704,5 +704,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             validadcion.soloNumeros(e);
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_nomb.Text = "";
+            txt_ape_pat.Text = "";
+            txt_ape_mat.Text = "";
+            txt_domilega.Text = "";
+            txt_telf.Text = "";
+            txt_email.Text = "";
+           
+        }
     }
 }
