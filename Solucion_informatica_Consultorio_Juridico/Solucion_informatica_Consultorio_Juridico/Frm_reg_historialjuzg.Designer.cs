@@ -250,6 +250,8 @@
             this.dt_recepcion.Name = "dt_recepcion";
             this.dt_recepcion.Size = new System.Drawing.Size(200, 20);
             this.dt_recepcion.TabIndex = 20;
+            this.dt_recepcion.ValueChanged += new System.EventHandler(this.dt_recepcion_ValueChanged);
+            this.dt_recepcion.Validating += new System.ComponentModel.CancelEventHandler(this.dt_recepcion_Validating);
             // 
             // dt_derivacion
             // 
@@ -259,6 +261,8 @@
             this.dt_derivacion.Name = "dt_derivacion";
             this.dt_derivacion.Size = new System.Drawing.Size(200, 20);
             this.dt_derivacion.TabIndex = 22;
+            this.dt_derivacion.ValueChanged += new System.EventHandler(this.dt_derivacion_ValueChanged);
+            this.dt_derivacion.Validating += new System.ComponentModel.CancelEventHandler(this.dt_derivacion_Validating);
             // 
             // dt_resolucion
             // 
@@ -268,6 +272,7 @@
             this.dt_resolucion.Name = "dt_resolucion";
             this.dt_resolucion.Size = new System.Drawing.Size(200, 20);
             this.dt_resolucion.TabIndex = 23;
+            this.dt_resolucion.Validating += new System.ComponentModel.CancelEventHandler(this.dt_resolucion_Validating);
             // 
             // dt_notificacion
             // 
@@ -277,6 +282,7 @@
             this.dt_notificacion.Name = "dt_notificacion";
             this.dt_notificacion.Size = new System.Drawing.Size(200, 20);
             this.dt_notificacion.TabIndex = 24;
+            this.dt_notificacion.Validating += new System.ComponentModel.CancelEventHandler(this.dt_notificacion_Validating);
             // 
             // dt_solucion
             // 
@@ -286,6 +292,7 @@
             this.dt_solucion.Name = "dt_solucion";
             this.dt_solucion.Size = new System.Drawing.Size(200, 20);
             this.dt_solucion.TabIndex = 25;
+            this.dt_solucion.Validating += new System.ComponentModel.CancelEventHandler(this.dt_solucion_Validating);
             // 
             // button2
             // 
@@ -416,7 +423,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(23, 487);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(244, 13);
