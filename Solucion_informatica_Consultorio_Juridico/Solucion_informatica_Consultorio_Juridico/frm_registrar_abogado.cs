@@ -18,7 +18,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         DataTable dts = new DataTable();
         DataTable ds = new DataTable();
 
-        //SqlConnection cnn = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
+       
         public frm_registrar_abogado()
         {
             InitializeComponent();
@@ -145,7 +145,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             }
         }
         public void generar_cod() {
-            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", CNNN.AbrirConexion());
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from abogados", CNNN.AbrirConexion());
             DataTable sqlex = new DataTable();
             sda.Fill(sqlex);
             txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
