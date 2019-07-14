@@ -53,19 +53,19 @@
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.errornombreabog = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorApePat = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorApeMat = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDNI = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dgv_datos_abo = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -95,19 +95,23 @@
             // 
             // cb_estado
             // 
+            this.cb_estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_estado.FormattingEnabled = true;
             this.cb_estado.Location = new System.Drawing.Point(158, 240);
             this.cb_estado.Name = "cb_estado";
             this.cb_estado.Size = new System.Drawing.Size(114, 21);
             this.cb_estado.TabIndex = 2;
+            this.cb_estado.SelectedIndexChanged += new System.EventHandler(this.cb_estado_SelectedIndexChanged);
             // 
             // cb_nombre
             // 
+            this.cb_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_nombre.FormattingEnabled = true;
             this.cb_nombre.Location = new System.Drawing.Point(158, 67);
             this.cb_nombre.Name = "cb_nombre";
             this.cb_nombre.Size = new System.Drawing.Size(114, 21);
             this.cb_nombre.TabIndex = 2;
+            this.cb_nombre.SelectedIndexChanged += new System.EventHandler(this.cb_nombre_SelectedIndexChanged);
             // 
             // txt_dni
             // 
@@ -294,22 +298,6 @@
             this.txt_buscar.TabIndex = 1;
             this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
-            // errornombreabog
-            // 
-            this.errornombreabog.ContainerControl = this;
-            // 
-            // errorApePat
-            // 
-            this.errorApePat.ContainerControl = this;
-            // 
-            // errorApeMat
-            // 
-            this.errorApeMat.ContainerControl = this;
-            // 
-            // errorDNI
-            // 
-            this.errorDNI.ContainerControl = this;
-            // 
             // dgv_datos_abo
             // 
             this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -327,6 +315,22 @@
             this.label8.Size = new System.Drawing.Size(21, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "dni";
+            // 
+            // errornombreabog
+            // 
+            this.errornombreabog.ContainerControl = this;
+            // 
+            // errorApePat
+            // 
+            this.errorApePat.ContainerControl = this;
+            // 
+            // errorApeMat
+            // 
+            this.errorApeMat.ContainerControl = this;
+            // 
+            // errorDNI
+            // 
+            this.errorDNI.ContainerControl = this;
             // 
             // frm_registrar_abogado
             // 
@@ -348,11 +352,11 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombreabog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApePat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApeMat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDNI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_datos_abo)).EndInit();
             this.ResumeLayout(false);
 
         }

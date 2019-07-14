@@ -14,8 +14,11 @@ namespace Solucion_informatica_Consultorio_Juridico
     public partial class frm_registrar_abogado : Form
     {
         Clases.Validacioes validacion = new Clases.Validacioes();
+        Clases.Conexion CNNN = new Clases.Conexion();
+        DataTable dts = new DataTable();
+        DataTable ds = new DataTable();
 
-        SqlConnection cnn = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
+        //SqlConnection cnn = new SqlConnection("database=consultoriojur;data source=.;integrated security=sspi");
         public frm_registrar_abogado()
         {
             InitializeComponent();
@@ -25,15 +28,45 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             generar_cod();
             dgv_datos_abo.DataSource = mostrar();
+            mostrartipoabo();
+            mostrarestadoabo();
+            mostrar();
+        }
+        public void mostrartipoabo()
+        {
+
+            CNNN.AbrirConexion(); 
+            string sql = "select * from Tipo_Abogado";
+            SqlDataAdapter da = new SqlDataAdapter(sql, CNNN.AbrirConexion());
+
+            da.Fill(ds);
+            cb_nombre.DataSource = ds;
+            cb_nombre.DisplayMember = "tipb_def_inc";
+
+            CNNN.CerrarConexion();
+
+        }
+        public void mostrarestadoabo()
+        {
+
+            CNNN.AbrirConexion();
+            string sql = "select * from Estado_Abogado";
+            SqlDataAdapter da = new SqlDataAdapter(sql, CNNN.AbrirConexion());
+
+            da.Fill(dts);
+            cb_estado.DataSource = dts;
+            cb_estado.DisplayMember = "estabog";
+
+            CNNN.CerrarConexion();
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             try
             {
-                string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
-                SqlConnection cnn = new SqlConnection(ConnectionString);
-                SqlCommand cmd = new SqlCommand("insertar_Abogado", cnn);
+                
+                SqlCommand cmd = new SqlCommand("insertar_Abogado", CNNN.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ab_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
@@ -55,12 +88,11 @@ namespace Solucion_informatica_Consultorio_Juridico
              
 
 
-                cnn.Open();
+                CNNN.AbrirConexion();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron insertados correctamente");
-                
-                cnn.Close();
 
+                CNNN.CerrarConexion(); 
                 generar_cod();  
             }
 
@@ -76,9 +108,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             try
             {
-                string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
-                SqlConnection cnn = new SqlConnection(ConnectionString);
-                SqlCommand cmd = new SqlCommand("actualizar_abogado", cnn);
+                SqlCommand cmd = new SqlCommand("actualizar_abogado", CNNN.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ab_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
@@ -102,10 +132,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
 
-                cnn.Open();
+                CNNN.AbrirConexion();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron modificados correctamente");
-                cnn.Close();
+                CNNN.CerrarConexion();
             }
 
 
@@ -115,30 +145,30 @@ namespace Solucion_informatica_Consultorio_Juridico
             }
         }
         public void generar_cod() {
-            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", cnn);
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(ab_id as int)),0)+1 from Abogado", CNNN.AbrirConexion());
             DataTable sqlex = new DataTable();
             sda.Fill(sqlex);
             txt_idAbogado.Text = sqlex.Rows[0][0].ToString();
         }
         public DataTable mostrar()
         {
-            cnn.Open();
+            CNNN.AbrirConexion();
             string sql = "select * from View_Abogado";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            SqlDataAdapter da = new SqlDataAdapter(sql, CNNN.AbrirConexion());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cnn.Close();
+            CNNN.CerrarConexion();
             return dt;
         }
         public DataTable buscar(string valor)
         {
 
-            cnn.Open();
+            CNNN.AbrirConexion();
             string sql = "select * from View_Abogado where DNI like '" + valor + "%'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            SqlDataAdapter da = new SqlDataAdapter(sql, CNNN.AbrirConexion());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cnn.Close();
+            CNNN.CerrarConexion();
             return dt;
         }
         private void txt_nomb_KeyPress(object sender, KeyPressEventArgs e)
@@ -204,6 +234,18 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void dgv_datos_abo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cb_nombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = cb_nombre.SelectedIndex;
+            txt_idtipabogado.Text = ds.Rows[a]["tipb_id"].ToString();
+        }
+
+        private void cb_estado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = cb_estado.SelectedIndex;
+            TXT_IDESTADO.Text = dts.Rows[a]["id_estabo"].ToString();
         }
     }
 }
