@@ -30,6 +30,22 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            btn_usu.Enabled = false;
+            btn_demandd.Enabled = false;
+            btn_demandt.Enabled = false;
+            btn_anex.Enabled = false;
+            btn_abog.Enabled = false;
+            dp_fecha.Enabled = false;
+            txt_asunto.Enabled = false;
+            cb_estado.Enabled = false;
+            txt_cantfol.Enabled = false;
+            txt_progre.Enabled = false;
+            txt_descrip.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_modificar.Enabled = false;
+            button3.Enabled = true;
+
+            
             try
             {
 
@@ -79,10 +95,28 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show(ex.ToString());
             }
+            txt_asunto.Text = "";
+            txt_cantfol.Text = "";
+            txt_progre.Text = "";
+            txt_descrip.Text = "";
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
+            btn_usu.Enabled = false;
+            btn_demandd.Enabled = false;
+            btn_demandt.Enabled = false;
+            btn_anex.Enabled = false;
+            btn_abog.Enabled = false;
+            dp_fecha.Enabled = false;
+            txt_asunto.Enabled = false;
+            cb_estado.Enabled = false;
+            txt_cantfol.Enabled = false;
+            txt_progre.Enabled = false;
+            txt_descrip.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_modificar.Enabled = false;
+            button3.Enabled = true;
             try
             {
 
@@ -132,6 +166,10 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show(ex.ToString());
             }
+            txt_asunto.Text = "";
+            txt_cantfol.Text = "";
+            txt_progre.Text = "";
+            txt_descrip.Text = "";
         }
         public void mostrar() {
 
@@ -235,6 +273,30 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Frm_buscar_abogado d = new Frm_buscar_abogado();
             d.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            btn_usu.Enabled = true;
+            btn_demandd.Enabled = true;
+            btn_demandt.Enabled = true;
+            btn_anex.Enabled = true;
+            btn_abog.Enabled = true;
+            dp_fecha.Enabled = true;
+            txt_asunto.Enabled = true;
+            cb_estado.Enabled = true;
+            txt_cantfol.Enabled = true;
+            txt_progre.Enabled = true;
+            txt_descrip.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_modificar.Enabled = false;
+            button3.Enabled = false;
+
+            txt_asunto.Text = "";
+            txt_cantfol.Text = "";
+            txt_progre.Text = "";
+            txt_descrip.Text = "";
+
         }
     }
 }

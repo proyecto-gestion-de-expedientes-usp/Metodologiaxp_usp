@@ -27,7 +27,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             button3.Enabled = true;
             button1.Enabled = false;
             cmb_condi.Enabled = false;
-            cmb_condi.Text = "";
+            
 
             try
             {
@@ -48,7 +48,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cone.con.Close();
                 MessageBox.Show(ex.Message, "Error al Grabar");
             }
-
+            cmb_condi.Text = "";
 
         }
 

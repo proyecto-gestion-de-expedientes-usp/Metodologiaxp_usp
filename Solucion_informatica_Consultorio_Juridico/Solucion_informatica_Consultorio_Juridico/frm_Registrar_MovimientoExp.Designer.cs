@@ -165,6 +165,7 @@
             // 
             // txt_asunto
             // 
+            this.txt_asunto.Enabled = false;
             this.txt_asunto.Location = new System.Drawing.Point(108, 205);
             this.txt_asunto.MaxLength = 30;
             this.txt_asunto.Multiline = true;
@@ -237,6 +238,7 @@
             // 
             // btn_usu
             // 
+            this.btn_usu.Enabled = false;
             this.btn_usu.Location = new System.Drawing.Point(301, 47);
             this.btn_usu.Name = "btn_usu";
             this.btn_usu.Size = new System.Drawing.Size(36, 23);
@@ -247,6 +249,7 @@
             // 
             // btn_demandd
             // 
+            this.btn_demandd.Enabled = false;
             this.btn_demandd.Location = new System.Drawing.Point(301, 73);
             this.btn_demandd.Name = "btn_demandd";
             this.btn_demandd.Size = new System.Drawing.Size(36, 23);
@@ -257,6 +260,7 @@
             // 
             // btn_demandt
             // 
+            this.btn_demandt.Enabled = false;
             this.btn_demandt.Location = new System.Drawing.Point(301, 99);
             this.btn_demandt.Name = "btn_demandt";
             this.btn_demandt.Size = new System.Drawing.Size(36, 23);
@@ -267,6 +271,7 @@
             // 
             // btn_abog
             // 
+            this.btn_abog.Enabled = false;
             this.btn_abog.Location = new System.Drawing.Point(301, 150);
             this.btn_abog.Name = "btn_abog";
             this.btn_abog.Size = new System.Drawing.Size(36, 23);
@@ -277,6 +282,7 @@
             // 
             // btn_anex
             // 
+            this.btn_anex.Enabled = false;
             this.btn_anex.Location = new System.Drawing.Point(301, 125);
             this.btn_anex.Name = "btn_anex";
             this.btn_anex.Size = new System.Drawing.Size(36, 23);
@@ -287,6 +293,7 @@
             // 
             // dp_fecha
             // 
+            this.dp_fecha.Enabled = false;
             this.dp_fecha.Location = new System.Drawing.Point(108, 179);
             this.dp_fecha.Name = "dp_fecha";
             this.dp_fecha.Size = new System.Drawing.Size(200, 20);
@@ -295,6 +302,7 @@
             // cb_estado
             // 
             this.cb_estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_estado.Enabled = false;
             this.cb_estado.FormattingEnabled = true;
             this.cb_estado.Items.AddRange(new object[] {
             "En Proceso",
@@ -360,6 +368,7 @@
             // 
             // txt_descrip
             // 
+            this.txt_descrip.Enabled = false;
             this.txt_descrip.Location = new System.Drawing.Point(108, 383);
             this.txt_descrip.MaxLength = 50;
             this.txt_descrip.Multiline = true;
@@ -370,6 +379,7 @@
             // 
             // txt_progre
             // 
+            this.txt_progre.Enabled = false;
             this.txt_progre.Location = new System.Drawing.Point(108, 282);
             this.txt_progre.MaxLength = 250;
             this.txt_progre.Multiline = true;
@@ -380,6 +390,7 @@
             // 
             // txt_cantfol
             // 
+            this.txt_cantfol.Enabled = false;
             this.txt_cantfol.Location = new System.Drawing.Point(108, 257);
             this.txt_cantfol.MaxLength = 10;
             this.txt_cantfol.Name = "txt_cantfol";
@@ -390,6 +401,7 @@
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Enabled = false;
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar.Location = new System.Drawing.Point(407, 498);
@@ -402,6 +414,7 @@
             // 
             // btn_modificar
             // 
+            this.btn_modificar.Enabled = false;
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modificar.Location = new System.Drawing.Point(545, 498);
@@ -420,8 +433,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 58);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Limpiar";
+            this.button3.Text = "Nuevo";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgv_datos
             // 
@@ -459,6 +473,7 @@
             // 
             // txt_nroexp
             // 
+            this.txt_nroexp.Enabled = false;
             this.txt_nroexp.Location = new System.Drawing.Point(224, 23);
             this.txt_nroexp.Name = "txt_nroexp";
             this.txt_nroexp.Size = new System.Drawing.Size(54, 20);
