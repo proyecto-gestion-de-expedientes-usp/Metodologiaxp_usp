@@ -902,5 +902,119 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             txt_buscar_doc.Focus();
         }
+
+        private void txt_nomb_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_nomb.Text;
+            if (cadena.Length > 1)
+            {
+
+                MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_nomb.Focus();
+                }
+            }
+        }
+
+        private void txt_ape_pat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_ape_pat.Text;
+            if (cadena.Length > 1)
+            {
+
+                MessageBox.Show("ingrese Apellido Paterno completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Paterno válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_ape_mat.Focus();
+                }
+            }
+        }
+
+        private void txt_ape_mat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_ape_mat.Text;
+            if (cadena.Length > 1)
+            {
+
+                MessageBox.Show("ingrese Apellido Materno completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Materno válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_ape_mat.Focus();
+                }
+            }
+        }
+
+        private void txt_domilega_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_domilega.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("ingrese domicilio completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un domicilio válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_domilega.Focus();
+                }
+            }
+        }
+
+        private void txt_telf_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_telf.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("ingrese telefono completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un telefono válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_telf.Focus();
+                }
+            }
+        }
+
+        private void txt_email_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_email.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("Ingrese un email completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un email válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_email.Focus();
+                }
+            }
+        }
     }
 }

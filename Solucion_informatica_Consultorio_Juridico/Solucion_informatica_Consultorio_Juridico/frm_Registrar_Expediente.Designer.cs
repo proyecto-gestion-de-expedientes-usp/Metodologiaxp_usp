@@ -35,10 +35,7 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_datos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_buscar_doc = new System.Windows.Forms.Button();
@@ -101,7 +98,6 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Enabled = false;
             this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
             this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_limpiar.Location = new System.Drawing.Point(119, 210);
@@ -139,10 +135,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.txt_buscar);
             this.groupBox2.Controls.Add(this.dgv_datos);
             this.groupBox2.Location = new System.Drawing.Point(12, 268);
             this.groupBox2.Name = "groupBox2";
@@ -152,46 +145,14 @@
             this.groupBox2.Text = "Busqueda";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // radioButton3
+            // txt_buscar
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(363, 32);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(174, 17);
-            this.radioButton3.TabIndex = 34;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Busqueda por Demandante Dni";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(184, 32);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(171, 17);
-            this.radioButton2.TabIndex = 34;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Busqueda por Demandado Dni";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(16, 32);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(162, 17);
-            this.radioButton1.TabIndex = 34;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Busqueda por Nª Expediente";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(16, 56);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(521, 20);
-            this.textBox9.TabIndex = 33;
+            this.txt_buscar.Location = new System.Drawing.Point(16, 56);
+            this.txt_buscar.MaxLength = 30;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(521, 20);
+            this.txt_buscar.TabIndex = 33;
+            this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // dgv_datos
             // 
@@ -490,6 +451,7 @@
             this.txt_expediente.Name = "txt_expediente";
             this.txt_expediente.Size = new System.Drawing.Size(100, 20);
             this.txt_expediente.TabIndex = 32;
+            this.txt_expediente.Validating += new System.ComponentModel.CancelEventHandler(this.txt_expediente_Validating);
             this.txt_expediente.Validated += new System.EventHandler(this.txt_expediente_Validated);
             // 
             // txt_doc
@@ -595,10 +557,7 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.DataGridView dgv_datos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_buscar_doc;

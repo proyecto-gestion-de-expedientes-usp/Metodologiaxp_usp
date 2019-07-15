@@ -85,7 +85,6 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_limpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -415,7 +414,6 @@
             this.groupBox1.Controls.Add(this.txt_cod_tipusua);
             this.groupBox1.Controls.Add(this.txt_cod_estausua);
             this.groupBox1.Controls.Add(this.btn_salir);
-            this.groupBox1.Controls.Add(this.btn_limpiar);
             this.groupBox1.Controls.Add(this.btn_modificar);
             this.groupBox1.Controls.Add(this.btn_guardar);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -519,12 +517,13 @@
             // 
             this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
             this.btn_salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salir.Location = new System.Drawing.Point(571, 373);
+            this.btn_salir.Location = new System.Drawing.Point(571, 316);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(119, 38);
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // btn_modificar
             // 
@@ -624,11 +623,13 @@
             // dgv_usuarios
             // 
             this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Location = new System.Drawing.Point(6, 72);
+            this.dgv_usuarios.Location = new System.Drawing.Point(6, 70);
             this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.ReadOnly = true;
             this.dgv_usuarios.Size = new System.Drawing.Size(466, 367);
             this.dgv_usuarios.TabIndex = 8;
             this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
+            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
             // 
             // errorNombre
             // 
@@ -662,19 +663,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btn_limpiar
-            // 
-            this.btn_limpiar.Enabled = false;
-            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
-            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(119, 38);
-            this.btn_limpiar.TabIndex = 5;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = true;
-            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
-            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,6 +675,7 @@
             this.Name = "frm_registrar_usuario";
             this.Opacity = 0.9D;
             this.Text = "Registrar Usuarios";
+            this.Activated += new System.EventHandler(this.frm_registrar_usuario_Activated);
             this.Load += new System.EventHandler(this.frm_registrar_usuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -764,6 +753,5 @@
         private System.Windows.Forms.ComboBox cb_provin;
         private System.Windows.Forms.ComboBox cb_dpto;
         private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.Button btn_limpiar;
     }
 }

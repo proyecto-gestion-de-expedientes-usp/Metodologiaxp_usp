@@ -16,7 +16,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         Clases.Validacioes validadcion = new Clases.Validacioes();
         Capas.conexion cone = new Capas.conexion();
         Clases.Datos sad = new Clases.Datos();
-
+        string campo;
 
         public void limpiar()
         {
@@ -270,6 +270,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_id_doc.Text = Program.iddocumen;
             txt_doc.Text = Program.nomdocum;
 
+        
             
             
         }
@@ -310,6 +311,30 @@ namespace Solucion_informatica_Consultorio_Juridico
             btn_modificar.Enabled = false;
             btn_limpiar.Enabled = false;
             limpiar();
+        }
+
+        private void txt_expediente_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string valor = txt_buscar.Text;
+            dgv_datos.DataSource = buscar( valor);
+
+            txt_buscar.Focus();
+        }
+        public DataTable buscar(string valor)
+        {
+
+            cone.con.Open();
+            string sql = "select * from Expediente where exp_nrosentencia  like '" + valor + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cone.con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cone.con.Close();
+            return dt;
         }
     }
 

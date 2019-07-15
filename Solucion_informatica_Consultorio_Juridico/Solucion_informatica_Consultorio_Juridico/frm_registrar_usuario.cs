@@ -36,7 +36,16 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
 
         }
-
+        public DataTable mostrar()
+        {
+            cnn.AbrirConexion();
+            string sql = "select * from Usuario";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cnn.CerrarConexion();
+            return dt;
+        }
         private void frm_registrar_usuario_Load(object sender, EventArgs e)
         {
                      
@@ -44,11 +53,13 @@ namespace Solucion_informatica_Consultorio_Juridico
             llenar_dpto();
             mostrarestadousuario();
             btn_modificar.Enabled = false;
+            dgv_usuarios.DataSource=mostrar();
 
             SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(usu_id as int)),0)+1 from Usuario", cnn.AbrirConexion());
             DataTable sqlex = new DataTable();
             sda.Fill(sqlex);
             txt_id_usu.Text = sqlex.Rows[0][0].ToString();
+            
         }
         public void mostrarestadousuario()
         {
@@ -111,8 +122,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_contra.Enabled = false;
             btn_guardar.Enabled = false;
             btnnuevo.Enabled = true;
-            btn_limpiar.Enabled = true;
-            btn_modificar.Enabled = true;
+            
             try
             {
                 
@@ -180,6 +190,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
+            btnnuevo.Enabled = true;
+            
+            btn_guardar.Enabled = true;
             try
             {
                
@@ -584,8 +597,25 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_cod_estausua.Text = dgv_usuarios.CurrentRow.Cells[14].Value.ToString();
             cb_dpto .Text= dgv_usuarios.CurrentRow.Cells[15].Value.ToString();
             txt_contra.Text = dgv_usuarios.CurrentRow.Cells[16].Value.ToString();
+            btn_modificar.Enabled = true;
+            txt_dni.Enabled = true;
+            txt_nombres.Enabled = true;
+            txt_apepat.Enabled = true;
+            txt_apemat.Enabled = true;
+            txt_cel.Enabled = true;
+            txt_domici.Enabled = true;
+            cb_Sexo.Enabled = true;
+            cb_estadoci.Enabled = true;
+            dp_fenaci.Enabled = true;
+            cb_dpto.Enabled = true;
+            cb_provin.Enabled = true;
+            cb_distritos.Enabled = true;
+            cb_esta_usua.Enabled = true;
+            cb_tip_usu.Enabled = true;
+            txt_correo.Enabled = true;
+            txt_contra.Enabled = true;
+            btnnuevo.Enabled = false;
 
-            btn_modificar.Enabled =true;
         }
 
         private void btnnuevo_Click(object sender, EventArgs e)
@@ -608,8 +638,8 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_contra.Enabled = true;
             btnnuevo.Enabled = false;
             btn_guardar.Enabled = true;
-            btn_limpiar.Enabled = true;
-            btn_modificar.Enabled = true;
+            
+            btnnuevo.Enabled = false;
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
@@ -710,6 +740,21 @@ namespace Solucion_informatica_Consultorio_Juridico
                     txt_domici.Focus();
                 }
             }
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void dgv_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //btn_modificar.Enabled = true;
+        }
+
+        private void frm_registrar_usuario_Activated(object sender, EventArgs e)
+        {
+            rbt_dni.Checked = true;
         }
     }
     }

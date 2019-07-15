@@ -276,6 +276,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(180, 20);
             this.txt_email.TabIndex = 32;
+            this.txt_email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_email_Validating);
             // 
             // txt_telf
             // 
@@ -285,6 +286,7 @@
             this.txt_telf.Name = "txt_telf";
             this.txt_telf.Size = new System.Drawing.Size(138, 20);
             this.txt_telf.TabIndex = 31;
+            this.txt_telf.Validating += new System.ComponentModel.CancelEventHandler(this.txt_telf_Validating);
             // 
             // label11
             // 
@@ -402,6 +404,7 @@
             this.txt_domilega.Name = "txt_domilega";
             this.txt_domilega.Size = new System.Drawing.Size(180, 20);
             this.txt_domilega.TabIndex = 16;
+            this.txt_domilega.Validating += new System.ComponentModel.CancelEventHandler(this.txt_domilega_Validating);
             // 
             // txt_ape_mat
             // 
@@ -411,6 +414,7 @@
             this.txt_ape_mat.Name = "txt_ape_mat";
             this.txt_ape_mat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_mat.TabIndex = 11;
+            this.txt_ape_mat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_ape_mat_Validating);
             // 
             // txt_ape_pat
             // 
@@ -420,6 +424,7 @@
             this.txt_ape_pat.Name = "txt_ape_pat";
             this.txt_ape_pat.Size = new System.Drawing.Size(180, 20);
             this.txt_ape_pat.TabIndex = 10;
+            this.txt_ape_pat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_ape_pat_Validating);
             // 
             // txt_nomb
             // 
@@ -431,6 +436,7 @@
             this.txt_nomb.TabIndex = 9;
             this.txt_nomb.TextChanged += new System.EventHandler(this.txt_nomb_TextChanged);
             this.txt_nomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nomb_KeyPress_1);
+            this.txt_nomb.Validating += new System.ComponentModel.CancelEventHandler(this.txt_nomb_Validating);
             // 
             // txt_id_tip_doc
             // 

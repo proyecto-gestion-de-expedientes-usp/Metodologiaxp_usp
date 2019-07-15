@@ -121,6 +121,7 @@
             this.txt_dni.Size = new System.Drawing.Size(118, 20);
             this.txt_dni.TabIndex = 1;
             this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
+            this.txt_dni.Validating += new System.ComponentModel.CancelEventHandler(this.txt_dni_Validating);
             this.txt_dni.Validated += new System.EventHandler(this.txt_dni_Validated);
             // 
             // txt_apemat
@@ -131,6 +132,7 @@
             this.txt_apemat.Size = new System.Drawing.Size(118, 20);
             this.txt_apemat.TabIndex = 1;
             this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
+            this.txt_apemat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_apemat_Validating);
             this.txt_apemat.Validated += new System.EventHandler(this.txt_apemat_Validated);
             // 
             // txt_apepat
@@ -141,6 +143,7 @@
             this.txt_apepat.Size = new System.Drawing.Size(118, 20);
             this.txt_apepat.TabIndex = 1;
             this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
+            this.txt_apepat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_apepat_Validating);
             this.txt_apepat.Validated += new System.EventHandler(this.txt_apepat_Validated);
             // 
             // txt_nomb
@@ -151,6 +154,7 @@
             this.txt_nomb.Size = new System.Drawing.Size(118, 20);
             this.txt_nomb.TabIndex = 1;
             this.txt_nomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nomb_KeyPress);
+            this.txt_nomb.Validating += new System.ComponentModel.CancelEventHandler(this.txt_nomb_Validating);
             this.txt_nomb.Validated += new System.EventHandler(this.txt_nomb_Validated);
             // 
             // TXT_IDESTADO
@@ -311,6 +315,7 @@
             this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
             this.dgv_datos_abo.Name = "dgv_datos_abo";
+            this.dgv_datos_abo.ReadOnly = true;
             this.dgv_datos_abo.Size = new System.Drawing.Size(428, 421);
             this.dgv_datos_abo.TabIndex = 0;
             this.dgv_datos_abo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_datos_abo_CellClick);

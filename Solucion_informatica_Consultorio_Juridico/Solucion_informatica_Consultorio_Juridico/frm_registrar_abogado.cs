@@ -247,5 +247,81 @@ namespace Solucion_informatica_Consultorio_Juridico
             int a = cb_estado.SelectedIndex;
             TXT_IDESTADO.Text = dts.Rows[a]["id_estabo"].ToString();
         }
+
+        private void txt_nomb_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_nomb.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_nomb.Focus();
+                }
+            }
+        }
+
+        private void txt_apepat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_apepat.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("ingrese Apellido Paterno completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Paterno válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_apepat.Focus();
+                }
+            }
+        }
+
+        private void txt_apemat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_apepat.Text;
+            if (cadena.Length > 5)
+            {
+
+                MessageBox.Show("ingrese Apellido Materno completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Materno  válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_apepat.Focus();
+                }
+            }
+        }
+
+        private void txt_dni_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_dni.Text;
+            if (cadena.Length > 7)
+            {
+
+                MessageBox.Show("ingrese DNI completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 9)
+                {
+                    MessageBox.Show("Ingrese un DNI  válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_dni.Focus();
+                }
+            }
+        }
     }
 }
