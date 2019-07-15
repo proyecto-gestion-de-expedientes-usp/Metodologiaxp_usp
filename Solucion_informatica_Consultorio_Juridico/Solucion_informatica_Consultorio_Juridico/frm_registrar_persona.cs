@@ -336,7 +336,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             cmd.Parameters.Add("@pers_apemat", SqlDbType.VarChar, 25);
             cmd.Parameters.Add("@pers_ciudad", SqlDbType.VarChar, 20);
             cmd.Parameters.Add("@pers_provincia", SqlDbType.VarChar, 20);
-            cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@pers_departamento", SqlDbType.VarChar, 20); 
             cmd.Parameters.Add("@pers_domlegal", SqlDbType.VarChar, 20);
             cmd.Parameters.Add("@pers_telefono", SqlDbType.VarChar, 13);
             cmd.Parameters.Add("@pers_email", SqlDbType.VarChar, 30);
