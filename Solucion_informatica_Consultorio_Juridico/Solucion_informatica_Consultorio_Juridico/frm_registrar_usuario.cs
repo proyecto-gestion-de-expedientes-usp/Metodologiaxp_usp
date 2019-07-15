@@ -304,24 +304,24 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void txt_nombres_Validated(object sender, EventArgs e)
         {
-            if (txt_nombres.Text.Trim() == "")
-            {
-                errorNombre.SetError(txt_nombres, "Ingrese Nombres...");
-            }
-            var cadena = txt_nombres.Text;
-            if (cadena.Length > 1)
-            {
-                txt_nombres.Focus();
-                MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_nombres.Focus();
-            }
-            else
-            {
-                if (cadena.Length < 20)
-                {
-                    MessageBox.Show("Igrese un Nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            //if (txt_nombres.Text.Trim() == "")
+            //{
+            //    errorNombre.SetError(txt_nombres, "Ingrese Nombres...");
+            //}
+            //var cadena = txt_nombres.Text;
+            //if (cadena.Length > 1)
+            //{
+            //    txt_nombres.Focus();
+            //    MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txt_nombres.Focus();
+            //}
+            //else
+            //{
+            //    if (cadena.Length < 20)
+            //    {
+            //        MessageBox.Show("Igrese un Nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //}
         }
 
         private void txt_apepat_Validated(object sender, EventArgs e)
@@ -392,7 +392,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             var cadena = txt_dni.Text;
             if (cadena.Length > 8)
             {
-                txt_dni.Focus();
+                
                 MessageBox.Show("El dni solo tiene 8 digitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
@@ -401,6 +401,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 if (cadena.Length < 8)
                 {
                     MessageBox.Show("Ingrese los 8 digitos del DNI 😎", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_dni.Focus();
                 }
             }
         }
@@ -614,6 +615,101 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_nombres_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_nombres.Text;
+            if (cadena.Length > 1)
+            {
+                
+                //MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_nombres.Focus();
+                }
+            }
+        }
+
+        private void txt_apepat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_apepat.Text;
+            if (cadena.Length > 1)
+            {
+
+                //MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_apepat.Focus();
+                }
+            }
+        }
+
+        private void txt_apemat_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_apemat.Text;
+            if (cadena.Length > 1)
+            {
+
+                //MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("Ingrese un Apellido Válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_apemat.Focus();
+                }
+            }
+        }
+
+        private void txt_cel_Validated(object sender, EventArgs e)
+        {
+            var cadena = txt_cel.Text;
+            if (cadena.Length > 5)
+            {
+
+                //MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 11)
+                {
+                    MessageBox.Show("Ingrese un telefono válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_cel.Focus();
+                }
+            }
+        }
+
+        private void txt_domici_Validating(object sender, CancelEventArgs e)
+        {
+            var cadena = txt_domici.Text;
+            if (cadena.Length > 5)
+            {
+
+                //MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 41)
+                {
+                    MessageBox.Show("Ingrese un domicilio válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_domici.Focus();
+                }
+            }
         }
     }
     }

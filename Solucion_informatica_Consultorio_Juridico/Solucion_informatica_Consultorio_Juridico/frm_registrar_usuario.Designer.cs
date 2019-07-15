@@ -68,7 +68,6 @@
             this.txt_cod_tipusua = new System.Windows.Forms.TextBox();
             this.txt_cod_estausua = new System.Windows.Forms.TextBox();
             this.btn_salir = new System.Windows.Forms.Button();
-            this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -86,6 +85,7 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_limpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -335,6 +335,7 @@
             this.txt_nombres.Size = new System.Drawing.Size(204, 20);
             this.txt_nombres.TabIndex = 3;
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
+            this.txt_nombres.Validating += new System.ComponentModel.CancelEventHandler(this.txt_nombres_Validating);
             this.txt_nombres.Validated += new System.EventHandler(this.txt_nombres_Validated);
             // 
             // txt_apepat
@@ -346,6 +347,7 @@
             this.txt_apepat.Size = new System.Drawing.Size(179, 20);
             this.txt_apepat.TabIndex = 3;
             this.txt_apepat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apepat_KeyPress);
+            this.txt_apepat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_apepat_Validating);
             this.txt_apepat.Validated += new System.EventHandler(this.txt_apepat_Validated);
             // 
             // txt_apemat
@@ -357,6 +359,7 @@
             this.txt_apemat.Size = new System.Drawing.Size(179, 20);
             this.txt_apemat.TabIndex = 3;
             this.txt_apemat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apemat_KeyPress);
+            this.txt_apemat.Validating += new System.ComponentModel.CancelEventHandler(this.txt_apemat_Validating);
             this.txt_apemat.Validated += new System.EventHandler(this.txt_apemat_Validated);
             // 
             // txt_cel
@@ -369,6 +372,7 @@
             this.txt_cel.TabIndex = 3;
             this.txt_cel.TextChanged += new System.EventHandler(this.txt_cel_TextChanged);
             this.txt_cel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cel_KeyPress);
+            this.txt_cel.Validated += new System.EventHandler(this.txt_cel_Validated);
             // 
             // txt_domici
             // 
@@ -379,6 +383,7 @@
             this.txt_domici.Name = "txt_domici";
             this.txt_domici.Size = new System.Drawing.Size(251, 60);
             this.txt_domici.TabIndex = 3;
+            this.txt_domici.Validating += new System.ComponentModel.CancelEventHandler(this.txt_domici_Validating);
             this.txt_domici.Validated += new System.EventHandler(this.txt_domici_Validated);
             // 
             // txt_correo
@@ -521,19 +526,6 @@
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             // 
-            // btn_limpiar
-            // 
-            this.btn_limpiar.Enabled = false;
-            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
-            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(119, 38);
-            this.btn_limpiar.TabIndex = 5;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = true;
-            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
-            // 
             // btn_modificar
             // 
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
@@ -670,6 +662,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btn_limpiar
+            // 
+            this.btn_limpiar.Enabled = false;
+            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
+            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(119, 38);
+            this.btn_limpiar.TabIndex = 5;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
+            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -738,7 +743,6 @@
         private System.Windows.Forms.TextBox txt_cod_tipusua;
         private System.Windows.Forms.TextBox txt_cod_estausua;
         private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -760,5 +764,6 @@
         private System.Windows.Forms.ComboBox cb_provin;
         private System.Windows.Forms.ComboBox cb_dpto;
         private System.Windows.Forms.Button btnnuevo;
+        private System.Windows.Forms.Button btn_limpiar;
     }
 }

@@ -277,6 +277,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
+            txt_nroexp.Enabled = true;
             btn_usu.Enabled = true;
             btn_demandd.Enabled = true;
             btn_demandt.Enabled = true;

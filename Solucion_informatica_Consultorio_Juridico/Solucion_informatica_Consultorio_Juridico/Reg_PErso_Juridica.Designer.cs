@@ -134,6 +134,7 @@
             this.cb_distritos_persoJ.Name = "cb_distritos_persoJ";
             this.cb_distritos_persoJ.Size = new System.Drawing.Size(121, 21);
             this.cb_distritos_persoJ.TabIndex = 41;
+            this.cb_distritos_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_distritos_persoJ_SelectedIndexChanged);
             // 
             // cb_provin_persoJ
             // 
@@ -143,6 +144,7 @@
             this.cb_provin_persoJ.Name = "cb_provin_persoJ";
             this.cb_provin_persoJ.Size = new System.Drawing.Size(121, 21);
             this.cb_provin_persoJ.TabIndex = 42;
+            this.cb_provin_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_provin_persoJ_SelectedIndexChanged);
             // 
             // cb_dpto_persoJ
             // 
@@ -152,6 +154,7 @@
             this.cb_dpto_persoJ.Name = "cb_dpto_persoJ";
             this.cb_dpto_persoJ.Size = new System.Drawing.Size(121, 21);
             this.cb_dpto_persoJ.TabIndex = 43;
+            this.cb_dpto_persoJ.SelectedIndexChanged += new System.EventHandler(this.cb_dpto_persoJ_SelectedIndexChanged);
             // 
             // dp_cre_persoJ
             // 

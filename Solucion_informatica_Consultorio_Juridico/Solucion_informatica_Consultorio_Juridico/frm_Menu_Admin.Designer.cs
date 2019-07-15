@@ -72,6 +72,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.personaNaturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pErsonaJurídicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +125,9 @@
             // 
             // personaToolStripMenuItem
             // 
+            this.personaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personaNaturalToolStripMenuItem,
+            this.pErsonaJurídicaToolStripMenuItem});
             this.personaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personaToolStripMenuItem.Image")));
             this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
             this.personaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
@@ -475,6 +480,20 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // personaNaturalToolStripMenuItem
+            // 
+            this.personaNaturalToolStripMenuItem.Name = "personaNaturalToolStripMenuItem";
+            this.personaNaturalToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.personaNaturalToolStripMenuItem.Text = "Persona Natural";
+            this.personaNaturalToolStripMenuItem.Click += new System.EventHandler(this.personaNaturalToolStripMenuItem_Click);
+            // 
+            // pErsonaJurídicaToolStripMenuItem
+            // 
+            this.pErsonaJurídicaToolStripMenuItem.Name = "pErsonaJurídicaToolStripMenuItem";
+            this.pErsonaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pErsonaJurídicaToolStripMenuItem.Text = "PErsona Jurídica";
+            this.pErsonaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pErsonaJurídicaToolStripMenuItem_Click);
+            // 
             // frm_Menu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,5 +561,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem personaNaturalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pErsonaJurídicaToolStripMenuItem;
     }
 }

@@ -30,7 +30,35 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void Reg_PErso_Juridica_Load(object sender, EventArgs e)
         {
-
+            llenar_dpto();
+        }
+        public void llenar_dpto()
+        {
+            cb_dpto_persoJ.Items.Add("Amazonas");
+            cb_dpto_persoJ.Items.Add("Áncash");
+            cb_dpto_persoJ.Items.Add("Apurímac");
+            cb_dpto_persoJ.Items.Add("Arequipa");
+            cb_dpto_persoJ.Items.Add("Ayacucho");
+            cb_dpto_persoJ.Items.Add("Cajamarca");
+            cb_dpto_persoJ.Items.Add("Callao");
+            cb_dpto_persoJ.Items.Add("Cuzco");
+            cb_dpto_persoJ.Items.Add("Huancavelica");
+            cb_dpto_persoJ.Items.Add("Huánuco");
+            cb_dpto_persoJ.Items.Add("Ica");
+            cb_dpto_persoJ.Items.Add("Junín");
+            cb_dpto_persoJ.Items.Add("La Libertad");
+            cb_dpto_persoJ.Items.Add("Lambayeque");
+            cb_dpto_persoJ.Items.Add("Lima");
+            cb_dpto_persoJ.Items.Add("Loreto");
+            cb_dpto_persoJ.Items.Add("Madre de Dios");
+            cb_dpto_persoJ.Items.Add("Moquegua");
+            cb_dpto_persoJ.Items.Add("Pasco");
+            cb_dpto_persoJ.Items.Add("Piura");
+            cb_dpto_persoJ.Items.Add("Puno");
+            cb_dpto_persoJ.Items.Add("San Martín");
+            cb_dpto_persoJ.Items.Add("Tacna");
+            cb_dpto_persoJ.Items.Add("Tumbes");
+            cb_dpto_persoJ.Items.Add("Ucayali");
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -118,6 +146,123 @@ namespace Solucion_informatica_Consultorio_Juridico
             MessageBox.Show("Los datos fueron insertados correctamente");
             cnn.CerrarConexion();
             generar_id();
+        }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(pers_id as int)),0)+1 from Persona", cnn.AbrirConexion());
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+           
+            txt_id_persoJ.Text = sqlex.Rows[0][0].ToString();
+        }
+
+        private void cb_dpto_persoJ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_dpto_persoJ.SelectedItem.Equals("Amazonas"))
+            {
+                cb_provin_persoJ.Items.Clear();
+                cb_provin_persoJ.Items.Add("Chachapoyas");
+                cb_provin_persoJ.Items.Add("Bagua");
+                cb_provin_persoJ.Items.Add("Bongara");
+                cb_provin_persoJ.Items.Add("Condorcanqui");
+                cb_provin_persoJ.Items.Add("Luya");
+                cb_provin_persoJ.Items.Add("Rodríguez de Mendoza");
+                cb_provin_persoJ.Items.Add("Utcubamba");
+
+            }
+            if (cb_dpto_persoJ.SelectedItem.Equals("Áncash"))
+            {
+                cb_provin_persoJ.Items.Clear();
+                cb_provin_persoJ.Items.Add("Huaraz");
+                cb_provin_persoJ.Items.Add("Aija");
+                cb_provin_persoJ.Items.Add("Antonio raymondi");
+                cb_provin_persoJ.Items.Add("Asunción");
+                cb_provin_persoJ.Items.Add("Bolognesi");
+                cb_provin_persoJ.Items.Add("Carhuaz");
+                cb_provin_persoJ.Items.Add("Carlos Fermín Fitzcarrald");
+                cb_provin_persoJ.Items.Add("Casma");
+                cb_provin_persoJ.Items.Add("Corongo");
+                cb_provin_persoJ.Items.Add("Huari");
+                cb_provin_persoJ.Items.Add("Huarmey");
+                cb_provin_persoJ.Items.Add("Huaylas");
+                cb_provin_persoJ.Items.Add("Mariscal Luzuriaga");
+                cb_provin_persoJ.Items.Add("Ocros");
+                cb_provin_persoJ.Items.Add("Pallasca");
+                cb_provin_persoJ.Items.Add("Pomabamba");
+                cb_provin_persoJ.Items.Add("Recuay");
+                cb_provin_persoJ.Items.Add("Santa");
+                cb_provin_persoJ.Items.Add("Sihuas");
+                cb_provin_persoJ.Items.Add("Yungay");
+
+
+
+
+            }
+            if (cb_dpto_persoJ.SelectedItem.Equals("Apurímac"))
+            {
+                cb_provin_persoJ.Items.Clear();
+
+                cb_provin_persoJ.Items.Add("Abancay");
+                cb_provin_persoJ.Items.Add("Andahuaylas");
+                cb_provin_persoJ.Items.Add("Antabamba");
+                cb_provin_persoJ.Items.Add("Aymaraes");
+                cb_provin_persoJ.Items.Add("Cotabambas");
+                cb_provin_persoJ.Items.Add("Chincheros");
+                cb_provin_persoJ.Items.Add("Grau");
+            }
+            if (cb_dpto_persoJ.SelectedItem.Equals("Arequipa"))
+            {
+
+                cb_provin_persoJ.Items.Clear();
+                cb_provin_persoJ.Items.Add("Arequipa");
+                cb_provin_persoJ.Items.Add("Camana");
+                cb_provin_persoJ.Items.Add("Caraveli");
+                cb_provin_persoJ.Items.Add("Caylloma");
+                cb_provin_persoJ.Items.Add("Condesuyos");
+                cb_provin_persoJ.Items.Add("Islay");
+                cb_provin_persoJ.Items.Add("La unión");
+
+            }
+            if (cb_dpto_persoJ.SelectedItem.Equals("Ayacucho"))
+            {
+
+                cb_provin_persoJ.Items.Clear();
+                cb_provin_persoJ.Items.Add("Huamanga");
+                cb_provin_persoJ.Items.Add("Cangallo");
+                cb_provin_persoJ.Items.Add("Huanca sancos");
+                cb_provin_persoJ.Items.Add("Huanta");
+                cb_provin_persoJ.Items.Add("La Mar");
+                cb_provin_persoJ.Items.Add("Lucanas");
+                cb_provin_persoJ.Items.Add("Parinacochas");
+                cb_provin_persoJ.Items.Add("Páucar del Sara Sara");
+                cb_provin_persoJ.Items.Add("Víctor Fajardo");
+                cb_provin_persoJ.Items.Add("Vilcas Huaman");
+                cb_provin_persoJ.Items.Add("Parinacochas");
+
+            }
+        }
+
+        private void cb_distritos_persoJ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cb_provin_persoJ_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_provin_persoJ.SelectedItem.Equals("Santa"))
+            {
+                cb_distritos_persoJ.Items.Clear();
+                cb_distritos_persoJ.Items.Add("Cáceres Del Perú");
+                cb_distritos_persoJ.Items.Add("Chimbote");
+                cb_distritos_persoJ.Items.Add("Coishco");
+                cb_distritos_persoJ.Items.Add("Macate");
+                cb_distritos_persoJ.Items.Add("Moro");
+                cb_distritos_persoJ.Items.Add("Nepeña");
+                cb_distritos_persoJ.Items.Add("Nuevo Chimbote");
+                cb_distritos_persoJ.Items.Add("Samanco");
+                cb_distritos_persoJ.Items.Add("Santa");
+
+            }
         }
     }
 }
