@@ -42,9 +42,31 @@ namespace Solucion_informatica_Consultorio_Juridico
             mostrar();
             mostrar_tipDoc();
             llenar_dpto();
-            //llenar_dptopj();
+           
+            mostrarb();
 
 
+        }
+        public DataTable mostrarb()
+        {
+            cnn.AbrirConexion();
+            string sql = "select * from View_Persona";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cnn.CerrarConexion();
+            return dt;
+        }
+        public DataTable buscar(string valor)
+        {
+
+            cnn.AbrirConexion();
+            string sql = "SELECT * from Persona  where pers_numdoc like '" + valor + " %'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cnn.CerrarConexion();
+            return dt;
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -102,6 +124,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 MessageBox.Show("Los datos fueron insertados correctamente");
                 cnn.CerrarConexion();
                 generar_id();
+                mostrarb();
                
             }
 
@@ -870,6 +893,14 @@ namespace Solucion_informatica_Consultorio_Juridico
                     MessageBox.Show("alacanzo el maximo de caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void txt_buscar_doc_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            string valor = txt_buscar_doc.Text;
+            dgv_pers.DataSource = buscar(valor);
+
+            txt_buscar_doc.Focus();
         }
     }
 }
