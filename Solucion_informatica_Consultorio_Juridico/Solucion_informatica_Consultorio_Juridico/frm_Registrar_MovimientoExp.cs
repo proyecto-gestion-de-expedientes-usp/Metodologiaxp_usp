@@ -35,7 +35,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                 SqlCommand cmd = new SqlCommand("insertar_MovExp", con.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@movexp_id", SqlDbType.Int);
+                //cmd.Parameters.Add("@movexp_id", SqlDbType.Int);
                 cmd.Parameters.Add("@ab_id", SqlDbType.Int);
                 cmd.Parameters.Add("@usu_id", SqlDbType.Int );
                 cmd.Parameters.Add("@demte_id", SqlDbType.Int);
@@ -50,7 +50,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@movexp_nro", SqlDbType.VarChar, 10);
 
 
-                cmd.Parameters["@movexp_id"].Value = txt_id_movexp.Text;
+                //cmd.Parameters["@movexp_id"].Value = txt_id_movexp.Text;
                 cmd.Parameters["@ab_id"].Value = txt_id_abo.Text;
                 cmd.Parameters["@usu_id"].Value = txt_id_usu.Text;
                 cmd.Parameters["@demte_id"].Value = txt_id_demandt.Text;

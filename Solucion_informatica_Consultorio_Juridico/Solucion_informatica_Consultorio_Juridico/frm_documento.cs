@@ -58,7 +58,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
 
                 Model.Documento doc = new Model.Documento();
-                doc.doc_id =Convert.ToInt32(txt_id.Text.Trim());
+                //doc.doc_id =Convert.ToInt32(txt_id.Text.Trim());
                 doc.doc_nombre = txtName.Text.Trim();
                 doc.doc_documento = file;
                 doc.doc_nombrereal = openFileDialog1.SafeFileName;

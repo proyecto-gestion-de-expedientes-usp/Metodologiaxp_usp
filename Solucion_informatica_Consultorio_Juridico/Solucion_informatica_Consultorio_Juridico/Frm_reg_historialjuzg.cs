@@ -70,7 +70,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add("@juzg_id", SqlDbType.Int);
+                    //cmd.Parameters.Add("@juzg_id", SqlDbType.Int);
                     cmd.Parameters.Add("@juzg_descripcion", SqlDbType.VarChar, 50);
                     cmd.Parameters.Add("@juzg_fecharecepcion", SqlDbType.Date);
                     cmd.Parameters.Add("@juzg_pronunciamiento", SqlDbType.VarChar, 50);
@@ -81,7 +81,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
 
 
-                    cmd.Parameters["@juzg_id"].Value = txt_id.Text;
+                    //cmd.Parameters["@juzg_id"].Value = txt_id.Text;
                     cmd.Parameters["@juzg_descripcion"].Value = txt_descripcion.Text;
                     cmd.Parameters["@juzg_fecharecepcion"].Value = dt_recepcion.Text;
                     cmd.Parameters["@juzg_pronunciamiento"].Value = txt_pronunciamiento.Text;

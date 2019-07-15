@@ -40,12 +40,12 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
+                    //cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
                     cmd.Parameters.Add("@tipb_def_inc", SqlDbType.VarChar, 20);
                     cmd.Parameters.Add("@tipb_estado", SqlDbType.VarChar, 20);
                     cmd.Parameters.Add("@tipb_descripcion", SqlDbType.VarChar, 50);
 
-                    cmd.Parameters["@tipb_id"].Value = txt_id.Text;
+                    //cmd.Parameters["@tipb_id"].Value = txt_id.Text;
                     cmd.Parameters["@tipb_def_inc"].Value = cmb_condi.Text;
                     cmd.Parameters["@tipb_estado"].Value = txt_estado.Text;
                     cmd.Parameters["@tipb_descripcion"].Value = txt_descripcion.Text;

@@ -121,7 +121,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 
                 SqlCommand cmd = new SqlCommand("insertar_Usu", cnn.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@usu_id", SqlDbType.Int);
+                //cmd.Parameters.Add("@usu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
                 cmd.Parameters.Add("@usu_dni", SqlDbType.Char, 8);
                 cmd.Parameters.Add("@usu_nombres", SqlDbType.VarChar, 20);
@@ -139,7 +139,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@usu_departamento", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@usu_contraseña", SqlDbType.VarChar, 30);
 
-                cmd.Parameters["@usu_id"].Value = txt_id_usu.Text;
+                //cmd.Parameters["@usu_id"].Value = txt_id_usu.Text;
                 cmd.Parameters["@tipusu_id"].Value = txt_cod_tipusua.Text;
                 cmd.Parameters["@usu_dni"].Value = txt_dni.Text;
                 cmd.Parameters["@usu_nombres"].Value = txt_nombres.Text;

@@ -34,11 +34,11 @@ namespace Solucion_informatica_Consultorio_Juridico
                 {
                     SqlCommand cmd = new SqlCommand("sp_insertar_tipo_usuario", cone.con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
+                    //cmd.Parameters.Add("@tipusu_id", SqlDbType.Int);
                     cmd.Parameters.Add("@tipusu_tipousuario", SqlDbType.VarChar, 20);
                     cmd.Parameters.Add("@tipusu_descripcion", SqlDbType.VarChar, 30);
 
-                    cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
+                    //cmd.Parameters["@tipusu_id"].Value = txt_id.Text;
                     cmd.Parameters["@tipusu_tipousuario"].Value = txttipousu.Text;
                     cmd.Parameters["@tipusu_descripcion"].Value = txtdescripcion.Text;
 

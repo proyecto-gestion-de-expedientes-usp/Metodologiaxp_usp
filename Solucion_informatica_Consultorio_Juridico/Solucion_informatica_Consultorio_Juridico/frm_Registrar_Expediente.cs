@@ -34,7 +34,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                 SqlCommand cmd = new SqlCommand("insertar_exp", cone.con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@exp_id", SqlDbType.Int);
+                //cmd.Parameters.Add("@exp_id", SqlDbType.Int);
                 cmd.Parameters.Add("@movexp", SqlDbType.Int);
                 cmd.Parameters.Add("@juzg_id", SqlDbType.Int);
                 cmd.Parameters.Add("@doc", SqlDbType.Int);
@@ -49,7 +49,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@exp_vistos", SqlDbType.VarChar, 30);
 
 
-                cmd.Parameters["@exp_id"].Value = txt_id_exp.Text;
+                //cmd.Parameters["@exp_id"].Value = txt_id_exp.Text;
                 cmd.Parameters["@movexp"].Value = txt_id_mov_exp.Text;
                 cmd.Parameters["@juzg_id"].Value = txt_id_juzgados.Text;
                 cmd.Parameters["@doc"].Value = txt_id_doc.Text;

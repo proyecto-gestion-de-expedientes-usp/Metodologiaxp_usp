@@ -68,7 +68,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 
                 SqlCommand cmd = new SqlCommand("insertar_Abogado", CNNN.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@ab_id", SqlDbType.Int);
+                //cmd.Parameters.Add("@ab_id", SqlDbType.Int);
                 cmd.Parameters.Add("@tipb_id", SqlDbType.Int);
                 cmd.Parameters.Add("@ab_estado", SqlDbType.Int);
                 cmd.Parameters.Add("@ab_nombres", SqlDbType.VarChar, 30);
@@ -77,7 +77,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@ab_dni", SqlDbType.Char, 8);
            
 
-                cmd.Parameters["@ab_id"].Value = txt_idAbogado.Text;
+                //cmd.Parameters["@ab_id"].Value = txt_idAbogado.Text;
                 cmd.Parameters["@tipb_id"].Value = txt_idtipabogado.Text;
                 cmd.Parameters["@ab_estado"].Value = TXT_IDESTADO.Text;
                 cmd.Parameters["@ab_nombres"].Value = txt_nomb.Text;

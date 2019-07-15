@@ -67,7 +67,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                 SqlCommand cmd = new SqlCommand("insertar_Persona", cnn.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@pers_id", SqlDbType.Int);
+                //cmd.Parameters.Add("@pers_id", SqlDbType.Int);
                 cmd.Parameters.Add("@pers_nombres", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@pers_apepat", SqlDbType.VarChar, 25);
                 cmd.Parameters.Add("@pers_apemat", SqlDbType.VarChar, 25);
@@ -81,7 +81,7 @@ namespace Solucion_informatica_Consultorio_Juridico
                 cmd.Parameters.Add("@pers_numdoc", SqlDbType.Char, 12);
                 cmd.Parameters.Add("@pers_fenaci", SqlDbType.Date);
 
-                cmd.Parameters["@pers_id"].Value = txt_idper.Text;
+                //cmd.Parameters["@pers_id"].Value = txt_idper.Text;
                 cmd.Parameters["@pers_nombres"].Value = txt_nomb.Text;
                 cmd.Parameters["@pers_apepat"].Value = txt_ape_pat.Text;
                 cmd.Parameters["@pers_apemat"].Value = txt_ape_mat.Text;
