@@ -61,6 +61,7 @@
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.txt_contra = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.cb_distritos = new System.Windows.Forms.ComboBox();
             this.cb_provin = new System.Windows.Forms.ComboBox();
             this.cb_dpto = new System.Windows.Forms.ComboBox();
@@ -85,7 +86,6 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -449,6 +449,18 @@
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnnuevo
+            // 
+            this.btnnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnnuevo.Image")));
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnuevo.Location = new System.Drawing.Point(571, 146);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(119, 46);
+            this.btnnuevo.TabIndex = 10;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
             // cb_distritos
             // 
             this.cb_distritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -500,9 +512,11 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(571, 379);
+            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
+            this.btn_salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salir.Location = new System.Drawing.Point(571, 373);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(119, 33);
+            this.btn_salir.Size = new System.Drawing.Size(119, 38);
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
@@ -510,18 +524,22 @@
             // btn_limpiar
             // 
             this.btn_limpiar.Enabled = false;
+            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
+            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
             this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(119, 33);
+            this.btn_limpiar.Size = new System.Drawing.Size(119, 38);
             this.btn_limpiar.TabIndex = 5;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
             // 
             // btn_modificar
             // 
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modificar.Location = new System.Drawing.Point(571, 260);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(119, 33);
+            this.btn_modificar.Size = new System.Drawing.Size(119, 43);
             this.btn_modificar.TabIndex = 5;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -530,9 +548,11 @@
             // btn_guardar
             // 
             this.btn_guardar.Enabled = false;
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar.Location = new System.Drawing.Point(571, 198);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(119, 33);
+            this.btn_guardar.Size = new System.Drawing.Size(119, 53);
             this.btn_guardar.TabIndex = 5;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -648,16 +668,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // btnnuevo
-            // 
-            this.btnnuevo.Location = new System.Drawing.Point(571, 146);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(119, 32);
-            this.btnnuevo.TabIndex = 10;
-            this.btnnuevo.Text = "Nuevo";
-            this.btnnuevo.UseVisualStyleBackColor = true;
-            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // frm_registrar_usuario
             // 

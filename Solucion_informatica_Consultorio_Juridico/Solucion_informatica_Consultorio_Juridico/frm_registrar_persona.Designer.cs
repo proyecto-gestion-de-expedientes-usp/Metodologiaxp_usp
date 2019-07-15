@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registrar_persona));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.cb_distr = new System.Windows.Forms.ComboBox();
             this.cb_pro = new System.Windows.Forms.ComboBox();
             this.cb_dpto = new System.Windows.Forms.ComboBox();
@@ -97,7 +99,6 @@
             this.txt_nom_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_Doc_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_persoJ = new System.Windows.Forms.TextBox();
-            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pers)).BeginInit();
@@ -115,13 +116,13 @@
             this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.cb_distr);
             this.groupBox1.Controls.Add(this.cb_pro);
+            this.groupBox1.Controls.Add(this.btn_limpiar);
             this.groupBox1.Controls.Add(this.cb_dpto);
             this.groupBox1.Controls.Add(this.dp_fenaci);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.btn_modificar);
             this.groupBox1.Controls.Add(this.btn_guardar);
-            this.groupBox1.Controls.Add(this.btn_limpiar);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txt_email);
@@ -151,6 +152,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnnuevo.Image")));
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnuevo.Location = new System.Drawing.Point(14, 329);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(116, 42);
+            this.btnnuevo.TabIndex = 47;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // cb_distr
             // 
@@ -247,9 +260,11 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(215, 348);
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modificar.Location = new System.Drawing.Point(16, 377);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.Size = new System.Drawing.Size(114, 37);
             this.btn_modificar.TabIndex = 37;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -258,9 +273,11 @@
             // btn_guardar
             // 
             this.btn_guardar.Enabled = false;
-            this.btn_guardar.Location = new System.Drawing.Point(122, 348);
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(136, 329);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.Size = new System.Drawing.Size(124, 42);
             this.btn_guardar.TabIndex = 36;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -268,9 +285,11 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(122, 381);
+            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
+            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_limpiar.Location = new System.Drawing.Point(136, 377);
             this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar.Size = new System.Drawing.Size(124, 37);
             this.btn_limpiar.TabIndex = 35;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
@@ -829,16 +848,6 @@
             this.txt_id_persoJ.Size = new System.Drawing.Size(53, 20);
             this.txt_id_persoJ.TabIndex = 8;
             this.txt_id_persoJ.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
-            // 
-            // btnnuevo
-            // 
-            this.btnnuevo.Location = new System.Drawing.Point(28, 348);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnnuevo.TabIndex = 47;
-            this.btnnuevo.Text = "Nuevo";
-            this.btnnuevo.UseVisualStyleBackColor = true;
-            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // frm_registrar_persona
             // 

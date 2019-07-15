@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_demandado));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,9 +117,11 @@
             // btn_reg
             // 
             this.btn_reg.Enabled = false;
-            this.btn_reg.Location = new System.Drawing.Point(42, 231);
+            this.btn_reg.Image = ((System.Drawing.Image)(resources.GetObject("btn_reg.Image")));
+            this.btn_reg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reg.Location = new System.Drawing.Point(12, 242);
             this.btn_reg.Name = "btn_reg";
-            this.btn_reg.Size = new System.Drawing.Size(67, 23);
+            this.btn_reg.Size = new System.Drawing.Size(127, 46);
             this.btn_reg.TabIndex = 10;
             this.btn_reg.Text = "Registrar";
             this.btn_reg.UseVisualStyleBackColor = true;
@@ -126,9 +129,11 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(131, 231);
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modificar.Location = new System.Drawing.Point(147, 242);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(67, 23);
+            this.btn_modificar.Size = new System.Drawing.Size(127, 46);
             this.btn_modificar.TabIndex = 11;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -136,9 +141,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(220, 231);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(280, 242);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
+            this.button2.Size = new System.Drawing.Size(127, 46);
             this.button2.TabIndex = 12;
             this.button2.Text = "Nuevo";
             this.button2.UseVisualStyleBackColor = true;

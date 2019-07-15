@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_demandante));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -137,9 +138,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(235, 245);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(268, 245);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
+            this.button2.Size = new System.Drawing.Size(116, 40);
             this.button2.TabIndex = 26;
             this.button2.Text = "Nuevo";
             this.button2.UseVisualStyleBackColor = true;
@@ -147,9 +150,11 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(146, 245);
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modificar.Location = new System.Drawing.Point(135, 245);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(67, 23);
+            this.btn_modificar.Size = new System.Drawing.Size(127, 41);
             this.btn_modificar.TabIndex = 25;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -158,9 +163,11 @@
             // btn_reg
             // 
             this.btn_reg.Enabled = false;
-            this.btn_reg.Location = new System.Drawing.Point(57, 245);
+            this.btn_reg.Image = ((System.Drawing.Image)(resources.GetObject("btn_reg.Image")));
+            this.btn_reg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reg.Location = new System.Drawing.Point(9, 245);
             this.btn_reg.Name = "btn_reg";
-            this.btn_reg.Size = new System.Drawing.Size(67, 23);
+            this.btn_reg.Size = new System.Drawing.Size(120, 39);
             this.btn_reg.TabIndex = 24;
             this.btn_reg.Text = "Registrar";
             this.btn_reg.UseVisualStyleBackColor = true;

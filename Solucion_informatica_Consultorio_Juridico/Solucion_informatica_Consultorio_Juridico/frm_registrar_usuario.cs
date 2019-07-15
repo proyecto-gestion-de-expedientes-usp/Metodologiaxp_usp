@@ -115,6 +115,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             btn_guardar.Enabled = false;
             btnnuevo.Enabled = true;
             btn_limpiar.Enabled = true;
+            btn_modificar.Enabled = true;
             try
             {
                 
@@ -597,6 +598,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             btnnuevo.Enabled = false;
             btn_guardar.Enabled = true;
             btn_limpiar.Enabled = true;
+            btn_modificar.Enabled = true;
         }
     }
     }

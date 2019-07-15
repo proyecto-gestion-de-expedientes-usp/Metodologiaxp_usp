@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Registrar_MovimientoExp));
             this.txt_id_usu = new System.Windows.Forms.TextBox();
             this.txt_nom_demandd = new System.Windows.Forms.TextBox();
             this.txt_id_demandd = new System.Windows.Forms.TextBox();
@@ -389,9 +390,11 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(464, 516);
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(407, 498);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.Size = new System.Drawing.Size(132, 58);
             this.btn_guardar.TabIndex = 8;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -399,9 +402,11 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(566, 516);
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modificar.Location = new System.Drawing.Point(545, 498);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.Size = new System.Drawing.Size(132, 58);
             this.btn_modificar.TabIndex = 8;
             this.btn_modificar.Text = "Modifcar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -409,9 +414,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(671, 516);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(683, 498);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(132, 58);
             this.button3.TabIndex = 8;
             this.button3.Text = "Limpiar";
             this.button3.UseVisualStyleBackColor = true;
