@@ -312,6 +312,20 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 errorNombre.SetError(txt_nombres, "Ingrese Nombres...");
             }
+            var cadena = txt_nombres.Text;
+            if (cadena.Length > 1)
+            {
+                txt_nombres.Focus();
+                MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                if (cadena.Length < 20)
+                {
+                    MessageBox.Show("", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void txt_apepat_Validated(object sender, EventArgs e)

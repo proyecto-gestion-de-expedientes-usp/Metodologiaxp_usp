@@ -98,29 +98,34 @@
             this.registrarUsuarioToolStripMenuItem,
             this.abogadoToolStripMenuItem,
             this.personaToolStripMenuItem});
+            this.maestroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("maestroToolStripMenuItem.Image")));
+            this.maestroToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.maestroToolStripMenuItem.Name = "maestroToolStripMenuItem";
-            this.maestroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.maestroToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.maestroToolStripMenuItem.Text = "Maestro";
             this.maestroToolStripMenuItem.Click += new System.EventHandler(this.maestroToolStripMenuItem_Click);
             // 
             // registrarUsuarioToolStripMenuItem
             // 
+            this.registrarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarUsuarioToolStripMenuItem.Image")));
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
             // abogadoToolStripMenuItem
             // 
+            this.abogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abogadoToolStripMenuItem.Image")));
             this.abogadoToolStripMenuItem.Name = "abogadoToolStripMenuItem";
-            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.abogadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abogadoToolStripMenuItem.Text = "Abogado";
             this.abogadoToolStripMenuItem.Click += new System.EventHandler(this.abogadoToolStripMenuItem_Click);
             // 
             // personaToolStripMenuItem
             // 
+            this.personaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personaToolStripMenuItem.Image")));
             this.personaToolStripMenuItem.Name = "personaToolStripMenuItem";
-            this.personaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.personaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.personaToolStripMenuItem.Text = "Persona";
             this.personaToolStripMenuItem.Click += new System.EventHandler(this.personaToolStripMenuItem_Click);
             // 
@@ -137,13 +142,16 @@
             this.registrarEstadoAbogadoToolStripMenuItem,
             this.registrarDocumentoToolStripMenuItem1,
             this.registrarTipoUsuarioToolStripMenuItem});
+            this.accionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("accionesToolStripMenuItem.Image")));
+            this.accionesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
-            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.accionesToolStripMenuItem.Text = "Acciones";
             this.accionesToolStripMenuItem.Click += new System.EventHandler(this.accionesToolStripMenuItem_Click);
             // 
             // registrarDemandadoToolStripMenuItem
             // 
+            this.registrarDemandadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarDemandadoToolStripMenuItem.Image")));
             this.registrarDemandadoToolStripMenuItem.Name = "registrarDemandadoToolStripMenuItem";
             this.registrarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandadoToolStripMenuItem.Text = "Registrar Demandado";
@@ -151,6 +159,7 @@
             // 
             // registrarDemandanteToolStripMenuItem
             // 
+            this.registrarDemandanteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarDemandanteToolStripMenuItem.Image")));
             this.registrarDemandanteToolStripMenuItem.Name = "registrarDemandanteToolStripMenuItem";
             this.registrarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarDemandanteToolStripMenuItem.Text = "Registrar Demandante";
@@ -158,6 +167,7 @@
             // 
             // registrarExpedienteToolStripMenuItem
             // 
+            this.registrarExpedienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarExpedienteToolStripMenuItem.Image")));
             this.registrarExpedienteToolStripMenuItem.Name = "registrarExpedienteToolStripMenuItem";
             this.registrarExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarExpedienteToolStripMenuItem.Text = "Registrar Expediente";
@@ -165,6 +175,7 @@
             // 
             // registrarMovimientoExpedienteToolStripMenuItem
             // 
+            this.registrarMovimientoExpedienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarMovimientoExpedienteToolStripMenuItem.Image")));
             this.registrarMovimientoExpedienteToolStripMenuItem.Name = "registrarMovimientoExpedienteToolStripMenuItem";
             this.registrarMovimientoExpedienteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarMovimientoExpedienteToolStripMenuItem.Text = "Registrar Movimiento Expediente";
@@ -172,6 +183,7 @@
             // 
             // registrarHistorialJuzgadoToolStripMenuItem
             // 
+            this.registrarHistorialJuzgadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarHistorialJuzgadoToolStripMenuItem.Image")));
             this.registrarHistorialJuzgadoToolStripMenuItem.Name = "registrarHistorialJuzgadoToolStripMenuItem";
             this.registrarHistorialJuzgadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarHistorialJuzgadoToolStripMenuItem.Text = "Registrar Historial Juzgado";
@@ -179,6 +191,7 @@
             // 
             // registrarTipoAbogadoToolStripMenuItem
             // 
+            this.registrarTipoAbogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarTipoAbogadoToolStripMenuItem.Image")));
             this.registrarTipoAbogadoToolStripMenuItem.Name = "registrarTipoAbogadoToolStripMenuItem";
             this.registrarTipoAbogadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarTipoAbogadoToolStripMenuItem.Text = "Registrar Tipo Abogado";
@@ -186,6 +199,7 @@
             // 
             // registrarTipoDocumentoToolStripMenuItem
             // 
+            this.registrarTipoDocumentoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarTipoDocumentoToolStripMenuItem.Image")));
             this.registrarTipoDocumentoToolStripMenuItem.Name = "registrarTipoDocumentoToolStripMenuItem";
             this.registrarTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarTipoDocumentoToolStripMenuItem.Text = "Registrar Tipo Documento";
@@ -193,6 +207,7 @@
             // 
             // registrarEstadoAbogadoToolStripMenuItem
             // 
+            this.registrarEstadoAbogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarEstadoAbogadoToolStripMenuItem.Image")));
             this.registrarEstadoAbogadoToolStripMenuItem.Name = "registrarEstadoAbogadoToolStripMenuItem";
             this.registrarEstadoAbogadoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarEstadoAbogadoToolStripMenuItem.Text = "Registrar Estado Abogado";
@@ -200,6 +215,7 @@
             // 
             // registrarDocumentoToolStripMenuItem1
             // 
+            this.registrarDocumentoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("registrarDocumentoToolStripMenuItem1.Image")));
             this.registrarDocumentoToolStripMenuItem1.Name = "registrarDocumentoToolStripMenuItem1";
             this.registrarDocumentoToolStripMenuItem1.Size = new System.Drawing.Size(248, 22);
             this.registrarDocumentoToolStripMenuItem1.Text = "Registrar Estado Usuario";
@@ -207,6 +223,7 @@
             // 
             // registrarTipoUsuarioToolStripMenuItem
             // 
+            this.registrarTipoUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarTipoUsuarioToolStripMenuItem.Image")));
             this.registrarTipoUsuarioToolStripMenuItem.Name = "registrarTipoUsuarioToolStripMenuItem";
             this.registrarTipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.registrarTipoUsuarioToolStripMenuItem.Text = "Registrar Tipo Usuario";
@@ -229,13 +246,15 @@
             this.buscarTipoUsuarioToolStripMenuItem,
             this.buscarTipoAbogadoToolStripMenuItem,
             this.buscarMovimientoExpedienteToolStripMenuItem});
+            this.bùsquedasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bùsquedasToolStripMenuItem.Image")));
             this.bùsquedasToolStripMenuItem.Name = "bùsquedasToolStripMenuItem";
-            this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.bùsquedasToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.bùsquedasToolStripMenuItem.Text = "Búsquedas";
             this.bùsquedasToolStripMenuItem.Click += new System.EventHandler(this.bùsquedasToolStripMenuItem_Click);
             // 
             // buscarAbogadoToolStripMenuItem
             // 
+            this.buscarAbogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarAbogadoToolStripMenuItem.Image")));
             this.buscarAbogadoToolStripMenuItem.Name = "buscarAbogadoToolStripMenuItem";
             this.buscarAbogadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarAbogadoToolStripMenuItem.Text = "Buscar Abogado";
@@ -243,6 +262,7 @@
             // 
             // buscarAnexoToolStripMenuItem
             // 
+            this.buscarAnexoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarAnexoToolStripMenuItem.Image")));
             this.buscarAnexoToolStripMenuItem.Name = "buscarAnexoToolStripMenuItem";
             this.buscarAnexoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarAnexoToolStripMenuItem.Text = "Buscar Anexo";
@@ -250,6 +270,7 @@
             // 
             // buscarDemandadoToolStripMenuItem
             // 
+            this.buscarDemandadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarDemandadoToolStripMenuItem.Image")));
             this.buscarDemandadoToolStripMenuItem.Name = "buscarDemandadoToolStripMenuItem";
             this.buscarDemandadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarDemandadoToolStripMenuItem.Text = "Buscar Demandado";
@@ -257,6 +278,7 @@
             // 
             // buscarDemandanteToolStripMenuItem
             // 
+            this.buscarDemandanteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarDemandanteToolStripMenuItem.Image")));
             this.buscarDemandanteToolStripMenuItem.Name = "buscarDemandanteToolStripMenuItem";
             this.buscarDemandanteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarDemandanteToolStripMenuItem.Text = "Buscar Demandante";
@@ -264,6 +286,7 @@
             // 
             // buscarDocumentoToolStripMenuItem
             // 
+            this.buscarDocumentoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarDocumentoToolStripMenuItem.Image")));
             this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
             this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarDocumentoToolStripMenuItem.Text = "Buscar Documento";
@@ -271,6 +294,7 @@
             // 
             // buscarPersonaToolStripMenuItem
             // 
+            this.buscarPersonaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarPersonaToolStripMenuItem.Image")));
             this.buscarPersonaToolStripMenuItem.Name = "buscarPersonaToolStripMenuItem";
             this.buscarPersonaToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarPersonaToolStripMenuItem.Text = "Buscar Persona";
@@ -278,6 +302,7 @@
             // 
             // buscarUsuarioToolStripMenuItem
             // 
+            this.buscarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarUsuarioToolStripMenuItem.Image")));
             this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
             this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
@@ -285,6 +310,7 @@
             // 
             // buscarEstadoAbogadoToolStripMenuItem
             // 
+            this.buscarEstadoAbogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarEstadoAbogadoToolStripMenuItem.Image")));
             this.buscarEstadoAbogadoToolStripMenuItem.Name = "buscarEstadoAbogadoToolStripMenuItem";
             this.buscarEstadoAbogadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarEstadoAbogadoToolStripMenuItem.Text = "Buscar Estado Abogado";
@@ -292,6 +318,7 @@
             // 
             // buscarEstadoUsuarioToolStripMenuItem
             // 
+            this.buscarEstadoUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarEstadoUsuarioToolStripMenuItem.Image")));
             this.buscarEstadoUsuarioToolStripMenuItem.Name = "buscarEstadoUsuarioToolStripMenuItem";
             this.buscarEstadoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarEstadoUsuarioToolStripMenuItem.Text = "Buscar Estado Usuario";
@@ -299,6 +326,7 @@
             // 
             // buscarHistorialJuzgadoToolStripMenuItem
             // 
+            this.buscarHistorialJuzgadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarHistorialJuzgadoToolStripMenuItem.Image")));
             this.buscarHistorialJuzgadoToolStripMenuItem.Name = "buscarHistorialJuzgadoToolStripMenuItem";
             this.buscarHistorialJuzgadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarHistorialJuzgadoToolStripMenuItem.Text = "Buscar Historial Juzgado";
@@ -306,6 +334,7 @@
             // 
             // buscarTipoDocumentoToolStripMenuItem
             // 
+            this.buscarTipoDocumentoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarTipoDocumentoToolStripMenuItem.Image")));
             this.buscarTipoDocumentoToolStripMenuItem.Name = "buscarTipoDocumentoToolStripMenuItem";
             this.buscarTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarTipoDocumentoToolStripMenuItem.Text = "Buscar Tipo Documento";
@@ -313,6 +342,7 @@
             // 
             // buscarTipoUsuarioToolStripMenuItem
             // 
+            this.buscarTipoUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarTipoUsuarioToolStripMenuItem.Image")));
             this.buscarTipoUsuarioToolStripMenuItem.Name = "buscarTipoUsuarioToolStripMenuItem";
             this.buscarTipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarTipoUsuarioToolStripMenuItem.Text = "Buscar Tipo Usuario";
@@ -320,6 +350,7 @@
             // 
             // buscarTipoAbogadoToolStripMenuItem
             // 
+            this.buscarTipoAbogadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarTipoAbogadoToolStripMenuItem.Image")));
             this.buscarTipoAbogadoToolStripMenuItem.Name = "buscarTipoAbogadoToolStripMenuItem";
             this.buscarTipoAbogadoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarTipoAbogadoToolStripMenuItem.Text = "Buscar Tipo Abogado";
@@ -327,6 +358,7 @@
             // 
             // buscarMovimientoExpedienteToolStripMenuItem
             // 
+            this.buscarMovimientoExpedienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarMovimientoExpedienteToolStripMenuItem.Image")));
             this.buscarMovimientoExpedienteToolStripMenuItem.Name = "buscarMovimientoExpedienteToolStripMenuItem";
             this.buscarMovimientoExpedienteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.buscarMovimientoExpedienteToolStripMenuItem.Text = "Buscar Movimiento Expediente";
@@ -337,13 +369,15 @@
             this.documentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarDocumentoToolStripMenuItem,
             this.registrarAnexosToolStripMenuItem});
+            this.documentosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("documentosToolStripMenuItem.Image")));
             this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
-            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.documentosToolStripMenuItem.Text = "Documentos";
             this.documentosToolStripMenuItem.Click += new System.EventHandler(this.documentosToolStripMenuItem_Click);
             // 
             // registrarDocumentoToolStripMenuItem
             // 
+            this.registrarDocumentoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarDocumentoToolStripMenuItem.Image")));
             this.registrarDocumentoToolStripMenuItem.Name = "registrarDocumentoToolStripMenuItem";
             this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.registrarDocumentoToolStripMenuItem.Text = "Registrar Documento";
@@ -351,6 +385,7 @@
             // 
             // registrarAnexosToolStripMenuItem
             // 
+            this.registrarAnexosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarAnexosToolStripMenuItem.Image")));
             this.registrarAnexosToolStripMenuItem.Name = "registrarAnexosToolStripMenuItem";
             this.registrarAnexosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.registrarAnexosToolStripMenuItem.Text = "Registrar Anexos";
@@ -363,13 +398,15 @@
             this.personasDemandanteToolStripMenuItem,
             this.casosPorCicloToolStripMenuItem,
             this.casosPorUsuarioToolStripMenuItem});
+            this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // personasDemandadasToolStripMenuItem
             // 
+            this.personasDemandadasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personasDemandadasToolStripMenuItem.Image")));
             this.personasDemandadasToolStripMenuItem.Name = "personasDemandadasToolStripMenuItem";
             this.personasDemandadasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.personasDemandadasToolStripMenuItem.Text = "Personas Demandadas";
@@ -377,6 +414,7 @@
             // 
             // personasDemandanteToolStripMenuItem
             // 
+            this.personasDemandanteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personasDemandanteToolStripMenuItem.Image")));
             this.personasDemandanteToolStripMenuItem.Name = "personasDemandanteToolStripMenuItem";
             this.personasDemandanteToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.personasDemandanteToolStripMenuItem.Text = "Personas Demandante";
@@ -384,6 +422,7 @@
             // 
             // casosPorCicloToolStripMenuItem
             // 
+            this.casosPorCicloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("casosPorCicloToolStripMenuItem.Image")));
             this.casosPorCicloToolStripMenuItem.Name = "casosPorCicloToolStripMenuItem";
             this.casosPorCicloToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.casosPorCicloToolStripMenuItem.Text = "Casos por Ciclo";
@@ -391,6 +430,7 @@
             // 
             // casosPorUsuarioToolStripMenuItem
             // 
+            this.casosPorUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("casosPorUsuarioToolStripMenuItem.Image")));
             this.casosPorUsuarioToolStripMenuItem.Name = "casosPorUsuarioToolStripMenuItem";
             this.casosPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.casosPorUsuarioToolStripMenuItem.Text = "Casos por Usuario";
@@ -398,8 +438,9 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
