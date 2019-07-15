@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Estadoabog));
             this.label5 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
@@ -47,10 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_condi = new Capas.ErrorTxtBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -103,6 +100,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(171, 260);
@@ -115,6 +113,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(12, 260);
@@ -226,6 +225,7 @@
             // 
             // cmb_condi
             // 
+            this.cmb_condi.Enabled = false;
             this.cmb_condi.Location = new System.Drawing.Point(109, 208);
             this.cmb_condi.MaxLength = 20;
             this.cmb_condi.Name = "cmb_condi";
@@ -233,10 +233,6 @@
             this.cmb_condi.TabIndex = 27;
             this.cmb_condi.Validar = true;
             this.cmb_condi.TextChanged += new System.EventHandler(this.cmb_condi_TextChanged);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // Frm_Estadoabog
             // 
@@ -263,7 +259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgdatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +283,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Capas.ErrorTxtBox cmb_condi;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

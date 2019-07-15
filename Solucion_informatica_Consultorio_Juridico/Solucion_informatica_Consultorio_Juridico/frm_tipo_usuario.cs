@@ -24,7 +24,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            button1.Enabled = false;
+            txttipousu.Enabled =    false;
+            txtdescripcion.Enabled = false;
+            button3.Enabled = true;
             if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
                 try
@@ -116,6 +119,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            txttipousu.Enabled = true;
+            txtdescripcion.Enabled = true;
+            button3.Enabled = false;
             limpiar();
         }
         public void limpiar()
@@ -239,6 +246,8 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txttipousu.Enabled = true;
+            txtdescripcion.Enabled = true;
             int pos = dgdatos.CurrentRow.Index;
             txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
           txttipousu.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();

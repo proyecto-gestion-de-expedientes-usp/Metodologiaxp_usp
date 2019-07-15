@@ -103,6 +103,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(151, 261);
@@ -115,6 +116,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(12, 261);
@@ -230,6 +232,7 @@
             // 
             // txtnombdocum
             // 
+            this.txtnombdocum.Enabled = false;
             this.txtnombdocum.Location = new System.Drawing.Point(100, 206);
             this.txtnombdocum.MaxLength = 35;
             this.txtnombdocum.Name = "txtnombdocum";

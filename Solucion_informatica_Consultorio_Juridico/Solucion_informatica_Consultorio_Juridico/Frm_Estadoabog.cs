@@ -24,35 +24,43 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
+            button3.Enabled = true;
+            button1.Enabled = false;
+            cmb_condi.Enabled = false;
+            cmb_condi.Text = "";
+            //if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
 
-            {
-                try
-                {
+            //{
+            //    try
+            //    {
 
-                    SqlCommand cmd = new SqlCommand("sp_insertar_estadoabog", cone.con);
+            //        SqlCommand cmd = new SqlCommand("sp_insertar_estadoabog", cone.con);
 
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@estabog", SqlDbType.VarChar, 20);
-                    cmd.Parameters["@estabog"].Value = cmb_condi.Text;
-                    cone.con.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datos fueron insertados correctamente");
-                    cone.con.Close();
-                    dgdatos.DataSource = mostrar();
-                }
-                catch (Exception ex)
-                {
-                    cone.con.Close();
-                    MessageBox.Show(ex.Message, "Error al Grabar");
-                }
-            }
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Parameters.Add("@estabog", SqlDbType.VarChar, 20);
+            //        cmd.Parameters["@estabog"].Value = cmb_condi.Text;
+            //        cone.con.Open();
+            //        cmd.ExecuteNonQuery();
+            //        MessageBox.Show("Los datos fueron insertados correctamente");
+            //        cone.con.Close();
+            //        dgdatos.DataSource = mostrar();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        cone.con.Close();
+            //        MessageBox.Show(ex.Message, "Error al Grabar");
+            //    }
+            //}
 
-            else { }
+            //else { }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button2.Enabled = false;
+            cmb_condi.Enabled = false;
+            button3.Enabled = true;
+            cmb_condi.Text = "";
             int seleccionar;
             seleccionar = this.dgdatos.SelectedRows.Count;
 
@@ -128,6 +136,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
+            cmb_condi.Enabled = true;
+            button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
             limpiar();
         }
         public void limpiar()
@@ -149,6 +161,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = false;
+            cmb_condi.Enabled = true;
             int pos = dgdatos.CurrentRow.Index;
             txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
             cmb_condi.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
@@ -222,7 +238,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void cmb_condi_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
+            //errorProvider1.Clear();
         }
     }
 }

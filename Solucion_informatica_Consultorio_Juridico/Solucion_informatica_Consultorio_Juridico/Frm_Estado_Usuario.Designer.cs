@@ -154,6 +154,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(22, 247);
@@ -166,6 +167,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(170, 247);
@@ -226,6 +228,7 @@
             // 
             // cmb_condi
             // 
+            this.cmb_condi.Enabled = false;
             this.cmb_condi.Location = new System.Drawing.Point(102, 206);
             this.cmb_condi.MaxLength = 20;
             this.cmb_condi.Name = "cmb_condi";

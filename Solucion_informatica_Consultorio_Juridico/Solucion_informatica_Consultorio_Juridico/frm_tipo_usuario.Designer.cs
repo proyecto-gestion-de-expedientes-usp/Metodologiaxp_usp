@@ -89,6 +89,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(8, 255);
@@ -226,6 +227,7 @@
             // 
             // txtdescripcion
             // 
+            this.txtdescripcion.Enabled = false;
             this.txtdescripcion.Location = new System.Drawing.Point(24, 205);
             this.txtdescripcion.MaxLength = 30;
             this.txtdescripcion.Name = "txtdescripcion";
@@ -236,6 +238,7 @@
             // 
             // txttipousu
             // 
+            this.txttipousu.Enabled = false;
             this.txttipousu.Location = new System.Drawing.Point(107, 130);
             this.txttipousu.MaxLength = 20;
             this.txttipousu.Name = "txttipousu";

@@ -23,6 +23,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
+            txtnombdocum.Enabled = false;
+            button1.Enabled = false;
+            button3.Enabled = true;
+
             if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
                 try
@@ -56,6 +60,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = true;
+            txtnombdocum.Enabled = false;
             int seleccionar;
             seleccionar = this.dgdatos.SelectedRows.Count;
 
@@ -110,6 +118,9 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            txtnombdocum.Enabled = true;
+            button3.Enabled = false;
             limpiar();
         }
 
@@ -147,6 +158,11 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void dgdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            button2.Enabled = true;
+            button1.Enabled = false;
+            button3.Enabled = false;
+            txtnombdocum.Enabled = true;
+
             int pos = dgdatos.CurrentRow.Index;
             txt_id.Text = dgdatos.CurrentRow.Cells[0].Value.ToString();
             txtnombdocum.Text = dgdatos.CurrentRow.Cells[1].Value.ToString();
