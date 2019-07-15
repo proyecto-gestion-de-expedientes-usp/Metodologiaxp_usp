@@ -19,7 +19,7 @@ namespace Solucion_informatica_Consultorio_Juridico
     {
         Clases.Validacioes validadcion = new Clases.Validacioes();
         Clases.Conexion cnn = new Clases.Conexion();
-        SqlConnection gh;
+       
         string campo;
         string valor;
         DataTable dts = new DataTable();
@@ -39,10 +39,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_usuario_Load(object sender, EventArgs e)
         {
-              
-
-            gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
-
+                     
             mostrartipousuario();
             llenar_dpto();
             mostrarestadousuario();
@@ -56,29 +53,29 @@ namespace Solucion_informatica_Consultorio_Juridico
         public void mostrarestadousuario()
         {
 
-            gh.Open();
+            cnn.AbrirConexion();
             string sql = "select * from Estado_Usu";
-            SqlDataAdapter da = new SqlDataAdapter(sql, gh);
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
 
             da.Fill(dts);
             cb_esta_usua.DataSource = dts;
             cb_esta_usua.DisplayMember = "est_condi";
 
-            gh.Close();
+            cnn.CerrarConexion();
 
         }
         public void mostrartipousuario()
         {
 
-            gh.Open();
+            cnn.AbrirConexion();
             string sql = "select * from Tipo_Usuario";
-            SqlDataAdapter da = new SqlDataAdapter(sql, gh);
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
 
             da.Fill(ds);
             cb_tip_usu.DataSource = ds;
             cb_tip_usu.DisplayMember = "tipusu_tipousuario";
 
-            gh.Close();
+            cnn.CerrarConexion();
 
         }
 
@@ -185,8 +182,7 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             try
             {
-                //string ConnectionString = "database=consultoriojur;data source=.;integrated security=sspi";
-                //SqlConnection cnn = new SqlConnection(ConnectionString);
+               
                 SqlCommand cmd = new SqlCommand("actualizar_Usu", cnn.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@usu_id", SqlDbType.Int);

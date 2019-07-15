@@ -16,7 +16,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
     {
         Clases.Validacioes validadcion = new Clases.Validacioes();
-        SqlConnection gh;
+        
         DataTable ds = new DataTable();
         DataTable dts = new DataTable();
         DataTable dx = new DataTable();
@@ -37,7 +37,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void frm_registrar_persona_Load(object sender, EventArgs e)
         {
-            gh = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
+           
             generar_id();
             mostrar();
             mostrar_tipDoc();
@@ -239,9 +239,9 @@ namespace Solucion_informatica_Consultorio_Juridico
         public void mostrar_tipDoc()
         {
 
-            gh.Open();
+            cnn.AbrirConexion();
             string sql = "select * from Tip_documento";
-            SqlDataAdapter da = new SqlDataAdapter(sql, gh);
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn.AbrirConexion());
             da.Fill(ds);
             cb_tip_Doc.DataSource = ds;
 
@@ -251,7 +251,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
             comboBox1.DisplayMember = "tipdoc_nom";
 
-            gh.Close();
+            cnn.CerrarConexion();
         }
       
         public static bool Valorreo(string email)

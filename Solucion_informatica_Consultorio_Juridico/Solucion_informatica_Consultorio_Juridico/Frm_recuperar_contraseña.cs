@@ -16,7 +16,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 {
     public partial class Frm_recuperar_contraseña : Form
     {
-        Capas.conexion sa = new Capas.conexion();
+        Clases.Conexion CNN = new Clases.Conexion();
         public Frm_recuperar_contraseña()
         {
             InitializeComponent();
@@ -30,12 +30,12 @@ namespace Solucion_informatica_Consultorio_Juridico
         {
             Random rd = new Random(DateTime.Now.Millisecond);
             int nuevaContrasena = rd.Next(100000, 999999);
-            SqlConnection sa = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
 
 
+            CNN.AbrirConexion();
 
 
-            SqlCommand cmd = new SqlCommand("NuevaContrasena", sa);
+            SqlCommand cmd = new SqlCommand("NuevaContrasena", CNN.AbrirConexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -43,7 +43,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             cmd.Parameters.AddWithValue("@contrasena", nuevaContrasena);
             try
             {
-                sa.Open();
+                CNN.AbrirConexion();
                 int filasAfectadas = cmd.ExecuteNonQuery();
                 if (filasAfectadas != 0)
                 {
@@ -99,19 +99,19 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sc = new SqlConnection("database=consultoriojur;data source=.;integrated security=true");
+            CNN.AbrirConexion();
             {
 
 
 
-                SqlCommand cmd = new SqlCommand("ValidarCorreo", sc);
+                SqlCommand cmd = new SqlCommand("ValidarCorreo", CNN.AbrirConexion());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@correo", txt_correo.Text);
                 try
                 {
-                    sc.Open();
+                    CNN.AbrirConexion();
                     SqlDataReader lector = cmd.ExecuteReader();
                     if (lector.Read())
                     {
