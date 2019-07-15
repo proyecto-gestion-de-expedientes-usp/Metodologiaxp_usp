@@ -86,7 +86,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(338, 135);
+            this.button1.Location = new System.Drawing.Point(290, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 23);
             this.button1.TabIndex = 7;
@@ -108,9 +108,9 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(428, 121);
+            this.dgdatos.Location = new System.Drawing.Point(366, 131);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(473, 210);
+            this.dgdatos.Size = new System.Drawing.Size(569, 254);
             this.dgdatos.TabIndex = 9;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             // 
@@ -119,7 +119,7 @@
             this.btn_reg.Enabled = false;
             this.btn_reg.Image = ((System.Drawing.Image)(resources.GetObject("btn_reg.Image")));
             this.btn_reg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reg.Location = new System.Drawing.Point(12, 242);
+            this.btn_reg.Location = new System.Drawing.Point(41, 242);
             this.btn_reg.Name = "btn_reg";
             this.btn_reg.Size = new System.Drawing.Size(127, 46);
             this.btn_reg.TabIndex = 10;
@@ -131,7 +131,7 @@
             // 
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(147, 242);
+            this.btn_modificar.Location = new System.Drawing.Point(199, 242);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(127, 46);
             this.btn_modificar.TabIndex = 11;
@@ -143,7 +143,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(280, 242);
+            this.button2.Location = new System.Drawing.Point(110, 305);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 46);
             this.button2.TabIndex = 12;
@@ -159,9 +159,9 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.btn_buscar1);
-            this.groupBox1.Location = new System.Drawing.Point(428, 46);
+            this.groupBox1.Location = new System.Drawing.Point(366, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 69);
+            this.groupBox1.Size = new System.Drawing.Size(569, 69);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
@@ -169,11 +169,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(385, 41);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(442, 10);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 23);
+            this.button3.Size = new System.Drawing.Size(114, 53);
             this.button3.TabIndex = 33;
-            this.button3.Text = "Mostrar Todo";
+            this.button3.Text = "Ver lista";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -224,9 +226,11 @@
             // 
             // btn_buscar1
             // 
-            this.btn_buscar1.Location = new System.Drawing.Point(297, 43);
+            this.btn_buscar1.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar1.Image")));
+            this.btn_buscar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscar1.Location = new System.Drawing.Point(322, 10);
             this.btn_buscar1.Name = "btn_buscar1";
-            this.btn_buscar1.Size = new System.Drawing.Size(82, 23);
+            this.btn_buscar1.Size = new System.Drawing.Size(114, 53);
             this.btn_buscar1.TabIndex = 28;
             this.btn_buscar1.Text = "Buscar";
             this.btn_buscar1.UseVisualStyleBackColor = true;
@@ -263,7 +267,7 @@
             // txt_nomper
             // 
             this.txt_nomper.Enabled = false;
-            this.txt_nomper.Location = new System.Drawing.Point(173, 137);
+            this.txt_nomper.Location = new System.Drawing.Point(147, 138);
             this.txt_nomper.Name = "txt_nomper";
             this.txt_nomper.ReadOnly = true;
             this.txt_nomper.Size = new System.Drawing.Size(137, 20);
@@ -284,7 +288,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(913, 337);
+            this.ClientSize = new System.Drawing.Size(944, 402);
             this.Controls.Add(this.txt_iddo);
             this.Controls.Add(this.txt_nomper);
             this.Controls.Add(this.txt_idper);

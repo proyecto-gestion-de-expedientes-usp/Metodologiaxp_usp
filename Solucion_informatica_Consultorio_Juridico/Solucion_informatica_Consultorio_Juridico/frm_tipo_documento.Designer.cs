@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tipo_documento));
             this.label5 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,9 +91,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(232, 261);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(83, 314);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(117, 46);
             this.button3.TabIndex = 21;
             this.button3.Text = "Nuevo";
             this.button3.UseVisualStyleBackColor = true;
@@ -100,9 +103,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(125, 261);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(151, 261);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(125, 47);
             this.button2.TabIndex = 20;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
@@ -110,9 +115,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 261);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 261);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(122, 47);
             this.button1.TabIndex = 19;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -121,9 +128,9 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(334, 175);
+            this.dgdatos.Location = new System.Drawing.Point(299, 171);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(391, 172);
+            this.dgdatos.Size = new System.Drawing.Size(548, 213);
             this.dgdatos.TabIndex = 18;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             // 
@@ -134,9 +141,9 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.txt_buscar);
-            this.groupBox1.Location = new System.Drawing.Point(334, 73);
+            this.groupBox1.Location = new System.Drawing.Point(299, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 96);
+            this.groupBox1.Size = new System.Drawing.Size(548, 96);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Tipo Documento  :";
@@ -167,9 +174,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(238, 49);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(234, 28);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(124, 44);
             this.button4.TabIndex = 11;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
@@ -177,9 +186,11 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(316, 39);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(374, 29);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 44);
+            this.button5.Size = new System.Drawing.Size(156, 44);
             this.button5.TabIndex = 12;
             this.button5.Text = "Mostrar Todo";
             this.button5.UseVisualStyleBackColor = true;
@@ -232,7 +243,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(776, 396);
+            this.ClientSize = new System.Drawing.Size(860, 396);
             this.Controls.Add(this.txtnombdocum);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_id);

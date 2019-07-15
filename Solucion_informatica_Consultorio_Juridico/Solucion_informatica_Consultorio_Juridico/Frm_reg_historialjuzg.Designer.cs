@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_reg_historialjuzg));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.dgdatos = new System.Windows.Forms.DataGridView();
@@ -94,9 +95,9 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(341, 239);
+            this.dgdatos.Location = new System.Drawing.Point(393, 259);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(403, 247);
+            this.dgdatos.Size = new System.Drawing.Size(459, 234);
             this.dgdatos.TabIndex = 2;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             // 
@@ -107,9 +108,9 @@
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(330, 25);
+            this.groupBox1.Location = new System.Drawing.Point(393, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 91);
+            this.groupBox1.Size = new System.Drawing.Size(459, 91);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bùsqueda por :";
@@ -149,9 +150,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(286, 38);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(318, 34);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 31);
+            this.button4.Size = new System.Drawing.Size(119, 40);
             this.button4.TabIndex = 28;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
@@ -171,9 +174,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(26, 426);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 405);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(120, 44);
             this.button1.TabIndex = 4;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -297,9 +302,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(118, 426);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(138, 405);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(129, 44);
             this.button2.TabIndex = 26;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
@@ -307,9 +314,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 426);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(273, 405);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(111, 44);
             this.button3.TabIndex = 27;
             this.button3.Text = "Nuevo";
             this.button3.UseVisualStyleBackColor = true;
@@ -325,9 +334,9 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.dt1);
             this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Location = new System.Drawing.Point(341, 122);
+            this.groupBox2.Location = new System.Drawing.Point(393, 134);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(459, 106);
+            this.groupBox2.Size = new System.Drawing.Size(459, 116);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bùsqueda por :";
@@ -413,9 +422,11 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(317, 71);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(320, 63);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 23);
+            this.button5.Size = new System.Drawing.Size(117, 43);
             this.button5.TabIndex = 28;
             this.button5.Text = "Buscar";
             this.button5.UseVisualStyleBackColor = true;
@@ -425,7 +436,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(23, 487);
+            this.label10.Location = new System.Drawing.Point(23, 473);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(244, 13);
             this.label10.TabIndex = 31;
@@ -444,10 +455,10 @@
             // 
             // txt_pronunciamiento
             // 
-            this.txt_pronunciamiento.Location = new System.Drawing.Point(97, 161);
+            this.txt_pronunciamiento.Location = new System.Drawing.Point(113, 161);
             this.txt_pronunciamiento.MaxLength = 50;
             this.txt_pronunciamiento.Name = "txt_pronunciamiento";
-            this.txt_pronunciamiento.Size = new System.Drawing.Size(216, 20);
+            this.txt_pronunciamiento.Size = new System.Drawing.Size(200, 20);
             this.txt_pronunciamiento.TabIndex = 33;
             this.txt_pronunciamiento.Validar = true;
             this.txt_pronunciamiento.TextChanged += new System.EventHandler(this.txt_pronunciamiento_TextChanged);
@@ -461,7 +472,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(812, 526);
+            this.ClientSize = new System.Drawing.Size(874, 505);
             this.Controls.Add(this.txt_pronunciamiento);
             this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.label10);

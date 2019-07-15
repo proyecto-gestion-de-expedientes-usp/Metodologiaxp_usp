@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_recuperar_contraseña));
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,16 +59,18 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(416, 123);
+            this.groupBox1.Size = new System.Drawing.Size(416, 196);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(127, 82);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(112, 89);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
+            this.button1.Size = new System.Drawing.Size(186, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Recuperar Contraseña";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,7 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(442, 158);
+            this.ClientSize = new System.Drawing.Size(442, 220);
             this.Controls.Add(this.groupBox1);
             this.Name = "Frm_recuperar_contraseña";
             this.Text = "Recuperación de Contraseña";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_buscar_tipo_documento));
             this.dgdatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -44,7 +45,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(12, 112);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(391, 172);
+            this.dgdatos.Size = new System.Drawing.Size(565, 172);
             this.dgdatos.TabIndex = 12;
             // 
             // groupBox1
@@ -56,10 +57,11 @@
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 96);
+            this.groupBox1.Size = new System.Drawing.Size(565, 96);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Tipo Documento :";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton2
             // 
@@ -87,9 +89,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(235, 52);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(235, 39);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(119, 44);
             this.button4.TabIndex = 11;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
@@ -97,9 +101,11 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(316, 39);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(392, 39);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 44);
+            this.button5.Size = new System.Drawing.Size(152, 44);
             this.button5.TabIndex = 12;
             this.button5.Text = "Mostrar Todo";
             this.button5.UseVisualStyleBackColor = true;
@@ -119,7 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(433, 313);
+            this.ClientSize = new System.Drawing.Size(590, 295);
             this.Controls.Add(this.dgdatos);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_buscar_tipo_documento";

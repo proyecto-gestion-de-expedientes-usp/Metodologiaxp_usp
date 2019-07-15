@@ -64,20 +64,22 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.btn_buscar1);
-            this.groupBox1.Location = new System.Drawing.Point(385, 63);
+            this.groupBox1.Location = new System.Drawing.Point(339, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 69);
+            this.groupBox1.Size = new System.Drawing.Size(539, 69);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por :";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(385, 19);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(415, 13);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 47);
+            this.button3.Size = new System.Drawing.Size(110, 50);
             this.button3.TabIndex = 32;
-            this.button3.Text = "Mostrar Todo";
+            this.button3.Text = "Ver lista";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -128,9 +130,11 @@
             // 
             // btn_buscar1
             // 
-            this.btn_buscar1.Location = new System.Drawing.Point(297, 43);
+            this.btn_buscar1.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar1.Image")));
+            this.btn_buscar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscar1.Location = new System.Drawing.Point(307, 13);
             this.btn_buscar1.Name = "btn_buscar1";
-            this.btn_buscar1.Size = new System.Drawing.Size(82, 23);
+            this.btn_buscar1.Size = new System.Drawing.Size(102, 50);
             this.btn_buscar1.TabIndex = 28;
             this.btn_buscar1.Text = "Buscar";
             this.btn_buscar1.UseVisualStyleBackColor = true;
@@ -140,7 +144,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(268, 245);
+            this.button2.Location = new System.Drawing.Point(83, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 40);
             this.button2.TabIndex = 26;
@@ -176,9 +180,9 @@
             // dgdatos
             // 
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdatos.Location = new System.Drawing.Point(387, 135);
+            this.dgdatos.Location = new System.Drawing.Point(334, 146);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(465, 197);
+            this.dgdatos.Size = new System.Drawing.Size(544, 197);
             this.dgdatos.TabIndex = 23;
             this.dgdatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellClick);
             this.dgdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdatos_CellContentClick);
@@ -198,7 +202,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(321, 148);
+            this.button1.Location = new System.Drawing.Point(280, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 23);
             this.button1.TabIndex = 21;
@@ -209,7 +213,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 203);
+            this.label3.Location = new System.Drawing.Point(19, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 19;
@@ -218,7 +222,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 153);
+            this.label2.Location = new System.Drawing.Point(19, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 17;
@@ -227,7 +231,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 104);
+            this.label1.Location = new System.Drawing.Point(19, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 15;
@@ -241,7 +245,7 @@
             this.txt_reg.Items.AddRange(new object[] {
             "ConsultorioUSP",
             "Fuera de Consultorio"});
-            this.txt_reg.Location = new System.Drawing.Point(96, 200);
+            this.txt_reg.Location = new System.Drawing.Point(83, 196);
             this.txt_reg.Name = "txt_reg";
             this.txt_reg.Size = new System.Drawing.Size(121, 21);
             this.txt_reg.TabIndex = 28;
@@ -254,7 +258,7 @@
             // txt_idper
             // 
             this.txt_idper.Enabled = false;
-            this.txt_idper.Location = new System.Drawing.Point(84, 150);
+            this.txt_idper.Location = new System.Drawing.Point(71, 146);
             this.txt_idper.Name = "txt_idper";
             this.txt_idper.ReadOnly = true;
             this.txt_idper.Size = new System.Drawing.Size(56, 20);
@@ -265,7 +269,7 @@
             // txt_nomper
             // 
             this.txt_nomper.Enabled = false;
-            this.txt_nomper.Location = new System.Drawing.Point(162, 150);
+            this.txt_nomper.Location = new System.Drawing.Point(135, 146);
             this.txt_nomper.Name = "txt_nomper";
             this.txt_nomper.ReadOnly = true;
             this.txt_nomper.Size = new System.Drawing.Size(130, 20);
@@ -276,7 +280,7 @@
             // txt_iddo
             // 
             this.txt_iddo.Enabled = false;
-            this.txt_iddo.Location = new System.Drawing.Point(84, 104);
+            this.txt_iddo.Location = new System.Drawing.Point(71, 100);
             this.txt_iddo.Name = "txt_iddo";
             this.txt_iddo.ReadOnly = true;
             this.txt_iddo.Size = new System.Drawing.Size(56, 20);
@@ -289,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(876, 360);
+            this.ClientSize = new System.Drawing.Size(890, 360);
             this.Controls.Add(this.txt_iddo);
             this.Controls.Add(this.txt_nomper);
             this.Controls.Add(this.txt_idper);

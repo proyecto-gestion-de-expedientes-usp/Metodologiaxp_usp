@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_buscar_persona));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,7 +51,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(19, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(543, 119);
+            this.groupBox1.Size = new System.Drawing.Size(601, 119);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Persona";
@@ -58,9 +59,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(435, 60);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(443, 46);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
+            this.button2.Size = new System.Drawing.Size(147, 45);
             this.button2.TabIndex = 42;
             this.button2.Text = "Mostrar Todo";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,9 +71,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(354, 68);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(310, 46);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(127, 45);
             this.button1.TabIndex = 41;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -105,7 +110,7 @@
             this.txt_buscar.Location = new System.Drawing.Point(9, 70);
             this.txt_buscar.MaxLength = 30;
             this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(339, 20);
+            this.txt_buscar.Size = new System.Drawing.Size(295, 20);
             this.txt_buscar.TabIndex = 2;
             this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
@@ -123,7 +128,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(19, 143);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(543, 274);
+            this.dgdatos.Size = new System.Drawing.Size(601, 274);
             this.dgdatos.TabIndex = 2;
             this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
             // 
@@ -133,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(577, 443);
+            this.ClientSize = new System.Drawing.Size(637, 443);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "Frm_buscar_persona";

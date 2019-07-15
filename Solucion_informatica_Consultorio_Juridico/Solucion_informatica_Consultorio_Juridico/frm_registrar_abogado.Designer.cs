@@ -241,9 +241,11 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(66, 364);
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(179, 349);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.Size = new System.Drawing.Size(151, 57);
             this.btn_guardar.TabIndex = 1;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -251,9 +253,11 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(196, 364);
+            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
+            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_modificar.Location = new System.Drawing.Point(21, 349);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.Size = new System.Drawing.Size(151, 57);
             this.btn_modificar.TabIndex = 1;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -261,18 +265,22 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(66, 403);
+            this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
+            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_limpiar.Location = new System.Drawing.Point(22, 425);
             this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar.Size = new System.Drawing.Size(151, 57);
             this.btn_limpiar.TabIndex = 1;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(196, 403);
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cerrar.Location = new System.Drawing.Point(179, 425);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.Size = new System.Drawing.Size(151, 57);
             this.btn_cerrar.TabIndex = 1;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -284,7 +292,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(346, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(442, 426);
+            this.groupBox2.Size = new System.Drawing.Size(442, 490);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda Por";
@@ -303,7 +311,7 @@
             this.dgv_datos_abo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_datos_abo.Location = new System.Drawing.Point(6, 63);
             this.dgv_datos_abo.Name = "dgv_datos_abo";
-            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 351);
+            this.dgv_datos_abo.Size = new System.Drawing.Size(428, 421);
             this.dgv_datos_abo.TabIndex = 0;
             this.dgv_datos_abo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_datos_abo_CellClick);
             // 
@@ -337,7 +345,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 514);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_limpiar);

@@ -142,5 +142,10 @@ namespace Solucion_informatica_Consultorio_Juridico
             campo = "doc_nombrereal";
             txt_buscar.Focus();
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

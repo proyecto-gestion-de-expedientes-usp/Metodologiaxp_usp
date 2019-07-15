@@ -160,9 +160,11 @@
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_login.Location = new System.Drawing.Point(56, 215);
+            this.btn_login.Image = ((System.Drawing.Image)(resources.GetObject("btn_login.Image")));
+            this.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_login.Location = new System.Drawing.Point(36, 215);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(115, 29);
+            this.btn_login.Size = new System.Drawing.Size(140, 43);
             this.btn_login.TabIndex = 26;
             this.btn_login.Text = "Iniciar Sesión";
             this.btn_login.UseVisualStyleBackColor = false;
@@ -170,11 +172,13 @@
             // 
             // button1
             // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(199, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 29);
+            this.button1.Size = new System.Drawing.Size(152, 43);
             this.button1.TabIndex = 31;
-            this.button1.Text = "Registrar Nuevo Usuario ";
+            this.button1.Text = "Nuevo Usuario ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -183,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(570, 261);
+            this.ClientSize = new System.Drawing.Size(570, 291);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);

@@ -78,12 +78,13 @@
             this.splitContainer1.Panel1.Controls.Add(this.txtFile);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvLista);
-            this.splitContainer1.Size = new System.Drawing.Size(711, 392);
-            this.splitContainer1.SplitterDistance = 170;
+            this.splitContainer1.Size = new System.Drawing.Size(711, 471);
+            this.splitContainer1.SplitterDistance = 204;
             this.splitContainer1.TabIndex = 22;
             // 
             // label4
@@ -114,27 +115,33 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(490, 144);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(468, 144);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(136, 46);
             this.button3.TabIndex = 28;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btn_abrir
             // 
-            this.btn_abrir.Location = new System.Drawing.Point(356, 144);
+            this.btn_abrir.Image = ((System.Drawing.Image)(resources.GetObject("btn_abrir.Image")));
+            this.btn_abrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_abrir.Location = new System.Drawing.Point(302, 144);
             this.btn_abrir.Name = "btn_abrir";
-            this.btn_abrir.Size = new System.Drawing.Size(75, 23);
+            this.btn_abrir.Size = new System.Drawing.Size(141, 46);
             this.btn_abrir.TabIndex = 27;
             this.btn_abrir.Text = "Abrir";
             this.btn_abrir.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(229, 144);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(142, 144);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(132, 46);
             this.button2.TabIndex = 26;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
@@ -201,7 +208,7 @@
             this.dgvLista.Location = new System.Drawing.Point(0, 0);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(711, 218);
+            this.dgvLista.Size = new System.Drawing.Size(711, 263);
             this.dgvLista.TabIndex = 2;
             // 
             // openFileDialog1
@@ -216,7 +223,7 @@
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(145, 410);
+            this.groupBox2.Location = new System.Drawing.Point(175, 518);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(458, 80);
             this.groupBox2.TabIndex = 23;
@@ -283,7 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(784, 524);
+            this.ClientSize = new System.Drawing.Size(784, 617);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_documento";

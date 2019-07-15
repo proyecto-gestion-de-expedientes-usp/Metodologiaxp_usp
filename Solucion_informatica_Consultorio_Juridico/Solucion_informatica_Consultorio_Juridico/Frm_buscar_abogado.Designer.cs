@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_buscar_abogado));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,9 +51,9 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txt_buscar);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(27, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 121);
+            this.groupBox1.Size = new System.Drawing.Size(554, 121);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Abogado";
@@ -60,9 +61,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 52);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(390, 52);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
+            this.button2.Size = new System.Drawing.Size(149, 38);
             this.button2.TabIndex = 37;
             this.button2.Text = "Mostrar Todo";
             this.button2.UseVisualStyleBackColor = true;
@@ -70,9 +73,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 60);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(269, 52);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(110, 38);
             this.button1.TabIndex = 36;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,7 +142,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(12, 139);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(427, 274);
+            this.dgdatos.Size = new System.Drawing.Size(554, 274);
             this.dgdatos.TabIndex = 2;
             this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
             // 
@@ -146,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(471, 424);
+            this.ClientSize = new System.Drawing.Size(580, 424);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "Frm_buscar_abogado";

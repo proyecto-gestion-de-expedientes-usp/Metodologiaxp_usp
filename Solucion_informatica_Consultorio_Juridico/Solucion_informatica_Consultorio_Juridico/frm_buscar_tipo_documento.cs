@@ -105,5 +105,10 @@ namespace Solucion_informatica_Consultorio_Juridico
                 }
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_buscar_Usuario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(531, 104);
+            this.groupBox1.Size = new System.Drawing.Size(649, 104);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Usuario ";
@@ -72,9 +73,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(450, 42);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(493, 32);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
+            this.button2.Size = new System.Drawing.Size(150, 48);
             this.button2.TabIndex = 38;
             this.button2.Text = "Mostrar Todo";
             this.button2.UseVisualStyleBackColor = true;
@@ -82,9 +85,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(358, 49);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(372, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 25);
+            this.button1.Size = new System.Drawing.Size(115, 48);
             this.button1.TabIndex = 6;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,7 +141,7 @@
             this.dgdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdatos.Location = new System.Drawing.Point(12, 122);
             this.dgdatos.Name = "dgdatos";
-            this.dgdatos.Size = new System.Drawing.Size(531, 311);
+            this.dgdatos.Size = new System.Drawing.Size(649, 311);
             this.dgdatos.TabIndex = 0;
             this.dgdatos.DoubleClick += new System.EventHandler(this.dgdatos_DoubleClick);
             // 
@@ -145,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(550, 455);
+            this.ClientSize = new System.Drawing.Size(673, 455);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgdatos);
             this.Name = "Frm_buscar_Usuario";
