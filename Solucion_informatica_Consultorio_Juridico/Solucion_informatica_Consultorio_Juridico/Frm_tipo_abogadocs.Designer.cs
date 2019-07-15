@@ -100,6 +100,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(175, 366);
@@ -112,6 +113,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(17, 366);
@@ -241,6 +243,7 @@
             // 
             // cmb_condi
             // 
+            this.cmb_condi.Enabled = false;
             this.cmb_condi.FormattingEnabled = true;
             this.cmb_condi.Items.AddRange(new object[] {
             "Defensa Demandante",
@@ -267,6 +270,7 @@
             // 
             // txt_estado
             // 
+            this.txt_estado.Enabled = false;
             this.txt_estado.Location = new System.Drawing.Point(87, 238);
             this.txt_estado.MaxLength = 20;
             this.txt_estado.Name = "txt_estado";
@@ -277,6 +281,7 @@
             // 
             // txt_descripcion
             // 
+            this.txt_descripcion.Enabled = false;
             this.txt_descripcion.Location = new System.Drawing.Point(86, 283);
             this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Multiline = true;
