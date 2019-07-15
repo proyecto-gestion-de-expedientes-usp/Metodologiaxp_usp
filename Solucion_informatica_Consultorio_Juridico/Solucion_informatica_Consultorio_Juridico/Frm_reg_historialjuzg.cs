@@ -39,6 +39,15 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
+            txt_descripcion.Enabled = false;
+            txt_pronunciamiento.Enabled = false;
+            dt_derivacion.Enabled = false;
+            dt_notificacion.Enabled = false;
+            dt_recepcion.Enabled = false;
+            dt_solucion.Enabled = false;
+            dt_resolucion.Enabled = false;
+            button1.Enabled = false;
+            button3.Enabled = true;
             if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
 
             {
@@ -233,6 +242,15 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
+            txt_descripcion.Enabled = true;
+            txt_pronunciamiento.Enabled = true;
+            dt_derivacion.Enabled = true;
+            dt_notificacion.Enabled = true;
+            dt_recepcion.Enabled = true;
+            dt_solucion.Enabled = true;
+            dt_resolucion.Enabled = true;
+            button1.Enabled = true;
+            button3.Enabled = false;
             txt_descripcion.Text = "";
             txt_pronunciamiento.Text = "";
             txt_buscar.Text = "";

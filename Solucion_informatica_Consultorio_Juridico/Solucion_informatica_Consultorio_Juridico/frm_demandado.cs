@@ -27,7 +27,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_reg_Click(object sender, EventArgs e)
         {
-
+            button1.Enabled = false;
+            txt_reg.Enabled = false;
+            btn_reg.Enabled = false;
+            button2.Enabled = true;
             if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
                     try
@@ -181,6 +184,10 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            txt_reg.Enabled = true;
+            btn_reg.Enabled = true;
+            button2.Enabled = false;
             txt_idper.Text = "";
             txt_iddo.Text = "";
             txt_nomper.Text = "";

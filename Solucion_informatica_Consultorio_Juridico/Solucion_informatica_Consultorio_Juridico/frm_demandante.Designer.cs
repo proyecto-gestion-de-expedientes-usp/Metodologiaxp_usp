@@ -157,6 +157,7 @@
             // 
             // btn_reg
             // 
+            this.btn_reg.Enabled = false;
             this.btn_reg.Location = new System.Drawing.Point(57, 245);
             this.btn_reg.Name = "btn_reg";
             this.btn_reg.Size = new System.Drawing.Size(67, 23);
@@ -189,6 +190,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(321, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 23);
@@ -227,6 +229,7 @@
             // txt_reg
             // 
             this.txt_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_reg.Enabled = false;
             this.txt_reg.FormattingEnabled = true;
             this.txt_reg.Items.AddRange(new object[] {
             "ConsultorioUSP",
