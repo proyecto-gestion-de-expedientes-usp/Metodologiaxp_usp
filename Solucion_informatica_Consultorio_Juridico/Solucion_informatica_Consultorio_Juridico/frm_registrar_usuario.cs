@@ -614,6 +614,11 @@ namespace Solucion_informatica_Consultorio_Juridico
             btn_limpiar.Enabled = true;
             btn_modificar.Enabled = true;
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

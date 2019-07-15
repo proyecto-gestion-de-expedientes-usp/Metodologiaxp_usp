@@ -16,6 +16,24 @@ namespace Solucion_informatica_Consultorio_Juridico
         Clases.Validacioes validadcion = new Clases.Validacioes();
         Capas.conexion cone = new Capas.conexion();
         Clases.Datos sad = new Clases.Datos();
+
+
+        public void limpiar()
+        {
+            txt_id_mov_exp.Text = "";
+            txt_moxep.Text = "";
+            txt_id_juzgados.Text = "";
+            txt_juz.Text = "";
+            txt_id_doc.Text="";
+            txt_materia.Text = "";
+            txt_sentencia.Text = "";
+            txt_expediente.Text = "";
+            txt_secretaria_juzgado.Text = "";
+            txt_resolucion.Text = "";
+            txt_ciudad.Text = "";
+            txt_vistos.Text = "";
+            
+        }
         public frm_Registrar_Expediente()
         {
             InitializeComponent();
@@ -29,6 +47,22 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            btn_buscar_movExp.Enabled = false;
+            btn_buscar_juzgado.Enabled = false;
+            btn_buscar_doc.Enabled = false;
+            txt_materia.Enabled = false;
+            txt_sentencia.Enabled = false;
+            txt_expediente.Enabled = false;
+            txt_secretaria_juzgado.Enabled = false;
+            dp_ini.Enabled = false;
+            txt_resolucion.Enabled = false;
+            txt_ciudad.Enabled = false;
+            dp_fin.Enabled = false;
+            txt_vistos.Enabled = false;
+            btn_limpiar.Enabled = true;
+            btn_modificar.Enabled = false;
+            btn_limpiar.Enabled = true;
+
             try
             {
 
@@ -82,6 +116,21 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
+            btn_buscar_movExp.Enabled = true;
+            btn_buscar_juzgado.Enabled = true;
+            btn_buscar_doc.Enabled = true;
+            txt_materia.Enabled = true;
+            txt_sentencia.Enabled = true;
+            txt_expediente.Enabled = true;
+            txt_secretaria_juzgado.Enabled = true;
+            dp_ini.Enabled = true;
+            txt_resolucion.Enabled = true;
+            txt_ciudad.Enabled = true;
+            dp_fin.Enabled = true;
+            txt_vistos.Enabled = true;
+            btn_guardar.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_limpiar.Enabled = true;
             try
             {
 
@@ -129,6 +178,7 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 MessageBox.Show(ex.ToString());
             }
+            limpiar();
         }
         public void generarid()
         {
@@ -241,5 +291,26 @@ namespace Solucion_informatica_Consultorio_Juridico
             frm_buscar_documento o = new frm_buscar_documento();
             o.ShowDialog();
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            btn_buscar_movExp.Enabled = true;
+            btn_buscar_juzgado.Enabled = true;
+            btn_buscar_doc.Enabled = true;
+            txt_materia.Enabled = true;
+            txt_sentencia.Enabled = true;
+            txt_expediente.Enabled = true;
+            txt_secretaria_juzgado.Enabled = true;
+            dp_ini.Enabled = true;
+            txt_resolucion.Enabled = true;
+            txt_ciudad.Enabled = true;
+            dp_fin.Enabled = true;
+            txt_vistos.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_modificar.Enabled = false;
+            btn_limpiar.Enabled = false;
+            limpiar();
+        }
     }
+
 }

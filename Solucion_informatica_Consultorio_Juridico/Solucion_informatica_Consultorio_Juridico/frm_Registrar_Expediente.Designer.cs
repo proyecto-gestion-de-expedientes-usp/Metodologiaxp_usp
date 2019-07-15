@@ -101,17 +101,20 @@
             // 
             // btn_limpiar
             // 
+            this.btn_limpiar.Enabled = false;
             this.btn_limpiar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar.Image")));
             this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar.Location = new System.Drawing.Point(283, 210);
+            this.btn_limpiar.Location = new System.Drawing.Point(119, 210);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(123, 41);
             this.btn_limpiar.TabIndex = 36;
-            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.Text = "Nuevo";
             this.btn_limpiar.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // btn_modificar
             // 
+            this.btn_modificar.Enabled = false;
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modificar.Location = new System.Drawing.Point(443, 210);
@@ -126,7 +129,7 @@
             // 
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(129, 210);
+            this.btn_guardar.Location = new System.Drawing.Point(279, 210);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(123, 41);
             this.btn_guardar.TabIndex = 38;
@@ -241,6 +244,7 @@
             // 
             // btn_buscar_doc
             // 
+            this.btn_buscar_doc.Enabled = false;
             this.btn_buscar_doc.Location = new System.Drawing.Point(311, 115);
             this.btn_buscar_doc.Name = "btn_buscar_doc";
             this.btn_buscar_doc.Size = new System.Drawing.Size(44, 23);
@@ -251,6 +255,7 @@
             // 
             // btn_buscar_juzgado
             // 
+            this.btn_buscar_juzgado.Enabled = false;
             this.btn_buscar_juzgado.Location = new System.Drawing.Point(311, 89);
             this.btn_buscar_juzgado.Name = "btn_buscar_juzgado";
             this.btn_buscar_juzgado.Size = new System.Drawing.Size(44, 23);
@@ -261,6 +266,7 @@
             // 
             // btn_buscar_movExp
             // 
+            this.btn_buscar_movExp.Enabled = false;
             this.btn_buscar_movExp.Location = new System.Drawing.Point(311, 60);
             this.btn_buscar_movExp.Name = "btn_buscar_movExp";
             this.btn_buscar_movExp.Size = new System.Drawing.Size(44, 23);
@@ -271,6 +277,7 @@
             // 
             // dp_fin
             // 
+            this.dp_fin.Enabled = false;
             this.dp_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dp_fin.Location = new System.Drawing.Point(697, 85);
             this.dp_fin.Name = "dp_fin";
@@ -279,6 +286,7 @@
             // 
             // dp_ini
             // 
+            this.dp_ini.Enabled = false;
             this.dp_ini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dp_ini.Location = new System.Drawing.Point(481, 117);
             this.dp_ini.Name = "dp_ini";
@@ -404,6 +412,7 @@
             // 
             // txt_resolucion
             // 
+            this.txt_resolucion.Enabled = false;
             this.txt_resolucion.Location = new System.Drawing.Point(481, 143);
             this.txt_resolucion.MaxLength = 30;
             this.txt_resolucion.Name = "txt_resolucion";
@@ -414,6 +423,7 @@
             // 
             // txt_materia
             // 
+            this.txt_materia.Enabled = false;
             this.txt_materia.Location = new System.Drawing.Point(150, 141);
             this.txt_materia.MaxLength = 30;
             this.txt_materia.Name = "txt_materia";
@@ -431,6 +441,7 @@
             // 
             // txt_vistos
             // 
+            this.txt_vistos.Enabled = false;
             this.txt_vistos.Location = new System.Drawing.Point(697, 111);
             this.txt_vistos.MaxLength = 30;
             this.txt_vistos.Name = "txt_vistos";
@@ -447,6 +458,7 @@
             // 
             // txt_secretaria_juzgado
             // 
+            this.txt_secretaria_juzgado.Enabled = false;
             this.txt_secretaria_juzgado.Location = new System.Drawing.Point(481, 89);
             this.txt_secretaria_juzgado.MaxLength = 30;
             this.txt_secretaria_juzgado.Name = "txt_secretaria_juzgado";
@@ -472,6 +484,7 @@
             // 
             // txt_expediente
             // 
+            this.txt_expediente.Enabled = false;
             this.txt_expediente.Location = new System.Drawing.Point(481, 63);
             this.txt_expediente.MaxLength = 30;
             this.txt_expediente.Name = "txt_expediente";
@@ -497,6 +510,7 @@
             // 
             // txt_ciudad
             // 
+            this.txt_ciudad.Enabled = false;
             this.txt_ciudad.Location = new System.Drawing.Point(697, 59);
             this.txt_ciudad.MaxLength = 30;
             this.txt_ciudad.Name = "txt_ciudad";
@@ -507,6 +521,7 @@
             // 
             // txt_sentencia
             // 
+            this.txt_sentencia.Enabled = false;
             this.txt_sentencia.Location = new System.Drawing.Point(481, 37);
             this.txt_sentencia.MaxLength = 30;
             this.txt_sentencia.Name = "txt_sentencia";
