@@ -317,13 +317,13 @@ namespace Solucion_informatica_Consultorio_Juridico
             {
                 txt_nombres.Focus();
                 MessageBox.Show("ingrese nombre completo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                txt_nombres.Focus();
             }
             else
             {
                 if (cadena.Length < 20)
                 {
-                    MessageBox.Show("", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Igrese un Nombre válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
