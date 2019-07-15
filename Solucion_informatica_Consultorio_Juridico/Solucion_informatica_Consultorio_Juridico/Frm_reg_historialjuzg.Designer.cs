@@ -171,7 +171,6 @@
             // 
             // button1
             // 
-            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(26, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -258,7 +257,6 @@
             // dt_derivacion
             // 
             this.dt_derivacion.CustomFormat = "dd-MM-yyyy";
-            this.dt_derivacion.Enabled = false;
             this.dt_derivacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_derivacion.Location = new System.Drawing.Point(113, 208);
             this.dt_derivacion.Name = "dt_derivacion";
@@ -270,7 +268,6 @@
             // dt_resolucion
             // 
             this.dt_resolucion.CustomFormat = "dd-MM-yyyy";
-            this.dt_resolucion.Enabled = false;
             this.dt_resolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_resolucion.Location = new System.Drawing.Point(113, 259);
             this.dt_resolucion.Name = "dt_resolucion";
@@ -281,7 +278,6 @@
             // dt_notificacion
             // 
             this.dt_notificacion.CustomFormat = "dd-MM-yyyy";
-            this.dt_notificacion.Enabled = false;
             this.dt_notificacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_notificacion.Location = new System.Drawing.Point(113, 311);
             this.dt_notificacion.Name = "dt_notificacion";
@@ -292,7 +288,6 @@
             // dt_solucion
             // 
             this.dt_solucion.CustomFormat = "dd-MM-yyyy";
-            this.dt_solucion.Enabled = false;
             this.dt_solucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_solucion.Location = new System.Drawing.Point(113, 350);
             this.dt_solucion.Name = "dt_solucion";
@@ -439,7 +434,6 @@
             // 
             // txt_descripcion
             // 
-            this.txt_descripcion.Enabled = false;
             this.txt_descripcion.Location = new System.Drawing.Point(97, 73);
             this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
@@ -450,7 +444,6 @@
             // 
             // txt_pronunciamiento
             // 
-            this.txt_pronunciamiento.Enabled = false;
             this.txt_pronunciamiento.Location = new System.Drawing.Point(97, 161);
             this.txt_pronunciamiento.MaxLength = 50;
             this.txt_pronunciamiento.Name = "txt_pronunciamiento";

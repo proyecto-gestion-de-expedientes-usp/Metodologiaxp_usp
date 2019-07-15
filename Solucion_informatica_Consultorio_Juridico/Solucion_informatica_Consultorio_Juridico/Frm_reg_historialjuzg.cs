@@ -27,9 +27,20 @@ namespace Solucion_informatica_Consultorio_Juridico
         private void Frm_reg_historialjuzg_Load(object sender, EventArgs e)
         {
             dgdatos.DataSource = mostrar();
+            generar_id();
 
             col();
         }
+        public void generar_id()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select isnull(Max(cast(juzg_id as int)),0)+1 from Historial_Juzgado", cone.con);
+            DataTable sqlex = new DataTable();
+            sda.Fill(sqlex);
+
+            txt_id.Text = sqlex.Rows[0][0].ToString();
+        }
+
+
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -39,15 +50,15 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txt_descripcion.Enabled = false;
-            txt_pronunciamiento.Enabled = false;
-            dt_derivacion.Enabled = false;
-            dt_notificacion.Enabled = false;
-            dt_recepcion.Enabled = false;
-            dt_solucion.Enabled = false;
-            dt_resolucion.Enabled = false;
-            button1.Enabled = false;
-            button3.Enabled = true;
+            //txt_descripcion.Enabled = false;
+            //txt_pronunciamiento.Enabled = false;
+            //dt_derivacion.Enabled = false;
+            //dt_notificacion.Enabled = false;
+            //dt_recepcion.Enabled = false;
+            //dt_solucion.Enabled = false;
+            //dt_resolucion.Enabled = false;
+            //button1.Enabled = false;
+            //button3.Enabled = true;
             if (Capas.validaciones.ValidarFormulario(this, errorProvider1) == false)
 
             {
@@ -89,7 +100,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    //txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -158,7 +169,7 @@ namespace Solucion_informatica_Consultorio_Juridico
 
                     cone.con.Close();
                     dgdatos.DataSource = mostrar();
-                    txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+                    //txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
                 }
 
 
@@ -242,27 +253,30 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void button3_Click(object sender, EventArgs e)
         {
-            txt_descripcion.Enabled = true;
-            txt_pronunciamiento.Enabled = true;
-            dt_derivacion.Enabled = true;
-            dt_notificacion.Enabled = true;
-            dt_recepcion.Enabled = true;
-            dt_solucion.Enabled = true;
-            dt_resolucion.Enabled = true;
-            button1.Enabled = true;
-            button3.Enabled = false;
+            //txt_descripcion.Enabled = true;
+            //txt_pronunciamiento.Enabled = true;
+            //dt_derivacion.Enabled = true;
+            //dt_notificacion.Enabled = true;
+            //dt_recepcion.Enabled = true;
+            //dt_solucion.Enabled = true;
+            //dt_resolucion.Enabled = true;
+            //button1.Enabled = true;
+            //button3.Enabled = false;
             txt_descripcion.Text = "";
             txt_pronunciamiento.Text = "";
             txt_buscar.Text = "";
             txt_descripcion.Focus();
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            generar_id();
+            //txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+
         }
 
         private void Frm_reg_historialjuzg_Activated(object sender, EventArgs e)
         {
             radioButton1.Checked = true;
             radioButton3.Checked = true;
-            txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            //txt_id.Text = Convert.ToString(dgdatos.RowCount - 1);
+            generar_id();
             this.dt_recepcion.Enabled = false;
         }
 
