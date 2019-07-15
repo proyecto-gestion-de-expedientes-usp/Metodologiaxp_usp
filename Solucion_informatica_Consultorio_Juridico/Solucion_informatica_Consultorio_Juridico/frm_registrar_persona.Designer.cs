@@ -97,6 +97,7 @@
             this.txt_nom_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_Doc_persoJ = new System.Windows.Forms.TextBox();
             this.txt_id_persoJ = new System.Windows.Forms.TextBox();
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pers)).BeginInit();
@@ -111,6 +112,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.cb_distr);
             this.groupBox1.Controls.Add(this.cb_pro);
             this.groupBox1.Controls.Add(this.cb_dpto);
@@ -153,6 +155,7 @@
             // cb_distr
             // 
             this.cb_distr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distr.Enabled = false;
             this.cb_distr.FormattingEnabled = true;
             this.cb_distr.Location = new System.Drawing.Point(122, 200);
             this.cb_distr.Name = "cb_distr";
@@ -162,6 +165,7 @@
             // cb_pro
             // 
             this.cb_pro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_pro.Enabled = false;
             this.cb_pro.FormattingEnabled = true;
             this.cb_pro.Location = new System.Drawing.Point(122, 176);
             this.cb_pro.Name = "cb_pro";
@@ -172,6 +176,7 @@
             // cb_dpto
             // 
             this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.Enabled = false;
             this.cb_dpto.FormattingEnabled = true;
             this.cb_dpto.Location = new System.Drawing.Point(122, 153);
             this.cb_dpto.Name = "cb_dpto";
@@ -183,6 +188,7 @@
             // 
             this.dp_fenaci.CustomFormat = "yyyy-MM-dd";
             this.dp_fenaci.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dp_fenaci.Enabled = false;
             this.dp_fenaci.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dp_fenaci.Location = new System.Drawing.Point(690, 45);
             this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
@@ -241,7 +247,7 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(125, 380);
+            this.btn_modificar.Location = new System.Drawing.Point(215, 348);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_modificar.TabIndex = 37;
@@ -251,7 +257,8 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(28, 380);
+            this.btn_guardar.Enabled = false;
+            this.btn_guardar.Location = new System.Drawing.Point(122, 348);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 36;
@@ -261,7 +268,7 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(217, 380);
+            this.btn_limpiar.Location = new System.Drawing.Point(122, 381);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
             this.btn_limpiar.TabIndex = 35;
@@ -289,6 +296,7 @@
             // 
             // txt_email
             // 
+            this.txt_email.Enabled = false;
             this.txt_email.Location = new System.Drawing.Point(122, 283);
             this.txt_email.MaxLength = 30;
             this.txt_email.Name = "txt_email";
@@ -298,6 +306,7 @@
             // 
             // txt_telf
             // 
+            this.txt_telf.Enabled = false;
             this.txt_telf.Location = new System.Drawing.Point(122, 257);
             this.txt_telf.MaxLength = 15;
             this.txt_telf.Name = "txt_telf";
@@ -316,6 +325,7 @@
             // 
             // cb_tip_Doc
             // 
+            this.cb_tip_Doc.Enabled = false;
             this.cb_tip_Doc.FormattingEnabled = true;
             this.cb_tip_Doc.Location = new System.Drawing.Point(181, 45);
             this.cb_tip_Doc.Name = "cb_tip_Doc";
@@ -406,6 +416,7 @@
             // 
             // txt_nro_documento
             // 
+            this.txt_nro_documento.Enabled = false;
             this.txt_nro_documento.Location = new System.Drawing.Point(470, 45);
             this.txt_nro_documento.MaxLength = 8;
             this.txt_nro_documento.Name = "txt_nro_documento";
@@ -417,6 +428,7 @@
             // 
             // txt_domilega
             // 
+            this.txt_domilega.Enabled = false;
             this.txt_domilega.Location = new System.Drawing.Point(122, 231);
             this.txt_domilega.MaxLength = 20;
             this.txt_domilega.Name = "txt_domilega";
@@ -425,6 +437,7 @@
             // 
             // txt_ape_mat
             // 
+            this.txt_ape_mat.Enabled = false;
             this.txt_ape_mat.Location = new System.Drawing.Point(122, 123);
             this.txt_ape_mat.MaxLength = 20;
             this.txt_ape_mat.Name = "txt_ape_mat";
@@ -434,6 +447,7 @@
             // 
             // txt_ape_pat
             // 
+            this.txt_ape_pat.Enabled = false;
             this.txt_ape_pat.Location = new System.Drawing.Point(122, 97);
             this.txt_ape_pat.MaxLength = 25;
             this.txt_ape_pat.Name = "txt_ape_pat";
@@ -443,6 +457,7 @@
             // 
             // txt_nomb
             // 
+            this.txt_nomb.Enabled = false;
             this.txt_nomb.Location = new System.Drawing.Point(122, 71);
             this.txt_nomb.MaxLength = 20;
             this.txt_nomb.Name = "txt_nomb";
@@ -815,6 +830,16 @@
             this.txt_id_persoJ.TabIndex = 8;
             this.txt_id_persoJ.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
+            // btnnuevo
+            // 
+            this.btnnuevo.Location = new System.Drawing.Point(28, 348);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnnuevo.TabIndex = 47;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
             // frm_registrar_persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -913,5 +938,6 @@
         private System.Windows.Forms.ComboBox cb_distr;
         private System.Windows.Forms.ComboBox cb_pro;
         private System.Windows.Forms.ComboBox cb_dpto;
+        private System.Windows.Forms.Button btnnuevo;
     }
 }

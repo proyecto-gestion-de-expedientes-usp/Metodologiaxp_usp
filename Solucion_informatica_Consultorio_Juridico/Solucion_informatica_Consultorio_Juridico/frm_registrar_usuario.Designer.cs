@@ -85,6 +85,7 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDistri = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnnuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -256,6 +257,7 @@
             // cb_Sexo
             // 
             this.cb_Sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Sexo.Enabled = false;
             this.cb_Sexo.FormattingEnabled = true;
             this.cb_Sexo.Items.AddRange(new object[] {
             "Masculino",
@@ -268,6 +270,7 @@
             // cb_estadoci
             // 
             this.cb_estadoci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_estadoci.Enabled = false;
             this.cb_estadoci.FormattingEnabled = true;
             this.cb_estadoci.Items.AddRange(new object[] {
             "Soltero/a",
@@ -282,6 +285,7 @@
             // cb_esta_usua
             // 
             this.cb_esta_usua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_esta_usua.Enabled = false;
             this.cb_esta_usua.FormattingEnabled = true;
             this.cb_esta_usua.Location = new System.Drawing.Point(153, 390);
             this.cb_esta_usua.Name = "cb_esta_usua";
@@ -291,6 +295,7 @@
             // 
             // dp_fenaci
             // 
+            this.dp_fenaci.Enabled = false;
             this.dp_fenaci.Location = new System.Drawing.Point(138, 287);
             this.dp_fenaci.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             this.dp_fenaci.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
@@ -310,6 +315,7 @@
             // 
             // txt_dni
             // 
+            this.txt_dni.Enabled = false;
             this.txt_dni.Location = new System.Drawing.Point(101, 39);
             this.txt_dni.MaxLength = 8;
             this.txt_dni.Name = "txt_dni";
@@ -322,6 +328,7 @@
             // 
             // txt_nombres
             // 
+            this.txt_nombres.Enabled = false;
             this.txt_nombres.Location = new System.Drawing.Point(101, 65);
             this.txt_nombres.MaxLength = 20;
             this.txt_nombres.Name = "txt_nombres";
@@ -332,6 +339,7 @@
             // 
             // txt_apepat
             // 
+            this.txt_apepat.Enabled = false;
             this.txt_apepat.Location = new System.Drawing.Point(101, 91);
             this.txt_apepat.MaxLength = 20;
             this.txt_apepat.Name = "txt_apepat";
@@ -342,6 +350,7 @@
             // 
             // txt_apemat
             // 
+            this.txt_apemat.Enabled = false;
             this.txt_apemat.Location = new System.Drawing.Point(101, 117);
             this.txt_apemat.MaxLength = 20;
             this.txt_apemat.Name = "txt_apemat";
@@ -352,6 +361,7 @@
             // 
             // txt_cel
             // 
+            this.txt_cel.Enabled = false;
             this.txt_cel.Location = new System.Drawing.Point(101, 143);
             this.txt_cel.MaxLength = 10;
             this.txt_cel.Name = "txt_cel";
@@ -362,6 +372,7 @@
             // 
             // txt_domici
             // 
+            this.txt_domici.Enabled = false;
             this.txt_domici.Location = new System.Drawing.Point(101, 169);
             this.txt_domici.MaxLength = 40;
             this.txt_domici.Multiline = true;
@@ -372,6 +383,7 @@
             // 
             // txt_correo
             // 
+            this.txt_correo.Enabled = false;
             this.txt_correo.Location = new System.Drawing.Point(50, 27);
             this.txt_correo.MaxLength = 60;
             this.txt_correo.Name = "txt_correo";
@@ -381,6 +393,7 @@
             // 
             // txt_contra
             // 
+            this.txt_contra.Enabled = false;
             this.txt_contra.Location = new System.Drawing.Point(128, 72);
             this.txt_contra.MaxLength = 30;
             this.txt_contra.Name = "txt_contra";
@@ -390,6 +403,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.cb_distritos);
             this.groupBox1.Controls.Add(this.cb_provin);
             this.groupBox1.Controls.Add(this.cb_dpto);
@@ -438,6 +452,7 @@
             // cb_distritos
             // 
             this.cb_distritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distritos.Enabled = false;
             this.cb_distritos.FormattingEnabled = true;
             this.cb_distritos.Location = new System.Drawing.Point(94, 360);
             this.cb_distritos.Name = "cb_distritos";
@@ -448,6 +463,7 @@
             // cb_provin
             // 
             this.cb_provin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_provin.Enabled = false;
             this.cb_provin.FormattingEnabled = true;
             this.cb_provin.Location = new System.Drawing.Point(94, 336);
             this.cb_provin.Name = "cb_provin";
@@ -458,6 +474,7 @@
             // cb_dpto
             // 
             this.cb_dpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_dpto.Enabled = false;
             this.cb_dpto.FormattingEnabled = true;
             this.cb_dpto.Location = new System.Drawing.Point(94, 313);
             this.cb_dpto.Name = "cb_dpto";
@@ -467,6 +484,7 @@
             // 
             // txt_cod_tipusua
             // 
+            this.txt_cod_tipusua.Enabled = false;
             this.txt_cod_tipusua.Location = new System.Drawing.Point(101, 417);
             this.txt_cod_tipusua.Name = "txt_cod_tipusua";
             this.txt_cod_tipusua.Size = new System.Drawing.Size(46, 20);
@@ -474,6 +492,7 @@
             // 
             // txt_cod_estausua
             // 
+            this.txt_cod_estausua.Enabled = false;
             this.txt_cod_estausua.Location = new System.Drawing.Point(101, 391);
             this.txt_cod_estausua.Name = "txt_cod_estausua";
             this.txt_cod_estausua.Size = new System.Drawing.Size(46, 20);
@@ -490,6 +509,7 @@
             // 
             // btn_limpiar
             // 
+            this.btn_limpiar.Enabled = false;
             this.btn_limpiar.Location = new System.Drawing.Point(571, 319);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(119, 33);
@@ -509,6 +529,7 @@
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Enabled = false;
             this.btn_guardar.Location = new System.Drawing.Point(571, 198);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(119, 33);
@@ -533,6 +554,7 @@
             // cb_tip_usu
             // 
             this.cb_tip_usu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tip_usu.Enabled = false;
             this.cb_tip_usu.FormattingEnabled = true;
             this.cb_tip_usu.Location = new System.Drawing.Point(153, 416);
             this.cb_tip_usu.Name = "cb_tip_usu";
@@ -627,6 +649,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnnuevo
+            // 
+            this.btnnuevo.Location = new System.Drawing.Point(571, 146);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(119, 32);
+            this.btnnuevo.TabIndex = 10;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
             // frm_registrar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,5 +748,6 @@
         private System.Windows.Forms.ComboBox cb_distritos;
         private System.Windows.Forms.ComboBox cb_provin;
         private System.Windows.Forms.ComboBox cb_dpto;
+        private System.Windows.Forms.Button btnnuevo;
     }
 }

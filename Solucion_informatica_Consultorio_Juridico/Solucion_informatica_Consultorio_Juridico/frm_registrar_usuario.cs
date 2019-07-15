@@ -96,6 +96,25 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            txt_dni.Enabled = false;
+            txt_nombres.Enabled = false;
+            txt_apepat.Enabled = false;
+            txt_apemat.Enabled = false;
+            txt_cel.Enabled = false;
+            txt_domici.Enabled = false;
+            cb_Sexo.Enabled = false;
+            cb_estadoci.Enabled = false;
+            dp_fenaci.Enabled = false;
+            cb_dpto.Enabled = false;
+            cb_provin.Enabled = false;
+            cb_distritos.Enabled = false;
+            cb_esta_usua.Enabled = false;
+            cb_tip_usu.Enabled = false;
+            txt_correo.Enabled = false;
+            txt_contra.Enabled = false;
+            btn_guardar.Enabled = false;
+            btnnuevo.Enabled = true;
+            btn_limpiar.Enabled = true;
             try
             {
                 
@@ -555,6 +574,29 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_contra.Text = dgv_usuarios.CurrentRow.Cells[16].Value.ToString();
 
             btn_modificar.Enabled =true;
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            txt_dni.Enabled = true;
+            txt_nombres.Enabled = true;
+            txt_apepat.Enabled = true;
+            txt_apemat.Enabled = true;
+            txt_cel.Enabled = true;
+            txt_domici.Enabled = true;
+            cb_Sexo.Enabled = true;
+            cb_estadoci.Enabled = true;
+            dp_fenaci.Enabled = true;
+            cb_dpto.Enabled = true;
+            cb_provin.Enabled = true;
+            cb_distritos.Enabled = true;
+            cb_esta_usua.Enabled = true;
+            cb_tip_usu.Enabled = true;
+            txt_correo.Enabled = true;
+            txt_contra.Enabled = true;
+            btnnuevo.Enabled = false;
+            btn_guardar.Enabled = true;
+            btn_limpiar.Enabled = true;
         }
     }
     }

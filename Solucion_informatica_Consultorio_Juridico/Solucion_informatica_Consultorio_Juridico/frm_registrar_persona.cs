@@ -49,6 +49,19 @@ namespace Solucion_informatica_Consultorio_Juridico
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            cb_tip_Doc.Enabled = false;
+            txt_nomb.Enabled = false;
+            txt_ape_pat.Enabled = false;
+            txt_ape_mat.Enabled = false;
+            cb_dpto.Enabled = false;
+            cb_pro.Enabled = false;
+            cb_distr.Enabled = false;
+            txt_domilega.Enabled = false;
+            txt_telf.Enabled = false;
+            txt_email.Enabled = false;
+            txt_nro_documento.Enabled = false;
+            btn_guardar.Enabled = false;
+            btnnuevo.Enabled = true;
             try
             {
 
@@ -714,6 +727,23 @@ namespace Solucion_informatica_Consultorio_Juridico
             txt_telf.Text = "";
             txt_email.Text = "";
            
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            cb_tip_Doc.Enabled = true;
+            txt_nomb.Enabled = true;
+            txt_ape_pat.Enabled = true;
+            txt_ape_mat.Enabled = true;
+            cb_dpto.Enabled = true;
+            cb_pro.Enabled = true;
+            cb_distr.Enabled = true;
+            txt_domilega.Enabled = true;
+            txt_telf.Enabled = true;
+            txt_email.Enabled = true;
+            txt_nro_documento.Enabled = true;
+            btn_guardar.Enabled = true;
+            btnnuevo.Enabled = false;
         }
     }
 }
